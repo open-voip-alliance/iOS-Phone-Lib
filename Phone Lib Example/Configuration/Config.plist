@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>URLS</key>
+	<dict>
+		<key>Stun Servers</key>
+		<array>
+			<string>stun.voipgrid.nl</string>
+		</array>
+		<key>Encrypted SIP Domain</key>
+		<string>sip.encryptedsip.com</string>
+		<key>Middleware BaseLink</key>
+		<string>https://vialerpush.voipgrid.nl</string>
+		<key>API</key>
+		<string>https://partner.voipgrid.nl/api</string>
+		<key>Partner</key>
+		<string>https://partner.voipgrid.nl/</string>
+		<key>SIP domain</key>
+		<string>sipproxy.voipgrid.nl</string>
+		<key>onboarding-nl</key>
+		<string>https://vialerapp.com/nl/app-info/</string>
+		<key>onboarding-en</key>
+		<string>https://vialerapp.com/app-info/</string>
+	</dict>
+</dict>
+</plist>

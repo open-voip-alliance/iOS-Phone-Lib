@@ -1,0 +1,62 @@
+PODS:
+  - Alamofire (5.5.0)
+  - iOSVoIPLib (0.1.0):
+    - linphone-sdk (= 5.0.40)
+  - linphone-sdk (5.0.40):
+    - linphone-sdk/all-frameworks (= 5.0.40)
+    - linphone-sdk/app-extension (= 5.0.40)
+    - linphone-sdk/app-extension-swift (= 5.0.40)
+    - linphone-sdk/basic-frameworks (= 5.0.40)
+    - linphone-sdk/swift (= 5.0.40)
+  - linphone-sdk/all-frameworks (5.0.40)
+  - linphone-sdk/app-extension (5.0.40)
+  - linphone-sdk/app-extension-swift (5.0.40):
+    - linphone-sdk/app-extension
+  - linphone-sdk/basic-frameworks (5.0.40):
+    - linphone-sdk/app-extension
+  - linphone-sdk/swift (5.0.40):
+    - linphone-sdk/app-extension-swift
+    - linphone-sdk/basic-frameworks
+  - PIL (0.1.0):
+    - iOSVoIPLib (~> 0.1.0)
+    - Swinject (~> 2.7.1)
+  - QuickTableViewController (1.3.1)
+  - SAMKeychain (1.5.3)
+  - Swinject (2.7.1)
+
+DEPENDENCIES:
+  - Alamofire (~> 5.2)
+  - iOSVoIPLib (from `iOSVoIPLib.podspec`)
+  - linphone-sdk (= 5.0.40)
+  - PIL (from `PIL.podspec`)
+  - QuickTableViewController
+  - SAMKeychain
+  - Swinject
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Alamofire
+    - QuickTableViewController
+    - SAMKeychain
+    - Swinject
+  https://gitlab.linphone.org/BC/public/podspec.git:
+    - linphone-sdk
+
+EXTERNAL SOURCES:
+  iOSVoIPLib:
+    :path: iOSVoIPLib.podspec
+  PIL:
+    :path: PIL.podspec
+
+SPEC CHECKSUMS:
+  Alamofire: 1c4fb5369c3fe93d2857c780d8bbe09f06f97e7c
+  iOSVoIPLib: a77ef52a3443bdee2486a0ab86c3fdb7da9db70a
+  linphone-sdk: 506c61b1eff916866e9c7a5265f8eadb2789e41f
+  PIL: 660930395909c8c4b572b049a61ab4b48c8dccb9
+  QuickTableViewController: 25e698de1546c2b829c543d91b64ebc6e884acfc
+  SAMKeychain: 483e1c9f32984d50ca961e26818a534283b4cd5c
+  Swinject: ddf78b8486dd9b71a667b852cad919ab4484478e
+
+PODFILE CHECKSUM: 67938fe9d69f001f80a53ddefeff69027d71a2b7
+
+COCOAPODS: 1.11.2
