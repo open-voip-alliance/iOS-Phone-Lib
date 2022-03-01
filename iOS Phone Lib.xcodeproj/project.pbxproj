@@ -164,7 +164,7 @@
 		8323716527C7CC060087E701 /* SipManagerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SipManagerProtocol.swift; sourceTree = "<group>"; };
 		8323716727C7CC060087E701 /* LinphoneManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinphoneManager.swift; sourceTree = "<group>"; };
 		8323716927C7CC060087E701 /* RegistrationState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationState.swift; sourceTree = "<group>"; };
-		835D7BA427B2E37800A7B5DD /* iOSVoIPLib.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = iOSVoIPLib.podspec; sourceTree = "<group>"; };
+		835D7BA427B2E37800A7B5DD /* iOSVoIPLib.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = iOSVoIPLib.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		835D7BA527B2E37800A7B5DD /* VoIPLib-README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "VoIPLib-README.md"; sourceTree = "<group>"; };
 		835D7BA627B2E37800A7B5DD /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		835D7C0127BAC7A200A7B5DD /* Phone Lib Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Phone Lib Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -181,7 +181,7 @@
 		835D82C627BAC9A000A7B5DD /* PIL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PIL.h; sourceTree = "<group>"; };
 		835D82C727BAC9A000A7B5DD /* PIL.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = PIL.docc; sourceTree = "<group>"; };
 		835D82E227BD3B6900A7B5DD /* PIL-README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "PIL-README.md"; sourceTree = "<group>"; };
-		835D82E327BD3B6900A7B5DD /* PIL.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PIL.podspec; sourceTree = "<group>"; };
+		835D82E327BD3B6900A7B5DD /* PIL.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PIL.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		835D82E727BD61DF00A7B5DD /* LogDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogDelegate.swift; sourceTree = "<group>"; };
 		835D82E827BD61DF00A7B5DD /* LogLevel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogLevel.swift; sourceTree = "<group>"; };
 		835D82E927BD61E000A7B5DD /* Builder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
