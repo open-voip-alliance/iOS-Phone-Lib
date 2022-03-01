@@ -12,9 +12,9 @@ Pod::Spec.new do |s|
 
     s.author = { "Chris Kontos" => "chris.kontos@wearespindle.com" }
 
-    s.homepage = "https://gitlab.wearespindle.com/vialer/mobile/voip/platform-integration-layer"
+    s.homepage = "https://gitlab.wearespindle.com/vialer/mobile/voip/ios-phone-lib"
 
-    s.source = { :git => "https://gitlab.wearespindle.com/vialer/mobile/voip/platform-integration-layer.git",
+    s.source = { :git => "https://gitlab.wearespindle.com/vialer/mobile/voip/ios-phone-lib.git",
                  :tag => "#{s.version}" }
 
     s.framework = "UIKit"
@@ -23,7 +23,6 @@ Pod::Spec.new do |s|
 
     s.source_files = "PIL/**/*.{swift}"
     s.resources = "PIL/Resources/**"
-
 
     s.swift_version = "5"
 
