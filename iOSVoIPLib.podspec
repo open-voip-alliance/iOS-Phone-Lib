@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
     
     s.name             = 'iOSVoIPLib'
-    s.version          = '0.1.0'
+    s.version          = '0.1.1'
     s.summary          = 'Allow for easy implementation of SIP into a swift project.'
 
     s.description      = 'This library is an opinionated sip-wrapper, currently using Linphone as the base.'
@@ -15,6 +15,6 @@ Pod::Spec.new do |s|
 
     s.source_files = 'iOSVoIPLib/Classes/**/*'
 
-    s.dependency 'linphone-sdk', '5.0.40'
+    s.dependency 'linphone-sdk', '5.1.10'
   
 end
