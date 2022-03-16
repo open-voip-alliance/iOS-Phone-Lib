@@ -1,20 +1,20 @@
 PODS:
   - Alamofire (5.5.0)
   - iOSVoIPLib (0.1.0):
-    - linphone-sdk (= 5.0.40)
-  - linphone-sdk (5.0.40):
-    - linphone-sdk/all-frameworks (= 5.0.40)
-    - linphone-sdk/app-extension (= 5.0.40)
-    - linphone-sdk/app-extension-swift (= 5.0.40)
-    - linphone-sdk/basic-frameworks (= 5.0.40)
-    - linphone-sdk/swift (= 5.0.40)
-  - linphone-sdk/all-frameworks (5.0.40)
-  - linphone-sdk/app-extension (5.0.40)
-  - linphone-sdk/app-extension-swift (5.0.40):
+    - linphone-sdk (= 5.1.10)
+  - linphone-sdk (5.1.10):
+    - linphone-sdk/all-frameworks (= 5.1.10)
+    - linphone-sdk/app-extension (= 5.1.10)
+    - linphone-sdk/app-extension-swift (= 5.1.10)
+    - linphone-sdk/basic-frameworks (= 5.1.10)
+    - linphone-sdk/swift (= 5.1.10)
+  - linphone-sdk/all-frameworks (5.1.10)
+  - linphone-sdk/app-extension (5.1.10)
+  - linphone-sdk/app-extension-swift (5.1.10):
     - linphone-sdk/app-extension
-  - linphone-sdk/basic-frameworks (5.0.40):
+  - linphone-sdk/basic-frameworks (5.1.10):
     - linphone-sdk/app-extension
-  - linphone-sdk/swift (5.0.40):
+  - linphone-sdk/swift (5.1.10):
     - linphone-sdk/app-extension-swift
     - linphone-sdk/basic-frameworks
   - PIL (0.1.0):
@@ -27,7 +27,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire (~> 5.2)
   - iOSVoIPLib (from `iOSVoIPLib.podspec`)
-  - linphone-sdk (= 5.0.40)
+  - linphone-sdk (= 5.1.10)
   - PIL (from `PIL.podspec`)
   - QuickTableViewController
   - SAMKeychain
@@ -50,13 +50,13 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Alamofire: 1c4fb5369c3fe93d2857c780d8bbe09f06f97e7c
-  iOSVoIPLib: 3fc8b081e7bee4a561bdd1fbb098ec9ff6a6310d
-  linphone-sdk: 506c61b1eff916866e9c7a5265f8eadb2789e41f
+  iOSVoIPLib: cf89b4b24e7d53d967b07f446c53ed4b4c83e187
+  linphone-sdk: c296697bc33e187d32ee7a7ad350ec7cbfd4ea30
   PIL: a5e8bc3c52e98c374c2b68afd71b1b7703220425
   QuickTableViewController: 25e698de1546c2b829c543d91b64ebc6e884acfc
   SAMKeychain: 483e1c9f32984d50ca961e26818a534283b4cd5c
   Swinject: ddf78b8486dd9b71a667b852cad919ab4484478e
 
-PODFILE CHECKSUM: 67938fe9d69f001f80a53ddefeff69027d71a2b7
+PODFILE CHECKSUM: 07f2a0144ef93697b89e8e10bef5421b78037fd0
 
 COCOAPODS: 1.11.2
