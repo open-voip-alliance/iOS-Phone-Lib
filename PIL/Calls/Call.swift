@@ -17,6 +17,7 @@ public struct Call {
     public let uuid: UUID
     public let mos: Float
     public let contact: Contact?
+    public let reason: String
     
     public var remotePartyHeading: String {
         get {

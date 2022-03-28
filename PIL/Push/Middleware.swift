@@ -10,7 +10,7 @@ import PushKit
 
 public protocol Middleware {
 
-    func respond(payload: PKPushPayload, available: Bool)
+    func respond(payload: PKPushPayload, available: Bool, reason: UnavailableReason?)
     
     func tokenReceived(token: String)
     
@@ -18,6 +18,12 @@ public protocol Middleware {
     
     /// View the content of the push message before it is processed.
     func inspect(payload: PKPushPayload, type: PKPushType)
+}
+
+public extension Middleware {
+    func respond(payload: PKPushPayload, available: Bool, reason: UnavailableReason? = nil) {
+        respond(payload: payload, available: available, reason: reason)
+    }
 }
 
 public struct IncomingPayloadCallDetail {
