@@ -22,7 +22,7 @@ public protocol Middleware {
 
 public extension Middleware {
     func respond(payload: PKPushPayload, available: Bool, reason: UnavailableReason? = nil) {
-        respond(payload: payload, available: available, reason: nil)
+        respond(payload: payload, available: available, reason: reason)
     }
 }
 
