@@ -42,12 +42,18 @@ extension PushKitDelegate: PKPushRegistryDelegate {
         
         if pil.calls.isInCall {
             pil.writeLog("Not taking call as we already have an active one!")
+            self.middleware.respond(payload: payload, available: false, reason: UnavailableReason.inCall)
             return
         }
                 
         pil.start() { success in
             self.pil.writeLog("PIL started with success=\(success), responding to middleware: \(success)")
-            self.middleware.respond(payload: payload, available: success)
+            
+            if success {
+                self.middleware.respond(payload: payload, available: true)
+            } else {
+                self.middleware.respond(payload: payload, available: false, reason: UnavailableReason.unableToRegister)
+            }            
         }
     }
 
@@ -73,4 +79,9 @@ extension String {
     public init(apnsToken: Data) {
         self = apnsToken.map { String(format: "%.2hhx", $0) }.joined()
     }
+}
+
+public enum UnavailableReason {
+    case inCall
+    case unableToRegister
 }

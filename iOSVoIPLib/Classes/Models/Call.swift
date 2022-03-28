@@ -68,6 +68,10 @@ public class Call:NSObject {
         return linphoneCall.getCobject?.hashValue
     }
     
+    public var reason: String {
+        return String.init(describing: linphoneCall.reason)
+    }
+    
     public var wasMissed: Bool {
         guard let log = linphoneCall.callLog else {
             return false
