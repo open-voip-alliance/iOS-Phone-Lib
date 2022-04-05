@@ -19,8 +19,9 @@ class PushKitDelegate: NSObject {
     func registerForVoipPushes() {
         voipRegistry.delegate = self
         voipRegistry.desiredPushTypes = [.voIP]
-
+print("REGISTERING FOR PUSH")
         if let token = token {
+            print("TOKEN received?")
             middleware.tokenReceived(token: token)
         }
     }
@@ -29,6 +30,13 @@ class PushKitDelegate: NSObject {
 extension PushKitDelegate: PKPushRegistryDelegate {
 
     public func pushRegistry(_ registry: PKPushRegistry, didReceiveIncomingPushWith payload: PKPushPayload, for type: PKPushType, completion: @escaping () -> ()) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            self.handle(payload: payload, for: type, completion: completion)
+            completion()
+        }
+    }
+    
+    private func handle(payload: PKPushPayload, for type: PKPushType, completion: @escaping () -> ()) {
         self.middleware.inspect(payload: payload, type: type)
         
         if type != .voIP {
@@ -53,15 +61,17 @@ extension PushKitDelegate: PKPushRegistryDelegate {
                 self.middleware.respond(payload: payload, available: true)
             } else {
                 self.middleware.respond(payload: payload, available: false, reason: UnavailableReason.unableToRegister)
-            }            
+            }
         }
     }
 
     var token: String? {
         get {
             guard let token = voipRegistry.pushToken(for: PKPushType.voIP) else {
+                print("TEST123 Push token nil")
                 return nil
             }
+            print("TEST123 token=\(token)")
 
             return String(apnsToken: token)
         }
@@ -73,6 +83,7 @@ extension PushKitDelegate: PKPushRegistryDelegate {
 
         middleware.tokenReceived(token: token)
     }
+    
 }
 
 extension String {

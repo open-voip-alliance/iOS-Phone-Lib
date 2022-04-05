@@ -197,6 +197,7 @@ extension IOSCallKit: CXProviderDelegate {
     }
 
     public func provider(_ provider: CXProvider, perform action: CXStartCallAction) {
+        print("TEST - \(action.handle.value)")
         if let number = action.handle.value as? String {
             self.voipLib.call(to: number)
             action.fulfill()
