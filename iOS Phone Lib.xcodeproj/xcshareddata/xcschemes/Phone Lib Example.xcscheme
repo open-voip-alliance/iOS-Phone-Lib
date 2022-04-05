@@ -60,38 +60,6 @@
             ReferencedContainer = "container:iOS Phone Lib.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
-      <EnvironmentVariables>
-         <EnvironmentVariable
-            key = "pil.default.username"
-            value = "169710067"
-            isEnabled = "YES">
-         </EnvironmentVariable>
-         <EnvironmentVariable
-            key = "pil.default.voipgrid.username"
-            value = "jeremy6@wearespindle.com"
-            isEnabled = "YES">
-         </EnvironmentVariable>
-         <EnvironmentVariable
-            key = "pil.default.voipgrid.password"
-            value = "jeremy37483"
-            isEnabled = "YES">
-         </EnvironmentVariable>
-         <EnvironmentVariable
-            key = "pil.default.password"
-            value = "aQuAh3L9DX5AvN5"
-            isEnabled = "YES">
-         </EnvironmentVariable>
-         <EnvironmentVariable
-            key = "pil.default.domain"
-            value = "sip.encryptedsip.com"
-            isEnabled = "YES">
-         </EnvironmentVariable>
-         <EnvironmentVariable
-            key = "pil.default.port"
-            value = "5061"
-            isEnabled = "YES">
-         </EnvironmentVariable>
-      </EnvironmentVariables>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
