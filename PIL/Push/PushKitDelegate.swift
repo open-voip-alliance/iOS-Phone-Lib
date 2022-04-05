@@ -38,7 +38,7 @@ extension PushKitDelegate: PKPushRegistryDelegate {
         
         pil.iOSCallKit.reportIncomingCall(detail: IncomingPayloadCallDetail(phoneNumber: "0123123123", callerId: "test123"))
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             self.handle(payload: payload, for: type, completion: completion)
         }
     }
