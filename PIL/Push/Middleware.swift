@@ -14,8 +14,6 @@ public protocol Middleware {
     
     func tokenReceived(token: String)
     
-    func extractCallDetail(from payload: PKPushPayload) -> IncomingPayloadCallDetail
-    
     /// View the content of the push message before it is processed.
     func inspect(payload: PKPushPayload, type: PKPushType)
 }
@@ -23,15 +21,5 @@ public protocol Middleware {
 public extension Middleware {
     func respond(payload: PKPushPayload, available: Bool, reason: UnavailableReason? = nil) {
         respond(payload: payload, available: available, reason: reason)
-    }
-}
-
-public struct IncomingPayloadCallDetail {
-    public let phoneNumber: String
-    public let callerId: String
-    
-    public init(phoneNumber: String, callerId: String) {
-        self.phoneNumber = phoneNumber
-        self.callerId = callerId
     }
 }
