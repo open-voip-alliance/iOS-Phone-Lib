@@ -39,6 +39,12 @@ public class PIL {
         }
     }
     
+    internal var isRegistered: Bool {
+        get {
+            voipLib.isRegistered
+        }
+    }
+    
     static public var shared: PIL?
     
     /// The user preferences for the PIL, when this value is updated it will trigger
