@@ -19,9 +19,8 @@ class PushKitDelegate: NSObject {
     func registerForVoipPushes() {
         voipRegistry.delegate = self
         voipRegistry.desiredPushTypes = [.voIP]
-print("REGISTERING FOR PUSH")
+
         if let token = token {
-            print("TOKEN received?")
             middleware.tokenReceived(token: token)
         }
     }
@@ -36,12 +35,14 @@ extension PushKitDelegate: PKPushRegistryDelegate {
             return
         }
         
-        pil.iOSCallKit.reportIncomingCall(detail: IncomingPayloadCallDetail(phoneNumber: "...", callerId: "..."))
+        pil.iOSCallKit.reportIncomingCall(
+            phoneNumber: payload.dictionaryPayload[pil.app.pushKitPhoneNumberKey] as? String ?? "",
+            callerName: payload.dictionaryPayload[pil.app.pushKitCallerNameKey] as? String ?? ""
+        )
         
-        DispatchQueue.main.async {
-            while(!self.pil.isRegistered) {
-                self.handle(payload: payload, for: type, completion: completion)
-            }
+        /// We will delay briefly to let the library initialize in the AppDelegate
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            self.handle(payload: payload, for: type, completion: completion)
         }
     }
     
@@ -73,10 +74,8 @@ extension PushKitDelegate: PKPushRegistryDelegate {
     var token: String? {
         get {
             guard let token = voipRegistry.pushToken(for: PKPushType.voIP) else {
-                print("TEST123 Push token nil")
                 return nil
             }
-            print("TEST123 token=\(token)")
 
             return String(apnsToken: token)
         }

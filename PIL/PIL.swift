@@ -93,12 +93,11 @@ public class PIL {
     ///   - forceReregister: a Bool to determine the voipLib will re-register.
     ///   - completion:  Called with param success when the PIL has been started.
     public func start(forceInitialize: Bool = false, forceReregister: Bool = false, completion: ((_ success: Bool) -> Void)? = nil) {
-        print("TEST123 START")
         guard let auth = auth else {
             print("There are not authentication details provided")
             return
         }
-print("TEST123 INITASDASe")
+
         pushKit.registerForVoipPushes()
         iOSCallKit.initialize()
 

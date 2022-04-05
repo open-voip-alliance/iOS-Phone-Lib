@@ -65,17 +65,17 @@ class IOSCallKit: NSObject {
         return providerConfiguration
     }
 
-    func reportIncomingCall(detail: IncomingPayloadCallDetail) {
+    func reportIncomingCall(phoneNumber: String, callerName: String) {
         self.pil.writeLog("Reporting incoming call!")
         
         let update = CXCallUpdate()
 
         update.remoteHandle = CXHandle(
                 type: CXHandle.HandleType.phoneNumber,
-                value: detail.phoneNumber
+                value: phoneNumber
         )
         
-        update.localizedCallerName = detail.callerId
+        update.localizedCallerName = callerName
         
         provider.reportNewIncomingCall(with: UUID.init(), update: update) { error in
             if error != nil {
@@ -197,7 +197,6 @@ extension IOSCallKit: CXProviderDelegate {
     }
 
     public func provider(_ provider: CXProvider, perform action: CXStartCallAction) {
-        print("TEST - \(action.handle.value)")
         if let number = action.handle.value as? String {
             self.voipLib.call(to: number)
             action.fulfill()

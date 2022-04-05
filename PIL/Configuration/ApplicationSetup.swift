@@ -10,18 +10,24 @@ public struct ApplicationSetup {
     public let userAgent: String
     public let logDelegate: LogDelegate?
     public let notifyOnMissedCall: Bool
+    public let pushKitPhoneNumberKey: String
+    public let pushKitCallerNameKey: String
     
     public init(
         middleware: Middleware? = nil,
         requestCallUi: @escaping () -> Void,
         userAgent: String = "iOS PIL",
         logDelegate: LogDelegate? = nil,
-        notifyOnMissedCall: Bool = true
+        notifyOnMissedCall: Bool = true,
+        pushKitPhoneNumberKey: String = "phonenumber",
+        pushKitCallerNameKey: String = "caller_id"
     ) {
         self.middleware = middleware
         self.userAgent = userAgent
         self.requestCallUi = requestCallUi
         self.logDelegate = logDelegate
         self.notifyOnMissedCall = notifyOnMissedCall
+        self.pushKitPhoneNumberKey = pushKitPhoneNumberKey
+        self.pushKitCallerNameKey = pushKitCallerNameKey
     }
 }

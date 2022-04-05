@@ -120,13 +120,6 @@ class VoIPGRIDMiddleware: Middleware {
         }
     }
     
-    public func extractCallDetail(from payload: PKPushPayload) -> IncomingPayloadCallDetail {
-        return IncomingPayloadCallDetail(
-            phoneNumber: payload.dictionaryPayload["phonenumber"] as? String ?? "",
-            callerId: payload.dictionaryPayload["caller_id"] as? String ?? ""
-        )
-    }
-    
     internal func createAuthHeader() -> HTTPHeaders {
         let username = defaults.object(forKey: "voipgrid_username") as? String ?? ""
         let apiToken = defaults.object(forKey: "voipgrid_api_token") as? String ?? ""
