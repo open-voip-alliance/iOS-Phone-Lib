@@ -30,27 +30,28 @@ print("REGISTERING FOR PUSH")
 extension PushKitDelegate: PKPushRegistryDelegate {
 
     public func pushRegistry(_ registry: PKPushRegistry, didReceiveIncomingPushWith payload: PKPushPayload, for type: PKPushType, completion: @escaping () -> ()) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            self.handle(payload: payload, for: type, completion: completion)
+        if type != .voIP {
+            pil.writeLog("Received a non-VoIP push message. Halting processing.")
             completion()
+            return
+        }
+        
+        pil.iOSCallKit.reportIncomingCall(detail: IncomingPayloadCallDetail(phoneNumber: "0123123123", callerId: "test123"))
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            self.handle(payload: payload, for: type, completion: completion)
         }
     }
     
     private func handle(payload: PKPushPayload, for type: PKPushType, completion: @escaping () -> ()) {
         self.middleware.inspect(payload: payload, type: type)
-        
-        if type != .voIP {
-            pil.writeLog("Received a non-VoIP push message. Halting processing.")
-            return
-        }
-        
+            
         pil.writeLog("Received a VoIP push message, starting incoming ringing.")
-        
-        pil.iOSCallKit.reportIncomingCall(detail: self.middleware.extractCallDetail(from: payload))
-        
+    
         if pil.calls.isInCall {
             pil.writeLog("Not taking call as we already have an active one!")
             self.middleware.respond(payload: payload, available: false, reason: UnavailableReason.inCall)
+            completion()
             return
         }
                 
@@ -62,6 +63,8 @@ extension PushKitDelegate: PKPushRegistryDelegate {
             } else {
                 self.middleware.respond(payload: payload, available: false, reason: UnavailableReason.unableToRegister)
             }
+            
+            completion()
         }
     }
 
