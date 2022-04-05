@@ -97,6 +97,7 @@
 		837885A027AC3FB7001A24A8 /* VoIPLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8378859527AC3FB7001A24A8 /* VoIPLib.framework */; };
 		837885A527AC3FB7001A24A8 /* VoIPLibTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837885A427AC3FB7001A24A8 /* VoIPLibTests.swift */; };
 		837885A627AC3FB7001A24A8 /* iOS_Phone_Lib.h in Headers */ = {isa = PBXBuildFile; fileRef = 8378859827AC3FB7001A24A8 /* iOS_Phone_Lib.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		838F72E527DBA3EC00B036D5 /* ringback.wav in Resources */ = {isa = PBXBuildFile; fileRef = 838F72E427DBA3EB00B036D5 /* ringback.wav */; };
 		841E15529B05F768B86EC3D7 /* Pods_VoIPLibTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CBEBAA54905A49DD3611199 /* Pods_VoIPLibTests.framework */; };
 		A704AF371012E8E36FC46286 /* Pods_Phone_Lib_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65D9AD3E3770D2BEE0EA065B /* Pods_Phone_Lib_Example.framework */; };
 		CBFB9C4030C38424BEC7B30A /* Pods_PILTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F39A691A704F6894F623920 /* Pods_PILTests.framework */; };
@@ -233,6 +234,7 @@
 		8378859927AC3FB7001A24A8 /* iOS_Phone_Lib.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = iOS_Phone_Lib.docc; sourceTree = "<group>"; };
 		8378859F27AC3FB7001A24A8 /* VoIPLibTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VoIPLibTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		837885A427AC3FB7001A24A8 /* VoIPLibTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoIPLibTests.swift; sourceTree = "<group>"; };
+		838F72E427DBA3EB00B036D5 /* ringback.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ringback.wav; sourceTree = "<group>"; };
 		8599C633D371A85AE1915FCB /* Pods-VoIPLibTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VoIPLibTests.debug.xcconfig"; path = "Target Support Files/Pods-VoIPLibTests/Pods-VoIPLibTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9BB44126D3172F675C310BB6 /* Pods_PIL.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PIL.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CEE8DFBA1D53D5B1BDCF057 /* Pods-iOS Phone LibTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS Phone LibTests.debug.xcconfig"; path = "Target Support Files/Pods-iOS Phone LibTests/Pods-iOS Phone LibTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -431,6 +433,7 @@
 			children = (
 				8323715727C7CC060087E701 /* VoIPLib.swift */,
 				8323715827C7CC060087E701 /* Actions.swift */,
+				8394503E27F6221A000CFAA8 /* Resources */,
 				8323715427C7CC060087E701 /* Config */,
 				8323716227C7CC060087E701 /* Error */,
 				8323716427C7CC060087E701 /* Managers */,
@@ -698,6 +701,14 @@
 			path = VoIPLibTests;
 			sourceTree = "<group>";
 		};
+		8394503E27F6221A000CFAA8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				838F72E427DBA3EB00B036D5 /* ringback.wav */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -897,6 +908,7 @@
 				835D833827BD61E100A7B5DD /* dtmf-3.aif in Resources */,
 				835D833027BD61E100A7B5DD /* dtmf-7.aif in Resources */,
 				835D833227BD61E100A7B5DD /* dtmf-4.aif in Resources */,
+				838F72E527DBA3EC00B036D5 /* ringback.wav in Resources */,
 				835D833327BD61E100A7B5DD /* dtmf-#.aif in Resources */,
 				835D833127BD61E100A7B5DD /* dtmf-6.aif in Resources */,
 				835D833A27BD61E100A7B5DD /* dtmf-8.aif in Resources */,
