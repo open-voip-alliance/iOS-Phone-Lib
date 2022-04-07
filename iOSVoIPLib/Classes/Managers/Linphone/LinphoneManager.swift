@@ -49,7 +49,21 @@ class LinphoneManager: SipManagerProtocol, LoggingServiceDelegate {
     var isSpeakerOn: Bool {
         AVAudioSession.sharedInstance().currentRoute.outputs.contains(where: { $0.portType == AVAudioSession.Port.builtInSpeaker })
     }
+    
+    private var ringbackPath: String {
+        let ringbackFileName = "ringback"
+                
+        let customBundle = Bundle(for: Self.self)
 
+        guard let resourceURL = customBundle.resourceURL?.appendingPathComponent("Resources.bundle") else { return "" }
+
+        guard let resourceBundle = Bundle(url: resourceURL) else { return "" }
+
+        guard let ringbackFileURL = resourceBundle.url( forResource: ringbackFileName , withExtension: "wav") else { return "" }
+        
+        return ringbackFileURL.path
+    }
+    
     func initialize(config: Config) -> Bool {
         self.config = config
 
@@ -88,6 +102,7 @@ class LinphoneManager: SipManagerProtocol, LoggingServiceDelegate {
             transports.tcpPort = 0
         }
         core.setUserAgent(name: config?.userAgent, version: nil)
+        core.ringback = ringbackPath        
         core.pushNotificationEnabled = false
         core.callkitEnabled = false
         core.ipv6Enabled = false
