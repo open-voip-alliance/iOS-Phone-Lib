@@ -1,6 +1,6 @@
 PODS:
   - Alamofire (5.5.0)
-  - iOSVoIPLib (0.1.0):
+  - iOSVoIPLib (0.1.1):
     - linphone-sdk (= 5.1.10)
   - linphone-sdk (5.1.10):
     - linphone-sdk/all-frameworks (= 5.1.10)
@@ -50,7 +50,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Alamofire: 1c4fb5369c3fe93d2857c780d8bbe09f06f97e7c
-  iOSVoIPLib: cf89b4b24e7d53d967b07f446c53ed4b4c83e187
+  iOSVoIPLib: 029718ce59664cc0e1d12e5657f0716d68e3dabf
   linphone-sdk: c296697bc33e187d32ee7a7ad350ec7cbfd4ea30
   PIL: a5e8bc3c52e98c374c2b68afd71b1b7703220425
   QuickTableViewController: 25e698de1546c2b829c543d91b64ebc6e884acfc
