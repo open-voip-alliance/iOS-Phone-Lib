@@ -382,22 +382,24 @@ class LinphoneManager: SipManagerProtocol, LoggingServiceDelegate {
             logVoIPLib(message: "Sending dtmf failed: \(error)")
             return
         }
-
-        do {
-            try call.pause()
-        } catch {
-            return
-        }
         
-        let resume = {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
             do {
-                try call.resume()
-            } catch {}
+                try call.pause()
+            } catch {
+                return
+            }
+            
+            let resume = {
+                do {
+                    try call.resume()
+                } catch {}
+            }
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1, execute: resume)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3, execute: resume)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: resume)
         }
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1, execute: resume)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2, execute: resume)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: resume)
     }
     
     /// Provide human readable call info
