@@ -15,7 +15,6 @@ Pod::Spec.new do |s|
 
     s.source_files = 'iOSVoIPLib/Classes/**/*'
 
-    s.dependency 'linphone-sdk', '5.1.10'
-    
-    s.resource_bundles = { 'Resources' => ['iOSVoIPLib/Resources'] }
+    s.dependency 'linphone-sdk-novideo', '5.1.15'
+  
 end
