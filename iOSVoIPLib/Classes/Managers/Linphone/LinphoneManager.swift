@@ -364,20 +364,40 @@ class LinphoneManager: SipManagerProtocol, LoggingServiceDelegate {
     }
     
     func sendDtmf(call:Call, dtmf: String) {
-        if dtmf.count == 1 {
-            do {
-                let dtmfDigit = dtmf.utf8CString[0]
-                try call.linphoneCall.sendDtmf(dtmf: dtmfDigit)
-            } catch (let error) {
-                logVoIPLib(message: "Sending dtmf failed: \(error)")
-            }
-        } else {
-            do {
-                try call.linphoneCall.sendDtmfs(dtmfs: dtmf)
-            } catch (let error) {
-                logVoIPLib(message: "Sending dtmfs failed: \(error)")
-            }
+        do {
+            sendDtmfWithLinphoneBugWorkAround(call: call, dtmf: dtmf)
+        } catch (let error) {
+            logVoIPLib(message: "Sending dtmf failed: \(error)")
         }
+    }
+    
+    /// There exists a bug that kills the audio session when dtmf is sent, this workaround will hold and
+    /// immediately resume the call.
+    ///
+    /// There is an open issue with Linphone: [https://github.com/BelledonneCommunications/linphone-iphone/issues/820]
+    private func sendDtmfWithLinphoneBugWorkAround(call: Call, dtmf: String) {
+        do {
+            try call.linphoneCall.sendDtmfs(dtmfs: dtmf)
+        } catch (let error) {
+            logVoIPLib(message: "Sending dtmf failed: \(error)")
+            return
+        }
+
+        do {
+            try call.pause()
+        } catch {
+            return
+        }
+        
+        let resume = {
+            do {
+                try call.resume()
+            } catch {}
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1, execute: resume)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2, execute: resume)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: resume)
     }
     
     /// Provide human readable call info
