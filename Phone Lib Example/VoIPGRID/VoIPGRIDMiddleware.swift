@@ -29,7 +29,7 @@ class VoIPGRIDMiddleware: Middleware {
                 "name" : username,
                 "token" : pushKitToken,
                 "sip_user_id" : sipUserId,
-                "app" : "com.voipgrid.PhoneLibExample",
+                "app" : "com.voipgrid.iOSPhoneLibExample",
                 "push_profile" : "once",
                 "sandbox" : "true"
             ],
@@ -55,7 +55,7 @@ class VoIPGRIDMiddleware: Middleware {
             parameters: [
                 "token" : pushKitToken,
                 "sip_user_id" : sipUserId,
-                "app" : "com.voipgrid.PhoneLibExample"
+                "app" : "com.voipgrid.iOSPhoneLibExample"
             ],
             headers: createAuthHeader()
         ).response { response in
