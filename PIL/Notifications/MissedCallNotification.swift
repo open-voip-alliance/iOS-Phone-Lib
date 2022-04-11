@@ -20,14 +20,9 @@ class MissedCallNotification {
     func notify(call: Call) {
         log("Requesting notification authorization")
         
-        center.requestAuthorization(options: [.alert, .sound, .badge, .provisional]) { granted, error in
-            if let error = error {
-                log("Unable to notify of missed call: \(error)", level: .warning)
-                return
-            }
-            
-            if !granted {
-                log("Unable to notify as permission not granted")
+        center.getNotificationSettings { (settings) in
+            if settings.authorizationStatus != .authorized {
+                log("We do not have authorization to create a missed calls notification")
                 return
             }
             
