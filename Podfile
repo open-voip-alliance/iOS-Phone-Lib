@@ -6,7 +6,7 @@ source 'https://gitlab.linphone.org/BC/public/podspec.git'
 source 'https://github.com/CocoaPods/Specs.git'
 
 target 'VoIPLib' do
-  pod 'linphone-sdk-novideo', '5.1.15'
+  pod 'linphone-sdk', '5.0.70'
 
   target 'VoIPLibTests' do
     inherit! :search_paths
