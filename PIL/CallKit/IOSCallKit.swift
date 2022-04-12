@@ -56,8 +56,7 @@ class IOSCallKit: NSObject {
             providerConfiguration.includesCallsInRecents = pil.preferences.includesCallsInRecents
             
             if pil.preferences.useApplicationRingtone {
-                if let ringtonePath = Bundle.main.path(forResource: "phone_integration_lib_call_kit_ringtone", ofType: "wav") {
-                    print("TEST123 We have resource!!! \(ringtonePath)")
+                if let ringtonePath = Bundle.main.path(forResource: "ringtone", ofType: "caf") {
                     providerConfiguration.ringtoneSound = ringtonePath
                 }
             }
