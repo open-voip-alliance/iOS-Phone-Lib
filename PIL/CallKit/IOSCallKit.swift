@@ -56,9 +56,9 @@ class IOSCallKit: NSObject {
             providerConfiguration.includesCallsInRecents = pil.preferences.includesCallsInRecents
             
             if pil.preferences.useApplicationRingtone {
-                if Bundle.main.path(forResource: "phone_integration_lib_call_kit_ringtone", ofType: "wav") != nil {
-                    providerConfiguration.ringtoneSound = "phone_integration_lib_call_kit_ringtone.wav"
-                }
+                providerConfiguration.ringtoneSound = "ringtone"
+            } else {
+                providerConfiguration.ringtoneSound = nil
             }
         }
         
