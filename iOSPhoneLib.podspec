@@ -1,6 +1,11 @@
 Pod::Spec.new do |s|
     
-    s.name             = 'iOSVoIPLib'
+    s.platform = :ios
+    s.ios.deployment_target = '12.0'
+    s.requires_arc = true
+    s.swift_version = "5"
+    
+    s.name             = 'iOSPhoneLib'
     s.version          = '0.1.1'
     s.summary          = 'Allow for easy implementation of SIP into a swift project.'
 
@@ -8,13 +13,15 @@ Pod::Spec.new do |s|
 
     s.homepage         = 'https://gitlab.wearespindle.com/vialer/mobile/voip/ios-phone-lib'
     s.license          = { :type => 'AGPL', :file => 'LICENSE' }
-    s.author           = { 'jeremynorman89' => 'jeremy.norman@wearespindle.com' }
+    s.author           = { "Chris Kontos" => "chris.kontos@wearespindle.com" }
     s.source           = { :git => 'https://gitlab.wearespindle.com/vialer/mobile/voip/ios-phone-lib.git', :tag => s.version.to_s }
 
     s.ios.deployment_target = '11.3'
 
-    s.source_files = 'iOSVoIPLib/Classes/**/*'
+    s.source_files = 'iOS Phone Lib/Classes/**/*'
 
     s.dependency 'linphone-sdk', '5.0.70'
+    s.framework = "UIKit"
+    s.dependency 'Swinject', '~> 2.7.1'
   
 end

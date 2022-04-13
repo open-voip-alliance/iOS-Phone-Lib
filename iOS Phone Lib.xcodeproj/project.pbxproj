@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3F4CFAB2CA3C4CA0C0C2CCB5 /* Pods_Phone_Lib_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 507146CEF6E4C713891792B4 /* Pods_Phone_Lib_Example.framework */; };
+		2A3FFCD6E25CDAF7199CB709 /* Pods_iOSPhoneLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 549D85B4AC91A2A595A667E2 /* Pods_iOSPhoneLib.framework */; };
+		4C9A78E2EC96E6AAA6428B1C /* Pods_Phone_Lib_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5FA638F1A3D665AB52BA014 /* Pods_Phone_Lib_Example.framework */; };
 		5C6C81122806DA2500EE2919 /* iOS_Phone_Lib.docc in Sources */ = {isa = PBXBuildFile; fileRef = 5C6C81112806DA2500EE2919 /* iOS_Phone_Lib.docc */; };
 		5C6C81132806DA2500EE2919 /* iOS_Phone_Lib.h in Headers */ = {isa = PBXBuildFile; fileRef = 5C6C81102806DA2500EE2919 /* iOS_Phone_Lib.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5C6C81162806DA2500EE2919 /* iOS_Phone_Lib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C6C810E2806DA2500EE2919 /* iOS_Phone_Lib.framework */; };
-		5C6C81172806DA2500EE2919 /* iOS_Phone_Lib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5C6C810E2806DA2500EE2919 /* iOS_Phone_Lib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5C6C81162806DA2500EE2919 /* iOSPhoneLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C6C810E2806DA2500EE2919 /* iOSPhoneLib.framework */; };
+		5C6C81172806DA2500EE2919 /* iOSPhoneLib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5C6C810E2806DA2500EE2919 /* iOSPhoneLib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5C6C811C2806DE9E00EE2919 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835D82F827BD61E000A7B5DD /* AudioManager.swift */; };
 		5C6C811D2806DE9E00EE2919 /* AudioRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835D82F927BD61E000A7B5DD /* AudioRoute.swift */; };
 		5C6C811E2806DE9E00EE2919 /* dtmf-7.aif in Sources */ = {isa = PBXBuildFile; fileRef = 835D82FB27BD61E000A7B5DD /* dtmf-7.aif */; };
@@ -74,7 +75,6 @@
 		5C6C815A2806DE9E00EE2919 /* CallDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8323715227C7CC060087E701 /* CallDelegate.swift */; };
 		5C6C815B2806DE9E00EE2919 /* RegistrationStateDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8323715327C7CC060087E701 /* RegistrationStateDelegate.swift */; };
 		5C6C815C2806DE9E00EE2919 /* RegistrationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8323716927C7CC060087E701 /* RegistrationState.swift */; };
-		73A86D56440E829C737DCBD2 /* Pods_iOS_Phone_Lib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A46CAD0C4DE3E4D52B0F54C /* Pods_iOS_Phone_Lib.framework */; };
 		8323712727C6B5210087E701 /* InCallDialpadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8323711F27C6B5210087E701 /* InCallDialpadViewController.swift */; };
 		8323712827C6B5210087E701 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8323712027C6B5210087E701 /* Assets.xcassets */; };
 		8323712927C6B5210087E701 /* CallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8323712127C6B5210087E701 /* CallViewController.swift */; };
@@ -109,7 +109,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				5C6C81172806DA2500EE2919 /* iOS_Phone_Lib.framework in Embed Frameworks */,
+				5C6C81172806DA2500EE2919 /* iOSPhoneLib.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -117,13 +117,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		2E7455BB745AB8C93D97A125 /* Pods-VoIPLibTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VoIPLibTests.release.xcconfig"; path = "Target Support Files/Pods-VoIPLibTests/Pods-VoIPLibTests.release.xcconfig"; sourceTree = "<group>"; };
-		507146CEF6E4C713891792B4 /* Pods_Phone_Lib_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Phone_Lib_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5C6C810E2806DA2500EE2919 /* iOS_Phone_Lib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = iOS_Phone_Lib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E206ED3595B3D411D940251 /* Pods-Phone Lib Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Phone Lib Example.debug.xcconfig"; path = "Target Support Files/Pods-Phone Lib Example/Pods-Phone Lib Example.debug.xcconfig"; sourceTree = "<group>"; };
+		549D85B4AC91A2A595A667E2 /* Pods_iOSPhoneLib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSPhoneLib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A2FC7EDC2BB4E95CE939375 /* Pods-Phone Lib Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Phone Lib Example.release.xcconfig"; path = "Target Support Files/Pods-Phone Lib Example/Pods-Phone Lib Example.release.xcconfig"; sourceTree = "<group>"; };
+		5C6C810E2806DA2500EE2919 /* iOSPhoneLib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = iOSPhoneLib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C6C81102806DA2500EE2919 /* iOS_Phone_Lib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iOS_Phone_Lib.h; sourceTree = "<group>"; };
 		5C6C81112806DA2500EE2919 /* iOS_Phone_Lib.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = iOS_Phone_Lib.docc; sourceTree = "<group>"; };
-		6A46CAD0C4DE3E4D52B0F54C /* Pods_iOS_Phone_Lib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_Phone_Lib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		735B7CA3C6F581F606317ACD /* Pods-iOS Phone Lib.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS Phone Lib.debug.xcconfig"; path = "Target Support Files/Pods-iOS Phone Lib/Pods-iOS Phone Lib.debug.xcconfig"; sourceTree = "<group>"; };
 		8323711F27C6B5210087E701 /* InCallDialpadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InCallDialpadViewController.swift; sourceTree = "<group>"; };
 		8323712027C6B5210087E701 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8323712127C6B5210087E701 /* CallViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallViewController.swift; sourceTree = "<group>"; };
@@ -148,7 +147,7 @@
 		8323716327C7CC060087E701 /* InitializationError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitializationError.swift; sourceTree = "<group>"; };
 		8323716727C7CC060087E701 /* LinphoneManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinphoneManager.swift; sourceTree = "<group>"; };
 		8323716927C7CC060087E701 /* RegistrationState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationState.swift; sourceTree = "<group>"; };
-		835D7BA427B2E37800A7B5DD /* iOSVoIPLib.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = iOSVoIPLib.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		835D7BA427B2E37800A7B5DD /* iOSPhoneLib.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = iOSPhoneLib.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		835D7BA527B2E37800A7B5DD /* VoIPLib-README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "VoIPLib-README.md"; sourceTree = "<group>"; };
 		835D7BA627B2E37800A7B5DD /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		835D7C0127BAC7A200A7B5DD /* Phone Lib Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Phone Lib Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -164,7 +163,6 @@
 		835D82C627BAC9A000A7B5DD /* PIL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PIL.h; sourceTree = "<group>"; };
 		835D82C727BAC9A000A7B5DD /* PIL.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = PIL.docc; sourceTree = "<group>"; };
 		835D82E227BD3B6900A7B5DD /* PIL-README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "PIL-README.md"; sourceTree = "<group>"; };
-		835D82E327BD3B6900A7B5DD /* PIL.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PIL.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		835D82E727BD61DF00A7B5DD /* LogDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogDelegate.swift; sourceTree = "<group>"; };
 		835D82E827BD61DF00A7B5DD /* LogLevel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogLevel.swift; sourceTree = "<group>"; };
 		835D82E927BD61E000A7B5DD /* Builder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
@@ -214,11 +212,9 @@
 		8378859827AC3FB7001A24A8 /* iOS_Phone_Lib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iOS_Phone_Lib.h; sourceTree = "<group>"; };
 		8378859927AC3FB7001A24A8 /* iOS_Phone_Lib.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = iOS_Phone_Lib.docc; sourceTree = "<group>"; };
 		837885A427AC3FB7001A24A8 /* VoIPLibTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoIPLibTests.swift; sourceTree = "<group>"; };
-		ABE3BB21E6775167AE4A5829 /* Pods-VoIPLibTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VoIPLibTests.debug.xcconfig"; path = "Target Support Files/Pods-VoIPLibTests/Pods-VoIPLibTests.debug.xcconfig"; sourceTree = "<group>"; };
-		B50C1247B38610B438F070FF /* Pods-Phone Lib Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Phone Lib Example.release.xcconfig"; path = "Target Support Files/Pods-Phone Lib Example/Pods-Phone Lib Example.release.xcconfig"; sourceTree = "<group>"; };
-		DF795A7DD9EE750540F9098E /* Pods-iOS Phone Lib.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS Phone Lib.release.xcconfig"; path = "Target Support Files/Pods-iOS Phone Lib/Pods-iOS Phone Lib.release.xcconfig"; sourceTree = "<group>"; };
-		EEF556409282B9BC2B09DF45 /* Pods-Phone Lib Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Phone Lib Example.debug.xcconfig"; path = "Target Support Files/Pods-Phone Lib Example/Pods-Phone Lib Example.debug.xcconfig"; sourceTree = "<group>"; };
-		EFB2B4D84BC123C6AC5466E6 /* Pods_VoIPLibTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VoIPLibTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		97867E611CEC258780393957 /* Pods-iOSPhoneLib.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSPhoneLib.debug.xcconfig"; path = "Target Support Files/Pods-iOSPhoneLib/Pods-iOSPhoneLib.debug.xcconfig"; sourceTree = "<group>"; };
+		9A8312AE1F347CE9AA9EF1D8 /* Pods-iOSPhoneLib.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSPhoneLib.release.xcconfig"; path = "Target Support Files/Pods-iOSPhoneLib/Pods-iOSPhoneLib.release.xcconfig"; sourceTree = "<group>"; };
+		E5FA638F1A3D665AB52BA014 /* Pods_Phone_Lib_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Phone_Lib_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -226,7 +222,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				73A86D56440E829C737DCBD2 /* Pods_iOS_Phone_Lib.framework in Frameworks */,
+				2A3FFCD6E25CDAF7199CB709 /* Pods_iOSPhoneLib.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,8 +230,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C6C81162806DA2500EE2919 /* iOS_Phone_Lib.framework in Frameworks */,
-				3F4CFAB2CA3C4CA0C0C2CCB5 /* Pods_Phone_Lib_Example.framework in Frameworks */,
+				5C6C81162806DA2500EE2919 /* iOSPhoneLib.framework in Frameworks */,
+				4C9A78E2EC96E6AAA6428B1C /* Pods_Phone_Lib_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,24 +241,12 @@
 		26FA3952D0EBD336A20443B6 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				EEF556409282B9BC2B09DF45 /* Pods-Phone Lib Example.debug.xcconfig */,
-				B50C1247B38610B438F070FF /* Pods-Phone Lib Example.release.xcconfig */,
-				ABE3BB21E6775167AE4A5829 /* Pods-VoIPLibTests.debug.xcconfig */,
-				2E7455BB745AB8C93D97A125 /* Pods-VoIPLibTests.release.xcconfig */,
-				735B7CA3C6F581F606317ACD /* Pods-iOS Phone Lib.debug.xcconfig */,
-				DF795A7DD9EE750540F9098E /* Pods-iOS Phone Lib.release.xcconfig */,
+				4E206ED3595B3D411D940251 /* Pods-Phone Lib Example.debug.xcconfig */,
+				5A2FC7EDC2BB4E95CE939375 /* Pods-Phone Lib Example.release.xcconfig */,
+				97867E611CEC258780393957 /* Pods-iOSPhoneLib.debug.xcconfig */,
+				9A8312AE1F347CE9AA9EF1D8 /* Pods-iOSPhoneLib.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		511D328710400A3E70270257 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				507146CEF6E4C713891792B4 /* Pods_Phone_Lib_Example.framework */,
-				EFB2B4D84BC123C6AC5466E6 /* Pods_VoIPLibTests.framework */,
-				6A46CAD0C4DE3E4D52B0F54C /* Pods_iOS_Phone_Lib.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		5C6C810F2806DA2500EE2919 /* iOS Phone Lib */ = {
@@ -593,8 +577,7 @@
 		8378858B27AC3FB7001A24A8 = {
 			isa = PBXGroup;
 			children = (
-				835D7BA427B2E37800A7B5DD /* iOSVoIPLib.podspec */,
-				835D82E327BD3B6900A7B5DD /* PIL.podspec */,
+				835D7BA427B2E37800A7B5DD /* iOSPhoneLib.podspec */,
 				835D82E227BD3B6900A7B5DD /* PIL-README.md */,
 				835D7BA527B2E37800A7B5DD /* VoIPLib-README.md */,
 				835D7BA627B2E37800A7B5DD /* LICENSE */,
@@ -605,7 +588,7 @@
 				5C6C810F2806DA2500EE2919 /* iOS Phone Lib */,
 				8378859627AC3FB7001A24A8 /* Products */,
 				26FA3952D0EBD336A20443B6 /* Pods */,
-				511D328710400A3E70270257 /* Frameworks */,
+				F8CC64FBFC7FA7EE3C1903B2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -613,7 +596,7 @@
 			isa = PBXGroup;
 			children = (
 				835D7C0127BAC7A200A7B5DD /* Phone Lib Example.app */,
-				5C6C810E2806DA2500EE2919 /* iOS_Phone_Lib.framework */,
+				5C6C810E2806DA2500EE2919 /* iOSPhoneLib.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -637,6 +620,15 @@
 			path = VoIPLibTests;
 			sourceTree = "<group>";
 		};
+		F8CC64FBFC7FA7EE3C1903B2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E5FA638F1A3D665AB52BA014 /* Pods_Phone_Lib_Example.framework */,
+				549D85B4AC91A2A595A667E2 /* Pods_iOSPhoneLib.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -651,11 +643,11 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		5C6C810D2806DA2500EE2919 /* iOS Phone Lib */ = {
+		5C6C810D2806DA2500EE2919 /* iOSPhoneLib */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5C6C811B2806DA2500EE2919 /* Build configuration list for PBXNativeTarget "iOS Phone Lib" */;
+			buildConfigurationList = 5C6C811B2806DA2500EE2919 /* Build configuration list for PBXNativeTarget "iOSPhoneLib" */;
 			buildPhases = (
-				417DFFC498689A58C0FFA33D /* [CP] Check Pods Manifest.lock */,
+				463CAA4F2BD095EF688D69DE /* [CP] Check Pods Manifest.lock */,
 				5C6C81092806DA2500EE2919 /* Headers */,
 				5C6C810A2806DA2500EE2919 /* Sources */,
 				5C6C810B2806DA2500EE2919 /* Frameworks */,
@@ -665,21 +657,21 @@
 			);
 			dependencies = (
 			);
-			name = "iOS Phone Lib";
+			name = iOSPhoneLib;
 			productName = "iOS Phone Lib";
-			productReference = 5C6C810E2806DA2500EE2919 /* iOS_Phone_Lib.framework */;
+			productReference = 5C6C810E2806DA2500EE2919 /* iOSPhoneLib.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		835D7C0027BAC7A200A7B5DD /* Phone Lib Example */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 835D7C1427BAC7A300A7B5DD /* Build configuration list for PBXNativeTarget "Phone Lib Example" */;
 			buildPhases = (
-				51B5CAEF7111328A37744A06 /* [CP] Check Pods Manifest.lock */,
+				6AEC927707A27A074FA87601 /* [CP] Check Pods Manifest.lock */,
 				835D7BFD27BAC7A200A7B5DD /* Sources */,
 				835D7BFE27BAC7A200A7B5DD /* Frameworks */,
 				835D7BFF27BAC7A200A7B5DD /* Resources */,
 				5C6C81182806DA2500EE2919 /* Embed Frameworks */,
-				E846DD397ECC9695976913BA /* [CP] Embed Pods Frameworks */,
+				67FE3FEB3680FCC38B931271 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -724,7 +716,7 @@
 			projectRoot = "";
 			targets = (
 				835D7C0027BAC7A200A7B5DD /* Phone Lib Example */,
-				5C6C810D2806DA2500EE2919 /* iOS Phone Lib */,
+				5C6C810D2806DA2500EE2919 /* iOSPhoneLib */,
 			);
 		};
 /* End PBXProject section */
@@ -753,7 +745,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		417DFFC498689A58C0FFA33D /* [CP] Check Pods Manifest.lock */ = {
+		463CAA4F2BD095EF688D69DE /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -768,14 +760,31 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-iOS Phone Lib-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-iOSPhoneLib-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		51B5CAEF7111328A37744A06 /* [CP] Check Pods Manifest.lock */ = {
+		67FE3FEB3680FCC38B931271 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Phone Lib Example/Pods-Phone Lib Example-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Phone Lib Example/Pods-Phone Lib Example-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Phone Lib Example/Pods-Phone Lib Example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6AEC927707A27A074FA87601 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -795,23 +804,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E846DD397ECC9695976913BA /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Phone Lib Example/Pods-Phone Lib Example-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Phone Lib Example/Pods-Phone Lib Example-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Phone Lib Example/Pods-Phone Lib Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -908,7 +900,7 @@
 /* Begin PBXTargetDependency section */
 		5C6C81152806DA2500EE2919 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 5C6C810D2806DA2500EE2919 /* iOS Phone Lib */;
+			target = 5C6C810D2806DA2500EE2919 /* iOSPhoneLib */;
 			targetProxy = 5C6C81142806DA2500EE2919 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -927,7 +919,7 @@
 /* Begin XCBuildConfiguration section */
 		5C6C81192806DA2500EE2919 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 735B7CA3C6F581F606317ACD /* Pods-iOS Phone Lib.debug.xcconfig */;
+			baseConfigurationReference = 97867E611CEC258780393957 /* Pods-iOSPhoneLib.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -947,7 +939,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.openvoipalliance.iOS-Phone-Lib";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = iOSPhoneLib;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -957,7 +949,7 @@
 		};
 		5C6C811A2806DA2500EE2919 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DF795A7DD9EE750540F9098E /* Pods-iOS Phone Lib.release.xcconfig */;
+			baseConfigurationReference = 9A8312AE1F347CE9AA9EF1D8 /* Pods-iOSPhoneLib.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -977,7 +969,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.openvoipalliance.iOS-Phone-Lib";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = iOSPhoneLib;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -987,7 +979,7 @@
 		};
 		835D7C1227BAC7A300A7B5DD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EEF556409282B9BC2B09DF45 /* Pods-Phone Lib Example.debug.xcconfig */;
+			baseConfigurationReference = 4E206ED3595B3D411D940251 /* Pods-Phone Lib Example.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -1031,7 +1023,7 @@
 		};
 		835D7C1327BAC7A300A7B5DD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B50C1247B38610B438F070FF /* Pods-Phone Lib Example.release.xcconfig */;
+			baseConfigurationReference = 5A2FC7EDC2BB4E95CE939375 /* Pods-Phone Lib Example.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -1196,7 +1188,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5C6C811B2806DA2500EE2919 /* Build configuration list for PBXNativeTarget "iOS Phone Lib" */ = {
+		5C6C811B2806DA2500EE2919 /* Build configuration list for PBXNativeTarget "iOSPhoneLib" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5C6C81192806DA2500EE2919 /* Debug */,
