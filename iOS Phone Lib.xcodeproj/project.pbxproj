@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		084BA948D0577996BFA097BB /* Pods_PIL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7AC935ACB6E548545B5227F /* Pods_PIL.framework */; };
 		13388BD5AEEAE33F1ADD5497 /* Pods_VoIPLibTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2CB435D3FFD1F9D41BED2F1 /* Pods_VoIPLibTests.framework */; };
-		5C29867F2805C3DE00D340CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C29867E2805C3DE00D340CE /* Assets.xcassets */; };
-		5C2986812805C58300D340CE /* phone_integration_lib_call_kit_ringtone.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5C2986802805C58300D340CE /* phone_integration_lib_call_kit_ringtone.wav */; };
 		8323712727C6B5210087E701 /* InCallDialpadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8323711F27C6B5210087E701 /* InCallDialpadViewController.swift */; };
 		8323712827C6B5210087E701 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8323712027C6B5210087E701 /* Assets.xcassets */; };
 		8323712927C6B5210087E701 /* CallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8323712127C6B5210087E701 /* CallViewController.swift */; };
@@ -35,7 +33,6 @@
 		8323717627C7CC060087E701 /* Call.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8323716027C7CC060087E701 /* Call.swift */; };
 		8323717727C7CC060087E701 /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8323716127C7CC060087E701 /* Direction.swift */; };
 		8323717827C7CC060087E701 /* InitializationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8323716327C7CC060087E701 /* InitializationError.swift */; };
-		8323717927C7CC060087E701 /* SipManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8323716527C7CC060087E701 /* SipManagerProtocol.swift */; };
 		8323717A27C7CC060087E701 /* LinphoneManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8323716727C7CC060087E701 /* LinphoneManager.swift */; };
 		8323717B27C7CC060087E701 /* RegistrationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8323716927C7CC060087E701 /* RegistrationState.swift */; };
 		835D7BA727B2E37800A7B5DD /* iOSVoIPLib.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 835D7BA427B2E37800A7B5DD /* iOSVoIPLib.podspec */; };
@@ -129,8 +126,6 @@
 		2D8FF88DC18CB77C7C76E973 /* Pods-PILTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PILTests.release.xcconfig"; path = "Target Support Files/Pods-PILTests/Pods-PILTests.release.xcconfig"; sourceTree = "<group>"; };
 		358B1ED3E39A24C8312DEDDA /* Pods-VoIPLib.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VoIPLib.release.xcconfig"; path = "Target Support Files/Pods-VoIPLib/Pods-VoIPLib.release.xcconfig"; sourceTree = "<group>"; };
 		4C357674FB503A67A13EA690 /* Pods-PILTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PILTests.debug.xcconfig"; path = "Target Support Files/Pods-PILTests/Pods-PILTests.debug.xcconfig"; sourceTree = "<group>"; };
-		5C29867E2805C3DE00D340CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		5C2986802805C58300D340CE /* phone_integration_lib_call_kit_ringtone.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = phone_integration_lib_call_kit_ringtone.wav; sourceTree = "<group>"; };
 		8323711F27C6B5210087E701 /* InCallDialpadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InCallDialpadViewController.swift; sourceTree = "<group>"; };
 		8323712027C6B5210087E701 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8323712127C6B5210087E701 /* CallViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallViewController.swift; sourceTree = "<group>"; };
@@ -155,7 +150,6 @@
 		8323716027C7CC060087E701 /* Call.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Call.swift; sourceTree = "<group>"; };
 		8323716127C7CC060087E701 /* Direction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Direction.swift; sourceTree = "<group>"; };
 		8323716327C7CC060087E701 /* InitializationError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitializationError.swift; sourceTree = "<group>"; };
-		8323716527C7CC060087E701 /* SipManagerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SipManagerProtocol.swift; sourceTree = "<group>"; };
 		8323716727C7CC060087E701 /* LinphoneManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinphoneManager.swift; sourceTree = "<group>"; };
 		8323716927C7CC060087E701 /* RegistrationState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationState.swift; sourceTree = "<group>"; };
 		835D7BA427B2E37800A7B5DD /* iOSVoIPLib.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = iOSVoIPLib.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -384,7 +378,6 @@
 		8323716427C7CC060087E701 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				8323716527C7CC060087E701 /* SipManagerProtocol.swift */,
 				8323716627C7CC060087E701 /* Linphone */,
 			);
 			name = Managers;
@@ -426,14 +419,12 @@
 		835D7C0227BAC7A200A7B5DD /* Phone Lib Example */ = {
 			isa = PBXGroup;
 			children = (
-				5C2986802805C58300D340CE /* phone_integration_lib_call_kit_ringtone.wav */,
 				835D829A27BAC86C00A7B5DD /* AppDelegate.swift */,
 				8323711E27C6B5210087E701 /* UI */,
 				835D829B27BAC86C00A7B5DD /* Configuration */,
 				835D829F27BAC86C00A7B5DD /* Helpers */,
 				835D82A127BAC86C00A7B5DD /* Supporting Files */,
 				835D82AD27BAC86C00A7B5DD /* VoIPGRID */,
-				5C29867E2805C3DE00D340CE /* Assets.xcassets */,
 			);
 			path = "Phone Lib Example";
 			sourceTree = "<group>";
@@ -865,9 +856,7 @@
 				835D82B227BAC86D00A7B5DD /* StagingConfig.plist in Resources */,
 				8323712827C6B5210087E701 /* Assets.xcassets in Resources */,
 				8323712B27C6B5210087E701 /* Main.storyboard in Resources */,
-				5C29867F2805C3DE00D340CE /* Assets.xcassets in Resources */,
 				8323712A27C6B5210087E701 /* LaunchScreen.storyboard in Resources */,
-				5C2986812805C58300D340CE /* phone_integration_lib_call_kit_ringtone.wav in Resources */,
 				835D82B127BAC86D00A7B5DD /* Config.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1114,7 +1103,6 @@
 				8323716A27C7CC060087E701 /* CallDelegate.swift in Sources */,
 				8323717527C7CC060087E701 /* CallState.swift in Sources */,
 				8323717027C7CC060087E701 /* Quality.swift in Sources */,
-				8323717927C7CC060087E701 /* SipManagerProtocol.swift in Sources */,
 				8323717127C7CC060087E701 /* Codec.swift in Sources */,
 				8323717627C7CC060087E701 /* Call.swift in Sources */,
 				8323717827C7CC060087E701 /* InitializationError.swift in Sources */,
@@ -1238,6 +1226,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.voipgrid.iOSPhoneLib-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;

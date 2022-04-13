@@ -10,7 +10,8 @@ import linphonesw
 import AVFoundation
 
 typealias LinphoneCall = linphonesw.Call
-public typealias RegistrationCallback = (RegistrationState) -> Void
+
+//CallKit: https://wiki.linphone.org/xwiki/wiki/public/view/Lib/Getting%20started/iOS/#HCallKitIntegration
 
 class LinphoneManager: LoggingServiceDelegate {
    

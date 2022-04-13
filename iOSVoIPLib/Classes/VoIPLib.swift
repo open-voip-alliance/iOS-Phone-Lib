@@ -12,11 +12,11 @@ public class VoIPLib {
     static public let shared = VoIPLib()
 
     public var isRegistered: Bool {
-        get { sipManager.isRegistered }
+        get { linphone.isRegistered }
     }
 
     public var isInitialized: Bool {
-        get { sipManager.isInitialized }
+        get { linphone.isInitialized }
     }
 
     public var isReady: Bool {
@@ -25,19 +25,19 @@ public class VoIPLib {
     
     public var config: Config? {
         get {
-            sipManager.config
+            linphone.config
         }
     }
     
-    let sipManager: SipManagerProtocol
+    let linphone: LinphoneManager
     
     init() {
-        sipManager = LinphoneManager()
+        linphone = LinphoneManager()
     }
     
     public func initialize(config: Config) {
         if (!isInitialized) {
-            _ = sipManager.initialize(config: config)
+            _ = linphone.initialize(config: config)
         }
     }
 
@@ -47,21 +47,21 @@ public class VoIPLib {
     }
 
     public func swapConfig(config: Config) {
-        sipManager.swapConfig(config: config)
+        linphone.swapConfig(config: config)
     }
     
     /// This `registers` your user on SIP. You need this before placing a call.
     /// - Returns: Bool containing register result
     public func register(callback: @escaping RegistrationCallback) {
-        sipManager.register(callback: callback)
+        linphone.register(callback: callback)
     }
 
     public func destroy() {
-        sipManager.destroy()
+        linphone.destroy()
     }
     
     public func terminateAllCalls() {
-        sipManager.terminateAllCalls()
+        linphone.terminateAllCalls()
     }
     
     /// This `unregisters` your user on SIP.
@@ -69,7 +69,7 @@ public class VoIPLib {
     /// - Parameters:
     ///     - finished: Called async when unregistering is done.
     public func unregister(finished:@escaping() -> ()) {
-        sipManager.unregister(finished: finished)
+        linphone.unregister(finished: finished)
     }
     
     /// Call a phone number
@@ -78,22 +78,22 @@ public class VoIPLib {
     ///     - number: The phone number to call
     /// - Returns: Returns true when call succeeds, false when the number is an empty string or the phone service isn't ready.
     public func call(to number: String) -> Bool {
-        return sipManager.call(to: number) != nil
+        return linphone.call(to: number) != nil
     }
     
     public var isMicrophoneMuted:Bool {
         get {
-            sipManager.isMicrophoneMuted
+            linphone.isMicrophoneMuted
         }
         
         set(muted) {
-            sipManager.setMicrophone(muted: muted)
+            linphone.setMicrophone(muted: muted)
         }
         
     }
     
     public func actions(call: Call) -> Actions {
-        Actions(sipManager: sipManager, call: call)
+        Actions(linphone: linphone, call: call)
     }
 }
 

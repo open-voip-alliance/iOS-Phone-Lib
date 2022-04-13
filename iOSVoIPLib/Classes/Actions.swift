@@ -9,11 +9,11 @@ import Foundation
 
 public class Actions {
     
-    let sipManager: SipManagerProtocol
+    let linphone: LinphoneManager
     let call: Call
     
-    init(sipManager: SipManagerProtocol, call: Call) {
-        self.sipManager = sipManager
+    init(linphone: LinphoneManager, call: Call) {
+        self.linphone = linphone
         self.call = call
     }
     
@@ -23,7 +23,7 @@ public class Actions {
     ///     - call: The accepting call
     /// - Returns: `Bool` Whether accepting went successfully
     public func accept() -> Bool {
-        sipManager.acceptCall(for: call)
+        linphone.acceptCall(for: call)
     }
     
     /// End an call.
@@ -32,7 +32,7 @@ public class Actions {
     ///     - call: The accepting call
     /// - Returns: `Bool` Whether ending went successfully
     public func end() -> Bool {
-        sipManager.endCall(for: call)
+        linphone.endCall(for: call)
     }
     
     /// Enable/disable the audio call.
@@ -41,7 +41,7 @@ public class Actions {
     /// - Parameters:
     ///     - enabled: State of audio
     public func setAudio(enabled:Bool) {
-        sipManager.setAudio(enabled: enabled)
+        linphone.setAudio(enabled: enabled)
     }
     
     /// Set a call on (un)hold
@@ -51,7 +51,7 @@ public class Actions {
     ///     - onHold: The new hold state
     /// - Returns: `Bool` Whether the change was successful.
     public func hold(onHold hold:Bool) -> Bool {
-        sipManager.setHold(call: call, onHold: hold)
+        linphone.setHold(call: call, onHold: hold)
     }
     
     /// Transfer a call. This is unattended.
@@ -61,7 +61,7 @@ public class Actions {
     ///     - number: Transfer to number
     /// - Returns: `Bool` Whether the transfer was successful.
     public func transfer(to number:String) -> Bool {
-        sipManager.transfer(call: call, to: number)
+        linphone.transfer(call: call, to: number)
     }
     
     /// Begin process of attended transfer by calling the transfer target's number.
@@ -71,7 +71,7 @@ public class Actions {
     ///     - number: The transfer target's number
     /// - Returns: `AttendedTransferCall` The struct with the two calls.
     public func beginAttendedTransfer(to number:String) -> AttendedTransferSession? {
-        sipManager.beginAttendedTransfer(call: call, to:number)
+        linphone.beginAttendedTransfer(call: call, to:number)
     }
     
     /// Finish process of attended transfer by merging the calls.
@@ -80,7 +80,7 @@ public class Actions {
     ///     - attendedTransferCall: The struct with the two calls.
     /// - Returns: `Bool` Whether the transfer was successful.
     public func finishAttendedTransfer(attendedTransferSession:AttendedTransferSession) -> Bool {
-        sipManager.finishAttendedTransfer(attendedTransferSession:attendedTransferSession)
+        linphone.finishAttendedTransfer(attendedTransferSession:attendedTransferSession)
     }
     
     /// Send Dtmf.
@@ -89,13 +89,13 @@ public class Actions {
     ///     - call: The call with the active call.
     ///     - dtmf: The string with the dtmf digits.
     public func sendDtmf(dtmf: String) {
-        sipManager.sendDtmf(call: call, dtmf: dtmf)
+        linphone.sendDtmf(call: call, dtmf: dtmf)
     }
     
     /// Get call information.
     ///
     /// - Returns: A string with the call info, empty when could not get any.
     public func callInfo() -> String {
-        sipManager.provideCallInfo(call: call)
+        linphone.provideCallInfo(call: call)
     }
 }

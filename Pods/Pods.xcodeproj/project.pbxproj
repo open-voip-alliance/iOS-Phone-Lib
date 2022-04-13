@@ -51,7 +51,6 @@
 		33A7D0F2D03004CE256A75E03DF33C70 /* RetryPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A711A1ED882A1460E7223C2238C96A /* RetryPolicy.swift */; };
 		36956FD84B11232CD9D05396B725CFFE /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B53465B21BEF3472EB0A0BBFD87DF5 /* Container.swift */; };
 		378F27A6F84643545E61664E10003E4F /* TapActionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B39A5638CC9791E3E15225FB46AE644 /* TapActionRow.swift */; };
-		3A0483F5DE07A9D57E992B7AA967A61B /* SipManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87FC173C92A2C223D7341E263BDE5311 /* SipManagerProtocol.swift */; };
 		3C4059621E23842C19D4EB5D35B41989 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DA3317FFEB4A1AD5C231BA47378EE1 /* Validation.swift */; };
 		3DB88988CA50B476B34FE42577FC6FC5 /* Contacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFDDE152198E9C835B5FA6683C213C3 /* Contacts.swift */; };
 		415A15F754C4398F97E27A15ACA3791D /* Pods-Phone Lib Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D2F74783E28670BFA48E087115AE26E /* Pods-Phone Lib Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -327,7 +326,7 @@
 		199AC9CBC9CB0BAAF36DC7BEFFAAC194 /* RedirectHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RedirectHandler.swift; path = Source/RedirectHandler.swift; sourceTree = "<group>"; };
 		19A711A1ED882A1460E7223C2238C96A /* RetryPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RetryPolicy.swift; path = Source/RetryPolicy.swift; sourceTree = "<group>"; };
 		1AB46B7572AEA9EE64582862CE860DDA /* OptionRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OptionRow.swift; path = Source/Rows/OptionRow.swift; sourceTree = "<group>"; };
-		1BB9CC264D2449A7BAEF9B724FCD7D18 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		1BB9CC264D2449A7BAEF9B724FCD7D18 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		1C0A3E016D1286014846C60C1893EA1A /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
 		1C713A0D707993FE78CD643B1C01F3AC /* Pods-PILTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PILTests-Info.plist"; sourceTree = "<group>"; };
 		1CAB57D09E4DB77FE067F746EFDC3B5C /* Pods-PIL.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-PIL.modulemap"; sourceTree = "<group>"; };
@@ -472,7 +471,7 @@
 		99A0EC747BD9BE226D12DBD3FC47F3EC /* Result+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Result+Alamofire.swift"; path = "Source/Result+Alamofire.swift"; sourceTree = "<group>"; };
 		9BAF6137CF7476C51537747E34CCA808 /* iOSVoIPLib.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = iOSVoIPLib.modulemap; sourceTree = "<group>"; };
 		9CB6A82D8F3DC92F1BF3D116326B7BE1 /* PushKitDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PushKitDelegate.swift; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9EDC36481F3CD766B9A83B499944B5E7 /* Call.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Call.swift; sourceTree = "<group>"; };
 		9F5A4DDE104E168D4B88D42D8F6E8A61 /* AudioManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
 		9FA4FC93397B40A3E0F68B695F305D43 /* Combine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Combine.swift; path = Source/Combine.swift; sourceTree = "<group>"; };
@@ -494,7 +493,7 @@
 		AFD36ABDA6148E76ECC52C5BB9AF9DC1 /* Pods-VoIPLib */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-VoIPLib"; path = Pods_VoIPLib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B27C711281E59A344193D536ABAD30DF /* Swinject-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Swinject-umbrella.h"; sourceTree = "<group>"; };
 		B346CEA443B184B16C5379BFD50160C7 /* AlamofireExtended.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AlamofireExtended.swift; path = Source/AlamofireExtended.swift; sourceTree = "<group>"; };
-		B4C67BB4BA71C3DAA5E4669BCD1BFFF8 /* PIL.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = PIL.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		B4C67BB4BA71C3DAA5E4669BCD1BFFF8 /* PIL.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = PIL.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		B671750C104961E2D073D740AAE082A0 /* belle-sip.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "belle-sip.framework"; path = "Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/belle-sip.framework"; sourceTree = DEVELOPER_DIR; };
 		B68096FE19B3FD3283AED36C98EFA29B /* Pods-PIL-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PIL-umbrella.h"; sourceTree = "<group>"; };
 		B75072878DE1BCBFC36D166A9744F863 /* Pods-PILTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PILTests-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -557,7 +556,7 @@
 		F28E319BE209C2BF44DFAEF243C2472E /* ObjectScope.Standard.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ObjectScope.Standard.swift; path = Sources/ObjectScope.Standard.swift; sourceTree = "<group>"; };
 		F37B55115022196FB74E3A1CAEC6C9D1 /* Pods-VoIPLib-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-VoIPLib-umbrella.h"; sourceTree = "<group>"; };
 		F50A738A30100BDACC98AF352AA66DAB /* belr.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = belr.framework; path = "linphone-sdk/apple-darwin/Frameworks/belr.framework"; sourceTree = "<group>"; };
-		F5C99BC866265F5F5C2BA686CD06DE95 /* iOSVoIPLib.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = iOSVoIPLib.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		F5C99BC866265F5F5C2BA686CD06DE95 /* iOSVoIPLib.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = iOSVoIPLib.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		F5F5B70E46F4D65B2F3C5663692E4959 /* Pods-VoIPLib.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-VoIPLib.modulemap"; sourceTree = "<group>"; };
 		F63D34DE2B75E69AB686F600980AC665 /* EventsManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EventsManager.swift; sourceTree = "<group>"; };
 		F6434BD2691A56A5C552A3B9274D7B06 /* Pods-PIL-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PIL-dummy.m"; sourceTree = "<group>"; };
@@ -963,7 +962,6 @@
 				31E7A2EB5CA129186CDB3C6E72DAA905 /* Frameworks */,
 				E8A7F3C0223FA162A7EF43F926B13D34 /* Support Files */,
 			);
-			name = "linphone-sdk";
 			path = "linphone-sdk";
 			sourceTree = "<group>";
 		};
@@ -1093,7 +1091,6 @@
 				3B39A5638CC9791E3E15225FB46AE644 /* TapActionRow.swift */,
 				334CC9413865313E8036B1A0BD8EAC31 /* Support Files */,
 			);
-			name = QuickTableViewController;
 			path = QuickTableViewController;
 			sourceTree = "<group>";
 		};
@@ -1134,7 +1131,6 @@
 				8C2863ADF9F7036F810F2337C9FE2E8B /* Resources */,
 				9CC1F4336A9475A44CB88EF6F71A8CF4 /* Support Files */,
 			);
-			name = SAMKeychain;
 			path = SAMKeychain;
 			sourceTree = "<group>";
 		};
@@ -1273,7 +1269,6 @@
 				64DA3317FFEB4A1AD5C231BA47378EE1 /* Validation.swift */,
 				4D33E1A2BEAEACAA3059DA083DF98508 /* Support Files */,
 			);
-			name = Alamofire;
 			path = Alamofire;
 			sourceTree = "<group>";
 		};
@@ -1358,7 +1353,6 @@
 				D639730A441DFB20144E03702BCCC808 /* UnavailableItems.swift */,
 				8AD688576AD7A8696C45ED05F96DE29A /* Support Files */,
 			);
-			name = Swinject;
 			path = Swinject;
 			sourceTree = "<group>";
 		};
@@ -1425,7 +1419,6 @@
 			children = (
 				79C4122F9EB6842AE561534D29314FB2 /* LinphoneManager.swift */,
 			);
-			name = Linphone;
 			path = Linphone;
 			sourceTree = "<group>";
 		};
@@ -1994,7 +1987,6 @@
 				1F6979360CA3888AC19FE29436699D9F /* Quality.swift in Sources */,
 				B51505805AEF60EE430C7A0CC8E21991 /* RegistrationState.swift in Sources */,
 				B47992D6AA6A0BB1FD4B50B7C4F235AA /* RegistrationStateDelegate.swift in Sources */,
-				3A0483F5DE07A9D57E992B7AA967A61B /* SipManagerProtocol.swift in Sources */,
 				4FC1A3ED6B75D4498F05D8C47404C83B /* SipRegistrationStatus.swift in Sources */,
 				A6FBD370EFECB785C13ACDF01C880BCA /* VoIPLib.swift in Sources */,
 			);
