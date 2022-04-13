@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 
     s.ios.deployment_target = '11.3'
 
-    s.source_files = 'iOSPhoneLib/**'
+    s.source_files = 'iOSPhoneLib/**/*'
 
     s.dependency 'linphone-sdk', '5.0.70'
     s.framework = "UIKit"
