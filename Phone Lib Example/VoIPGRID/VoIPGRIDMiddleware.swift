@@ -7,7 +7,7 @@
 
 import Foundation
 import Alamofire
-import iOS_Phone_Lib
+import iOSPhoneLib
 import PushKit
 
 class VoIPGRIDMiddleware: Middleware {

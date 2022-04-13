@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import iOS_Phone_Lib
+import iOSPhoneLib
 import UIKit
 
 class CallViewController: UIViewController, PILEventDelegate {

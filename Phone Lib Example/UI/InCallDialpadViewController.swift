@@ -7,7 +7,7 @@
 
 import Foundation
 import UIKit
-import iOS_Phone_Lib
+import iOSPhoneLib
 import Contacts
 
 class InCallDialpadViewController: UIViewController {

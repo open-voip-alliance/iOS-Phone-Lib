@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import iOS_Phone_Lib
+@testable import iOSPhoneLib
 
 class VoIPLibTests: XCTestCase {
 
