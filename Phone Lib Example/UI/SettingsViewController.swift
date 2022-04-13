@@ -7,7 +7,7 @@
 
 import Foundation
 import QuickTableViewController
-import PIL
+import iOS_Phone_Lib
 
 final class SettingsViewController: QuickTableViewController {
 
