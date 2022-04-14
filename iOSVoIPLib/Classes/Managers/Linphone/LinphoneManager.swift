@@ -158,7 +158,7 @@ class LinphoneManager: SipManagerProtocol, LoggingServiceDelegate {
                 log("Proxy config found, re-registering")
                 linphoneCore.refreshRegisters()
                 return
-            }
+            } //wip HERE?
             
             log("No proxy config found, registering for the first time.")
 

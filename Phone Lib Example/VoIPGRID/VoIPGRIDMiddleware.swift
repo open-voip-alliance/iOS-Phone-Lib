@@ -22,6 +22,20 @@ class VoIPGRIDMiddleware: Middleware {
         let sipUserId = defaults.object(forKey: "username") as? String ?? ""
         let pushKitToken = defaults.object(forKey: "push_kit_token") as? String ?? ""
         print("Registering with \(pushKitToken)")
+        //wip
+    let aparameters = [
+        "name" : username,
+        "token" : pushKitToken,
+        "sip_user_id" : sipUserId,
+        "app" : "com.voipgrid.iOSPhoneLib-Example",
+        "push_profile" : "once",
+        "sandbox" : "true",
+        //wip
+        "os_version" : UIDevice.current.systemVersion,
+        "client_version" : Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "",
+        //"user_uuid" :
+    ]
+        
         AF.request(
             "https://vialerpush.voipgrid.nl/api/apns-device/",
             method: .post,
@@ -29,9 +43,13 @@ class VoIPGRIDMiddleware: Middleware {
                 "name" : username,
                 "token" : pushKitToken,
                 "sip_user_id" : sipUserId,
-                "app" : "com.voipgrid.iOSPhoneLibExample",
+                "app" : "com.voipgrid.iOSPhoneLib-Example",
                 "push_profile" : "once",
-                "sandbox" : "true"
+                "sandbox" : "true",
+                //wip
+                "os_version" : UIDevice.current.systemVersion,
+                "client_version" : Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "",
+                //"user_uuid" :
             ],
             headers: createAuthHeader()
         ).response { response in
@@ -55,7 +73,7 @@ class VoIPGRIDMiddleware: Middleware {
             parameters: [
                 "token" : pushKitToken,
                 "sip_user_id" : sipUserId,
-                "app" : "com.voipgrid.iOSPhoneLibExample"
+                "app" : "com.voipgrid.iOSPhoneLib-Example"
             ],
             headers: createAuthHeader()
         ).response { response in

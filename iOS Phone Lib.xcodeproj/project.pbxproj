@@ -173,7 +173,6 @@
 		835D829D27BAC86C00A7B5DD /* StagingConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = StagingConfig.plist; sourceTree = "<group>"; };
 		835D829E27BAC86C00A7B5DD /* UrlsConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrlsConfiguration.swift; sourceTree = "<group>"; };
 		835D82A027BAC86C00A7B5DD /* MicPermissionHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MicPermissionHelper.swift; sourceTree = "<group>"; };
-		835D82A227BAC86C00A7B5DD /* PILExampleApp.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = PILExampleApp.entitlements; sourceTree = "<group>"; };
 		835D82A327BAC86C00A7B5DD /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		835D82AE27BAC86C00A7B5DD /* VoIPGRIDLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoIPGRIDLogin.swift; sourceTree = "<group>"; };
 		835D82AF27BAC86C00A7B5DD /* VoIPGRIDMiddleware.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoIPGRIDMiddleware.swift; sourceTree = "<group>"; };
@@ -445,7 +444,6 @@
 		835D7C0227BAC7A200A7B5DD /* Phone Lib Example */ = {
 			isa = PBXGroup;
 			children = (
-				83905B22280080070018F1DA /* Phone Lib Example.entitlements */,
 				835D829A27BAC86C00A7B5DD /* AppDelegate.swift */,
 				8323711E27C6B5210087E701 /* UI */,
 				835D829B27BAC86C00A7B5DD /* Configuration */,
@@ -477,7 +475,7 @@
 		835D82A127BAC86C00A7B5DD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				835D82A227BAC86C00A7B5DD /* PILExampleApp.entitlements */,
+				83905B22280080070018F1DA /* Phone Lib Example.entitlements */,
 				835D82A327BAC86C00A7B5DD /* Info.plist */,
 			);
 			path = "Supporting Files";
@@ -1226,7 +1224,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = "Phone Lib Example/Phone Lib Example.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "Phone Lib Example/Supporting Files/Phone Lib Example.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -1247,7 +1245,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1270,7 +1268,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = "Phone Lib Example/Phone Lib Example.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "Phone Lib Example/Supporting Files/Phone Lib Example.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -1291,7 +1289,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
