@@ -55,8 +55,6 @@
 		5C6C81452806DE9E00EE2919 /* Middleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835D82F227BD61E000A7B5DD /* Middleware.swift */; };
 		5C6C81472806DE9E00EE2919 /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835D82E927BD61E000A7B5DD /* Builder.swift */; };
 		5C6C81482806DE9E00EE2919 /* PIL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835D82F427BD61E000A7B5DD /* PIL.swift */; };
-		5C6C814A2806DE9E00EE2919 /* PIL.h in Sources */ = {isa = PBXBuildFile; fileRef = 835D82C627BAC9A000A7B5DD /* PIL.h */; };
-		5C6C814B2806DE9E00EE2919 /* PIL.docc in Sources */ = {isa = PBXBuildFile; fileRef = 835D82C727BAC9A000A7B5DD /* PIL.docc */; };
 		5C6C814C2806DE9E00EE2919 /* VoIPLib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8323715727C7CC060087E701 /* VoIPLib.swift */; };
 		5C6C814D2806DE9E00EE2919 /* Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8323715827C7CC060087E701 /* Actions.swift */; };
 		5C6C814F2806DE9E00EE2919 /* VoIPLibConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8323715627C7CC060087E701 /* VoIPLibConfig.swift */; };
@@ -156,13 +154,10 @@
 		835D82A327BAC86C00A7B5DD /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		835D82AE27BAC86C00A7B5DD /* VoIPGRIDLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoIPGRIDLogin.swift; sourceTree = "<group>"; };
 		835D82AF27BAC86C00A7B5DD /* VoIPGRIDMiddleware.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoIPGRIDMiddleware.swift; sourceTree = "<group>"; };
-		835D82C627BAC9A000A7B5DD /* PIL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PIL.h; sourceTree = "<group>"; };
-		835D82C727BAC9A000A7B5DD /* PIL.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = PIL.docc; sourceTree = "<group>"; };
 		835D82E227BD3B6900A7B5DD /* PIL-README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "PIL-README.md"; sourceTree = "<group>"; };
 		835D82E727BD61DF00A7B5DD /* LogDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogDelegate.swift; sourceTree = "<group>"; };
 		835D82E827BD61DF00A7B5DD /* LogLevel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogLevel.swift; sourceTree = "<group>"; };
 		835D82E927BD61E000A7B5DD /* Builder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
-		835D82EA27BD61E000A7B5DD /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		835D82EC27BD61E000A7B5DD /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		835D82ED27BD61E000A7B5DD /* PlatformIntegrator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlatformIntegrator.swift; sourceTree = "<group>"; };
 		835D82EE27BD61E000A7B5DD /* PILEventDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PILEventDelegate.swift; sourceTree = "<group>"; };
@@ -418,9 +413,6 @@
 				835D82F327BD61E000A7B5DD /* Localizable.stringsdict */,
 				835D82E927BD61E000A7B5DD /* Builder.swift */,
 				835D82F427BD61E000A7B5DD /* PIL.swift */,
-				835D82EA27BD61E000A7B5DD /* Info.plist */,
-				835D82C627BAC9A000A7B5DD /* PIL.h */,
-				835D82C727BAC9A000A7B5DD /* PIL.docc */,
 			);
 			path = PIL;
 			sourceTree = "<group>";
@@ -838,8 +830,6 @@
 				5C6C81452806DE9E00EE2919 /* Middleware.swift in Sources */,
 				5C6C81472806DE9E00EE2919 /* Builder.swift in Sources */,
 				5C6C81482806DE9E00EE2919 /* PIL.swift in Sources */,
-				5C6C814A2806DE9E00EE2919 /* PIL.h in Sources */,
-				5C6C814B2806DE9E00EE2919 /* PIL.docc in Sources */,
 				5C6C814C2806DE9E00EE2919 /* VoIPLib.swift in Sources */,
 				5C6C814D2806DE9E00EE2919 /* Actions.swift in Sources */,
 				5C6C814F2806DE9E00EE2919 /* VoIPLibConfig.swift in Sources */,
