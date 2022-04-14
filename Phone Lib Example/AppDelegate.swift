@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import PIL
+import iOSPhoneLib
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate, LogDelegate {
