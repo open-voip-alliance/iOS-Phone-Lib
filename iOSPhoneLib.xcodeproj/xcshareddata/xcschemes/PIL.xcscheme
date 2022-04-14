@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8378859427AC3FB7001A24A8"
-               BuildableName = "VoIPLib.framework"
-               BlueprintName = "VoIPLib"
-               ReferencedContainer = "container:iOS Phone Lib.xcodeproj">
+               BlueprintIdentifier = "835D82C327BAC9A000A7B5DD"
+               BuildableName = "PIL.framework"
+               BlueprintName = "PIL"
+               ReferencedContainer = "container:iOSPhoneLib.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -28,16 +28,6 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8378859E27AC3FB7001A24A8"
-               BuildableName = "VoIPLibTests.xctest"
-               BlueprintName = "VoIPLibTests"
-               ReferencedContainer = "container:iOS Phone Lib.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
@@ -60,10 +50,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8378859427AC3FB7001A24A8"
-            BuildableName = "VoIPLib.framework"
-            BlueprintName = "VoIPLib"
-            ReferencedContainer = "container:iOS Phone Lib.xcodeproj">
+            BlueprintIdentifier = "835D82C327BAC9A000A7B5DD"
+            BuildableName = "PIL.framework"
+            BlueprintName = "PIL"
+            ReferencedContainer = "container:iOSPhoneLib.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

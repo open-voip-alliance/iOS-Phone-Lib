@@ -683,7 +683,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 8378858F27AC3FB7001A24A8 /* Build configuration list for PBXProject "iOS Phone Lib" */;
+			buildConfigurationList = 8378858F27AC3FB7001A24A8 /* Build configuration list for PBXProject "iOSPhoneLib" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -1186,7 +1186,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8378858F27AC3FB7001A24A8 /* Build configuration list for PBXProject "iOS Phone Lib" */ = {
+		8378858F27AC3FB7001A24A8 /* Build configuration list for PBXProject "iOSPhoneLib" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				837885A727AC3FB7001A24A8 /* Debug */,
