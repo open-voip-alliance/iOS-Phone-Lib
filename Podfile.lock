@@ -1,8 +1,5 @@
 PODS:
   - Alamofire (5.5.0)
-  - iOSPhoneLib (0.1.1):
-    - linphone-sdk (= 5.0.70)
-    - Swinject (~> 2.7.1)
   - linphone-sdk (5.0.70):
     - linphone-sdk/all-frameworks (= 5.0.70)
     - linphone-sdk/app-extension (= 5.0.70)
@@ -24,7 +21,6 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 5.2)
-  - iOSPhoneLib (from `iOSPhoneLib.podspec`)
   - linphone-sdk (= 5.0.70)
   - QuickTableViewController
   - SAMKeychain
@@ -39,18 +35,13 @@ SPEC REPOS:
   https://gitlab.linphone.org/BC/public/podspec.git:
     - linphone-sdk
 
-EXTERNAL SOURCES:
-  iOSPhoneLib:
-    :path: iOSPhoneLib.podspec
-
 SPEC CHECKSUMS:
   Alamofire: 1c4fb5369c3fe93d2857c780d8bbe09f06f97e7c
-  iOSPhoneLib: 819ab864c1b168ea9480b3b7e617f0b16705b30a
   linphone-sdk: 64da89a6cfc393e600ffbedb38d22e25fdaf023b
   QuickTableViewController: 25e698de1546c2b829c543d91b64ebc6e884acfc
   SAMKeychain: 483e1c9f32984d50ca961e26818a534283b4cd5c
   Swinject: ddf78b8486dd9b71a667b852cad919ab4484478e
 
-PODFILE CHECKSUM: 23e1025e418bc2b15d5bdb2eb88d90a7ae702b50
+PODFILE CHECKSUM: 14c2e643ba36694c89074371f37dd79116dba462
 
 COCOAPODS: 1.11.2

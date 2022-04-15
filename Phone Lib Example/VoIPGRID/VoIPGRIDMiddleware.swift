@@ -29,9 +29,11 @@ class VoIPGRIDMiddleware: Middleware {
                 "name" : username,
                 "token" : pushKitToken,
                 "sip_user_id" : sipUserId,
-                "app" : "com.voipgrid.PhoneLibExample",
+                "app" : "com.voipgrid.iOSPhoneLib-Example",
                 "push_profile" : "once",
-                "sandbox" : "true"
+                "sandbox" : "true",
+                "os_version" : UIDevice.current.systemVersion,
+                "client_version" : Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "",
             ],
             headers: createAuthHeader()
         ).response { response in
@@ -55,7 +57,7 @@ class VoIPGRIDMiddleware: Middleware {
             parameters: [
                 "token" : pushKitToken,
                 "sip_user_id" : sipUserId,
-                "app" : "com.voipgrid.PhoneLibExample"
+                "app" : "com.voipgrid.PhoneLib-Example"
             ],
             headers: createAuthHeader()
         ).response { response in
@@ -68,7 +70,7 @@ class VoIPGRIDMiddleware: Middleware {
         }
     }
     
-    public func respond(payload: PKPushPayload, available: Bool) {
+    public func respond(payload: PKPushPayload, available: Bool, reason: UnavailableReason? = nil) {
         let sipUserId = defaults.object(forKey: "username") as? String ?? ""
         
         AF.request(
