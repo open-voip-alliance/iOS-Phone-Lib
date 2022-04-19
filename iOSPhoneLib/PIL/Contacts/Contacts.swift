@@ -48,7 +48,7 @@ class Contacts {
 
         do {
             try store.enumerateContacts(with: request, usingBlock: { (contact, stopPointer) in
-                if !contact.phoneNumbers.filter({ $0.value.stringValue.stripSuperfluousCharactersFromPhoneNumber() == call.remoteNumber }).isEmpty {
+                if !contact.phoneNumbers.filter({ $0.value.stringValue.normalizePhoneNumber() == call.remoteNumber }).isEmpty {
                     self.cachedContacts[call.identifier] = Contact("\(contact.givenName) \(contact.familyName)")
                     return
                 }
@@ -94,7 +94,7 @@ extension VoIPLibCall {
 }
 
 extension String {
-    func stripSuperfluousCharactersFromPhoneNumber() -> String {
+    func normalizePhoneNumber() -> String {
         return replacingOccurrences(of: "[^0-9\\+]", with: "", options: .regularExpression)
     }
 }
