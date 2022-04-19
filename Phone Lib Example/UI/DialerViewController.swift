@@ -18,18 +18,6 @@ class DialerViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        numberPreview.text = ""
-        //wip fast setup
-        numberPreview.text = "0630821207"
-        self.defaults.set("497920083", forKey: "username")
-        self.defaults.set("pxNnxaxb56AK8hr", forKey: "password")
-        self.defaults.set(UrlsConfiguration.shared.encryptedSipDomain(), forKey: "domain")
-        self.defaults.set("5060", forKey: "port")
-        
-        self.defaults.set("chris2@vialerapp.com", forKey: "voipgrid_username")
-        self.defaults.set("password123", forKey: "voipgrid_password")
-        //wip
         
         CNContactStore().requestAccess(for: .contacts) { (granted, error) in
             
