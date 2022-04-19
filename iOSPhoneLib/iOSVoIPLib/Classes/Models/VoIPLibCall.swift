@@ -13,13 +13,13 @@ public class VoIPLibCall:NSObject {
     
     public var remoteNumber: String {
         get {
-            linphoneCall.remoteAddress?.displayName ?? ""
+            linphoneCall.remoteAddress?.username ?? ""
         }
     }
     
     public var displayName: String {
         get {
-            linphoneCall.remoteAddress?.username ?? ""
+            linphoneCall.remoteAddress?.displayName ?? ""
         }
     }
     
