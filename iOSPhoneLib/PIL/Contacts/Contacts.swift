@@ -21,43 +21,39 @@ class Contacts {
             self,
             selector: #selector(addressBookDidChange),
             name: NSNotification.Name.CNContactStoreDidChange,
-            object: nil)
+            object: nil
+        )
     }
     
     
-    func find(number: String) -> Contact? {
-        let contact = self.cachedContacts[number]
-        
-        if contact == nil {
-            store.requestAccess(for: .contacts) { (granted, error) in
-                if granted {
-                    self.performBackgroundLookup(number: number)
-                }
+    func find(call: VoIPLibCall) -> Contact? {
+        if let contact = self.cachedContacts[call.identifier] {
+            if let contact = contact {
+                return contact.exists ? contact : nil
             }
         }
         
-        if let contact = contact {
-            return contact
+        store.requestAccess(for: .contacts) { (granted, error) in
+            if granted {
+                self.performBackgroundLookup(call: call)
+            }
         }
         
         return nil
     }
     
-    private func performBackgroundLookup(number: String) {
+    private func performBackgroundLookup(call: VoIPLibCall) {
         let keys = [CNContactGivenNameKey, CNContactFamilyNameKey, CNContactPhoneNumbersKey, CNContactImageDataAvailableKey, CNContactThumbnailImageDataKey]
         let request = CNContactFetchRequest(keysToFetch: keys as [CNKeyDescriptor])
-        
+
         do {
             try store.enumerateContacts(with: request, usingBlock: { (contact, stopPointer) in
-                if !contact.phoneNumbers.filter({ $0.value.stringValue.filter("+0123456789".contains) == number }).isEmpty {
-                    self.cachedContacts[number] = Contact(
-                        name: "\(contact.givenName) \(contact.familyName)",
-                        image: nil //contact.imageData //wip this causes exception
-                    )
+                if !contact.phoneNumbers.filter({ $0.value.stringValue.stripSuperfluousCharactersFromPhoneNumber() == call.remoteNumber }).isEmpty {
+                    self.cachedContacts[call.identifier] = Contact("\(contact.givenName) \(contact.familyName)")
                     return
                 }
                 
-                self.cachedContacts[number] = nil
+                self.cachedContacts[call.identifier] = Contact.notFound()
             })
         } catch {
             print("Unable to access contacts")
@@ -72,4 +68,33 @@ class Contacts {
 public struct Contact {
     public let name: String
     public let image: Data?
+    
+    internal var exists: Bool {
+        return !name.isEmpty
+    }
+    
+    init(_ name: String) {
+        self.name = name
+        self.image = nil
+    }
+    
+    init() {
+        self.init("")
+    }
+    
+    public static func notFound() -> Contact {
+        return Contact()
+    }
+}
+
+extension VoIPLibCall {
+    var identifier: String {
+        return callId.description
+    }
+}
+
+extension String {
+    func stripSuperfluousCharactersFromPhoneNumber() -> String {
+        return replacingOccurrences(of: "[^0-9\\+]", with: "", options: .regularExpression)
+    }
 }
