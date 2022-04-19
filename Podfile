@@ -11,7 +11,7 @@ target 'iOSPhoneLib' do
 end
 
 target 'Phone Lib Example' do
-  #pod 'iOSPhoneLib', :path => 'iOSPhoneLib.podspec'
+  pod 'iOSPhoneLib', :path => 'iOSPhoneLib.podspec'
   pod 'SAMKeychain'
   pod 'QuickTableViewController'
   pod 'Alamofire', '~> 5.2'
