@@ -12,6 +12,7 @@ public struct ApplicationSetup {
     public let notifyOnMissedCall: Bool
     public let pushKitPhoneNumberKey: String
     public let pushKitCallerNameKey: String
+    public let ringtonePath: String
     
     public init(
         middleware: Middleware? = nil,
@@ -20,7 +21,8 @@ public struct ApplicationSetup {
         logDelegate: LogDelegate? = nil,
         notifyOnMissedCall: Bool = true,
         pushKitPhoneNumberKey: String = "phonenumber",
-        pushKitCallerNameKey: String = "caller_id"
+        pushKitCallerNameKey: String = "caller_id",
+        ringtonePath: String = ""
     ) {
         self.middleware = middleware
         self.userAgent = userAgent
@@ -29,5 +31,6 @@ public struct ApplicationSetup {
         self.notifyOnMissedCall = notifyOnMissedCall
         self.pushKitPhoneNumberKey = pushKitPhoneNumberKey
         self.pushKitCallerNameKey = pushKitCallerNameKey
+        self.ringtonePath = ringtonePath
     }
 }
