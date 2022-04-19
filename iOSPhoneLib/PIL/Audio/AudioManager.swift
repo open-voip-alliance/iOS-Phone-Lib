@@ -33,7 +33,8 @@ public class AudioManager {
     
     public var isMicrophoneMuted: Bool {
         get {
-            voipLib.isMicrophoneMuted
+            pil.writeLog("IS MICROPHONE MUTED: \(voipLib.isMicrophoneMuted)")
+            return voipLib.isMicrophoneMuted
         }
     }
     
