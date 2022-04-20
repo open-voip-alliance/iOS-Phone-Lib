@@ -18,7 +18,7 @@ class DialerViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         numberPreview.text = ""
         
         CNContactStore().requestAccess(for: .contacts) { (granted, error) in

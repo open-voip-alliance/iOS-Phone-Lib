@@ -45,7 +45,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Alamofire: 1c4fb5369c3fe93d2857c780d8bbe09f06f97e7c
-  iOSPhoneLib: 819ab864c1b168ea9480b3b7e617f0b16705b30a
+  iOSPhoneLib: bdb0d49524d2558d4381ca5be70eb6f5c4d1cf71
   linphone-sdk: 64da89a6cfc393e600ffbedb38d22e25fdaf023b
   QuickTableViewController: 25e698de1546c2b829c543d91b64ebc6e884acfc
   SAMKeychain: 483e1c9f32984d50ca961e26818a534283b4cd5c
