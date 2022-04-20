@@ -18,14 +18,14 @@ public class CallActions {
     }
 
     public func hold() {
-        performCallAction { uuid -> CXCallAction in
-            CXSetHeldCallAction(call: uuid, onHold: true)
+        if let call = pil.calls.activeVoipLibCall {
+            _ = voipLib.actions(call: call).hold(onHold: true)
         }
     }
     
     public func unhold() {
-        performCallAction { uuid -> CXCallAction in
-            CXSetHeldCallAction(call: uuid, onHold: false)
+        if let call = pil.calls.activeVoipLibCall {
+            _ = voipLib.actions(call: call).hold(onHold: false)
         }
     }
     
@@ -65,15 +65,11 @@ public class CallActions {
     }
     
     func mute() {
-        performCallAction { uuid -> CXCallAction in
-            CXSetMutedCallAction(call: uuid, muted: true)
-        }
+        voipLib.isMicrophoneMuted = true
     }
     
     func unmute() {
-        performCallAction { uuid -> CXCallAction in
-            CXSetMutedCallAction(call: uuid, muted: false)
-        }
+        voipLib.isMicrophoneMuted = false
     }
     
     func toggleMute() {
