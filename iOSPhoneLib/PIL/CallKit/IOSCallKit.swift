@@ -240,7 +240,6 @@ extension IOSCallKit: CXProviderDelegate {
         }
         
         pil.audio.onDeactivateAudioSession()
-        timer?.invalidate()
     }
 }
 
