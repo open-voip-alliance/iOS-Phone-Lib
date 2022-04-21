@@ -60,6 +60,14 @@ class VoipLibEventTranslator: VoIPLibCallDelegate {
         } else {
             pil.events.broadcast(event: .callConnected(state: pil.sessionState))
         }
+        
+        /// For outbound calls the audio route is changed when the call is connected to the phone (from bluetooth), as a workaround
+        /// we will route this back to the default input after a short delay.
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+            if !self.pil.calls.isInTransfer {
+                self.pil.audio.routeToDefault()
+            }
+        }
     }
 
     public func callEnded(_ call: VoIPLibCall) {

@@ -131,7 +131,7 @@ public class AudioManager {
         }
     }
     
-    private func routeToDefault() {
+    internal func routeToDefault() {
         if hasBluetooth() {
             routeAudio(.bluetooth)
         } else {
