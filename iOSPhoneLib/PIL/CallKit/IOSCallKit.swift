@@ -73,7 +73,7 @@ class IOSCallKit: NSObject {
         )
         
         update.localizedCallerName = callerName
-        print("TEST123 \(phoneNumber) - \(callerName)")
+
         provider.reportNewIncomingCall(with: UUID.init(), update: update) { error in
             if error != nil {
                 self.pil.writeLog("ERROR: \(error?.localizedDescription)")
