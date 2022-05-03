@@ -73,7 +73,7 @@ class IOSCallKit: NSObject {
         )
         
         update.localizedCallerName = callerName
-        
+        print("TEST123 \(phoneNumber) - \(callerName)")
         provider.reportNewIncomingCall(with: UUID.init(), update: update) { error in
             if error != nil {
                 self.pil.writeLog("ERROR: \(error?.localizedDescription)")
@@ -148,7 +148,11 @@ class IOSCallKit: NSObject {
     func updateCall(call: Call) {
         let update = CXCallUpdate()
         update.hasVideo = false
-        update.localizedCallerName = call.remoteNumber
+        update.localizedCallerName = call.remotePartyHeading
+        update.remoteHandle = CXHandle(
+                type: CXHandle.HandleType.phoneNumber,
+                value: call.remoteNumber
+        )
         update.supportsGrouping = false
         update.supportsUngrouping = false
         update.supportsHolding = true
