@@ -22,7 +22,10 @@ class PlatformIntegrator: PILEventDelegate {
     }
     
     func onEvent(event: Event) {
-        pil.writeLog("PlatformIntegrator received \(event) event")
+        switch event {
+            case .callDurationUpdated(_): break
+            default: self.pil.writeLog("PlatformIntegrator received \(event) event")
+        }
         
         handle(event: event)
     }
@@ -33,7 +36,7 @@ class PlatformIntegrator: PILEventDelegate {
             case .outgoingCallStarted:
                 pil.iOSCallKit.reportOutgoingCallConnecting()
                 pil.app.requestCallUi()
-            case .callEnded(let state):
+            case .callEnded(_):
                 pil.iOSCallKit.endAllCalls()
                 fallthrough
             case .attendedTransferAborted,
