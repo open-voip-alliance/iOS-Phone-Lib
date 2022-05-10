@@ -108,11 +108,11 @@ class IOSCallKit: NSObject {
             return
         }
         
-        guard let call = controller.callObserver.calls.last(where: { $0.uuid != self.findCallUuid()! && !$0.isOutgoing }) else {
-            pil.writeLog("Unable to find incoming call to cancel in CallKit")
+        guard let call = controller.callObserver.calls.last(where: { !$0.hasConnected && !$0.isOutgoing }) else {
+            pil.writeLog("Unable to find ringing call to cancel in CallKit")
             return
         }
-        
+
         pil.writeLog("Cancelling incoming call with uuid \(call.uuid), the user will have been alerted for the incoming call already")
         provider.reportCall(with: call.uuid, endedAt: nil, reason: reason)
     }
