@@ -171,7 +171,6 @@ class IOSCallKit: NSObject {
         }
     }
 
-    
     private var hasActiveCalls: Bool {
         get {
             controller.callObserver.calls.count > 0
@@ -251,8 +250,8 @@ extension IOSCallKit: CXCallObserverDelegate {
     func callObserver(_ callObserver: CXCallObserver, callChanged call: CXCall) {
         let callCount = callObserver.calls.count
         
-        if callCount >= 2 {
-            pil.writeLog("We have detected multiple calls, we must cancel them.")
+        if callCount >= 2 && pil.calls.isInCall {
+            pil.writeLog("We have detected another call in CallKit while we are already in a Vialer call, remove it from CallKit")
             cancelIncomingCall()
         }
         
