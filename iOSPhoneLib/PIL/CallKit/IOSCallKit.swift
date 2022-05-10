@@ -108,10 +108,13 @@ class IOSCallKit: NSObject {
             return
         }
         
-        controller.callObserver.calls.filter({ $0.uuid != self.findCallUuid()! && !$0.isOutgoing }).forEach { call in
-            pil.writeLog("Cancelling incoming call with uuid \(call.uuid), the user will have been alerted for the incoming call already")
-            provider.reportCall(with: call.uuid, endedAt: nil, reason: reason)
+        guard let call = controller.callObserver.calls.last(where: { $0.uuid != self.findCallUuid()! && !$0.isOutgoing }) else {
+            pil.writeLog("Unable to find incoming call to cancel in CallKit")
+            return
         }
+        
+        pil.writeLog("Cancelling incoming call with uuid \(call.uuid), the user will have been alerted for the incoming call already")
+        provider.reportCall(with: call.uuid, endedAt: nil, reason: reason)
     }
     
     func endAllCalls(reason: CXCallEndedReason = CXCallEndedReason.remoteEnded, date: Date? = nil) {
@@ -171,7 +174,6 @@ class IOSCallKit: NSObject {
         }
     }
 
-    
     private var hasActiveCalls: Bool {
         get {
             controller.callObserver.calls.count > 0
@@ -251,8 +253,8 @@ extension IOSCallKit: CXCallObserverDelegate {
     func callObserver(_ callObserver: CXCallObserver, callChanged call: CXCall) {
         let callCount = callObserver.calls.count
         
-        if callCount >= 2 {
-            pil.writeLog("We have detected multiple calls, we must cancel them.")
+        if callCount >= 2 && pil.calls.isInCall {
+            pil.writeLog("We have detected another call in CallKit while we are already in a Vialer call, remove it from CallKit")
             cancelIncomingCall()
         }
         
