@@ -388,7 +388,7 @@ class LinphoneManager: LoggingServiceDelegate {
     }
     
     func onLogMessageWritten(logService: LoggingService, domain: String, level: LogLevel, message: String) {
-        logging.message(message: message)
+        config?.logListener(message)
     }
 }
 
