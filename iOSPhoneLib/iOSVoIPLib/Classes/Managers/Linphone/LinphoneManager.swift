@@ -85,19 +85,15 @@ class LinphoneManager: LoggingServiceDelegate {
     private func startLinphone() throws {
         factory.enableLogCollection(state: LogCollectionState.Enabled)
         logging.addDelegate(delegate: self)
-        logging.logLevel = LinphoneLogLevel.Debug
-        logging.debug(message: "asdasd")
+        logging.logLevel = LinphoneLogLevel.Warning
+
         linphoneCore = try factory.createCore(configPath: "", factoryConfigPath: "", systemContext: nil)
-        
         linphoneCore.addDelegate(delegate: stateManager)
         try applyPreStartConfiguration(core: linphoneCore)
         try linphoneCore.start()
         applyPostStartConfiguration(core: linphoneCore)
         configureCodecs(core: linphoneCore)
         factory.enableLogCollection(state: LogCollectionState.Enabled)
-        logging.addDelegate(delegate: self)
-        logging.logLevel = LinphoneLogLevel.Debug
-        logging.debug(message: "asdasd")
     }
 
     private func applyPreStartConfiguration(core: Core) throws {
@@ -392,9 +388,7 @@ class LinphoneManager: LoggingServiceDelegate {
     }
     
     func onLogMessageWritten(logService: LoggingService, domain: String, level: LogLevel, message: String) {
-        
-            print("Linphone: \(message)")
-       // config?.logListener(message)
+        logging.message(message: message)
     }
 }
 
