@@ -86,14 +86,12 @@ class LinphoneManager: LoggingServiceDelegate {
         factory.enableLogCollection(state: LogCollectionState.Disabled)
         logging.addDelegate(delegate: self)
         logging.logLevel = LinphoneLogLevel.Warning
-
         linphoneCore = try factory.createCore(configPath: "", factoryConfigPath: "", systemContext: nil)
         linphoneCore.addDelegate(delegate: stateManager)
         try applyPreStartConfiguration(core: linphoneCore)
         try linphoneCore.start()
         applyPostStartConfiguration(core: linphoneCore)
         configureCodecs(core: linphoneCore)
-        factory.enableLogCollection(state: LogCollectionState.Enabled)
     }
 
     private func applyPreStartConfiguration(core: Core) throws {
