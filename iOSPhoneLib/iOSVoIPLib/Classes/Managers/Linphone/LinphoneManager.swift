@@ -86,7 +86,6 @@ class LinphoneManager: LoggingServiceDelegate {
         factory.enableLogCollection(state: LogCollectionState.Disabled)
         logging.addDelegate(delegate: self)
         logging.logLevel = LinphoneLogLevel.Warning
-        
         linphoneCore = try factory.createCore(configPath: "", factoryConfigPath: "", systemContext: nil)
         linphoneCore.addDelegate(delegate: stateManager)
         try applyPreStartConfiguration(core: linphoneCore)
@@ -155,7 +154,7 @@ class LinphoneManager: LoggingServiceDelegate {
         self.config = config
     }
 
-    internal var registrationVoIPLibCallback: RegistrationCallback? = nil
+    internal var registrationCallback: RegistrationCallback? = nil
     
     //MARK: - SipSdkProtocol
     func register(callback: @escaping RegistrationCallback) {
@@ -171,7 +170,7 @@ class LinphoneManager: LoggingServiceDelegate {
             linphoneCore.removeDelegate(delegate: self.registrationListener)
             linphoneCore.addDelegate(delegate: self.registrationListener)
 
-            self.registrationVoIPLibCallback = callback
+            self.registrationCallback = callback
 
             if (!linphoneCore.proxyConfigList.isEmpty) {
                 log("Proxy config found, re-registering")
@@ -218,32 +217,9 @@ class LinphoneManager: LoggingServiceDelegate {
     }
     
     func unregister(finished:@escaping() -> ()) {
-        DispatchQueue.global().async {
-            guard self.isInitialized else {
-                DispatchQueue.main.async {
-                    finished()
-                }
-                return
-            }
-            self.logVoIPLib(message: "Linphone unregistering")
-            for config in self.linphoneCore.proxyConfigList {
-                config.edit() // start editing proxy configuration
-                config.registerEnabled = false // de-activate registration for this proxy config
-                do {
-                    try config.done()
-                } catch {
-                    self.logVoIPLib(message: "Linphone unregistering error on proxy: \(error)")
-                } // initiate REGISTER with expire = 0
-            }
-
-            self.isRegistered = false
-            
-            while(self.linphoneCore.proxyConfigList.contains(where: { $0.state != linphonesw.RegistrationState.Cleared } )) {
-                self.linphoneCore.iterate() // to make sure we receive VoIPLibCall backs before shutting down
-                usleep(50000)
-            }
-            self.linphoneCore.proxyConfigList.forEach( { self.linphoneCore.removeProxyConfig(config: $0) } )
-        }
+        self.linphoneCore.clearProxyConfig()
+        self.linphoneCore.clearAllAuthInfo()
+        finished()
     }
 
     func destroy() {
@@ -459,8 +435,34 @@ class LinphoneStateManager:CoreDelegate {
 }
 
 class RegistrationListener : CoreDelegate {
-    private let linphoneManager: LinphoneManager
     
+    /**
+     * The amount of time to wait before determining registration has failed.
+     */
+    private let registrationTimeoutSecs: Double = 5
+    
+    /**
+     * The time that we will wait before executing the method again to clean-up.
+     */
+    private let cleanUpDelaySecs: Double = 1
+    
+    /**
+     * It is sometimes possible that a failed registration will occur before a successful one
+     * so we will track the time of the first registration update before determining it has
+     * failed.
+     */
+    private var startTime: Double? = nil
+    
+    private var currentTime: Double {
+        get {
+            return NSDate().timeIntervalSince1970
+        }
+    }
+    
+    private var timer: Timer? = nil
+    
+    private let linphoneManager: LinphoneManager
+
     init(linphoneManager: LinphoneManager) {
         self.linphoneManager = linphoneManager
     }
@@ -468,10 +470,56 @@ class RegistrationListener : CoreDelegate {
     func onRegistrationStateChanged(core: Core, proxyConfig: ProxyConfig, state: linphonesw.RegistrationState, message: String) {
         log("Received registration state change: \(state.rawValue)")
         
-        if state == linphonesw.RegistrationState.Ok || state == linphonesw.RegistrationState.Failed {
-            linphoneManager.isRegistered = state == linphonesw.RegistrationState.Ok
-            linphoneManager.registrationVoIPLibCallback?(state == linphonesw.RegistrationState.Ok ? RegistrationState.registered : RegistrationState.failed)
-            linphoneManager.registrationVoIPLibCallback = nil
+        guard let callback = linphoneManager.registrationCallback else {
+            log("Callback not set so registration state change has not done anything.")
+            return
         }
+        
+        // If the registration was successful, just immediately invoke the callback and reset
+        // all timers.
+        if state == linphonesw.RegistrationState.Ok {
+            log("Successful, resetting timers.")
+            linphoneManager.registrationCallback = nil
+            callback(RegistrationState.registered)
+            reset()
+            return
+        }
+        
+        // If there is no start time, we want to set it to begin the time.
+        let startTime = (self.startTime != nil ? self.startTime : {
+            let startTime = currentTime
+            self.startTime = startTime
+            log("Started registration timer: \(startTime).")
+            return startTime
+        }())!
+        
+        if hasExceededTimeout(startTime) {
+            linphoneManager.registrationCallback = nil
+            linphoneManager.unregister {}
+            log("Registration timeout has been exceeded, registration failed.")
+            callback(RegistrationState.failed)
+            reset()
+            return
+        }
+        
+        // Queuing call of this method so we ensure that the callback is eventually invoked
+        // even if there are no future registration updates.
+        timer = Timer.scheduledTimer(withTimeInterval: cleanUpDelaySecs, repeats: false, block: { _ in
+            self.onRegistrationStateChanged(
+                core: core,
+                proxyConfig: proxyConfig,
+                state: state,
+                message: "Automatically called to ensure callback is executed"
+            )
+        })
+    }
+    
+    private func hasExceededTimeout(_ startTime: Double) -> Bool {
+        return (startTime + registrationTimeoutSecs) < currentTime
+    }
+    
+    private func reset() {
+        startTime = nil
+        timer?.invalidate()
     }
 }
