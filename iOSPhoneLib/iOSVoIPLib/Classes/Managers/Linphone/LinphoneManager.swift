@@ -83,7 +83,7 @@ class LinphoneManager: LoggingServiceDelegate {
     }
     
     private func startLinphone() throws {
-        factory.enableLogCollection(state: LogCollectionState.Enabled)
+        factory.enableLogCollection(state: LogCollectionState.Disabled)
         logging.addDelegate(delegate: self)
         logging.logLevel = LinphoneLogLevel.Warning
 
@@ -149,8 +149,7 @@ class LinphoneManager: LoggingServiceDelegate {
     }
     
     fileprivate func logVoIPLib(message: String) {
-        //print("Linphone: \(message)")
-        //logging.message(message: message)
+        logging.message(message: message)
     }
     
     func swapConfig(config: VoIPLibConfig) {
@@ -220,32 +219,9 @@ class LinphoneManager: LoggingServiceDelegate {
     }
     
     func unregister(finished:@escaping() -> ()) {
-        DispatchQueue.global().async {
-            guard self.isInitialized else {
-                DispatchQueue.main.async {
-                    finished()
-                }
-                return
-            }
-            self.logVoIPLib(message: "Linphone unregistering")
-            for config in self.linphoneCore.proxyConfigList {
-                config.edit() // start editing proxy configuration
-                config.registerEnabled = false // de-activate registration for this proxy config
-                do {
-                    try config.done()
-                } catch {
-                    self.logVoIPLib(message: "Linphone unregistering error on proxy: \(error)")
-                } // initiate REGISTER with expire = 0
-            }
-
-            self.isRegistered = false
-            
-            while(self.linphoneCore.proxyConfigList.contains(where: { $0.state != linphonesw.RegistrationState.Cleared } )) {
-                self.linphoneCore.iterate() // to make sure we receive VoIPLibCall backs before shutting down
-                usleep(50000)
-            }
-            self.linphoneCore.proxyConfigList.forEach( { self.linphoneCore.removeProxyConfig(config: $0) } )
-        }
+        self.linphoneCore.clearProxyConfig()
+        self.linphoneCore.clearAllAuthInfo()
+        finished()
     }
 
     func destroy() {
