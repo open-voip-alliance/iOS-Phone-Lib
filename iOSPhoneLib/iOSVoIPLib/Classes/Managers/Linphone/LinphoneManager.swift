@@ -50,6 +50,12 @@ class LinphoneManager: LoggingServiceDelegate {
         AVAudioSession.sharedInstance().currentRoute.outputs.contains(where: { $0.portType == AVAudioSession.Port.builtInSpeaker })
     }
     
+    /**
+     * We're going to store the auth object that we used to authenticate with successfully, so we
+     * know we need to re-register if it has changed.
+     */
+    private var lastRegisteredCredentials: Auth? = nil
+    
     var pil: PIL {
         get {
             return PIL.shared!
@@ -166,6 +172,11 @@ class LinphoneManager: LoggingServiceDelegate {
         do {
             guard let auth = pil.auth else {
                 throw InitializationError.noConfigurationProvided
+            }
+            
+            if lastRegisteredCredentials != auth && lastRegisteredCredentials != nil {
+                log("Auth appears to have changed, unregistering old.")
+                unregister()
             }
 
             linphoneCore.removeDelegate(delegate: self.registrationListener)
