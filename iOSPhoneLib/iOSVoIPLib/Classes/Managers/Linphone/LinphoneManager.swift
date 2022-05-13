@@ -496,6 +496,7 @@ class RegistrationListener : CoreDelegate {
         
         if hasExceededTimeout(startTime) {
             linphoneManager.registrationCallback = nil
+            linphoneManager.isRegistered = false
             linphoneManager.unregister {}
             log("Registration timeout has been exceeded, registration failed.")
             callback(RegistrationState.failed)
