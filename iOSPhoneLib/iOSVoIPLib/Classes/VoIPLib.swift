@@ -69,7 +69,7 @@ public class VoIPLib {
     /// - Parameters:
     ///     - finished: Called async when unregistering is done.
     public func unregister(finished:@escaping() -> ()) {
-        linphone.unregister(finished: finished)
+        linphone.unregister()
     }
     
     /// Call a phone number

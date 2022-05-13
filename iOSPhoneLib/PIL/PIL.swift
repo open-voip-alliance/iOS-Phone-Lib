@@ -16,6 +16,7 @@ public class PIL {
     private lazy var pushKit: PushKitDelegate = { PushKitDelegate(middleware: app.middleware!) }()
     private lazy var voipLibHelper = { di.resolve(VoIPLibHelper.self)! }()
     internal lazy var platformIntegrator = { di.resolve(PlatformIntegrator.self)! }()
+    internal lazy var voipLibEventTranslator = { di.resolve(VoipLibEventTranslator.self)! }()
     
     let voipLib: VoIPLib = di.resolve(VoIPLib.self)!
     lazy var iOSCallKit = { di.resolve(IOSCallKit.self)! }()
@@ -44,40 +45,35 @@ public class PIL {
     /// a full PIL restart and re-register.
     public var preferences = Preferences() {
         didSet {
-            if isPreparedToStart && oldValue != preferences {
-               start(forceInitialize: true, forceReregister: true)
-            }
+            iOSCallKit.refresh()
         }
     }
     
     /// The authentication details for the PIL, when this value is updated it will
     /// trigger a full re-register.
-    public var auth: Auth? {
-        didSet {
-            if isPreparedToStart && oldValue != auth {
-                start(forceInitialize: false, forceReregister: true)
-            }
-        }
-    }
+    public var auth: Auth?
     
     init(applicationSetup: ApplicationSetup) {
         self.app = applicationSetup
         PIL.shared = self
         events.listen(delegate: platformIntegrator)
         self.iOS.startListeningForSystemNotifications()
+        voipLib.initialize(
+            config: VoIPLibConfig(
+                callDelegate: voipLibEventTranslator,
+                userAgent: app.userAgent,
+                logListener: { message in
+                    self.app.logDelegate?.onLogReceived(message: message, level: LogLevel.info)
+                }
+            )
+        )
     }
     
     /// Check if the PIL is currently configured to successfully register.
     /// Attempt to boot and register to see if user credentials are correct.
     /// - Parameter callback: Called when the registration check has been completed.
     public func performRegistrationCheck(callback: @escaping (Bool) -> Void) {
-        guard let auth = auth else {
-            callback(false)
-            return
-        }
-        
-        voipLibHelper.initialize(force: false)
-        voipLibHelper.register(auth: auth, force: true, callback: callback)
+        voipLibHelper.register(callback: callback)
     }
     
     /// Start the PIL, unless the force options are provided, the method will not restart or re-register.
@@ -85,19 +81,24 @@ public class PIL {
     ///   - forceInitialize: a Bool to determine if the voipLib will restart.
     ///   - forceReregister: a Bool to determine the voipLib will re-register.
     ///   - completion:  Called with param success when the PIL has been started.
+    @available(*, deprecated, message: "Force parameters no longer used, use new start() method instead.")
     public func start(forceInitialize: Bool = false, forceReregister: Bool = false, completion: ((_ success: Bool) -> Void)? = nil) {
-        guard let auth = auth else {
-            print("There are not authentication details provided")
+        if auth == nil {
+            completion?(false)
+            log("There are no authentication details provided")
             return
         }
-
+        
         pushKit.registerForVoipPushes()
         iOSCallKit.initialize()
 
-        voipLibHelper.initialize(force: forceInitialize)
-        voipLibHelper.register(auth: auth, force: forceReregister) { success in
+        voipLibHelper.register { success in
             completion?(success)
         }
+    }
+    
+    public func start(completion: ((_ success: Bool) -> Void)? = nil) {
+        start(forceInitialize: false, forceReregister: false, completion: completion)
     }
     
     /// Stop the PIL, this will remove all authentication credentials from memory and destroy the underlying voip lib. This will not destroy the PIL.
@@ -113,12 +114,11 @@ public class PIL {
     /// - Parameter number: the String number to call.
     public func call(number: String) {
         if calls.isInCall {
+            events.broadcast(event: .outgoingCallSetupFailed)
             return
         }
         
-        start { _ in
-            self.iOSCallKit.startCall(number: number)
-        }
+        self.iOSCallKit.startCall(number: number)
     }
     
     internal func writeLog(_ message: String, level: LogLevel = .info) {

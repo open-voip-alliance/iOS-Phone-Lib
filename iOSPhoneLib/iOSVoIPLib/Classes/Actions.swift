@@ -96,6 +96,6 @@ public class Actions {
     ///
     /// - Returns: A string with the VoIPLibCall info, empty when could not get any.
     public func VoIPLibCallInfo() -> String {
-        linphone.provideVoIPLibCallInfo(call: call)
+        linphone.provideCallInfo(call: call)
     }
 }
