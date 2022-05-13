@@ -480,6 +480,7 @@ class RegistrationListener : CoreDelegate {
         if state == linphonesw.RegistrationState.Ok {
             log("Successful, resetting timers.")
             linphoneManager.registrationCallback = nil
+            linphoneManager.isRegistered = true
             callback(RegistrationState.registered)
             reset()
             return
