@@ -50,6 +50,18 @@ class LinphoneManager: LoggingServiceDelegate {
         AVAudioSession.sharedInstance().currentRoute.outputs.contains(where: { $0.portType == AVAudioSession.Port.builtInSpeaker })
     }
     
+    /**
+     * We're going to store the auth object that we used to authenticate with successfully, so we
+     * know we need to re-register if it has changed.
+     */
+    private var lastRegisteredCredentials: Auth? = nil
+    
+    var pil: PIL {
+        get {
+            return PIL.shared!
+        }
+    }
+    
     private var ringbackPath: String {
         let ringbackFileName = "ringback"
                 
@@ -68,7 +80,7 @@ class LinphoneManager: LoggingServiceDelegate {
         self.config = config
 
         if isInitialized {
-            logVoIPLib(message: "Linphone already init")
+            log("Linphone already init")
             return true
         }
 
@@ -76,7 +88,7 @@ class LinphoneManager: LoggingServiceDelegate {
             try startLinphone()
             return true
         } catch {
-            logVoIPLib(message: "Failed to start Linphone \(error.localizedDescription)")
+            log("Failed to start Linphone \(error.localizedDescription)")
             linphoneCore = nil
             return false
         }
@@ -146,7 +158,7 @@ class LinphoneManager: LoggingServiceDelegate {
         core.echoCancellationEnabled = true
     }
     
-    fileprivate func logVoIPLib(message: String) {
+    fileprivate func log(_ message: String) {
         logging.message(message: message)
     }
     
@@ -156,15 +168,15 @@ class LinphoneManager: LoggingServiceDelegate {
 
     internal var registrationCallback: RegistrationCallback? = nil
     
-    //MARK: - SipSdkProtocol
     func register(callback: @escaping RegistrationCallback) {
         do {
-            guard let config = self.config else {
+            guard let auth = pil.auth else {
                 throw InitializationError.noConfigurationProvided
             }
             
-            guard let auth = PIL.shared?.auth else {
-                throw InitializationError.noConfigurationProvided
+            if lastRegisteredCredentials != auth && lastRegisteredCredentials != nil {
+                log("Auth appears to have changed, unregistering old.")
+                unregister()
             }
 
             linphoneCore.removeDelegate(delegate: self.registrationListener)
@@ -172,60 +184,54 @@ class LinphoneManager: LoggingServiceDelegate {
 
             self.registrationCallback = callback
 
-            if (!linphoneCore.proxyConfigList.isEmpty) {
-                log("Proxy config found, re-registering")
+            if (!linphoneCore.accountList.isEmpty) {
+                log("SIP account not found, re-registering")
                 linphoneCore.refreshRegisters()
                 return
             }
             
-            log("No proxy config found, registering for the first time.")
+            log("No SIP account found, registering for the first time.")
 
-            let proxyConfig = try createProxyConfig(core: linphoneCore, auth: auth)
-
-            try linphoneCore.addProxyConfig(config: proxyConfig)
-
-            linphoneCore.addAuthInfo(info: try createAuthInfo(auth: auth))
-            linphoneCore.defaultProxyConfig = linphoneCore.proxyConfigList.first
+            let account = try createAccount(core: linphoneCore, auth: auth)
+            try linphoneCore.addAccount(account: account)
+            try linphoneCore.addAuthInfo(info: createAuthInfo(auth: auth))
+            linphoneCore.defaultAccount = account
         } catch (let error) {
-            logVoIPLib(message: "Linphone registration failed: \(error)")
-            callback(RegistrationState.failed)
+            log("Linphone registration failed: \(error)")
+            callback(.failed)
         }
     }
 
     private func createAuthInfo(auth: Auth) throws -> AuthInfo {
-        return try factory.createAuthInfo(username: auth.username, userid: auth.username, passwd: auth.password, ha1: "", realm: "", domain: "\(auth.domain):\(auth.port)")
+        return try factory.createAuthInfo(
+            username: auth.username,
+            userid: auth.username,
+            passwd: auth.password,
+            ha1: "",
+            realm: "",
+            domain: auth.domain
+        )
     }
 
-    private func createProxyConfig(core: Core, auth: Auth) throws -> ProxyConfig {
-        guard let auth = PIL.shared?.auth else {
-            throw InitializationError.noConfigurationProvided
-        }
-        
-        let identity = "sip:" + auth.username + "@" + auth.domain + ":\(auth.port)"
-        let proxy = "sip:\(auth.domain):\(auth.port)"
-        let identifyAddress = try factory.createAddress(addr: identity)
-
-        proxyConfig = try linphoneCore.createProxyConfig()
-        proxyConfig.registerEnabled = true
-        proxyConfig.qualityReportingEnabled = false
-        proxyConfig.qualityReportingInterval = 0
-        try proxyConfig.setIdentityaddress(newValue: identifyAddress)
-        try proxyConfig.setServeraddr(newValue: proxy)
-        proxyConfig.natPolicy = nil
-        try proxyConfig.done()
-        return proxyConfig
+    private func createAccount(core: Core, auth: Auth) throws -> Account {
+        let params = try core.createAccountParams()
+        try params.setIdentityaddress(newValue: core.interpretUrl(url: "sip:\(auth.username)@\(auth.domain):\(auth.port)")!)
+        params.registerEnabled = true
+        try params.setServeraddress(newValue: core.interpretUrl(url: "sip:\(auth.domain);transport=tls")!)
+        return try linphoneCore.createAccount(params: params)
     }
     
-    func unregister(finished:@escaping() -> ()) {
-        self.linphoneCore.clearProxyConfig()
-        self.linphoneCore.clearAllAuthInfo()
-        finished()
+    func unregister() {
+        linphoneCore.clearAccounts()
+        linphoneCore.clearAllAuthInfo()
+        log("Unregister complete")
     }
 
     func destroy() {
+        unregister()
         linphoneCore.removeDelegate(delegate: stateManager)
         linphoneCore.stop()
-        logVoIPLib(message: "Linphone unregistered")
+        log("Linphone destroyed")
         linphoneCore = nil
         isRegistered = false
     }
@@ -280,11 +286,11 @@ class LinphoneManager: LoggingServiceDelegate {
         }
         
         guard let enabled = linphoneCore?.audioPayloadTypes.filter({ payload in payload.enabled() }).map({ payload in payload.mimeType }).joined(separator: ", ") else {
-            logVoIPLib(message: "Unable to log codecs, no core")
+            log("Unable to log codecs, no core")
             return
         }
         
-        logVoIPLib(message: "Enabled codecs: \(enabled)")
+        log("Enabled codecs: \(enabled)")
     }
 
     
@@ -293,17 +299,17 @@ class LinphoneManager: LoggingServiceDelegate {
     }
     
     func setAudio(enabled:Bool) {
-        logVoIPLib(message: "Linphone set audio: \(enabled)")
+        log("Linphone set audio: \(enabled)")
         linphoneCore.activateAudioSession(actived: enabled)
     }
     
     func setHold(call: VoIPLibCall, onHold hold:Bool) -> Bool {
         do {
             if hold {
-                logVoIPLib(message: "Pausing VoIPLibCall.")
+                log("Pausing VoIPLibCall.")
                 try call.pause()
             } else {
-                logVoIPLib(message: "Resuming VoIPLibCall.")
+                log("Resuming VoIPLibCall.")
                 try call.resume()
             }
             return true
@@ -315,17 +321,17 @@ class LinphoneManager: LoggingServiceDelegate {
     func transfer(call: VoIPLibCall, to number: String) -> Bool {
         do {
             try call.linphoneCall.transfer(referTo: number)
-            logVoIPLib(message: "Transfer was successful")
+            log("Transfer was successful")
             return true
         } catch (let error) {
-            logVoIPLib(message: "Transfer failed: \(error)")
+            log("Transfer failed: \(error)")
             return false
         }
     }
     
     func beginAttendedTransfer(call: VoIPLibCall, to number:String) -> AttendedTransferSession? {
         guard let destinationVoIPLibCall = self.call(to: number) else {
-            logVoIPLib(message: "Unable to make VoIPLibCall for target VoIPLibCall")
+            log("Unable to make VoIPLibCall for target VoIPLibCall")
             return nil
         }
         
@@ -335,10 +341,10 @@ class LinphoneManager: LoggingServiceDelegate {
     func finishAttendedTransfer(attendedTransferSession: AttendedTransferSession) -> Bool {
         do {
             try attendedTransferSession.from.linphoneCall.transferToAnother(dest: attendedTransferSession.to.linphoneCall)
-            logVoIPLib(message: "Transfer was successful")
+            log("Transfer was successful")
             return true
         } catch (let error) {
-            logVoIPLib(message: "Transfer failed: \(error)")
+            log("Transfer failed: \(error)")
             return false
         }
     }
@@ -347,7 +353,7 @@ class LinphoneManager: LoggingServiceDelegate {
         do {
             try call.linphoneCall.sendDtmfs(dtmfs: dtmf)
         } catch (let error) {
-            logVoIPLib(message: "Sending dtmf failed: \(error)")
+            log("Sending dtmf failed: \(error)")
             return
         }
     }
@@ -356,7 +362,7 @@ class LinphoneManager: LoggingServiceDelegate {
     ///
     /// - Parameter VoIPLibCall: the VoIPLibCall object
     /// - Returns: a String with all VoIPLibCall info
-    func provideVoIPLibCallInfo(call: VoIPLibCall) -> String {
+    func provideCallInfo(call: VoIPLibCall) -> String {
         let VoIPLibCallInfoProvider = VoIPLibCallInfoProvider(VoIPLibCall: call)
         return VoIPLibCallInfoProvider.provideVoIPLibCallInfo()
     }
@@ -377,15 +383,15 @@ class LinphoneStateManager:CoreDelegate {
     }
     
     func onCallStateChanged(core: Core, call: LinphoneCall, state: LinphoneCall.State, message: String) {
-        linphoneManager.logVoIPLib(message: "OnVoIPLibCallStateChanged, state:\(state) with message:\(message).")
+        linphoneManager.log("OnVoIPLibCallStateChanged, state:\(state) with message:\(message).")
 
         guard let voipLibCall = VoIPLibCall(linphoneCall: call) else {
-            linphoneManager.logVoIPLib(message: "Unable to create VoIPLibCall, no remote address")
+            linphoneManager.log("Unable to create VoIPLibCall, no remote address")
             return
         }
 
         guard let delegate = self.linphoneManager.config?.callDelegate else {
-            linphoneManager.logVoIPLib(message: "Unable to send events as no VoIPLibCall delegate")
+            linphoneManager.log("Unable to send events as no VoIPLibCall delegate")
             return
         }
 
@@ -410,12 +416,12 @@ class LinphoneStateManager:CoreDelegate {
     
     func onTransferStateChanged(core: Core, transfered: LinphoneCall, VoIPLibCallState: LinphoneCall.State) {
         guard let delegate = self.linphoneManager.config?.callDelegate else {
-            linphoneManager.logVoIPLib(message: "Unable to send VoIPLibCall transfer event as no VoIPLibCall delegate")
+            linphoneManager.log("Unable to send VoIPLibCall transfer event as no VoIPLibCall delegate")
             return
         }
         
         guard let voipLibVoIPLibCall = VoIPLibCall(linphoneCall: transfered) else {
-            linphoneManager.logVoIPLib(message: "Unable to create VoIPLibCall, no remote address")
+            linphoneManager.log("Unable to create VoIPLibCall, no remote address")
             return
         }
         
@@ -467,7 +473,7 @@ class RegistrationListener : CoreDelegate {
         self.linphoneManager = linphoneManager
     }
 
-    func onRegistrationStateChanged(core: Core, proxyConfig: ProxyConfig, state: linphonesw.RegistrationState, message: String) {
+    func onAccountRegistrationStateChanged(core: Core, account: Account, state: linphonesw.RegistrationState, message: String) {
         log("Received registration state change: \(state.rawValue)")
         
         guard let callback = linphoneManager.registrationCallback else {
@@ -497,7 +503,7 @@ class RegistrationListener : CoreDelegate {
         if hasExceededTimeout(startTime) {
             linphoneManager.registrationCallback = nil
             linphoneManager.isRegistered = false
-            linphoneManager.unregister {}
+            linphoneManager.unregister()
             log("Registration timeout has been exceeded, registration failed.")
             callback(RegistrationState.failed)
             reset()
@@ -507,9 +513,9 @@ class RegistrationListener : CoreDelegate {
         // Queuing call of this method so we ensure that the callback is eventually invoked
         // even if there are no future registration updates.
         timer = Timer.scheduledTimer(withTimeInterval: cleanUpDelaySecs, repeats: false, block: { _ in
-            self.onRegistrationStateChanged(
+            self.onAccountRegistrationStateChanged(
                 core: core,
-                proxyConfig: proxyConfig,
+                account: account,
                 state: state,
                 message: "Automatically called to ensure callback is executed"
             )
