@@ -39,12 +39,7 @@ var register: (Container) -> Container = {
         pil: c.resolve(PIL.self)!,
         voipLib: c.resolve(VoIPLib.self)!,
         audioSession: AVAudioSession.sharedInstance(),
-        dtmfPlayer: c.resolve(DtmfPlayer.self)!,
         callActions: c.resolve(CallActions.self)!
-    ) }.inObjectScope(.container)
-    
-    $0.register(DtmfPlayer.self) { c in DtmfPlayer(
-        pil: c.resolve(PIL.self)!
     ) }.inObjectScope(.container)
     
     $0.register(Contacts.self) { _ in Contacts() }.inObjectScope(.container)
@@ -74,8 +69,7 @@ var register: (Container) -> Container = {
     $0.register(VoIPLibHelper.self) { c in
         VoIPLibHelper(
             voipLib: c.resolve(VoIPLib.self)!,
-            pil: c.resolve(PIL.self)!,
-            voipLibEventTranslator: c.resolve(VoipLibEventTranslator.self)!
+            pil: c.resolve(PIL.self)!
         )
     }.inObjectScope(.container)
     

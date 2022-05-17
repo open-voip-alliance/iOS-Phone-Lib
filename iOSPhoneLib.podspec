@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
 
     s.source_files = 'iOSPhoneLib/**/*'
 
-    s.dependency 'linphone-sdk', '5.0.70'
+    s.dependency 'linphone-sdk', '5.1.28'
     s.framework = "UIKit"
     s.dependency 'Swinject', '~> 2.7.1'
     s.resource_bundles = { 'Resources' => ['iOSPhoneLib/iOSVoIPLib/Resources'] }

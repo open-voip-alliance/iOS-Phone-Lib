@@ -8,7 +8,7 @@
 import Foundation
 import linphonesw
 
-class VoIPLibCallInfoProvider {
+class CallInfoProvider {
     
     let VoIPLibCall: VoIPLibCall
     
@@ -16,7 +16,7 @@ class VoIPLibCallInfoProvider {
         self.VoIPLibCall = VoIPLibCall
     }
     
-    func provideVoIPLibCallInfo() -> String {
+    func provide() -> String {
         let audio = provideAudioInfo()
         let advancedSettings = provideAdvancedSettings()
         let toAddressInfo = provideToAddressInfo()

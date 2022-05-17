@@ -35,7 +35,7 @@ class CallList {
             print("Call has been removed from CallList")
             return call
         }
-        print("Call could not be found on CallList")
+        log("Call could not be found on CallList")
         return nil
     }
     

@@ -85,12 +85,7 @@ class VoIPGRIDMiddleware: Middleware {
             encoder: URLEncodedFormParameterEncoder.default,
             headers: createAuthHeader()
         ).response { response in
-            switch response.result {
-                case .success(_):
-                    print("Succcess")
-                case .failure(_):
-                    print("Failure")
-                }
+            
         }
     }
     
@@ -112,11 +107,11 @@ class VoIPGRIDMiddleware: Middleware {
         ).response { response in
             switch response.result {
                 case .success(_):
-                    print("VoIP Account Encryption set to \(encryption) successfully.")
+                   // print("VoIP Account Encryption set to \(encryption) successfully.")
                     self.defaults.set(encryption, forKey: "VoIP Account Encryption")
                     completion(true)
                 case .failure(_):
-                    print("Error, could not set the VoIP account encryption to \(encryption).")
+                   // print("Error, could not set the VoIP account encryption to \(encryption).")
                     completion(false)
                 }
         }

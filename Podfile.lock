@@ -1,21 +1,21 @@
 PODS:
-  - Alamofire (5.5.0)
+  - Alamofire (5.6.1)
   - iOSPhoneLib (0.1.1):
-    - linphone-sdk (= 5.0.70)
+    - linphone-sdk (= 5.1.28)
     - Swinject (~> 2.7.1)
-  - linphone-sdk (5.0.70):
-    - linphone-sdk/all-frameworks (= 5.0.70)
-    - linphone-sdk/app-extension (= 5.0.70)
-    - linphone-sdk/app-extension-swift (= 5.0.70)
-    - linphone-sdk/basic-frameworks (= 5.0.70)
-    - linphone-sdk/swift (= 5.0.70)
-  - linphone-sdk/all-frameworks (5.0.70)
-  - linphone-sdk/app-extension (5.0.70)
-  - linphone-sdk/app-extension-swift (5.0.70):
+  - linphone-sdk (5.1.28):
+    - linphone-sdk/all-frameworks (= 5.1.28)
+    - linphone-sdk/app-extension (= 5.1.28)
+    - linphone-sdk/app-extension-swift (= 5.1.28)
+    - linphone-sdk/basic-frameworks (= 5.1.28)
+    - linphone-sdk/swift (= 5.1.28)
+  - linphone-sdk/all-frameworks (5.1.28)
+  - linphone-sdk/app-extension (5.1.28)
+  - linphone-sdk/app-extension-swift (5.1.28):
     - linphone-sdk/app-extension
-  - linphone-sdk/basic-frameworks (5.0.70):
+  - linphone-sdk/basic-frameworks (5.1.28):
     - linphone-sdk/app-extension
-  - linphone-sdk/swift (5.0.70):
+  - linphone-sdk/swift (5.1.28):
     - linphone-sdk/app-extension-swift
     - linphone-sdk/basic-frameworks
   - QuickTableViewController (1.3.1)
@@ -25,7 +25,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire (~> 5.2)
   - iOSPhoneLib (from `iOSPhoneLib.podspec`)
-  - linphone-sdk (= 5.0.70)
+  - linphone-sdk (= 5.1.28)
   - QuickTableViewController
   - SAMKeychain
   - Swinject
@@ -44,13 +44,13 @@ EXTERNAL SOURCES:
     :path: iOSPhoneLib.podspec
 
 SPEC CHECKSUMS:
-  Alamofire: 1c4fb5369c3fe93d2857c780d8bbe09f06f97e7c
-  iOSPhoneLib: bdb0d49524d2558d4381ca5be70eb6f5c4d1cf71
-  linphone-sdk: 64da89a6cfc393e600ffbedb38d22e25fdaf023b
+  Alamofire: 87bd8c952f9a4454320fce00d9cc3de57bcadaf5
+  iOSPhoneLib: a50d078f9329ef2d1707aad303c9ac938ae19efc
+  linphone-sdk: d3c29da0625a4f5e699b1e8cea0777fc7225e667
   QuickTableViewController: 25e698de1546c2b829c543d91b64ebc6e884acfc
   SAMKeychain: 483e1c9f32984d50ca961e26818a534283b4cd5c
   Swinject: ddf78b8486dd9b71a667b852cad919ab4484478e
 
-PODFILE CHECKSUM: 23e1025e418bc2b15d5bdb2eb88d90a7ae702b50
+PODFILE CHECKSUM: 717d54296126f3230067b91e59e2b321cc6a7f84
 
 COCOAPODS: 1.11.2

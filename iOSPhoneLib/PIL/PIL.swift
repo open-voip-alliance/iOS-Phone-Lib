@@ -61,7 +61,6 @@ public class PIL {
         voipLib.initialize(
             config: VoIPLibConfig(
                 callDelegate: voipLibEventTranslator,
-                userAgent: app.userAgent,
                 logListener: { message in
                     self.app.logDelegate?.onLogReceived(message: message, level: LogLevel.info)
                 }
