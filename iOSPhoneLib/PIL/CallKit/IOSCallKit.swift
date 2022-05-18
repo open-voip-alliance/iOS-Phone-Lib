@@ -88,7 +88,7 @@ class IOSCallKit: NSObject {
             if self.hasActiveCalls {
                 self.pil.writeLog("Performing sanity check that we have an active library while there are calls ringing")
                 
-                if !self.pil.voipLib.isReady {
+                if !self.pil.voipLib.isInitialized {
                     self.pil.writeLog("VoIP library is not booted, ending all calls")
                     self.endAllCalls(reason: .failed)
                     return

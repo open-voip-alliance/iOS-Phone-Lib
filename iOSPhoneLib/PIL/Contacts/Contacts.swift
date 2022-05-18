@@ -56,7 +56,7 @@ class Contacts {
                 self.cachedContacts[call.identifier] = Contact.notFound()
             })
         } catch {
-            print("Unable to access contacts")
+            log("Unable to access contacts")
         }
     }
     

@@ -39,8 +39,6 @@ class CallViewController: UIViewController, PILEventDelegate {
     }
     
     func onEvent(event: Event) {
-        print("CallViewController received \(event) event")
-        
         self.event = event
         
         switch event {

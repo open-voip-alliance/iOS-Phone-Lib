@@ -82,10 +82,7 @@ public class CallActions {
         }
     }
     
-    public func sendDtmf(_ dtmf: String, playToneLocally: Bool = true) {
-        if playToneLocally {
-            pil.audio.dtmf.playTone(dtmf)
-        }
+    public func sendDtmf(_ dtmf: String) {
         performCallAction { uuid -> CXCallAction in
             CXPlayDTMFCallAction(call: uuid, digits: dtmf, type: .singleTone)
         }
@@ -109,9 +106,9 @@ public class CallActions {
         
         controller.request(CXTransaction(action: action)) { error in
             if error != nil {
-                print("Failed to perform \(action.description) \(String(describing: error?.localizedDescription))")
+                log("Failed to perform \(action.description) \(String(describing: error?.localizedDescription))")
             } else {
-                debugPrint("Performed \(action.description))")
+                log("Performed \(action.description))")
             }
         }
     }

@@ -57,8 +57,8 @@ extension PushKitDelegate: PKPushRegistryDelegate {
             completion()
             return
         }
-                
-        pil.start() { success in
+                        
+        pil.start { success in
             self.pil.writeLog("PIL started with success=\(success), responding to middleware: \(success)")
             
             if success {
@@ -83,7 +83,7 @@ extension PushKitDelegate: PKPushRegistryDelegate {
 
     func pushRegistry(_ registry: PKPushRegistry, didUpdate pushCredentials: PKPushCredentials, for type: PKPushType) {
         let token = String(apnsToken: pushCredentials.token)
-        print("Received a new APNS token: \(token)")
+        log("Received a new APNS token: \(token)")
 
         middleware.tokenReceived(token: token)
     }

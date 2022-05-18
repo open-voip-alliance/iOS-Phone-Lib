@@ -7,23 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		594FFAB9AE2EAF13349279C1 /* Pods_iOSPhoneLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C8F9CB0D512CF790D57338D /* Pods_iOSPhoneLib.framework */; };
+		4E1B2987E1A40B7C6EA65EF0 /* Pods_iOSPhoneLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D772D3A3A27097AFA1F1A68E /* Pods_iOSPhoneLib.framework */; };
 		5C6C81162806DA2500EE2919 /* iOSPhoneLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C6C810E2806DA2500EE2919 /* iOSPhoneLib.framework */; };
 		5C6C811C2806DE9E00EE2919 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835D82F827BD61E000A7B5DD /* AudioManager.swift */; };
 		5C6C811D2806DE9E00EE2919 /* AudioRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835D82F927BD61E000A7B5DD /* AudioRoute.swift */; };
-		5C6C811E2806DE9E00EE2919 /* dtmf-7.aif in Sources */ = {isa = PBXBuildFile; fileRef = 835D82FB27BD61E000A7B5DD /* dtmf-7.aif */; };
-		5C6C811F2806DE9E00EE2919 /* dtmf-6.aif in Sources */ = {isa = PBXBuildFile; fileRef = 835D82FC27BD61E000A7B5DD /* dtmf-6.aif */; };
-		5C6C81202806DE9E00EE2919 /* dtmf-4.aif in Sources */ = {isa = PBXBuildFile; fileRef = 835D82FD27BD61E000A7B5DD /* dtmf-4.aif */; };
-		5C6C81212806DE9E00EE2919 /* dtmf-#.aif in Sources */ = {isa = PBXBuildFile; fileRef = 835D82FE27BD61E000A7B5DD /* dtmf-#.aif */; };
-		5C6C81222806DE9E00EE2919 /* dtmf-5.aif in Sources */ = {isa = PBXBuildFile; fileRef = 835D82FF27BD61E000A7B5DD /* dtmf-5.aif */; };
-		5C6C81232806DE9E00EE2919 /* dtmf-1.aif in Sources */ = {isa = PBXBuildFile; fileRef = 835D830027BD61E000A7B5DD /* dtmf-1.aif */; };
-		5C6C81242806DE9E00EE2919 /* dtmf-0.aif in Sources */ = {isa = PBXBuildFile; fileRef = 835D830127BD61E000A7B5DD /* dtmf-0.aif */; };
-		5C6C81252806DE9E00EE2919 /* dtmf-2.aif in Sources */ = {isa = PBXBuildFile; fileRef = 835D830227BD61E000A7B5DD /* dtmf-2.aif */; };
-		5C6C81262806DE9E00EE2919 /* dtmf-3.aif in Sources */ = {isa = PBXBuildFile; fileRef = 835D830327BD61E000A7B5DD /* dtmf-3.aif */; };
-		5C6C81272806DE9E00EE2919 /* dtmf-*.aif in Sources */ = {isa = PBXBuildFile; fileRef = 835D830427BD61E000A7B5DD /* dtmf-*.aif */; };
-		5C6C81282806DE9E00EE2919 /* dtmf-8.aif in Sources */ = {isa = PBXBuildFile; fileRef = 835D830527BD61E000A7B5DD /* dtmf-8.aif */; };
-		5C6C81292806DE9E00EE2919 /* dtmf-9.aif in Sources */ = {isa = PBXBuildFile; fileRef = 835D830627BD61E000A7B5DD /* dtmf-9.aif */; };
-		5C6C812A2806DE9E00EE2919 /* DtmfPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835D830727BD61E000A7B5DD /* DtmfPlayer.swift */; };
 		5C6C812B2806DE9E00EE2919 /* AudioState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835D830827BD61E000A7B5DD /* AudioState.swift */; };
 		5C6C812C2806DE9E00EE2919 /* IOSCallKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835D831E27BD61E100A7B5DD /* IOSCallKit.swift */; };
 		5C6C812D2806DE9E00EE2919 /* CallDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835D830C27BD61E000A7B5DD /* CallDirection.swift */; };
@@ -60,16 +47,15 @@
 		5C6C81512806DE9E00EE2919 /* LinphoneManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8323716727C7CC060087E701 /* LinphoneManager.swift */; };
 		5C6C81522806DE9E00EE2919 /* Quality.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8323715A27C7CC060087E701 /* Quality.swift */; };
 		5C6C81532806DE9E00EE2919 /* Codec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8323715B27C7CC060087E701 /* Codec.swift */; };
-		5C6C81542806DE9E00EE2919 /* SipRegistrationStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8323715C27C7CC060087E701 /* SipRegistrationStatus.swift */; };
 		5C6C81552806DE9E00EE2919 /* CallInfoProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8323715D27C7CC060087E701 /* CallInfoProvider.swift */; };
 		5C6C81562806DE9E00EE2919 /* AttendedTransferSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8323715E27C7CC060087E701 /* AttendedTransferSession.swift */; };
 		5C6C81572806DE9E00EE2919 /* VoIPLibCallState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8323715F27C7CC060087E701 /* VoIPLibCallState.swift */; };
 		5C6C81582806DE9E00EE2919 /* VoIPLibCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8323716027C7CC060087E701 /* VoIPLibCall.swift */; };
 		5C6C81592806DE9E00EE2919 /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8323716127C7CC060087E701 /* Direction.swift */; };
 		5C6C815A2806DE9E00EE2919 /* CallDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8323715227C7CC060087E701 /* CallDelegate.swift */; };
-		5C6C815B2806DE9E00EE2919 /* RegistrationStateDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8323715327C7CC060087E701 /* RegistrationStateDelegate.swift */; };
 		5C6C815C2806DE9E00EE2919 /* RegistrationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8323716927C7CC060087E701 /* RegistrationState.swift */; };
-		70406E0AC48F19A43EB74491 /* Pods_Phone_Lib_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3118FC036DE448A150A0101 /* Pods_Phone_Lib_Example.framework */; };
+		5C7CB554282F04F900DD8FDD /* LinphoneRegistrationListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7CB553282F04F900DD8FDD /* LinphoneRegistrationListener.swift */; };
+		5C7CB556282F053800DD8FDD /* LinphoneListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7CB555282F053800DD8FDD /* LinphoneListener.swift */; };
 		8323712727C6B5210087E701 /* InCallDialpadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8323711F27C6B5210087E701 /* InCallDialpadViewController.swift */; };
 		8323712827C6B5210087E701 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8323712027C6B5210087E701 /* Assets.xcassets */; };
 		8323712927C6B5210087E701 /* CallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8323712127C6B5210087E701 /* CallViewController.swift */; };
@@ -85,6 +71,7 @@
 		835D82BD27BAC86D00A7B5DD /* VoIPGRIDLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835D82AE27BAC86C00A7B5DD /* VoIPGRIDLogin.swift */; };
 		835D82BE27BAC86D00A7B5DD /* VoIPGRIDMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835D82AF27BAC86C00A7B5DD /* VoIPGRIDMiddleware.swift */; };
 		835D834F27BD64C200A7B5DD /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = 835D82F327BD61E000A7B5DD /* Localizable.stringsdict */; };
+		AFB5693CC42E214A23443FC9 /* Pods_Phone_Lib_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFCE9A2066A9538A192D45E5 /* Pods_Phone_Lib_Example.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,10 +98,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0C8F9CB0D512CF790D57338D /* Pods_iOSPhoneLib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSPhoneLib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1A93D27F99CCB9F7C31E4485 /* Pods-iOSPhoneLib.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSPhoneLib.debug.xcconfig"; path = "Target Support Files/Pods-iOSPhoneLib/Pods-iOSPhoneLib.debug.xcconfig"; sourceTree = "<group>"; };
-		57178D121F951AA21B114491 /* Pods-iOSPhoneLib.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSPhoneLib.release.xcconfig"; path = "Target Support Files/Pods-iOSPhoneLib/Pods-iOSPhoneLib.release.xcconfig"; sourceTree = "<group>"; };
+		3B0279054752F1ABFA92DF23 /* Pods-Phone Lib Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Phone Lib Example.release.xcconfig"; path = "Target Support Files/Pods-Phone Lib Example/Pods-Phone Lib Example.release.xcconfig"; sourceTree = "<group>"; };
+		5561E41A9A4693FF84F958FF /* Pods-iOSPhoneLib.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSPhoneLib.debug.xcconfig"; path = "Target Support Files/Pods-iOSPhoneLib/Pods-iOSPhoneLib.debug.xcconfig"; sourceTree = "<group>"; };
 		5C6C810E2806DA2500EE2919 /* iOSPhoneLib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = iOSPhoneLib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C7CB553282F04F900DD8FDD /* LinphoneRegistrationListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinphoneRegistrationListener.swift; sourceTree = "<group>"; };
+		5C7CB555282F053800DD8FDD /* LinphoneListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinphoneListener.swift; sourceTree = "<group>"; };
 		8323711F27C6B5210087E701 /* InCallDialpadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InCallDialpadViewController.swift; sourceTree = "<group>"; };
 		8323712027C6B5210087E701 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8323712127C6B5210087E701 /* CallViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallViewController.swift; sourceTree = "<group>"; };
@@ -124,13 +112,11 @@
 		8323712627C6B5210087E701 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		8323714F27C7C1F40087E701 /* PILTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PILTests.swift; sourceTree = "<group>"; };
 		8323715227C7CC060087E701 /* CallDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallDelegate.swift; sourceTree = "<group>"; };
-		8323715327C7CC060087E701 /* RegistrationStateDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationStateDelegate.swift; sourceTree = "<group>"; };
 		8323715627C7CC060087E701 /* VoIPLibConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoIPLibConfig.swift; sourceTree = "<group>"; };
 		8323715727C7CC060087E701 /* VoIPLib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VoIPLib.swift; path = Classes/VoIPLib.swift; sourceTree = "<group>"; };
 		8323715827C7CC060087E701 /* Actions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Actions.swift; path = Classes/Actions.swift; sourceTree = "<group>"; };
 		8323715A27C7CC060087E701 /* Quality.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Quality.swift; sourceTree = "<group>"; };
 		8323715B27C7CC060087E701 /* Codec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Codec.swift; sourceTree = "<group>"; };
-		8323715C27C7CC060087E701 /* SipRegistrationStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SipRegistrationStatus.swift; sourceTree = "<group>"; };
 		8323715D27C7CC060087E701 /* CallInfoProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallInfoProvider.swift; sourceTree = "<group>"; };
 		8323715E27C7CC060087E701 /* AttendedTransferSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttendedTransferSession.swift; sourceTree = "<group>"; };
 		8323715F27C7CC060087E701 /* VoIPLibCallState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoIPLibCallState.swift; sourceTree = "<group>"; };
@@ -166,19 +152,6 @@
 		835D82F627BD61E000A7B5DD /* Container.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
 		835D82F827BD61E000A7B5DD /* AudioManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
 		835D82F927BD61E000A7B5DD /* AudioRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioRoute.swift; sourceTree = "<group>"; };
-		835D82FB27BD61E000A7B5DD /* dtmf-7.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = "dtmf-7.aif"; sourceTree = "<group>"; };
-		835D82FC27BD61E000A7B5DD /* dtmf-6.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = "dtmf-6.aif"; sourceTree = "<group>"; };
-		835D82FD27BD61E000A7B5DD /* dtmf-4.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = "dtmf-4.aif"; sourceTree = "<group>"; };
-		835D82FE27BD61E000A7B5DD /* dtmf-#.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = "dtmf-#.aif"; sourceTree = "<group>"; };
-		835D82FF27BD61E000A7B5DD /* dtmf-5.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = "dtmf-5.aif"; sourceTree = "<group>"; };
-		835D830027BD61E000A7B5DD /* dtmf-1.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = "dtmf-1.aif"; sourceTree = "<group>"; };
-		835D830127BD61E000A7B5DD /* dtmf-0.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = "dtmf-0.aif"; sourceTree = "<group>"; };
-		835D830227BD61E000A7B5DD /* dtmf-2.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = "dtmf-2.aif"; sourceTree = "<group>"; };
-		835D830327BD61E000A7B5DD /* dtmf-3.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = "dtmf-3.aif"; sourceTree = "<group>"; };
-		835D830427BD61E000A7B5DD /* dtmf-*.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = "dtmf-*.aif"; sourceTree = "<group>"; };
-		835D830527BD61E000A7B5DD /* dtmf-8.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = "dtmf-8.aif"; sourceTree = "<group>"; };
-		835D830627BD61E000A7B5DD /* dtmf-9.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = "dtmf-9.aif"; sourceTree = "<group>"; };
-		835D830727BD61E000A7B5DD /* DtmfPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DtmfPlayer.swift; sourceTree = "<group>"; };
 		835D830827BD61E000A7B5DD /* AudioState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioState.swift; sourceTree = "<group>"; };
 		835D830A27BD61E000A7B5DD /* MissedCallNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MissedCallNotification.swift; sourceTree = "<group>"; };
 		835D830C27BD61E000A7B5DD /* CallDirection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallDirection.swift; sourceTree = "<group>"; };
@@ -199,9 +172,10 @@
 		835D832027BD61E100A7B5DD /* IOS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IOS.swift; sourceTree = "<group>"; };
 		837885A427AC3FB7001A24A8 /* VoIPLibTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoIPLibTests.swift; sourceTree = "<group>"; };
 		8394DF632808928C005DB853 /* Phone Lib Example.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Phone Lib Example.entitlements"; sourceTree = "<group>"; };
-		A3118FC036DE448A150A0101 /* Pods_Phone_Lib_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Phone_Lib_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DEFA76D95D3360EFE038ED7F /* Pods-Phone Lib Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Phone Lib Example.debug.xcconfig"; path = "Target Support Files/Pods-Phone Lib Example/Pods-Phone Lib Example.debug.xcconfig"; sourceTree = "<group>"; };
-		EE33F0708F1E6B6164F475F0 /* Pods-Phone Lib Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Phone Lib Example.release.xcconfig"; path = "Target Support Files/Pods-Phone Lib Example/Pods-Phone Lib Example.release.xcconfig"; sourceTree = "<group>"; };
+		849F37BAC65B99BF9EA406CD /* Pods-Phone Lib Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Phone Lib Example.debug.xcconfig"; path = "Target Support Files/Pods-Phone Lib Example/Pods-Phone Lib Example.debug.xcconfig"; sourceTree = "<group>"; };
+		BFCE9A2066A9538A192D45E5 /* Pods_Phone_Lib_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Phone_Lib_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3E74D37A1C8A459DB352DE7 /* Pods-iOSPhoneLib.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSPhoneLib.release.xcconfig"; path = "Target Support Files/Pods-iOSPhoneLib/Pods-iOSPhoneLib.release.xcconfig"; sourceTree = "<group>"; };
+		D772D3A3A27097AFA1F1A68E /* Pods_iOSPhoneLib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSPhoneLib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,7 +183,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				594FFAB9AE2EAF13349279C1 /* Pods_iOSPhoneLib.framework in Frameworks */,
+				4E1B2987E1A40B7C6EA65EF0 /* Pods_iOSPhoneLib.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,29 +192,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C6C81162806DA2500EE2919 /* iOSPhoneLib.framework in Frameworks */,
-				70406E0AC48F19A43EB74491 /* Pods_Phone_Lib_Example.framework in Frameworks */,
+				AFB5693CC42E214A23443FC9 /* Pods_Phone_Lib_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		157F7D155150BEA0B6CA3AF8 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				A3118FC036DE448A150A0101 /* Pods_Phone_Lib_Example.framework */,
-				0C8F9CB0D512CF790D57338D /* Pods_iOSPhoneLib.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		26FA3952D0EBD336A20443B6 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				DEFA76D95D3360EFE038ED7F /* Pods-Phone Lib Example.debug.xcconfig */,
-				EE33F0708F1E6B6164F475F0 /* Pods-Phone Lib Example.release.xcconfig */,
-				1A93D27F99CCB9F7C31E4485 /* Pods-iOSPhoneLib.debug.xcconfig */,
-				57178D121F951AA21B114491 /* Pods-iOSPhoneLib.release.xcconfig */,
+				849F37BAC65B99BF9EA406CD /* Pods-Phone Lib Example.debug.xcconfig */,
+				3B0279054752F1ABFA92DF23 /* Pods-Phone Lib Example.release.xcconfig */,
+				5561E41A9A4693FF84F958FF /* Pods-iOSPhoneLib.debug.xcconfig */,
+				D3E74D37A1C8A459DB352DE7 /* Pods-iOSPhoneLib.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -272,7 +237,6 @@
 			isa = PBXGroup;
 			children = (
 				8323715227C7CC060087E701 /* CallDelegate.swift */,
-				8323715327C7CC060087E701 /* RegistrationStateDelegate.swift */,
 			);
 			name = Protocols;
 			path = Classes/Protocols;
@@ -292,7 +256,6 @@
 			children = (
 				8323715A27C7CC060087E701 /* Quality.swift */,
 				8323715B27C7CC060087E701 /* Codec.swift */,
-				8323715C27C7CC060087E701 /* SipRegistrationStatus.swift */,
 				8323715D27C7CC060087E701 /* CallInfoProvider.swift */,
 				8323715E27C7CC060087E701 /* AttendedTransferSession.swift */,
 				8323715F27C7CC060087E701 /* VoIPLibCallState.swift */,
@@ -325,6 +288,8 @@
 			isa = PBXGroup;
 			children = (
 				8323716727C7CC060087E701 /* LinphoneManager.swift */,
+				5C7CB553282F04F900DD8FDD /* LinphoneRegistrationListener.swift */,
+				5C7CB555282F053800DD8FDD /* LinphoneListener.swift */,
 			);
 			path = Linphone;
 			sourceTree = "<group>";
@@ -466,30 +431,9 @@
 			children = (
 				835D82F827BD61E000A7B5DD /* AudioManager.swift */,
 				835D82F927BD61E000A7B5DD /* AudioRoute.swift */,
-				835D82FA27BD61E000A7B5DD /* Sounds */,
-				835D830727BD61E000A7B5DD /* DtmfPlayer.swift */,
 				835D830827BD61E000A7B5DD /* AudioState.swift */,
 			);
 			path = Audio;
-			sourceTree = "<group>";
-		};
-		835D82FA27BD61E000A7B5DD /* Sounds */ = {
-			isa = PBXGroup;
-			children = (
-				835D82FB27BD61E000A7B5DD /* dtmf-7.aif */,
-				835D82FC27BD61E000A7B5DD /* dtmf-6.aif */,
-				835D82FD27BD61E000A7B5DD /* dtmf-4.aif */,
-				835D82FE27BD61E000A7B5DD /* dtmf-#.aif */,
-				835D82FF27BD61E000A7B5DD /* dtmf-5.aif */,
-				835D830027BD61E000A7B5DD /* dtmf-1.aif */,
-				835D830127BD61E000A7B5DD /* dtmf-0.aif */,
-				835D830227BD61E000A7B5DD /* dtmf-2.aif */,
-				835D830327BD61E000A7B5DD /* dtmf-3.aif */,
-				835D830427BD61E000A7B5DD /* dtmf-*.aif */,
-				835D830527BD61E000A7B5DD /* dtmf-8.aif */,
-				835D830627BD61E000A7B5DD /* dtmf-9.aif */,
-			);
-			path = Sounds;
 			sourceTree = "<group>";
 		};
 		835D830927BD61E000A7B5DD /* Notifications */ = {
@@ -571,7 +515,7 @@
 				8323714627C7C1D60087E701 /* PILTests */,
 				8378859627AC3FB7001A24A8 /* Products */,
 				26FA3952D0EBD336A20443B6 /* Pods */,
-				157F7D155150BEA0B6CA3AF8 /* Frameworks */,
+				C4AD81E42D5C803034237F3B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -601,6 +545,15 @@
 			path = VoIPLibTests;
 			sourceTree = "<group>";
 		};
+		C4AD81E42D5C803034237F3B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BFCE9A2066A9538A192D45E5 /* Pods_Phone_Lib_Example.framework */,
+				D772D3A3A27097AFA1F1A68E /* Pods_iOSPhoneLib.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -618,7 +571,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5C6C811B2806DA2500EE2919 /* Build configuration list for PBXNativeTarget "iOSPhoneLib" */;
 			buildPhases = (
-				FFB19685D2265059676EF68F /* [CP] Check Pods Manifest.lock */,
+				EC6C8675995931513EBE98DC /* [CP] Check Pods Manifest.lock */,
 				5C6C81092806DA2500EE2919 /* Headers */,
 				5C6C810A2806DA2500EE2919 /* Sources */,
 				5C6C810B2806DA2500EE2919 /* Frameworks */,
@@ -637,12 +590,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 835D7C1427BAC7A300A7B5DD /* Build configuration list for PBXNativeTarget "Phone Lib Example" */;
 			buildPhases = (
-				A924616D32E57D1D0D6BCF3F /* [CP] Check Pods Manifest.lock */,
+				AD4BC2AF399A21F19A3DB545 /* [CP] Check Pods Manifest.lock */,
 				835D7BFD27BAC7A200A7B5DD /* Sources */,
 				835D7BFE27BAC7A200A7B5DD /* Frameworks */,
 				835D7BFF27BAC7A200A7B5DD /* Resources */,
 				5C6C81182806DA2500EE2919 /* Embed Frameworks */,
-				9272E7DED8E5E60B04084AE1 /* [CP] Embed Pods Frameworks */,
+				498F1D85032F40CE5BF6BA77 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -716,7 +669,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		9272E7DED8E5E60B04084AE1 /* [CP] Embed Pods Frameworks */ = {
+		498F1D85032F40CE5BF6BA77 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -733,7 +686,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Phone Lib Example/Pods-Phone Lib Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A924616D32E57D1D0D6BCF3F /* [CP] Check Pods Manifest.lock */ = {
+		AD4BC2AF399A21F19A3DB545 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -755,7 +708,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		FFB19685D2265059676EF68F /* [CP] Check Pods Manifest.lock */ = {
+		EC6C8675995931513EBE98DC /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -786,19 +739,6 @@
 			files = (
 				5C6C811C2806DE9E00EE2919 /* AudioManager.swift in Sources */,
 				5C6C811D2806DE9E00EE2919 /* AudioRoute.swift in Sources */,
-				5C6C811E2806DE9E00EE2919 /* dtmf-7.aif in Sources */,
-				5C6C811F2806DE9E00EE2919 /* dtmf-6.aif in Sources */,
-				5C6C81202806DE9E00EE2919 /* dtmf-4.aif in Sources */,
-				5C6C81212806DE9E00EE2919 /* dtmf-#.aif in Sources */,
-				5C6C81222806DE9E00EE2919 /* dtmf-5.aif in Sources */,
-				5C6C81232806DE9E00EE2919 /* dtmf-1.aif in Sources */,
-				5C6C81242806DE9E00EE2919 /* dtmf-0.aif in Sources */,
-				5C6C81252806DE9E00EE2919 /* dtmf-2.aif in Sources */,
-				5C6C81262806DE9E00EE2919 /* dtmf-3.aif in Sources */,
-				5C6C81272806DE9E00EE2919 /* dtmf-*.aif in Sources */,
-				5C6C81282806DE9E00EE2919 /* dtmf-8.aif in Sources */,
-				5C6C81292806DE9E00EE2919 /* dtmf-9.aif in Sources */,
-				5C6C812A2806DE9E00EE2919 /* DtmfPlayer.swift in Sources */,
 				5C6C812B2806DE9E00EE2919 /* AudioState.swift in Sources */,
 				5C6C812C2806DE9E00EE2919 /* IOSCallKit.swift in Sources */,
 				5C6C812D2806DE9E00EE2919 /* CallDirection.swift in Sources */,
@@ -820,6 +760,7 @@
 				5C6C813D2806DE9E00EE2919 /* PILEventDelegate.swift in Sources */,
 				5C6C813E2806DE9E00EE2919 /* EventsManager.swift in Sources */,
 				5C6C813F2806DE9E00EE2919 /* VoIPLibHelper.swift in Sources */,
+				5C7CB556282F053800DD8FDD /* LinphoneListener.swift in Sources */,
 				5C6C81402806DE9E00EE2919 /* IOS.swift in Sources */,
 				5C6C81412806DE9E00EE2919 /* LogDelegate.swift in Sources */,
 				5C6C81422806DE9E00EE2919 /* LogLevel.swift in Sources */,
@@ -835,14 +776,13 @@
 				5C6C81512806DE9E00EE2919 /* LinphoneManager.swift in Sources */,
 				5C6C81522806DE9E00EE2919 /* Quality.swift in Sources */,
 				5C6C81532806DE9E00EE2919 /* Codec.swift in Sources */,
-				5C6C81542806DE9E00EE2919 /* SipRegistrationStatus.swift in Sources */,
 				5C6C81552806DE9E00EE2919 /* CallInfoProvider.swift in Sources */,
 				5C6C81562806DE9E00EE2919 /* AttendedTransferSession.swift in Sources */,
 				5C6C81572806DE9E00EE2919 /* VoIPLibCallState.swift in Sources */,
+				5C7CB554282F04F900DD8FDD /* LinphoneRegistrationListener.swift in Sources */,
 				5C6C81582806DE9E00EE2919 /* VoIPLibCall.swift in Sources */,
 				5C6C81592806DE9E00EE2919 /* Direction.swift in Sources */,
 				5C6C815A2806DE9E00EE2919 /* CallDelegate.swift in Sources */,
-				5C6C815B2806DE9E00EE2919 /* RegistrationStateDelegate.swift in Sources */,
 				5C6C815C2806DE9E00EE2919 /* RegistrationState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -887,7 +827,7 @@
 /* Begin XCBuildConfiguration section */
 		5C6C81192806DA2500EE2919 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1A93D27F99CCB9F7C31E4485 /* Pods-iOSPhoneLib.debug.xcconfig */;
+			baseConfigurationReference = 5561E41A9A4693FF84F958FF /* Pods-iOSPhoneLib.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -917,7 +857,7 @@
 		};
 		5C6C811A2806DA2500EE2919 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 57178D121F951AA21B114491 /* Pods-iOSPhoneLib.release.xcconfig */;
+			baseConfigurationReference = D3E74D37A1C8A459DB352DE7 /* Pods-iOSPhoneLib.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -947,7 +887,7 @@
 		};
 		835D7C1227BAC7A300A7B5DD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DEFA76D95D3360EFE038ED7F /* Pods-Phone Lib Example.debug.xcconfig */;
+			baseConfigurationReference = 849F37BAC65B99BF9EA406CD /* Pods-Phone Lib Example.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -991,7 +931,7 @@
 		};
 		835D7C1327BAC7A300A7B5DD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EE33F0708F1E6B6164F475F0 /* Pods-Phone Lib Example.release.xcconfig */;
+			baseConfigurationReference = 3B0279054752F1ABFA92DF23 /* Pods-Phone Lib Example.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;

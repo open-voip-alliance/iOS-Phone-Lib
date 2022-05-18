@@ -43,7 +43,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, LogDelegate {
                 )
             )
         } catch {
-            print("ERROR: Failed to start PIL - \(error)")
+           print("ERROR: Failed to start PIL - \(error)")
         }
         
         return true

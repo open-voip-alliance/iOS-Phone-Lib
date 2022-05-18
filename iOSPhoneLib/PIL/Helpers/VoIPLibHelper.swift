@@ -8,15 +8,12 @@
 import Foundation
 
 class VoIPLibHelper {
-
     private let voipLib: VoIPLib
     private let pil: PIL
-    private let voipLibEventTranslator: VoipLibEventTranslator
     
-    init(voipLib: VoIPLib, pil: PIL, voipLibEventTranslator: VoipLibEventTranslator) {
+    init(voipLib: VoIPLib, pil: PIL) {
         self.voipLib = voipLib
         self.pil = pil
-        self.voipLibEventTranslator = voipLibEventTranslator
     }
 
     /// Attempt to register if there are valid credentials.
@@ -24,6 +21,7 @@ class VoIPLibHelper {
         if pil.auth == nil {
             pil.writeLog("There are no authentication credentials, not registering.")
             callback(false)
+            return
         }
     
         pil.writeLog("Attempting registration...")

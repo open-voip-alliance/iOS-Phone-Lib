@@ -1,10 +1,3 @@
-//
-//  LinphoneManager.swift
-//  Pods-SpindleSIPFramework_Example
-//
-//  Created by Fabian Giger on 14/04/2020.
-//
-
 import Foundation
 import linphonesw
 import AVFoundation
@@ -13,41 +6,19 @@ typealias LinphoneCall = linphonesw.Call
 public typealias RegistrationCallback = (RegistrationState) -> Void
 typealias LinphoneLogLevel = linphonesw.LogLevel
 
-class LinphoneManager: LoggingServiceDelegate {
+class LinphoneManager: linphonesw.LoggingServiceDelegate {
    
     private(set) var config: VoIPLibConfig?
     var isInitialized: Bool {
         linphoneCore != nil
     }
-    var isRegistered: Bool = false
     
     private var linphoneCore: Core!
-    private lazy var stateManager: LinphoneStateManager = {
-        LinphoneStateManager(manager: self)
-    }()
-    
-    private lazy var registrationListener: RegistrationListener = {
-        RegistrationListener(linphoneManager: self)
-    }()
-    
-    private var proxyConfig: ProxyConfig!
-    
-    private var logging: LoggingService {
-        LoggingService.Instance
-    }
-    
-    private var factory: Factory {
-        Factory.Instance
-    }
-    
-    var sipRegistrationStatus: SipRegistrationStatus = SipRegistrationStatus.none
+    private lazy var linphoneListener = { LinphoneListener(manager: self) }()
+    private lazy var registrationListener = { LinphoneRegistrationListener(manager: self) }()
     
     var isMicrophoneMuted: Bool {
         return !linphoneCore.micEnabled
-    }
-    
-    var isSpeakerOn: Bool {
-        AVAudioSession.sharedInstance().currentRoute.outputs.contains(where: { $0.portType == AVAudioSession.Port.builtInSpeaker })
     }
     
     /**
@@ -57,23 +28,12 @@ class LinphoneManager: LoggingServiceDelegate {
     private var lastRegisteredCredentials: Auth? = nil
     
     var pil: PIL {
-        get {
-            return PIL.shared!
-        }
+        return PIL.shared!
     }
     
-    private var ringbackPath: String {
-        let ringbackFileName = "ringback"
-                
-        let customBundle = Bundle(for: Self.self)
-
-        guard let resourceURL = customBundle.resourceURL?.appendingPathComponent("Resources.bundle") else { return "" }
-
-        guard let resourceBundle = Bundle(url: resourceURL) else { return "" }
-
-        guard let ringbackFileURL = resourceBundle.url( forResource: ringbackFileName , withExtension: "wav") else { return "" }
-        
-        return ringbackFileURL.path
+    init() {
+        registrationListener = LinphoneRegistrationListener(manager: self)
+        linphoneListener = LinphoneListener(manager: self)
     }
     
     func initialize(config: VoIPLibConfig) -> Bool {
@@ -95,11 +55,11 @@ class LinphoneManager: LoggingServiceDelegate {
     }
     
     private func startLinphone() throws {
-        factory.enableLogCollection(state: LogCollectionState.Disabled)
-        logging.addDelegate(delegate: self)
-        logging.logLevel = LinphoneLogLevel.Warning
-        linphoneCore = try factory.createCore(configPath: "", factoryConfigPath: "", systemContext: nil)
-        linphoneCore.addDelegate(delegate: stateManager)
+        LoggingService.Instance.addDelegate(delegate: self)
+        LoggingService.Instance.logLevel = linphonesw.LogLevel.Debug
+        
+        linphoneCore = try Factory.Instance.createCore(configPath: "", factoryConfigPath: "", systemContext: nil)
+        linphoneCore.addDelegate(delegate: linphoneListener)
         try applyPreStartConfiguration(core: linphoneCore)
         try linphoneCore.start()
         applyPostStartConfiguration(core: linphoneCore)
@@ -112,7 +72,7 @@ class LinphoneManager: LoggingServiceDelegate {
             transports.udpPort = 0
             transports.tcpPort = 0
         }
-        core.setUserAgent(name: config?.userAgent, version: nil)
+        core.setUserAgent(name: pil.app.userAgent, version: nil)
         core.ringback = ringbackPath        
         core.pushNotificationEnabled = false
         core.callkitEnabled = false
@@ -128,16 +88,6 @@ class LinphoneManager: LoggingServiceDelegate {
         core.audioPort = -1
         core.nortpTimeout = 30
         core.avpfMode = AVPFMode.Disabled
-        if let stun = config?.stun {
-            core.stunServer = stun
-        }
-        if let natPolicy = core.natPolicy {
-            natPolicy.stunEnabled = config?.stun != nil
-            natPolicy.upnpEnabled = false
-            natPolicy.stunServer = config?.stun ?? ""
-            natPolicy.resolveStunServer()
-            core.natPolicy = natPolicy
-        }
         core.audioJittcomp = 100
 
         if let transports = linphoneCore.transports {
@@ -159,13 +109,9 @@ class LinphoneManager: LoggingServiceDelegate {
     }
     
     fileprivate func log(_ message: String) {
-        logging.message(message: message)
+        LoggingService.Instance.message(message: message)
     }
     
-    func swapConfig(config: VoIPLibConfig) {
-        self.config = config
-    }
-
     internal var registrationCallback: RegistrationCallback? = nil
     
     func register(callback: @escaping RegistrationCallback) {
@@ -203,7 +149,7 @@ class LinphoneManager: LoggingServiceDelegate {
     }
 
     private func createAuthInfo(auth: Auth) throws -> AuthInfo {
-        return try factory.createAuthInfo(
+        return try Factory.Instance.createAuthInfo(
             username: auth.username,
             userid: auth.username,
             passwd: auth.password,
@@ -229,11 +175,10 @@ class LinphoneManager: LoggingServiceDelegate {
 
     func destroy() {
         unregister()
-        linphoneCore.removeDelegate(delegate: stateManager)
+        linphoneCore.removeDelegate(delegate: linphoneListener)
         linphoneCore.stop()
         log("Linphone destroyed")
         linphoneCore = nil
-        isRegistered = false
     }
     
     func terminateAllCalls() {
@@ -250,7 +195,7 @@ class LinphoneManager: LoggingServiceDelegate {
         return isInitialized ? VoIPLibCall : nil
     }
     
-    func acceptVoIPLibCall(for call: VoIPLibCall) -> Bool {
+    func acceptCall(for call: VoIPLibCall) -> Bool {
         do {
             try call.linphoneCall.accept()
             return true
@@ -259,7 +204,7 @@ class LinphoneManager: LoggingServiceDelegate {
         }
     }
     
-    func endVoIPLibCall(for call: VoIPLibCall) -> Bool {
+    func endCall(for call: VoIPLibCall) -> Bool {
         do {
             try call.linphoneCall.terminate()
             return true
@@ -269,9 +214,7 @@ class LinphoneManager: LoggingServiceDelegate {
     }
     
     private func configureCodecs(core: Core) {
-        guard let codecs = config?.codecs else {
-            return
-        }
+        let codecs = [Codec.OPUS]
         
         linphoneCore?.videoPayloadTypes.forEach { payload in
             _ = payload.enable(enabled: false)
@@ -320,7 +263,7 @@ class LinphoneManager: LoggingServiceDelegate {
     
     func transfer(call: VoIPLibCall, to number: String) -> Bool {
         do {
-            try call.linphoneCall.transfer(referTo: number)
+            try call.linphoneCall.transferTo(referTo: linphoneCore.createAddress(address: number))
             log("Transfer was successful")
             return true
         } catch (let error) {
@@ -358,176 +301,20 @@ class LinphoneManager: LoggingServiceDelegate {
         }
     }
     
-    /// Provide human readable VoIPLibCall info
-    ///
-    /// - Parameter VoIPLibCall: the VoIPLibCall object
-    /// - Returns: a String with all VoIPLibCall info
     func provideCallInfo(call: VoIPLibCall) -> String {
-        let VoIPLibCallInfoProvider = VoIPLibCallInfoProvider(VoIPLibCall: call)
-        return VoIPLibCallInfoProvider.provideVoIPLibCallInfo()
+        return CallInfoProvider(VoIPLibCall: call).provide()
     }
     
     func onLogMessageWritten(logService: LoggingService, domain: String, level: LogLevel, message: String) {
         config?.logListener(message)
     }
-}
-
-class LinphoneStateManager:CoreDelegate {
     
-    private let headersToPreserve = ["Remote-Party-ID", "P-Asserted-Identity"]
-    
-    let linphoneManager:LinphoneManager
-    
-    init(manager:LinphoneManager) {
-        linphoneManager = manager
-    }
-    
-    func onCallStateChanged(core: Core, call: LinphoneCall, state: LinphoneCall.State, message: String) {
-        linphoneManager.log("OnVoIPLibCallStateChanged, state:\(state) with message:\(message).")
-
-        guard let voipLibCall = VoIPLibCall(linphoneCall: call) else {
-            linphoneManager.log("Unable to create VoIPLibCall, no remote address")
-            return
-        }
-
-        guard let delegate = self.linphoneManager.config?.callDelegate else {
-            linphoneManager.log("Unable to send events as no VoIPLibCall delegate")
-            return
-        }
-
-        DispatchQueue.main.async {
-            switch state {
-                case .OutgoingInit:
-                    delegate.outgoingCallCreated(voipLibCall)
-                case .IncomingReceived:
-                    self.preserveHeaders(linphoneCall: call)
-                    delegate.incomingCallReceived(voipLibCall)
-                case .Connected:
-                    delegate.callConnected(voipLibCall)
-                case .End, .Error:
-                    delegate.callEnded(voipLibCall)
-                case .Released:
-                    delegate.callReleased(voipLibCall)
-                default:
-                    delegate.callUpdated(voipLibCall, message: message)
-            }
-        }
-    }
-    
-    func onTransferStateChanged(core: Core, transfered: LinphoneCall, VoIPLibCallState: LinphoneCall.State) {
-        guard let delegate = self.linphoneManager.config?.callDelegate else {
-            linphoneManager.log("Unable to send VoIPLibCall transfer event as no VoIPLibCall delegate")
-            return
-        }
-        
-        guard let voipLibVoIPLibCall = VoIPLibCall(linphoneCall: transfered) else {
-            linphoneManager.log("Unable to create VoIPLibCall, no remote address")
-            return
-        }
-        
-        delegate.attendedTransferMerged(voipLibVoIPLibCall)
-    }
-    
-    /**
-            Some headers only appear in the initial invite, this will check for any headers we have flagged to be preserved
-     and retain them across all iterations of the LinphoneVoIPLibCall.
-     */
-    private func preserveHeaders(linphoneCall: LinphoneCall) {
-        headersToPreserve.forEach { key in
-            let value = linphoneCall.getToHeader(headerName: key)
-            linphoneCall.params?.addCustomHeader(headerName: key, headerValue: value)
-        }
-    }
-}
-
-class RegistrationListener : CoreDelegate {
-    
-    /**
-     * The amount of time to wait before determining registration has failed.
-     */
-    private let registrationTimeoutSecs: Double = 5
-    
-    /**
-     * The time that we will wait before executing the method again to clean-up.
-     */
-    private let cleanUpDelaySecs: Double = 1
-    
-    /**
-     * It is sometimes possible that a failed registration will occur before a successful one
-     * so we will track the time of the first registration update before determining it has
-     * failed.
-     */
-    private var startTime: Double? = nil
-    
-    private var currentTime: Double {
-        get {
-            return NSDate().timeIntervalSince1970
-        }
-    }
-    
-    private var timer: Timer? = nil
-    
-    private let linphoneManager: LinphoneManager
-
-    init(linphoneManager: LinphoneManager) {
-        self.linphoneManager = linphoneManager
-    }
-
-    func onAccountRegistrationStateChanged(core: Core, account: Account, state: linphonesw.RegistrationState, message: String) {
-        log("Received registration state change: \(state.rawValue)")
-        
-        guard let callback = linphoneManager.registrationCallback else {
-            log("Callback not set so registration state change has not done anything.")
-            return
-        }
-        
-        // If the registration was successful, just immediately invoke the callback and reset
-        // all timers.
-        if state == linphonesw.RegistrationState.Ok {
-            log("Successful, resetting timers.")
-            linphoneManager.registrationCallback = nil
-            linphoneManager.isRegistered = true
-            callback(RegistrationState.registered)
-            reset()
-            return
-        }
-        
-        // If there is no start time, we want to set it to begin the time.
-        let startTime = (self.startTime != nil ? self.startTime : {
-            let startTime = currentTime
-            self.startTime = startTime
-            log("Started registration timer: \(startTime).")
-            return startTime
-        }())!
-        
-        if hasExceededTimeout(startTime) {
-            linphoneManager.registrationCallback = nil
-            linphoneManager.isRegistered = false
-            linphoneManager.unregister()
-            log("Registration timeout has been exceeded, registration failed.")
-            callback(RegistrationState.failed)
-            reset()
-            return
-        }
-        
-        // Queuing call of this method so we ensure that the callback is eventually invoked
-        // even if there are no future registration updates.
-        timer = Timer.scheduledTimer(withTimeInterval: cleanUpDelaySecs, repeats: false, block: { _ in
-            self.onAccountRegistrationStateChanged(
-                core: core,
-                account: account,
-                state: state,
-                message: "Automatically called to ensure callback is executed"
-            )
-        })
-    }
-    
-    private func hasExceededTimeout(_ startTime: Double) -> Bool {
-        return (startTime + registrationTimeoutSecs) < currentTime
-    }
-    
-    private func reset() {
-        startTime = nil
-        timer?.invalidate()
+    private var ringbackPath: String {
+        let ringbackFileName = "ringback"
+        let customBundle = Bundle(for: Self.self)
+        guard let resourceURL = customBundle.resourceURL?.appendingPathComponent("Resources.bundle") else { return "" }
+        guard let resourceBundle = Bundle(url: resourceURL) else { return "" }
+        guard let ringbackFileURL = resourceBundle.url( forResource: ringbackFileName , withExtension: "wav") else { return "" }
+        return ringbackFileURL.path
     }
 }

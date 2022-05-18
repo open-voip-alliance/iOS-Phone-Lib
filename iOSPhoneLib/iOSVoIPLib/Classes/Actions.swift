@@ -23,7 +23,7 @@ public class Actions {
     ///     - VoIPLibCall: The accepting VoIPLibCall
     /// - Returns: `Bool` Whether accepting went successfully
     public func accept() -> Bool {
-        linphone.acceptVoIPLibCall(for: call)
+        linphone.acceptCall(for: call)
     }
     
     /// End an VoIPLibCall.
@@ -32,7 +32,7 @@ public class Actions {
     ///     - VoIPLibCall: The accepting VoIPLibCall
     /// - Returns: `Bool` Whether ending went successfully
     public func end() -> Bool {
-        linphone.endVoIPLibCall(for: call)
+        linphone.endCall(for: call)
     }
     
     /// Enable/disable the audio VoIPLibCall.

@@ -13,19 +13,16 @@ public class AudioManager {
     private let pil: PIL
     private let callActions: CallActions
     
-    let dtmf: DtmfPlayer
-    
     private lazy var routePickerView: AVRoutePickerView = {
         let routePickerView = AVRoutePickerView()
         routePickerView.isHidden = true
         return routePickerView
     }()
     
-    init(pil: PIL, voipLib: VoIPLib, audioSession: AVAudioSession, dtmfPlayer: DtmfPlayer, callActions: CallActions) {
+    init(pil: PIL, voipLib: VoIPLib, audioSession: AVAudioSession, callActions: CallActions) {
         self.pil = pil
         self.voipLib = voipLib
         self.audioSession = audioSession
-        self.dtmf = dtmfPlayer
         self.callActions = callActions
         
         NotificationCenter.default.addObserver(self, selector: #selector(handleRouteChange), name: AVAudioSession.routeChangeNotification, object: nil)

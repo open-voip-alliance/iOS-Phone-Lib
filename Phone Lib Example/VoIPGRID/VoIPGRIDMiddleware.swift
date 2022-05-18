@@ -84,14 +84,7 @@ class VoIPGRIDMiddleware: Middleware {
             ],
             encoder: URLEncodedFormParameterEncoder.default,
             headers: createAuthHeader()
-        ).response { response in
-            switch response.result {
-                case .success(_):
-                    print("Succcess")
-                case .failure(_):
-                    print("Failure")
-                }
-        }
+        ).response { _ in }
     }
     
     func inspect(payload: PKPushPayload, type: PKPushType) {

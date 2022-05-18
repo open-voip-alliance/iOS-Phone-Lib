@@ -35,7 +35,7 @@ class InCallDialpadViewController: UIViewController {
         let currentNumberPreview = numberPreview.text ?? ""
         let buttonNumber = sender.currentTitle ?? ""
         
-        pil.actions.sendDtmf(buttonNumber, playToneLocally: self.defaults.bool(forKey: "play_dtmf_tones"))
+        pil.actions.sendDtmf(buttonNumber)
         
         numberPreview.text = currentNumberPreview + buttonNumber
     }
