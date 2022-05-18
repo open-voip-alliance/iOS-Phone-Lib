@@ -131,12 +131,12 @@ class LinphoneManager: linphonesw.LoggingServiceDelegate {
             self.registrationCallback = callback
 
             if (!linphoneCore.accountList.isEmpty) {
-                log("SIP account not found, re-registering")
+                log("We are already registered, refreshing registration.")
                 linphoneCore.refreshRegisters()
                 return
             }
             
-            log("No SIP account found, registering for the first time.")
+            log("No valid registrations, registering for the first time.")
 
             let account = try createAccount(core: linphoneCore, auth: auth)
             try linphoneCore.addAccount(account: account)
