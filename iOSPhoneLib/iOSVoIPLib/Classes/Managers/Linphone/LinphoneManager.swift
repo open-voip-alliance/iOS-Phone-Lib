@@ -55,9 +55,6 @@ class LinphoneManager: linphonesw.LoggingServiceDelegate {
     }
     
     private func startLinphone() throws {
-        LoggingService.Instance.addDelegate(delegate: self)
-        LoggingService.Instance.logLevel = linphonesw.LogLevel.Debug
-        
         linphoneCore = try Factory.Instance.createCore(configPath: "", factoryConfigPath: "", systemContext: nil)
         linphoneCore.addDelegate(delegate: linphoneListener)
         try applyPreStartConfiguration(core: linphoneCore)
@@ -106,10 +103,6 @@ class LinphoneManager: linphonesw.LoggingServiceDelegate {
         core.useRfc2833ForDtmf = true
         core.adaptiveRateControlEnabled = true
         core.echoCancellationEnabled = true
-    }
-    
-    fileprivate func log(_ message: String) {
-        LoggingService.Instance.message(message: message)
     }
     
     internal var registrationCallback: RegistrationCallback? = nil
