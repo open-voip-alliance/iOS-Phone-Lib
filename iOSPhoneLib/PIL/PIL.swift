@@ -112,7 +112,7 @@ public class PIL {
     /// This will boot the lib if it is not already booted.
     /// - Parameter number: the String number to call.
     public func call(number: String) {
-        if calls.isInCall {
+        if !calls.isInCall {
             events.broadcast(event: .outgoingCallSetupFailed(reason: .inCall))
             return
         }
