@@ -113,9 +113,13 @@ public class PIL {
     /// - Parameter number: the String number to call.
     public func call(number: String) {
         if calls.isInCall {
-            events.broadcast(event: .outgoingCallSetupFailed)
+            events.broadcast(event: .outgoingCallSetupFailed(reason: .inCall))
             return
         }
+        
+        // We're just going to refresh registrations here to avoid ghost call issues. So if in a state where registration
+        // fails, then the following call should work.
+        voipLib.refreshRegistration()
         
         self.iOSCallKit.startCall(number: number)
     }

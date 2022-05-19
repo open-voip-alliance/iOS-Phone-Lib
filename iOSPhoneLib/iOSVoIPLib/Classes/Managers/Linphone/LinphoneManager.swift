@@ -89,7 +89,7 @@ class LinphoneManager: linphonesw.LoggingServiceDelegate {
         core.nortpTimeout = 30
         core.avpfMode = AVPFMode.Disabled
         core.audioJittcomp = 100
-
+        
         if let transports = linphoneCore.transports {
             transports.tlsPort = -1
             transports.udpPort = 0
@@ -307,6 +307,10 @@ class LinphoneManager: linphonesw.LoggingServiceDelegate {
     
     func onLogMessageWritten(logService: LoggingService, domain: String, level: LogLevel, message: String) {
         config?.logListener(message)
+    }
+    
+    internal func refreshRegistration() {
+        linphoneCore.refreshRegisters()
     }
     
     private var ringbackPath: String {
