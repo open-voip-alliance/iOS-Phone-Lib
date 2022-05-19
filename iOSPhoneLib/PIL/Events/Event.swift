@@ -16,11 +16,18 @@ public enum Event {
     case audioStateUpdated(state: CallSessionState)
     case callStateUpdated(state: CallSessionState)
     
-    case outgoingCallSetupFailed
-    case incomingCallSetupFailed
+    case outgoingCallSetupFailed(reason: CallSetupFailedReason)
+    case incomingCallSetupFailed(reason: CallSetupFailedReason)
     
     case attendedTransferStarted(state: CallSessionState)
     case attendedTransferAborted(state: CallSessionState)
     case attendedTransferConnected(state: CallSessionState)
     case attendedTransferEnded(state: CallSessionState)
+}
+
+public enum CallSetupFailedReason {
+    case inCall
+    case unknown
+    case unableToRegister
+    case rejectedByCallKit
 }

@@ -38,6 +38,10 @@ class VoIPLib {
     func register(callback: @escaping RegistrationCallback) {
         linphone.register(callback: callback)
     }
+    
+    func refreshRegistration() {
+        linphone.refreshRegistration()
+    }
 
     func destroy() {
         linphone.destroy()

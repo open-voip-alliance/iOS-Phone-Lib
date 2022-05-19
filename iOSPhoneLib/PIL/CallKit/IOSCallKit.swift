@@ -137,7 +137,7 @@ class IOSCallKit: NSObject {
         controller.requestTransaction(with: action) { error in
             if let error = error {
                 self.pil.writeLog("Failed to start call: \(error.localizedDescription)")
-                self.pil.events.broadcast(event: .outgoingCallSetupFailed)
+                self.pil.events.broadcast(event: .outgoingCallSetupFailed(reason: .rejectedByCallKit))
             }
         }
     }
@@ -201,7 +201,9 @@ extension IOSCallKit: CXProviderDelegate {
 
     public func provider(_ provider: CXProvider, perform action: CXStartCallAction) {
         if let number = action.handle.value as? String {
-            self.voipLib.call(to: number)
+            if !self.voipLib.call(to: number) {
+                self.pil.events.broadcast(event: .outgoingCallSetupFailed(reason: .unknown))
+            }
             action.fulfill()
         }
     }
