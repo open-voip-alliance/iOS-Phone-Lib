@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4E1B2987E1A40B7C6EA65EF0 /* Pods_iOSPhoneLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D772D3A3A27097AFA1F1A68E /* Pods_iOSPhoneLib.framework */; };
+		2C286C66EAF5E1F3344A4EBF /* Pods_iOSPhoneLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A002D775E9B87EEC64647858 /* Pods_iOSPhoneLib.framework */; };
 		5C6C81162806DA2500EE2919 /* iOSPhoneLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C6C810E2806DA2500EE2919 /* iOSPhoneLib.framework */; };
 		5C6C811C2806DE9E00EE2919 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835D82F827BD61E000A7B5DD /* AudioManager.swift */; };
 		5C6C811D2806DE9E00EE2919 /* AudioRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835D82F927BD61E000A7B5DD /* AudioRoute.swift */; };
@@ -71,7 +71,7 @@
 		835D82BD27BAC86D00A7B5DD /* VoIPGRIDLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835D82AE27BAC86C00A7B5DD /* VoIPGRIDLogin.swift */; };
 		835D82BE27BAC86D00A7B5DD /* VoIPGRIDMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835D82AF27BAC86C00A7B5DD /* VoIPGRIDMiddleware.swift */; };
 		835D834F27BD64C200A7B5DD /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = 835D82F327BD61E000A7B5DD /* Localizable.stringsdict */; };
-		AFB5693CC42E214A23443FC9 /* Pods_Phone_Lib_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFCE9A2066A9538A192D45E5 /* Pods_Phone_Lib_Example.framework */; };
+		F0991BF8E12C49E93999C19C /* Pods_Phone_Lib_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCAEA0B3039134882F05A97E /* Pods_Phone_Lib_Example.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,8 +98,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		3B0279054752F1ABFA92DF23 /* Pods-Phone Lib Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Phone Lib Example.release.xcconfig"; path = "Target Support Files/Pods-Phone Lib Example/Pods-Phone Lib Example.release.xcconfig"; sourceTree = "<group>"; };
-		5561E41A9A4693FF84F958FF /* Pods-iOSPhoneLib.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSPhoneLib.debug.xcconfig"; path = "Target Support Files/Pods-iOSPhoneLib/Pods-iOSPhoneLib.debug.xcconfig"; sourceTree = "<group>"; };
 		5C6C810E2806DA2500EE2919 /* iOSPhoneLib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = iOSPhoneLib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C7CB553282F04F900DD8FDD /* LinphoneRegistrationListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinphoneRegistrationListener.swift; sourceTree = "<group>"; };
 		5C7CB555282F053800DD8FDD /* LinphoneListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinphoneListener.swift; sourceTree = "<group>"; };
@@ -172,10 +170,12 @@
 		835D832027BD61E100A7B5DD /* IOS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IOS.swift; sourceTree = "<group>"; };
 		837885A427AC3FB7001A24A8 /* VoIPLibTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoIPLibTests.swift; sourceTree = "<group>"; };
 		8394DF632808928C005DB853 /* Phone Lib Example.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Phone Lib Example.entitlements"; sourceTree = "<group>"; };
-		849F37BAC65B99BF9EA406CD /* Pods-Phone Lib Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Phone Lib Example.debug.xcconfig"; path = "Target Support Files/Pods-Phone Lib Example/Pods-Phone Lib Example.debug.xcconfig"; sourceTree = "<group>"; };
-		BFCE9A2066A9538A192D45E5 /* Pods_Phone_Lib_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Phone_Lib_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D3E74D37A1C8A459DB352DE7 /* Pods-iOSPhoneLib.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSPhoneLib.release.xcconfig"; path = "Target Support Files/Pods-iOSPhoneLib/Pods-iOSPhoneLib.release.xcconfig"; sourceTree = "<group>"; };
-		D772D3A3A27097AFA1F1A68E /* Pods_iOSPhoneLib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSPhoneLib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C770779625166C07240E624 /* Pods-iOSPhoneLib.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSPhoneLib.release.xcconfig"; path = "Target Support Files/Pods-iOSPhoneLib/Pods-iOSPhoneLib.release.xcconfig"; sourceTree = "<group>"; };
+		A002D775E9B87EEC64647858 /* Pods_iOSPhoneLib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSPhoneLib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7AA11712FA49192F0466E33 /* Pods-iOSPhoneLib.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSPhoneLib.debug.xcconfig"; path = "Target Support Files/Pods-iOSPhoneLib/Pods-iOSPhoneLib.debug.xcconfig"; sourceTree = "<group>"; };
+		F98C4530360EAE4239210123 /* Pods-Phone Lib Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Phone Lib Example.release.xcconfig"; path = "Target Support Files/Pods-Phone Lib Example/Pods-Phone Lib Example.release.xcconfig"; sourceTree = "<group>"; };
+		FC631C7E0BA483C4BD4C6A85 /* Pods-Phone Lib Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Phone Lib Example.debug.xcconfig"; path = "Target Support Files/Pods-Phone Lib Example/Pods-Phone Lib Example.debug.xcconfig"; sourceTree = "<group>"; };
+		FCAEA0B3039134882F05A97E /* Pods_Phone_Lib_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Phone_Lib_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,7 +183,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E1B2987E1A40B7C6EA65EF0 /* Pods_iOSPhoneLib.framework in Frameworks */,
+				2C286C66EAF5E1F3344A4EBF /* Pods_iOSPhoneLib.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,7 +192,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C6C81162806DA2500EE2919 /* iOSPhoneLib.framework in Frameworks */,
-				AFB5693CC42E214A23443FC9 /* Pods_Phone_Lib_Example.framework in Frameworks */,
+				F0991BF8E12C49E93999C19C /* Pods_Phone_Lib_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,12 +202,21 @@
 		26FA3952D0EBD336A20443B6 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				849F37BAC65B99BF9EA406CD /* Pods-Phone Lib Example.debug.xcconfig */,
-				3B0279054752F1ABFA92DF23 /* Pods-Phone Lib Example.release.xcconfig */,
-				5561E41A9A4693FF84F958FF /* Pods-iOSPhoneLib.debug.xcconfig */,
-				D3E74D37A1C8A459DB352DE7 /* Pods-iOSPhoneLib.release.xcconfig */,
+				FC631C7E0BA483C4BD4C6A85 /* Pods-Phone Lib Example.debug.xcconfig */,
+				F98C4530360EAE4239210123 /* Pods-Phone Lib Example.release.xcconfig */,
+				A7AA11712FA49192F0466E33 /* Pods-iOSPhoneLib.debug.xcconfig */,
+				9C770779625166C07240E624 /* Pods-iOSPhoneLib.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		7C7A2E4460013E35C910F583 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FCAEA0B3039134882F05A97E /* Pods_Phone_Lib_Example.framework */,
+				A002D775E9B87EEC64647858 /* Pods_iOSPhoneLib.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		8323711E27C6B5210087E701 /* UI */ = {
@@ -515,7 +524,7 @@
 				8323714627C7C1D60087E701 /* PILTests */,
 				8378859627AC3FB7001A24A8 /* Products */,
 				26FA3952D0EBD336A20443B6 /* Pods */,
-				C4AD81E42D5C803034237F3B /* Frameworks */,
+				7C7A2E4460013E35C910F583 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -545,15 +554,6 @@
 			path = VoIPLibTests;
 			sourceTree = "<group>";
 		};
-		C4AD81E42D5C803034237F3B /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				BFCE9A2066A9538A192D45E5 /* Pods_Phone_Lib_Example.framework */,
-				D772D3A3A27097AFA1F1A68E /* Pods_iOSPhoneLib.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -571,7 +571,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5C6C811B2806DA2500EE2919 /* Build configuration list for PBXNativeTarget "iOSPhoneLib" */;
 			buildPhases = (
-				EC6C8675995931513EBE98DC /* [CP] Check Pods Manifest.lock */,
+				D2AB1D413B781CEA911D992D /* [CP] Check Pods Manifest.lock */,
 				5C6C81092806DA2500EE2919 /* Headers */,
 				5C6C810A2806DA2500EE2919 /* Sources */,
 				5C6C810B2806DA2500EE2919 /* Frameworks */,
@@ -590,12 +590,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 835D7C1427BAC7A300A7B5DD /* Build configuration list for PBXNativeTarget "Phone Lib Example" */;
 			buildPhases = (
-				AD4BC2AF399A21F19A3DB545 /* [CP] Check Pods Manifest.lock */,
+				EE12DB118655D8B36CBEEB3D /* [CP] Check Pods Manifest.lock */,
 				835D7BFD27BAC7A200A7B5DD /* Sources */,
 				835D7BFE27BAC7A200A7B5DD /* Frameworks */,
 				835D7BFF27BAC7A200A7B5DD /* Resources */,
 				5C6C81182806DA2500EE2919 /* Embed Frameworks */,
-				498F1D85032F40CE5BF6BA77 /* [CP] Embed Pods Frameworks */,
+				8A9220E9D3C10A92A64E8D09 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -669,7 +669,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		498F1D85032F40CE5BF6BA77 /* [CP] Embed Pods Frameworks */ = {
+		8A9220E9D3C10A92A64E8D09 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -686,29 +686,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Phone Lib Example/Pods-Phone Lib Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		AD4BC2AF399A21F19A3DB545 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Phone Lib Example-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		EC6C8675995931513EBE98DC /* [CP] Check Pods Manifest.lock */ = {
+		D2AB1D413B781CEA911D992D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -724,6 +702,28 @@
 			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-iOSPhoneLib-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EE12DB118655D8B36CBEEB3D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Phone Lib Example-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -827,7 +827,7 @@
 /* Begin XCBuildConfiguration section */
 		5C6C81192806DA2500EE2919 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5561E41A9A4693FF84F958FF /* Pods-iOSPhoneLib.debug.xcconfig */;
+			baseConfigurationReference = A7AA11712FA49192F0466E33 /* Pods-iOSPhoneLib.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -857,7 +857,7 @@
 		};
 		5C6C811A2806DA2500EE2919 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D3E74D37A1C8A459DB352DE7 /* Pods-iOSPhoneLib.release.xcconfig */;
+			baseConfigurationReference = 9C770779625166C07240E624 /* Pods-iOSPhoneLib.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -887,7 +887,7 @@
 		};
 		835D7C1227BAC7A300A7B5DD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 849F37BAC65B99BF9EA406CD /* Pods-Phone Lib Example.debug.xcconfig */;
+			baseConfigurationReference = FC631C7E0BA483C4BD4C6A85 /* Pods-Phone Lib Example.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -931,7 +931,7 @@
 		};
 		835D7C1327BAC7A300A7B5DD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3B0279054752F1ABFA92DF23 /* Pods-Phone Lib Example.release.xcconfig */;
+			baseConfigurationReference = F98C4530360EAE4239210123 /* Pods-Phone Lib Example.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
