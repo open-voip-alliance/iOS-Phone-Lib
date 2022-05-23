@@ -1,10 +1,7 @@
-//
-// Created by Jeremy Norman on 15/02/2021.
-//
-
 import Foundation
 import AVFoundation
 import AVKit
+import linphonesw
 
 public class AudioManager {
     
@@ -12,6 +9,19 @@ public class AudioManager {
     private let audioSession: AVAudioSession
     private let pil: PIL
     private let callActions: CallActions
+    
+    private var linphoneAudio: LinphoneAudio {
+        voipLib.linphone.linphoneAudio
+    }
+    
+    public var state: AudioState {
+        AudioState(
+            currentRoute: linphoneAudio.currentRoute,
+            availableRoutes: linphoneAudio.availableRoutes,
+            bluetoothDeviceName: findBluetoothName(),
+            isMicrophoneMuted: isMicrophoneMuted
+        )
+    }
     
     private lazy var routePickerView: AVRoutePickerView = {
         let routePickerView = AVRoutePickerView()
@@ -25,149 +35,41 @@ public class AudioManager {
         self.audioSession = audioSession
         self.callActions = callActions
         
-        NotificationCenter.default.addObserver(self, selector: #selector(handleRouteChange), name: AVAudioSession.routeChangeNotification, object: nil)
+        listenForAudioRouteChangesFromOS()
+        setAppropriateDefaults()
     }
     
     public var isMicrophoneMuted: Bool {
-        get {
-            voipLib.isMicrophoneMuted
-        }
-    }
-    
-    public var state: AudioState {
-        get {
-            guard let availableInputs = audioSession.availableInputs else {
-                return AudioState(currentRoute: .phone, availableRoutes: [.phone, .speaker], bluetoothDeviceName: nil, isMicrophoneMuted: isMicrophoneMuted)
-            }
-            
-            var routes: [AudioRoute] = [.speaker]
-            
-            if hasBluetooth() {
-                routes.append(.bluetooth)
-            }
-            
-            if hasPhone() {
-                routes.append(.phone)
-            }
-            
-            var currentRoute: AudioRoute = .phone
-            
-            if (!audioSession.currentRoute.outputs.filter({$0.portType == .builtInSpeaker}).isEmpty) {
-                currentRoute = .speaker
-            }
-            
-            if (!audioSession.currentRoute.outputs.filter({$0.portType == .bluetoothHFP || $0.portType == .headsetMic}).isEmpty) {
-                currentRoute = .bluetooth
-            }
-            
-            return AudioState(currentRoute: currentRoute, availableRoutes: routes, bluetoothDeviceName: findBluetoothName(), isMicrophoneMuted: isMicrophoneMuted)
-        }
+        voipLib.isMicrophoneMuted
     }
     
     public func routeAudio(_ route: AudioRoute) {
-        guard let availableInputs = audioSession.availableInputs else {
-            return
-        }
+        linphoneAudio.routeAudio(to: route)
         
-        do {
-            if route == .phone {
-                try audioSession.overrideOutputAudioPort(.none)
-            }
-            
-            if route == .speaker {
-                try audioSession.overrideOutputAudioPort(.speaker)
-            }
-            
-            if route == .bluetooth {
-                try audioSession.overrideOutputAudioPort(.none)
-                var input = availableInputs.filter({$0.portType == .bluetoothHFP}).first
-                
-                if input == nil {
-                    input = availableInputs.filter({$0.portType == .headsetMic}).first
-                }
-                
-                try audioSession.setPreferredInput(input)
-            }
-            
-            try audioSession.setActive(true)
-        } catch {
-            pil.writeLog("Audio routing failed: \(error.localizedDescription)")
-        }        
+        log("Routed audio to \(route)")
     }
     
     /// Launch a native UI dialog box that allows the user to choose from a list of inputs.
     public func launchAudioRoutePicker() {
-        do {
-            try audioSession.overrideOutputAudioPort(.none)
-            
-            if let routePickerButton = routePickerView.subviews.first(where: { $0 is UIButton }) as? UIButton {
-                routePickerButton.sendActions(for: .touchUpInside)
-            }
-        } catch {
-            pil.writeLog("Unable to launch audio route picker")
-        }
-    }
-    
-    func onActivateAudioSession() {
-        do {
-            try audioSession.setPreferredSampleRate(44100.0)
-            try audioSession.setCategory(.playAndRecord, mode: .voiceChat, options: [.allowBluetooth, .duckOthers])
-            try audioSession.setActive(true, options: [.notifyOthersOnDeactivation])
-        } catch {
-            pil.writeLog("Unable to activate audio \(error.localizedDescription)")
-        }
+        log("Launching native Audio Route Picker")
         
-        routeToDefault()
-    }
-    
-    func onDeactivateAudioSession() {
-        do {
-            try audioSession.setActive(false, options: [.notifyOthersOnDeactivation])
-        } catch {
-            pil.writeLog("Unable to deactivate audio \(error.localizedDescription)")
+        if let routePickerButton = routePickerView.subviews.first(where: { $0 is UIButton }) as? UIButton {
+            routePickerButton.sendActions(for: .touchUpInside)
         }
     }
     
-    internal func routeToDefault() {
-        if hasBluetooth() {
-            routeAudio(.bluetooth)
-        } else {
-            routeAudio(.phone)
-        }
-    }
-    
-    private func hasBluetooth() -> Bool {
-        return isAvailable(port: .bluetoothHFP) || isAvailable(port: .headsetMic)
-    }
-    
-    private func hasSpeaker() -> Bool {
-        return isAvailable(port: .builtInSpeaker)
-    }
-    
-    private func hasPhone() -> Bool {
-        return isAvailable(port: .builtInMic)
+    private func isRouteAvailable(_ route: AudioRoute) -> Bool {
+        return linphoneAudio.hasAudioRouteAvailable(.phone)
     }
     
     private func findBluetoothName() -> String? {
-        guard let availableInputs = audioSession.availableInputs else {
-            return nil
+        if linphoneAudio.currentRoute == .bluetooth {
+            if let currentDevice = linphoneAudio.currentAudioDevice {
+                return currentDevice.deviceName
+            }
         }
         
-        var name: String? = availableInputs.filter({ $0.portType == .bluetoothHFP }).first?.portName
-        
-        if name == nil {
-            name = availableInputs.filter({ $0.portType == .headsetMic }).first?.portName
-        }
-        
-        return name
-    }
-    
-    private func isAvailable(port: AVAudioSession.Port) -> Bool {
-        guard let availableInputs = audioSession.availableInputs else {
-            return false
-        }
-        
-        return !availableInputs.filter({$0.portType == port}).isEmpty
+        return linphoneAudio.findDevice(.bluetooth)?.deviceName
     }
     
     public func mute() { callActions.mute() }
@@ -176,17 +78,29 @@ public class AudioManager {
     
     public func toggleMute() { callActions.toggleMute() }
     
+    private func setAppropriateDefaults() {
+        let route = isRouteAvailable(.bluetooth) ? AudioRoute.bluetooth : .phone
+        
+        linphoneAudio.routeAudio(
+            to: route,
+            onlySetDefaults: true
+        )
+        
+        log("Set default audio route to \(route)")
+    }
+    
+    private func listenForAudioRouteChangesFromOS() {
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(handleRouteChange),
+            name: AVAudioSession.routeChangeNotification,
+            object: nil
+        )
+    }
+    
     @objc func handleRouteChange(notification: Notification) {
-        guard let userInfo = notification.userInfo,
-              let reasonValue = userInfo[AVAudioSessionRouteChangeReasonKey] as? UInt,
-              let reason = AVAudioSession.RouteChangeReason(rawValue: reasonValue) else {
-            return
-        }
-        
-        if reason == .oldDeviceUnavailable || reason == .newDeviceAvailable {
-            routeToDefault()
-        }
-        
+        setAppropriateDefaults()
+        log("Detected audio route change from the OS: \(linphoneAudio.audioDevicesAsString)")
         pil.events.broadcast(event: .audioStateUpdated(state: pil.sessionState))
     }
 }

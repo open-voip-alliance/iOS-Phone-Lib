@@ -69,6 +69,6 @@ internal class LinphoneListener: CoreDelegate {
     }
     
     func onAudioDevicesListUpdated(core: Core) {
-        log("onAudioDevicesListUpdated")
+        log("onAudioDevicesListUpdated: \(core.audioDevicesAsString)")
     }
 }

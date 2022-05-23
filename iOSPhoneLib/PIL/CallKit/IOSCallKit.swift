@@ -226,12 +226,10 @@ extension IOSCallKit: CXProviderDelegate {
         }
     }
 
-    public func provider(_ provider: CXProvider, didActivate audioSession: AVAudioSession) {
+    public func provider(_ provider: CXProvider, didActivate audioSession: AVAudioSession) {        
         callExists { call in
             voipLib.actions(call: call).setAudio(enabled: true)
         }
-
-        pil.audio.onActivateAudioSession()
         
         timer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true, block: { timer in
             if self.pil.calls.activeCall == nil {
@@ -246,8 +244,6 @@ extension IOSCallKit: CXProviderDelegate {
         callExists { call in
             voipLib.actions(call: call).setAudio(enabled: false)
         }
-        
-        pil.audio.onDeactivateAudioSession()
     }
 }
 
