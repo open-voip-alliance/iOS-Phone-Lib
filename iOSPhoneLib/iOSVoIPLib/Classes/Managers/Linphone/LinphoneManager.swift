@@ -185,9 +185,19 @@ class LinphoneManager: linphonesw.LoggingServiceDelegate {
     }
     
     func call(to number: String) -> VoIPLibCall? {
-        guard let linphoneCall = linphoneCore.invite(url: number) else {return nil}
-        let VoIPLibCall = VoIPLibCall.init(linphoneCall: linphoneCall)
-        return isInitialized ? VoIPLibCall : nil
+        let url = "\(number)@\(pil.auth!.domain)"
+        
+        guard let address = linphoneCore.interpretUrl(url: url) else {
+            log("Unable to start call, failed to interpret URL: \(url)", level: .error)
+            return nil
+        }
+        
+        guard let call = linphoneCore.inviteAddress(addr: address) else {
+            log("Unable to start call, linphone did not create a call object", level: .error)
+            return nil
+        }
+        
+        return VoIPLibCall(linphoneCall: call)
     }
     
     func acceptCall(for call: VoIPLibCall) -> Bool {
