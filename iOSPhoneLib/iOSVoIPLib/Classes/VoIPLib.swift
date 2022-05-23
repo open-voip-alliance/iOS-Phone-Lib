@@ -10,15 +10,17 @@ import Foundation
 class VoIPLib {
     
     static public let shared = VoIPLib()
-
+    
     var isInitialized: Bool {
         get { linphone.isInitialized }
     }
     
     var config: VoIPLibConfig? {
-        get {
-            linphone.config
-        }
+        linphone.config
+    }
+    
+    var audio: LinphoneAudio {
+        linphone.linphoneAudio
     }
     
     let linphone: LinphoneManager

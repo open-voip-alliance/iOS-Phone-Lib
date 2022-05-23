@@ -13,9 +13,10 @@ class LinphoneManager: linphonesw.LoggingServiceDelegate {
         linphoneCore != nil
     }
     
-    private var linphoneCore: Core!
+    internal var linphoneCore: Core!
     private lazy var linphoneListener = { LinphoneListener(manager: self) }()
     private lazy var registrationListener = { LinphoneRegistrationListener(manager: self) }()
+    internal lazy var linphoneAudio = { LinphoneAudio(manager: self) }()
     
     var isMicrophoneMuted: Bool {
         return !linphoneCore.micEnabled
@@ -55,6 +56,7 @@ class LinphoneManager: linphonesw.LoggingServiceDelegate {
     }
     
     private func startLinphone() throws {
+        LoggingService.Instance.logLevel = .Debug
         linphoneCore = try Factory.Instance.createCore(configPath: "", factoryConfigPath: "", systemContext: nil)
         linphoneCore.addDelegate(delegate: linphoneListener)
         try applyPreStartConfiguration(core: linphoneCore)

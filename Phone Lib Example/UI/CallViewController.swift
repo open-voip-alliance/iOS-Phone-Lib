@@ -21,8 +21,9 @@ class CallViewController: UIViewController, PILEventDelegate {
     @IBOutlet weak var muteButton: UIButton!
     @IBOutlet weak var holdButton: UIButton!
     @IBOutlet weak var earpieceButton: UIButton!
-    @IBOutlet weak var bluetoothButton: UIButton!
+    @IBOutlet weak var bluetoothMultipleDeviceButton: UIButton!
     @IBOutlet weak var transferButton: UIButton!
+    @IBOutlet weak var bluetoothSingleDeviceButton: UIButton!
     
     let pil = PIL.shared!
     
@@ -109,15 +110,18 @@ class CallViewController: UIViewController, PILEventDelegate {
             holdButton.setTitle("HOLD", for: .normal)
         }
         
-        bluetoothButton.isEnabled = audioState.availableRoutes.contains(.bluetooth)
+        bluetoothMultipleDeviceButton.isEnabled = audioState.availableRoutes.contains(.bluetooth)
         earpieceButton.isEnabled = audioState.availableRoutes.contains(.phone)
         speakerButton.isEnabled = audioState.availableRoutes.contains(.speaker)
+        bluetoothSingleDeviceButton.isEnabled = audioState.availableRoutes.contains(.bluetooth)
         
         speakerButton.isSelected = audioState.currentRoute == .speaker
-        bluetoothButton.isSelected = audioState.currentRoute == .bluetooth
+        bluetoothMultipleDeviceButton.isSelected = audioState.currentRoute == .bluetooth
         earpieceButton.isSelected = audioState.currentRoute == .phone
+        bluetoothSingleDeviceButton.isSelected = audioState.currentRoute == .bluetooth
         
-        bluetoothButton.setTitle(audioState.bluetoothDeviceName ?? "BLUETOOTH", for: .normal)
+        bluetoothMultipleDeviceButton.setTitle(audioState.bluetoothDeviceName ?? "BLUETOOTH", for: .normal)
+        bluetoothSingleDeviceButton.setTitle(audioState.bluetoothDeviceName ?? "BLUETOOTH", for: .normal)
         
         if callSessionState?.inactiveCall != nil {
             transferButton.setTitle("MERGE", for: .normal)
@@ -164,6 +168,10 @@ class CallViewController: UIViewController, PILEventDelegate {
     
     @IBAction func bluetoothButtonWasPressed(_ sender: Any) {
         pil.audio.launchAudioRoutePicker()
+    }
+    
+    @IBAction func bluetoothSingleButtonWasPressed(_ sender: Any) {
+        pil.audio.routeAudio(.bluetooth)
     }
 
     @IBAction func earpieceButtonWasPressed(_ sender: Any) {
