@@ -168,14 +168,6 @@ class LinphoneManager: linphonesw.LoggingServiceDelegate {
         log("Unregister complete")
     }
 
-    func destroy() {
-        unregister()
-        linphoneCore.removeDelegate(delegate: linphoneListener)
-        linphoneCore.stop()
-        log("Linphone destroyed")
-        linphoneCore = nil
-    }
-    
     func terminateAllCalls() {
         do {
            try linphoneCore.terminateAllCalls()

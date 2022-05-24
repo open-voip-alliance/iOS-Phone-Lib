@@ -44,10 +44,6 @@ class VoIPLib {
     func refreshRegistration() {
         linphone.refreshRegistration()
     }
-
-    func destroy() {
-        linphone.destroy()
-    }
     
     func terminateAllCalls() {
         linphone.terminateAllCalls()

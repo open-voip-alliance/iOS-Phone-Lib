@@ -105,7 +105,7 @@ public class PIL {
     /// This should be called when a user logs-out (or similar action).
     public func stop() {
         auth = nil
-        voipLib.destroy()
+        voipLib.unregister()
     }
     
     /// Place a call to the given number.
