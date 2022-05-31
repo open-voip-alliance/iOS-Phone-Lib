@@ -152,8 +152,11 @@ public enum PILError: Error {
 internal extension String {
     var normalizedForCalling: String {
         let regex = try! NSRegularExpression(pattern: "[^+\\d]")
-        let range = NSMakeRange(0, count)
         
-        return regex.stringByReplacingMatches(in: self, range: range, withTemplate: "")
+        return regex.stringByReplacingMatches(
+            in: self,
+            range: NSMakeRange(0, count),
+            withTemplate: ""
+        )
     }
 }
