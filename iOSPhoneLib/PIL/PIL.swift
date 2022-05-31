@@ -121,7 +121,7 @@ public class PIL {
         // fails, then the following call should work.
         voipLib.refreshRegistration()
         
-        self.iOSCallKit.startCall(number: number)
+        self.iOSCallKit.startCall(number: number.normalizedForCalling)
     }
     
     internal func writeLog(_ message: String, level: LogLevel = .info) {
@@ -147,4 +147,13 @@ internal func log(_ message: String, level: LogLevel = .info) {
 
 public enum PILError: Error {
     case alreadyInitialized
+}
+
+internal extension String {
+    var normalizedForCalling: String {
+        let regex = try! NSRegularExpression(pattern: "[^+\\d]")
+        let range = NSMakeRange(0, count)
+        
+        return regex.stringByReplacingMatches(in: self, range: range, withTemplate: "")
+    }
 }
