@@ -90,7 +90,7 @@ public class CallActions {
     
     public func beginAttendedTransfer(number: String) {
         callExists { call in
-            pil.calls.transferSession = voipLib.actions(call: call).beginAttendedTransfer(to: number)
+            pil.calls.transferSession = voipLib.actions(call: call).beginAttendedTransfer(to: number.normalizedForCalling)
         }
     }
     
