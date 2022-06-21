@@ -37,8 +37,10 @@ internal class LinphoneRegistrationListener : CoreDelegate {
     func onAccountRegistrationStateChanged(core: Core, account: Account, state: linphonesw.RegistrationState, message: String) {
         log("Received registration state change: \(state.rawValue), message: \(message)")
         
-        guard let callback = manager.registrationCallback else {
-            log("Callback not set so registration state change has not done anything.")
+        let callbacks = manager.registrationCallbacks
+        
+        if callbacks.isEmpty {
+            log("No call backs exist, registration change does nothing.")
             return
         }
         
@@ -46,8 +48,8 @@ internal class LinphoneRegistrationListener : CoreDelegate {
         // all timers.
         if state == linphonesw.RegistrationState.Ok {
             log("Successful, resetting timers.")
-            manager.registrationCallback = nil
-            callback(RegistrationState.registered)
+            manager.registrationCallbacks = []
+            callbacks.invoke(state: RegistrationState.registered)
             reset()
             return
         }
@@ -61,10 +63,10 @@ internal class LinphoneRegistrationListener : CoreDelegate {
         }())!
         
         if hasExceededTimeout(startTime) {
-            manager.registrationCallback = nil
+            manager.registrationCallbacks = []
             manager.unregister()
             log("Registration timeout has been exceeded, registration failed.")
-            callback(RegistrationState.failed)
+            callbacks.invoke(state: RegistrationState.failed)
             reset()
             return
         }
@@ -88,5 +90,16 @@ internal class LinphoneRegistrationListener : CoreDelegate {
     private func reset() {
         startTime = nil
         timer?.invalidate()
+    }
+}
+
+extension Array {
+    func invoke(state: RegistrationState) {
+        filter { element in
+            element is RegistrationCallback
+        }.forEach { element in
+            let callback = element as! RegistrationCallback
+            callback(state)
+        }
     }
 }

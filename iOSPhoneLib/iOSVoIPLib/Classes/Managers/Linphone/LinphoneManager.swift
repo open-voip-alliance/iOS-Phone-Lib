@@ -107,7 +107,7 @@ class LinphoneManager: linphonesw.LoggingServiceDelegate {
         core.echoCancellationEnabled = true
     }
     
-    internal var registrationCallback: RegistrationCallback? = nil
+    internal var registrationCallbacks: [RegistrationCallback] = []
     
     func register(callback: @escaping RegistrationCallback) {
         do {
@@ -123,7 +123,7 @@ class LinphoneManager: linphonesw.LoggingServiceDelegate {
             linphoneCore.removeDelegate(delegate: self.registrationListener)
             linphoneCore.addDelegate(delegate: self.registrationListener)
 
-            self.registrationCallback = callback
+            self.registrationCallbacks.append(callback)
 
             if (!linphoneCore.accountList.isEmpty) {
                 log("We are already registered, refreshing registration.")
