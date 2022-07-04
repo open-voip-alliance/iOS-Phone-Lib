@@ -150,9 +150,9 @@ public enum PILError: Error {
 }
 
 internal extension String {
-    /// Remove all characters that aren't either a digit or a `+`.
+    /// Remove - ( ) characters from the number.
     var normalizedForCalling: String {
-        let regex = try! NSRegularExpression(pattern: "[^+\\d]")
+        let regex = try! NSRegularExpression(pattern: "[-()]")
         
         return regex.stringByReplacingMatches(
             in: self,
