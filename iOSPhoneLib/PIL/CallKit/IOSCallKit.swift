@@ -72,7 +72,7 @@ class IOSCallKit: NSObject {
                 value: phoneNumber
         )
         
-        update.localizedCallerName = callerName
+        update.localizedCallerName = "\(callerName) (\(phoneNumber))"
 
         provider.reportNewIncomingCall(with: UUID.init(), update: update) { error in
             if error != nil {
@@ -151,7 +151,7 @@ class IOSCallKit: NSObject {
     func updateCall(call: Call) {
         let update = CXCallUpdate()
         update.hasVideo = false
-        update.localizedCallerName = call.remotePartyHeading
+        update.localizedCallerName = call.prettyRemotePartyHeading
         update.remoteHandle = CXHandle(
                 type: CXHandle.HandleType.phoneNumber,
                 value: call.remoteNumber
