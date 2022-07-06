@@ -30,6 +30,14 @@ public struct Call {
         }
     }
     
+    public var prettyRemotePartyHeading: String {
+        if remotePartySubheading.isEmpty {
+            return remotePartyHeading
+        }
+        
+        return "\(remotePartyHeading) (\(remotePartySubheading))"
+    }
+    
     public var remotePartySubheading: String {
         get {
             if contact != nil || !displayName.isEmpty {
