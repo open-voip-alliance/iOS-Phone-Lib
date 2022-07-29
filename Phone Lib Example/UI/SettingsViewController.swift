@@ -15,7 +15,10 @@ final class SettingsViewController: QuickTableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        let useApplicationRingtone = PIL.shared != nil ? PIL.shared!.preferences.useApplicationRingtone : false
+        let includesCallsInRecents = PIL.shared != nil ? PIL.shared!.preferences.includesCallsInRecents : false
+        
         tableContents = [
 
             Section(title: "Authentication", rows: [
@@ -66,9 +69,18 @@ final class SettingsViewController: QuickTableViewController {
             ]),
             
             Section(title: "Preferences", rows: [
-                SwitchRow(text: "Use Application Ringtone", switchValue: self.defaults.bool(forKey: "use_application_ringtone"), action: { row in
+                SwitchRow(text: "Use Application Ringtone", switchValue: useApplicationRingtone, action: { row in
                     if let switchRow = row as? SwitchRowCompatible {
-                        self.defaults.set(switchRow.switchValue, forKey: "use_application_ringtone")
+                        if let pil = PIL.shared {
+                            pil.preferences = Preferences.init(useApplicationRingtone: switchRow.switchValue, includesCallsInRecents: includesCallsInRecents)
+                        }
+                    }
+                }),
+                SwitchRow(text: "Show calls in native recents", switchValue: includesCallsInRecents, action: { row in
+                    if let switchRow = row as? SwitchRowCompatible {
+                        if let pil = PIL.shared {
+                            pil.preferences = Preferences.init(useApplicationRingtone: useApplicationRingtone, includesCallsInRecents: switchRow.switchValue)
+                        }
                     }
                 }),
             ])
