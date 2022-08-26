@@ -27,7 +27,7 @@ public class PIL {
     public lazy var calls = { di.resolve(Calls.self)! }()
     public lazy var iOS = { di.resolve(IOS.self)! }()
     
-    var sessionState: CallSessionState {
+    public var sessionState: CallSessionState {
         get {
             CallSessionState(activeCall: calls.activeCall, inactiveCall: calls.inactiveCall, audioState: audio.state)
         }
