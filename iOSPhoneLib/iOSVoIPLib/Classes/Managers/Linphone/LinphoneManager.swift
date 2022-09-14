@@ -105,6 +105,13 @@ class LinphoneManager: linphonesw.LoggingServiceDelegate {
         core.useRfc2833ForDtmf = true
         core.adaptiveRateControlEnabled = true
         core.echoCancellationEnabled = true
+        if core.hasBuiltinEchoCanceller() {
+            core.echoCancellationEnabled = false
+            log("Built-in echo cancellation detected, disabling software.")
+        } else {
+            core.echoCancellationEnabled = true
+            log("This device does not have built-in echo cancellation, enabled software.")
+        }
     }
     
     internal var registrationCallbacks: [RegistrationCallback] = []

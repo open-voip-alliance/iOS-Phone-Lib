@@ -44,6 +44,20 @@ public class AudioManager {
     }
     
     public func routeAudio(_ route: AudioRoute) {
+        // The echo limiter is a brute-force method to prevent echo, it should only be used
+        // when it is really necessary, such as when the user is using the phone's speaker.
+        if (route == AudioRoute.speaker) {
+            pil.calls.list.callArray.forEach { call in
+                call.linphoneCall.echoLimiterEnabled = true
+                call.linphoneCall.echoCancellationEnabled = false
+            }
+        } else {
+            pil.calls.list.callArray.forEach { call in
+                call.linphoneCall.echoLimiterEnabled = false
+                call.linphoneCall.echoCancellationEnabled = true
+            }
+        }
+        
         linphoneAudio.routeAudio(to: route)
         
         log("Routed audio to \(route)")

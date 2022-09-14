@@ -79,4 +79,10 @@ class VoIPLib {
     func actions(call: VoIPLibCall) -> Actions {
         Actions(linphoneManager: linphone, call: call)
     }
+    
+    func beginEchoCancellation() {
+        do {
+            try linphone.linphoneCore.startEchoCancellerCalibration()
+        } catch {}
+    }
 }
