@@ -138,7 +138,7 @@ public class PIL {
         isPreparedToStart
     }
     
-    func performEchoCancellationCalibration() {
+    public func performEchoCancellationCalibration() {
         log("Beginning echo cancellation calibration")
         voipLib.startEchoCancellerCalibration()
     }
