@@ -137,6 +137,11 @@ public class PIL {
     internal var isStarted: Bool {
         isPreparedToStart
     }
+    
+    func performEchoCancellationCalibration() {
+        log("Beginning echo cancellation calibration")
+        voipLib.startEchoCancellerCalibration()
+    }
 }
 
 internal func log(_ message: String, level: LogLevel = .info) {
