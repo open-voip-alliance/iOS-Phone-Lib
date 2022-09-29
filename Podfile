@@ -7,7 +7,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 
 target 'iOSPhoneLib' do
   pod 'Swinject'
-  pod 'linphone-sdk-novideo', '5.1.58'
+  pod 'linphone-sdk-novideo', '5.1.63'
 end
 
 target 'Phone Lib Example' do
