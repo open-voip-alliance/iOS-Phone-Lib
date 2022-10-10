@@ -318,11 +318,6 @@ class LinphoneManager: linphonesw.LoggingServiceDelegate {
     }
     
     private var ringbackPath: String {
-        let ringbackFileName = "ringback"
-        let customBundle = Bundle(for: Self.self)
-        guard let resourceURL = customBundle.resourceURL?.appendingPathComponent("Resources.bundle") else { return "" }
-        guard let resourceBundle = Bundle(url: resourceURL) else { return "" }
-        guard let ringbackFileURL = resourceBundle.url( forResource: ringbackFileName , withExtension: "wav") else { return "" }
-        return ringbackFileURL.path
+        Bundle.main.path(forResource: "ringback", ofType: "wav") ?? ""
     }
 }
