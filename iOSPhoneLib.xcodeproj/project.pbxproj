@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5C00279A2839151800FC1368 /* LinphoneAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0027992839151800FC1368 /* LinphoneAudio.swift */; };
+		5C12BB9E28F45DE800053E2F /* ringback.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5C12BB9D28F45DE800053E2F /* ringback.wav */; };
 		5C6C81162806DA2500EE2919 /* iOSPhoneLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C6C810E2806DA2500EE2919 /* iOSPhoneLib.framework */; };
 		5C6C811C2806DE9E00EE2919 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835D82F827BD61E000A7B5DD /* AudioManager.swift */; };
 		5C6C811D2806DE9E00EE2919 /* AudioRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835D82F927BD61E000A7B5DD /* AudioRoute.swift */; };
@@ -100,6 +101,7 @@
 
 /* Begin PBXFileReference section */
 		5C0027992839151800FC1368 /* LinphoneAudio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinphoneAudio.swift; sourceTree = "<group>"; };
+		5C12BB9D28F45DE800053E2F /* ringback.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ringback.wav; sourceTree = "<group>"; };
 		5C6C810E2806DA2500EE2919 /* iOSPhoneLib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = iOSPhoneLib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C7CB553282F04F900DD8FDD /* LinphoneRegistrationListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinphoneRegistrationListener.swift; sourceTree = "<group>"; };
 		5C7CB555282F053800DD8FDD /* LinphoneListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinphoneListener.swift; sourceTree = "<group>"; };
@@ -333,6 +335,7 @@
 		835D7C0227BAC7A200A7B5DD /* Phone Lib Example */ = {
 			isa = PBXGroup;
 			children = (
+				5C12BB9D28F45DE800053E2F /* ringback.wav */,
 				835D829A27BAC86C00A7B5DD /* AppDelegate.swift */,
 				8323711E27C6B5210087E701 /* UI */,
 				835D829B27BAC86C00A7B5DD /* Configuration */,
@@ -660,6 +663,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C12BB9E28F45DE800053E2F /* ringback.wav in Resources */,
 				835D834F27BD64C200A7B5DD /* Localizable.stringsdict in Resources */,
 				835D82B227BAC86D00A7B5DD /* StagingConfig.plist in Resources */,
 				8323712827C6B5210087E701 /* Assets.xcassets in Resources */,
