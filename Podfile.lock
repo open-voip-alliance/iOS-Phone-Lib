@@ -1,21 +1,21 @@
 PODS:
-  - Alamofire (5.6.2)
+  - Alamofire (5.6.4)
   - iOSPhoneLib (0.1.1):
-    - linphone-sdk-novideo (= 5.1.63)
+    - linphone-sdk-novideo (= 5.2.6)
     - Swinject (~> 2.7.1)
-  - linphone-sdk-novideo (5.1.63):
-    - linphone-sdk-novideo/all-frameworks (= 5.1.63)
-    - linphone-sdk-novideo/app-extension (= 5.1.63)
-    - linphone-sdk-novideo/app-extension-swift (= 5.1.63)
-    - linphone-sdk-novideo/basic-frameworks (= 5.1.63)
-    - linphone-sdk-novideo/swift (= 5.1.63)
-  - linphone-sdk-novideo/all-frameworks (5.1.63)
-  - linphone-sdk-novideo/app-extension (5.1.63)
-  - linphone-sdk-novideo/app-extension-swift (5.1.63):
+  - linphone-sdk-novideo (5.2.6):
+    - linphone-sdk-novideo/all-frameworks (= 5.2.6)
+    - linphone-sdk-novideo/app-extension (= 5.2.6)
+    - linphone-sdk-novideo/app-extension-swift (= 5.2.6)
+    - linphone-sdk-novideo/basic-frameworks (= 5.2.6)
+    - linphone-sdk-novideo/swift (= 5.2.6)
+  - linphone-sdk-novideo/all-frameworks (5.2.6)
+  - linphone-sdk-novideo/app-extension (5.2.6)
+  - linphone-sdk-novideo/app-extension-swift (5.2.6):
     - linphone-sdk-novideo/app-extension
-  - linphone-sdk-novideo/basic-frameworks (5.1.63):
+  - linphone-sdk-novideo/basic-frameworks (5.2.6):
     - linphone-sdk-novideo/app-extension
-  - linphone-sdk-novideo/swift (5.1.63):
+  - linphone-sdk-novideo/swift (5.2.6):
     - linphone-sdk-novideo/app-extension-swift
     - linphone-sdk-novideo/basic-frameworks
   - QuickTableViewController (1.3.1)
@@ -25,7 +25,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire (~> 5.2)
   - iOSPhoneLib (from `iOSPhoneLib.podspec`)
-  - linphone-sdk-novideo (= 5.1.63)
+  - linphone-sdk-novideo (= 5.2.6)
   - QuickTableViewController
   - SAMKeychain
   - Swinject
@@ -44,13 +44,13 @@ EXTERNAL SOURCES:
     :path: iOSPhoneLib.podspec
 
 SPEC CHECKSUMS:
-  Alamofire: d368e1ff8a298e6dde360e35a3e68e6c610e7204
-  iOSPhoneLib: c25e28649ab5dbc57e27bcdd803257119a3bf018
-  linphone-sdk-novideo: 24127c66568ae49ba841d205af25af9ce7be97e7
+  Alamofire: 4e95d97098eacb88856099c4fc79b526a299e48c
+  iOSPhoneLib: d676409cde03b70d8b1e79ce0385c50e08c71037
+  linphone-sdk-novideo: 0b827a386c0a48cc57d26beae9421d5fd9c2b18d
   QuickTableViewController: 25e698de1546c2b829c543d91b64ebc6e884acfc
   SAMKeychain: 483e1c9f32984d50ca961e26818a534283b4cd5c
   Swinject: ddf78b8486dd9b71a667b852cad919ab4484478e
 
-PODFILE CHECKSUM: f2001d3119e38f92d97ba58c48ffafbd97686864
+PODFILE CHECKSUM: 5a307aa3a859bdedee8f2179c6e424c09592176a
 
 COCOAPODS: 1.11.3

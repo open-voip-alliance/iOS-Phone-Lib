@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
 
     s.source_files = 'iOSPhoneLib/**/*'
 
-    s.dependency 'linphone-sdk-novideo', '5.1.63'
+    s.dependency 'linphone-sdk-novideo', '5.2.6'
     s.framework = "UIKit"
     s.dependency 'Swinject', '~> 2.7.1'
   
