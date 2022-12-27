@@ -37,6 +37,7 @@ class PlatformIntegrator: PILEventDelegate {
                 pil.iOSCallKit.reportOutgoingCallConnecting()
                 pil.app.requestCallUi()
             case .callEnded(_):
+                pil.audio.unmute()
                 pil.iOSCallKit.endAllCalls()
                 fallthrough
             case .attendedTransferAborted,
