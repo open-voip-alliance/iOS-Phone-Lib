@@ -22,6 +22,6 @@ Pod::Spec.new do |s|
 
     s.dependency 'linphone-sdk-novideo', '5.2.43'
     s.framework = "UIKit"
-    s.dependency 'Swinject'
+    s.dependency 'Swinject', '~> 2.8.2'
   
 end
