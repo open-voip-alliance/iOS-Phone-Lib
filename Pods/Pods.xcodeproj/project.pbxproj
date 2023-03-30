@@ -1362,7 +1362,7 @@
 			buildConfigurationList = 5705BA79F86461A7351B1A9BE8085F21 /* Build configuration list for PBXNativeTarget "linphone-sdk-novideo" */;
 			buildPhases = (
 				D92FAC49984E83CEBE25444F9169C325 /* Headers */,
-				4087C47F08679A80D98FA9441034ACAE /* [CP] Copy XCFrameworks */,
+				EEC1D444859423404D57809A61EA15A1 /* [CP] Copy XCFrameworks */,
 				F0E700B27AD0666A765730F3C76CB6D2 /* Sources */,
 				540ACA42F9FCB04B3B8A5F679F215581 /* Frameworks */,
 				3A08C7AC6D087A08CB428A68556E3F86 /* Resources */,
@@ -1507,15 +1507,17 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4087C47F08679A80D98FA9441034ACAE /* [CP] Copy XCFrameworks */ = {
+		EEC1D444859423404D57809A61EA15A1 /* [CP] Copy XCFrameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/linphone-sdk-novideo/linphone-sdk-novideo-xcframeworks-input-files.xcfilelist",
 			);
 			name = "[CP] Copy XCFrameworks";
 			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/linphone-sdk-novideo/linphone-sdk-novideo-xcframeworks-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
