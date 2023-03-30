@@ -82,7 +82,7 @@ internal extension AudioDevice {
         switch type {
             case .AuxLine, .Microphone, .Earpiece, .GenericUsb, .Telephony, .Unknown: return .phone
             case .Speaker: return .speaker
-            case .Bluetooth, .BluetoothA2DP, .Headset, .Headphones: return .bluetooth
+            case .Bluetooth, .BluetoothA2DP, .Headset, .Headphones, .HearingAid: return .bluetooth
         }
     }
 }

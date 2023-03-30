@@ -74,7 +74,7 @@ class LinphoneManager: linphonesw.LoggingServiceDelegate {
         core.setUserAgent(name: pil.app.userAgent, version: nil)
         core.ringback = ringbackPath        
         core.pushNotificationEnabled = false
-        core.callkitEnabled = false
+        core.callkitEnabled = true
         core.ipv6Enabled = false
         core.dnsSrvEnabled = false
         core.dnsSearchEnabled = false
