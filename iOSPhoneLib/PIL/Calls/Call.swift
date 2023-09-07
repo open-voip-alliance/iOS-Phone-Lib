@@ -13,6 +13,7 @@ public struct Call {
     public let isOnHold: Bool
     public let uuid: UUID
     public let mos: Float
+    public let currentMos: Float
     public let contact: Contact?
     public let reason: String
     

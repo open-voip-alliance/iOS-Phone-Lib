@@ -28,6 +28,7 @@ public class PILCallFactory {
             isOnHold: (libraryCall.state == .pausedByRemote || libraryCall.state == .paused),
             uuid: UUID.init(),
             mos: libraryCall.quality.average,
+            currentMos: libraryCall.quality.current,
             contact: contacts.find(call: libraryCall),
             reason: libraryCall.reason
         )

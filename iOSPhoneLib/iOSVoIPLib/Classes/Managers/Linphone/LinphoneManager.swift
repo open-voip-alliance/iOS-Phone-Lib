@@ -163,9 +163,23 @@ class LinphoneManager: linphonesw.LoggingServiceDelegate {
 
     private func createAccount(core: Core, auth: Auth) throws -> Account {
         let params = try core.createAccountParams()
-        try params.setIdentityaddress(newValue: core.interpretUrl(url: "sip:\(auth.username)@\(auth.domain):\(auth.port)")!)
+        
+        let identityUrl = "sip:\(auth.username)@\(auth.domain):\(auth.port)"
+        guard let identityAddress = core.interpretUrl(url: identityUrl, applyInternationalPrefix: false) else {
+            log("Unable to create account, failed to interpret identity URL: \(identityUrl)", level: .error)
+            throw InitializationError.noConfigurationProvided
+            }
+        try params.setIdentityaddress(newValue: identityAddress)
+        
         params.registerEnabled = true
-        try params.setServeraddress(newValue: core.interpretUrl(url: "sip:\(auth.domain);transport=tls")!)
+        
+        let serverUrl = "sip:\(auth.domain);transport=tls"
+        guard let serverAddress = core.interpretUrl(url: serverUrl, applyInternationalPrefix: false) else {
+            log("Unable to create account, failed to interpret server URL: \(serverUrl)", level: .error)
+            throw InitializationError.noConfigurationProvided
+        }
+        try params.setServeraddress(newValue: serverAddress)
+        
         return try linphoneCore.createAccount(params: params)
     }
     
@@ -186,7 +200,7 @@ class LinphoneManager: linphonesw.LoggingServiceDelegate {
     func call(to number: String) -> VoIPLibCall? {
         let url = "\(number)@\(pil.auth!.domain)"
         
-        guard let address = linphoneCore.interpretUrl(url: url) else {
+        guard let address = linphoneCore.interpretUrl(url: url, applyInternationalPrefix: false) else {
             log("Unable to start call, failed to interpret URL: \(url)", level: .error)
             return nil
         }
