@@ -15,9 +15,6 @@ Pod::Spec.new do |s|
     s.license          = { :type => 'AGPL', :file => 'LICENSE' }
     s.author           = { "Chris Kontos" => "chris.kontos@wearespindle.com" }
     s.source           = { :git => 'https://gitlab.wearespindle.com/vialer/mobile/voip/ios-phone-lib.git', :tag => s.version.to_s }
-
-    s.ios.deployment_target = '11.3'
-
     s.source_files = 'iOSPhoneLib/**/*'
 
     s.dependency 'linphone-sdk-novideo', '5.2.112'
