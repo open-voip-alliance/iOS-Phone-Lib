@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
     s.static_framework = true
     s.homepage         = 'https://github.com/open-voip-alliance/iOS-Phone-Lib'
     s.license          = { :type => 'AGPL', :file => 'LICENSE' }
-    s.author           = { "Johannes Nevels" => "johannes.nevels@voys.nl" }
+    s.author           = { "Johannes Nevels" => "googledeveloper@voys.nl" }
     s.source           = { :git => 'https://github.com/open-voip-alliance/iOS-Phone-Lib.git', :tag => s.version.to_s }
     s.source_files = 'iOSPhoneLib/**/*'
     
