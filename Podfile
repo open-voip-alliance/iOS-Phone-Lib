@@ -1,6 +1,6 @@
 platform :ios, '13.0'
 inhibit_all_warnings!
-use_frameworks!
+use_frameworks! :linkage => :static
 
 source 'https://gitlab.linphone.org/BC/public/podspec.git'
 source 'https://github.com/CocoaPods/Specs.git'
@@ -11,7 +11,7 @@ target 'iOSPhoneLib' do
 end
 
 target 'Phone Lib Example' do
-  pod 'iOSPhoneLib', :path => 'iOSPhoneLib.podspec'
+  pod 'iOSPhoneLib' , :path => 'iOSPhoneLib.podspec'
   pod 'SAMKeychain'
   pod 'QuickTableViewController'
   pod 'Alamofire', '~> 5.2'
