@@ -1,12 +1,12 @@
 Pod::Spec.new do |s|
     
     s.platform = :ios
-    s.ios.deployment_target = '13.0'
+    s.ios.deployment_target = '12.0'
     s.requires_arc = true
     s.swift_version = "5"
     
     s.name             = 'iOSPhoneLib'
-    s.version          = '0.1.3'
+    s.version          = '0.1.4'
     s.summary          = 'Allow for easy implementation of SIP into a swift project.'
 
     s.description      = 'This library is an opinionated sip-wrapper, currently using Linphone as the base.'
