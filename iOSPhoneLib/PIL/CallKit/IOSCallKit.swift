@@ -144,7 +144,7 @@ class IOSCallKit: NSObject {
     
     func reportOutgoingCallConnecting() {
         if let uuid = findCallUuid() {
-            provider.reportOutgoingCall(with:uuid, startedConnectingAt: Date())
+            provider.reportOutgoingCall(with:uuid, connectedAt: Date())
         }
     }
     
@@ -190,12 +190,14 @@ extension IOSCallKit: CXProviderDelegate {
     public func provider(_ provider: CXProvider, perform action: CXAnswerCallAction) {
         callExists(action) { call in
             voipLib.actions(call: call).accept()
+            action.fulfill()
         }
     }
 
     public func provider(_ provider: CXProvider, perform action: CXEndCallAction) {
         pil.calls.list.callArray.forEach { call in
             voipLib.actions(call: call).end()
+            action.fulfill()
         }
     }
 
@@ -216,6 +218,7 @@ extension IOSCallKit: CXProviderDelegate {
     public func provider(_ provider: CXProvider, perform action: CXSetHeldCallAction) {
         callExists(action) { call in
             voipLib.actions(call: call).hold(onHold: action.isOnHold)
+            action.fulfill()
         }
     }
 
