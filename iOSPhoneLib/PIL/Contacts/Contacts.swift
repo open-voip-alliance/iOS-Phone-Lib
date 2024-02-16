@@ -16,7 +16,10 @@ class Contacts {
     
     private var cachedContacts = [String: Contact?]()
     
-    init() {
+    private let preferences: CurrentPreferencesResolver
+    
+    init(preferences: @escaping CurrentPreferencesResolver) {
+        self.preferences = preferences
         NotificationCenter.default.addObserver(
             self,
             selector: #selector(addressBookDidChange),
@@ -39,13 +42,20 @@ class Contacts {
             }
         }
         
+        if cachedContacts[call.identifier] == nil {
+            if let contact = preferences().supplementaryContacts.first(where: {$0.number.normalizePhoneNumber() == call.remoteNumber}) {
+                cachedContacts[call.identifier] = contact.toContact()
+            }
+        }
+        
         return nil
     }
     
     private func performBackgroundLookup(call: VoIPLibCall) {
         let keys = [CNContactGivenNameKey, CNContactFamilyNameKey, CNContactPhoneNumbersKey, CNContactImageDataAvailableKey, CNContactThumbnailImageDataKey]
         let request = CNContactFetchRequest(keysToFetch: keys as [CNKeyDescriptor])
-
+        let supp = preferences().supplementaryContacts
+        
         do {
             try store.enumerateContacts(with: request, usingBlock: { (contact, stopPointer) in
                 if !contact.phoneNumbers.filter({ $0.value.stringValue.normalizePhoneNumber() == call.remoteNumber }).isEmpty {
@@ -53,11 +63,17 @@ class Contacts {
                     return
                 }
                 
-                self.cachedContacts[call.identifier] = Contact.notFound()
+                if cachedContacts[call.identifier] == nil {
+                    cachedContacts[call.identifier] = Contact.notFound()
+                }
             })
         } catch {
             log("Unable to access contacts")
         }
+    }
+    
+    internal func clearCaches() {
+        cachedContacts = [:]
     }
     
     @objc func addressBookDidChange() {

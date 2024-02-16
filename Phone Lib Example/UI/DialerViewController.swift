@@ -34,6 +34,13 @@ class DialerViewController: UIViewController {
         guard let number = numberPreview.text,
               let pil = PIL.shared else { return }
         
+        pil.preferences = Preferences(
+            useApplicationRingtone: pil.preferences.useApplicationRingtone,
+            includesCallsInRecents: pil.preferences.includesCallsInRecents,
+            supplementaryContacts: [SupplementaryContact(number: number, name: "Supplementary Contact")]
+        )
+
+        
         MicPermissionHelper.requestMicrophonePermission { startCalling in
             if startCalling {
                 pil.call(number: number)

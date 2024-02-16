@@ -2,23 +2,16 @@ import Foundation
 
 public struct Preferences: Equatable {
     public let useApplicationRingtone: Bool
-    @available(*, deprecated, message: "Codecs are no longer configurable")
-    public let codecs: [Codec] = [Codec.OPUS]
     public let includesCallsInRecents: Bool
+    public let supplementaryContacts: Set<SupplementaryContact>
     
-    
-    @available(*, deprecated, message: "Codecs are no longer configurable")
-    public init(useApplicationRingtone: Bool = true, codecs: [Codec] = [Codec.OPUS], includesCallsInRecents: Bool = false) {
+    public init(useApplicationRingtone: Bool = true, includesCallsInRecents: Bool = false, supplementaryContacts: Set<SupplementaryContact> = []) {
         self.useApplicationRingtone = useApplicationRingtone
         self.includesCallsInRecents = includesCallsInRecents
-    }
-    
-    public init(useApplicationRingtone: Bool = true, includesCallsInRecents: Bool = false) {
-        self.useApplicationRingtone = useApplicationRingtone
-        self.includesCallsInRecents = includesCallsInRecents
+        self.supplementaryContacts = supplementaryContacts
     }
 
     public static func ==(lhs: Self, rhs: Self) -> Bool {
-        lhs.useApplicationRingtone == rhs.useApplicationRingtone && lhs.includesCallsInRecents == rhs.includesCallsInRecents
+        lhs.useApplicationRingtone == rhs.useApplicationRingtone && lhs.includesCallsInRecents == rhs.includesCallsInRecents && lhs.supplementaryContacts == rhs.supplementaryContacts
     }
 }
