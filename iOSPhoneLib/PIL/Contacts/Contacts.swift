@@ -54,7 +54,6 @@ class Contacts {
     private func performBackgroundLookup(call: VoIPLibCall) {
         let keys = [CNContactGivenNameKey, CNContactFamilyNameKey, CNContactPhoneNumbersKey, CNContactImageDataAvailableKey, CNContactThumbnailImageDataKey]
         let request = CNContactFetchRequest(keysToFetch: keys as [CNKeyDescriptor])
-        let supp = preferences().supplementaryContacts
         
         do {
             try store.enumerateContacts(with: request, usingBlock: { (contact, stopPointer) in
