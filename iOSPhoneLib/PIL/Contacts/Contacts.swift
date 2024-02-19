@@ -42,10 +42,8 @@ class Contacts {
             }
         }
         
-        if cachedContacts[call.identifier] == nil {
-            if let contact = preferences().supplementaryContacts.first(where: {$0.number.normalizePhoneNumber() == call.remoteNumber}) {
-                cachedContacts[call.identifier] = contact.toContact()
-            }
+        if cachedContacts[call.identifier] == nil, let contact = preferences().supplementaryContacts.first(where: {$0.number.normalizePhoneNumber() == call.remoteNumber}) {
+            cachedContacts[call.identifier] = contact.toContact()
         }
         
         return nil
