@@ -10,6 +10,10 @@ import Swinject
 import CallKit
 import AVFoundation
 
+// Resolves the current preferences from the [PIL] that doesn't require depending on the whole
+// [PIL] object.
+typealias CurrentPreferencesResolver = () -> Preferences
+
 var register: (Container) -> Container = {
     
     $0.register(PIL.self) { _ in
@@ -42,7 +46,13 @@ var register: (Container) -> Container = {
         callActions: c.resolve(CallActions.self)!
     ) }.inObjectScope(.container)
     
-    $0.register(Contacts.self) { _ in Contacts() }.inObjectScope(.container)
+    $0.register(CurrentPreferencesResolver.self) { c in
+        {c.resolve(PIL.self)!.preferences}
+    }.inObjectScope(.container)
+    
+    $0.register(Contacts.self) { c in Contacts(
+        preferences: c.resolve(CurrentPreferencesResolver.self)!
+    ) }.inObjectScope(.container)
     
     $0.register(PILCallFactory.self) { c in
         PILCallFactory(contacts: c.resolve(Contacts.self)!)
