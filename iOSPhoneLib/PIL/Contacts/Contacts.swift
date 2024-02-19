@@ -76,7 +76,7 @@ class Contacts {
     }
     
     @objc func addressBookDidChange() {
-        cachedContacts.removeAll()
+        clearCache()
     }
 }
 
