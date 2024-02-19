@@ -71,8 +71,8 @@ class Contacts {
         }
     }
     
-    internal func clearCaches() {
-        cachedContacts = [:]
+    internal func clearCache() {
+        cachedContacts.removeAll()
     }
     
     @objc func addressBookDidChange() {

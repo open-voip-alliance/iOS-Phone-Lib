@@ -47,7 +47,7 @@ public class PIL {
     public var preferences = Preferences() {
         didSet {
             iOSCallKit.refresh()
-            contacts.clearCaches()
+            contacts.clearCache()
         }
     }
     
