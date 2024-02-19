@@ -78,12 +78,6 @@ class Contacts {
     }
 }
 
-extension Set<SupplementaryContact> {
-    func find(forCall call: VoIPLibCall) -> SupplementaryContact? {
-        return first(where: {$0.number.normalizePhoneNumber() == call.remoteNumber})
-    }
-}
-
 public struct Contact {
     public let name: String
     public let image: Data?
@@ -115,5 +109,11 @@ extension VoIPLibCall {
 extension String {
     func normalizePhoneNumber() -> String {
         return replacingOccurrences(of: "[^0-9\\+]", with: "", options: .regularExpression)
+    }
+}
+
+extension Set<SupplementaryContact> {
+    func find(forCall call: VoIPLibCall) -> SupplementaryContact? {
+        return first(where: {$0.number.normalizePhoneNumber() == call.remoteNumber})
     }
 }
