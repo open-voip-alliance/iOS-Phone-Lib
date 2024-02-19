@@ -22,7 +22,8 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		1D85D2C4D8FD9FE09AE9C992 /* Pods_iOSPhoneLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 306DC0D7DF12112A59265C66 /* Pods_iOSPhoneLib.framework */; };
+		1A55D2242B7E869F006BBEFB /* SupplementaryContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A55D2232B7E869F006BBEFB /* SupplementaryContact.swift */; };
+		2C70EAB9036A1EDA60801929 /* Pods_Phone_Lib_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53057F9D284C0D60E8D22EB9 /* Pods_Phone_Lib_Example.framework */; };
 		5C00279A2839151800FC1368 /* LinphoneAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0027992839151800FC1368 /* LinphoneAudio.swift */; };
 		5C12BB9E28F45DE800053E2F /* ringback.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5C12BB9D28F45DE800053E2F /* ringback.wav */; };
 		5C6C811C2806DE9E00EE2919 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835D82F827BD61E000A7B5DD /* AudioManager.swift */; };
@@ -72,6 +73,7 @@
 		5C6C815C2806DE9E00EE2919 /* RegistrationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8323716927C7CC060087E701 /* RegistrationState.swift */; };
 		5C7CB554282F04F900DD8FDD /* LinphoneRegistrationListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7CB553282F04F900DD8FDD /* LinphoneRegistrationListener.swift */; };
 		5C7CB556282F053800DD8FDD /* LinphoneListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7CB555282F053800DD8FDD /* LinphoneListener.swift */; };
+		791AAC547A9D2FDBC01898C9 /* Pods_iOSPhoneLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 439E46841232B4DF192E05CE /* Pods_iOSPhoneLib.framework */; };
 		8323712727C6B5210087E701 /* InCallDialpadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8323711F27C6B5210087E701 /* InCallDialpadViewController.swift */; };
 		8323712827C6B5210087E701 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8323712027C6B5210087E701 /* Assets.xcassets */; };
 		8323712927C6B5210087E701 /* CallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8323712127C6B5210087E701 /* CallViewController.swift */; };
@@ -87,7 +89,6 @@
 		835D82BD27BAC86D00A7B5DD /* VoIPGRIDLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835D82AE27BAC86C00A7B5DD /* VoIPGRIDLogin.swift */; };
 		835D82BE27BAC86D00A7B5DD /* VoIPGRIDMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835D82AF27BAC86C00A7B5DD /* VoIPGRIDMiddleware.swift */; };
 		835D834F27BD64C200A7B5DD /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = 835D82F327BD61E000A7B5DD /* Localizable.stringsdict */; };
-		C51B26A4EB4FDE4EABF0F958 /* Pods_Phone_Lib_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F2D1F66FFA12B475AF5CA0F /* Pods_Phone_Lib_Example.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -103,14 +104,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		306DC0D7DF12112A59265C66 /* Pods_iOSPhoneLib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSPhoneLib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4EA0E99A108BE147800E2BDB /* Pods-Phone Lib Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Phone Lib Example.debug.xcconfig"; path = "Target Support Files/Pods-Phone Lib Example/Pods-Phone Lib Example.debug.xcconfig"; sourceTree = "<group>"; };
+		122A51CD24560AF18F5DDBF3 /* Pods-iOSPhoneLib.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSPhoneLib.release.xcconfig"; path = "Target Support Files/Pods-iOSPhoneLib/Pods-iOSPhoneLib.release.xcconfig"; sourceTree = "<group>"; };
+		1A55D2232B7E869F006BBEFB /* SupplementaryContact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupplementaryContact.swift; sourceTree = "<group>"; };
+		439E46841232B4DF192E05CE /* Pods_iOSPhoneLib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSPhoneLib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		53057F9D284C0D60E8D22EB9 /* Pods_Phone_Lib_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Phone_Lib_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C0027992839151800FC1368 /* LinphoneAudio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinphoneAudio.swift; sourceTree = "<group>"; };
 		5C12BB9D28F45DE800053E2F /* ringback.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ringback.wav; sourceTree = "<group>"; };
 		5C6C810E2806DA2500EE2919 /* iOSPhoneLib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = iOSPhoneLib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C7CB553282F04F900DD8FDD /* LinphoneRegistrationListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinphoneRegistrationListener.swift; sourceTree = "<group>"; };
 		5C7CB555282F053800DD8FDD /* LinphoneListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinphoneListener.swift; sourceTree = "<group>"; };
-		7F2D1F66FFA12B475AF5CA0F /* Pods_Phone_Lib_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Phone_Lib_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8323711F27C6B5210087E701 /* InCallDialpadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InCallDialpadViewController.swift; sourceTree = "<group>"; };
 		8323712027C6B5210087E701 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8323712127C6B5210087E701 /* CallViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallViewController.swift; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 		835D832027BD61E100A7B5DD /* IOS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IOS.swift; sourceTree = "<group>"; };
 		837885A427AC3FB7001A24A8 /* VoIPLibTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoIPLibTests.swift; sourceTree = "<group>"; };
 		8394DF632808928C005DB853 /* Phone Lib Example.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Phone Lib Example.entitlements"; sourceTree = "<group>"; };
+		886E8D3C8170DA08CD6212BB /* Pods-Phone Lib Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Phone Lib Example.release.xcconfig"; path = "Target Support Files/Pods-Phone Lib Example/Pods-Phone Lib Example.release.xcconfig"; sourceTree = "<group>"; };
 		8F23DC172B4D817A00E71B87 /* linphonesw.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = linphonesw.xcframework; sourceTree = "<group>"; };
 		8F23DC522B4D8E4800E71B87 /* bctoolbox-ios.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = "bctoolbox-ios.xcframework"; path = "linphone-sdk-novideo/apple-darwin/XCFrameworks/bctoolbox-ios.xcframework"; sourceTree = "<group>"; };
 		8F23DC532B4D8E4800E71B87 /* bctoolbox.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = bctoolbox.xcframework; path = "linphone-sdk-novideo/apple-darwin/XCFrameworks/bctoolbox.xcframework"; sourceTree = "<group>"; };
@@ -215,9 +218,8 @@
 		8F852B8A2B4E943F00DE236B /* linphonesw.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = linphonesw.xcframework; sourceTree = "<group>"; };
 		8F852B8B2B4E943F00DE236B /* msopenh264.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = msopenh264.xcframework; sourceTree = "<group>"; };
 		8F852B8C2B4E943F00DE236B /* linphonetester.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = linphonetester.xcframework; sourceTree = "<group>"; };
-		A75667A8024FB2AC65D95EEA /* Pods-iOSPhoneLib.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSPhoneLib.release.xcconfig"; path = "Target Support Files/Pods-iOSPhoneLib/Pods-iOSPhoneLib.release.xcconfig"; sourceTree = "<group>"; };
-		B520D2655C50CFEE51B26FC8 /* Pods-Phone Lib Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Phone Lib Example.release.xcconfig"; path = "Target Support Files/Pods-Phone Lib Example/Pods-Phone Lib Example.release.xcconfig"; sourceTree = "<group>"; };
-		E4FD5B63A6B22E8C91E933A6 /* Pods-iOSPhoneLib.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSPhoneLib.debug.xcconfig"; path = "Target Support Files/Pods-iOSPhoneLib/Pods-iOSPhoneLib.debug.xcconfig"; sourceTree = "<group>"; };
+		D2F87BE6F4431BF6FB323829 /* Pods-Phone Lib Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Phone Lib Example.debug.xcconfig"; path = "Target Support Files/Pods-Phone Lib Example/Pods-Phone Lib Example.debug.xcconfig"; sourceTree = "<group>"; };
+		D93B8A3B73E688370BE5788E /* Pods-iOSPhoneLib.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSPhoneLib.debug.xcconfig"; path = "Target Support Files/Pods-iOSPhoneLib/Pods-iOSPhoneLib.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -225,7 +227,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D85D2C4D8FD9FE09AE9C992 /* Pods_iOSPhoneLib.framework in Frameworks */,
+				791AAC547A9D2FDBC01898C9 /* Pods_iOSPhoneLib.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,7 +235,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C51B26A4EB4FDE4EABF0F958 /* Pods_Phone_Lib_Example.framework in Frameworks */,
+				2C70EAB9036A1EDA60801929 /* Pods_Phone_Lib_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,10 +245,10 @@
 		26FA3952D0EBD336A20443B6 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				4EA0E99A108BE147800E2BDB /* Pods-Phone Lib Example.debug.xcconfig */,
-				B520D2655C50CFEE51B26FC8 /* Pods-Phone Lib Example.release.xcconfig */,
-				E4FD5B63A6B22E8C91E933A6 /* Pods-iOSPhoneLib.debug.xcconfig */,
-				A75667A8024FB2AC65D95EEA /* Pods-iOSPhoneLib.release.xcconfig */,
+				D2F87BE6F4431BF6FB323829 /* Pods-Phone Lib Example.debug.xcconfig */,
+				886E8D3C8170DA08CD6212BB /* Pods-Phone Lib Example.release.xcconfig */,
+				D93B8A3B73E688370BE5788E /* Pods-iOSPhoneLib.debug.xcconfig */,
+				122A51CD24560AF18F5DDBF3 /* Pods-iOSPhoneLib.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -525,6 +527,7 @@
 			isa = PBXGroup;
 			children = (
 				835D831C27BD61E100A7B5DD /* Contacts.swift */,
+				1A55D2232B7E869F006BBEFB /* SupplementaryContact.swift */,
 			);
 			path = Contacts;
 			sourceTree = "<group>";
@@ -634,8 +637,8 @@
 				8F23DC612B4D8E4800E71B87 /* ortp.xcframework */,
 				8F23DC622B4D8E4800E71B87 /* ZXing.xcframework */,
 				8F23DC172B4D817A00E71B87 /* linphonesw.xcframework */,
-				7F2D1F66FFA12B475AF5CA0F /* Pods_Phone_Lib_Example.framework */,
-				306DC0D7DF12112A59265C66 /* Pods_iOSPhoneLib.framework */,
+				53057F9D284C0D60E8D22EB9 /* Pods_Phone_Lib_Example.framework */,
+				439E46841232B4DF192E05CE /* Pods_iOSPhoneLib.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -657,7 +660,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5C6C811B2806DA2500EE2919 /* Build configuration list for PBXNativeTarget "iOSPhoneLib" */;
 			buildPhases = (
-				D51714B171489A3A5F8F8AED /* [CP] Check Pods Manifest.lock */,
+				2D73D504D2DD73C2918D1BD4 /* [CP] Check Pods Manifest.lock */,
 				5C6C81092806DA2500EE2919 /* Headers */,
 				5C6C810A2806DA2500EE2919 /* Sources */,
 				5C6C810B2806DA2500EE2919 /* Frameworks */,
@@ -676,12 +679,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 835D7C1427BAC7A300A7B5DD /* Build configuration list for PBXNativeTarget "Phone Lib Example" */;
 			buildPhases = (
-				68C030EB81AFC967F88137F4 /* [CP] Check Pods Manifest.lock */,
+				B6DA5CABC8F0867A8DACCE84 /* [CP] Check Pods Manifest.lock */,
 				835D7BFD27BAC7A200A7B5DD /* Sources */,
 				835D7BFE27BAC7A200A7B5DD /* Frameworks */,
 				835D7BFF27BAC7A200A7B5DD /* Resources */,
-				0C35663521717251FC3B1604 /* [CP] Embed Pods Frameworks */,
-				1142B293FA9FD2EE6F106A4D /* [CP] Copy Pods Resources */,
+				825F687B37DCEC731C9CCC2B /* [CP] Embed Pods Frameworks */,
+				EAC0B26D9E05431EDC69D005 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -700,7 +703,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1510;
-				LastUpgradeCheck = 1330;
+				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					5C6C810D2806DA2500EE2919 = {
 						CreatedOnToolsVersion = 13.3.1;
@@ -759,81 +762,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0C35663521717251FC3B1604 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Phone Lib Example/Pods-Phone Lib Example-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Phone Lib Example/Pods-Phone Lib Example-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Phone Lib Example/Pods-Phone Lib Example-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		1142B293FA9FD2EE6F106A4D /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Phone Lib Example/Pods-Phone Lib Example-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Phone Lib Example/Pods-Phone Lib Example-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Phone Lib Example/Pods-Phone Lib Example-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		68C030EB81AFC967F88137F4 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Phone Lib Example-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8F852B792B4E8D0900DE236B /* Export to XCFramework */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Export to XCFramework";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Remove current frameworks\nrm -r linphone-sdk-novideo-frameworks/\n# Copy existing depedencies of linphone to frameworks to be included in pod\ncp -r Pods/linphone-sdk-novideo/linphone-sdk-novideo/apple-darwin/XCFrameworks/ linphone-sdk-novideo-frameworks/\n\n# Export linphonesw for device\nxcodebuild archive \\\n-workspace iOSPhoneLib.xcworkspace \\\n-scheme linphone-sdk-novideo \\\n-configuration Release \\\n-sdk iphoneos \\\n-archivePath archives/ios_devices.xcarchive \\\nBUILD_LIBRARY_FOR_DISTRIBUTION=YES \\\nSKIP_INSTALL=NO \\\n\n# Export linphonesw for simulator\nxcodebuild archive \\\n-workspace iOSPhoneLib.xcworkspace \\\n-scheme linphone-sdk-novideo \\\n-configuration Debug \\\n-sdk iphonesimulator \\\n-archivePath archives/ios_simulators.xcarchive \\\nBUILD_LIBRARY_FOR_DISTRIBUTION=YES \\\nSKIP_INSTALL=NO \\\n\n# Combine both linphonesw frameworks to XCFramework\nxcodebuild \\\n-create-xcframework \\\n-framework archives/ios_devices.xcarchive/Products/Library/Frameworks/linphonesw.framework \\\n-framework archives/ios_simulators.xcarchive/Products/Library/Frameworks/linphonesw.framework \\\n-output linphone-sdk-novideo-frameworks/linphonesw.xcframework\n\n# Remove archives\nrm -rf archives\n";
-		};
-		D51714B171489A3A5F8F8AED /* [CP] Check Pods Manifest.lock */ = {
+		2D73D504D2DD73C2918D1BD4 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -855,6 +784,80 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		825F687B37DCEC731C9CCC2B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Phone Lib Example/Pods-Phone Lib Example-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Phone Lib Example/Pods-Phone Lib Example-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Phone Lib Example/Pods-Phone Lib Example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8F852B792B4E8D0900DE236B /* Export to XCFramework */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Export to XCFramework";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Remove current frameworks\nrm -r linphone-sdk-novideo-frameworks/\n# Copy existing depedencies of linphone to frameworks to be included in pod\ncp -r Pods/linphone-sdk-novideo/linphone-sdk-novideo/apple-darwin/XCFrameworks/ linphone-sdk-novideo-frameworks/\n\n# Export linphonesw for device\nxcodebuild archive \\\n-workspace iOSPhoneLib.xcworkspace \\\n-scheme linphone-sdk-novideo \\\n-configuration Release \\\n-sdk iphoneos \\\n-archivePath archives/ios_devices.xcarchive \\\nBUILD_LIBRARY_FOR_DISTRIBUTION=YES \\\nSKIP_INSTALL=NO \\\n\n# Export linphonesw for simulator\nxcodebuild archive \\\n-workspace iOSPhoneLib.xcworkspace \\\n-scheme linphone-sdk-novideo \\\n-configuration Debug \\\n-sdk iphonesimulator \\\n-archivePath archives/ios_simulators.xcarchive \\\nBUILD_LIBRARY_FOR_DISTRIBUTION=YES \\\nSKIP_INSTALL=NO \\\n\n# Combine both linphonesw frameworks to XCFramework\nxcodebuild \\\n-create-xcframework \\\n-framework archives/ios_devices.xcarchive/Products/Library/Frameworks/linphonesw.framework \\\n-framework archives/ios_simulators.xcarchive/Products/Library/Frameworks/linphonesw.framework \\\n-output linphone-sdk-novideo-frameworks/linphonesw.xcframework\n\n# Remove archives\nrm -rf archives\n";
+		};
+		B6DA5CABC8F0867A8DACCE84 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Phone Lib Example-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EAC0B26D9E05431EDC69D005 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Phone Lib Example/Pods-Phone Lib Example-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Phone Lib Example/Pods-Phone Lib Example-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Phone Lib Example/Pods-Phone Lib Example-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -874,6 +877,7 @@
 				5C6C81322806DE9E00EE2919 /* CallSessionState.swift in Sources */,
 				5C6C81332806DE9E00EE2919 /* VoipLibEventTranslator.swift in Sources */,
 				5C6C81342806DE9E00EE2919 /* Call.swift in Sources */,
+				1A55D2242B7E869F006BBEFB /* SupplementaryContact.swift in Sources */,
 				5C6C81352806DE9E00EE2919 /* CallActions.swift in Sources */,
 				5C6C81362806DE9E00EE2919 /* Preferences.swift in Sources */,
 				5C6C81372806DE9E00EE2919 /* Auth.swift in Sources */,
@@ -945,8 +949,9 @@
 /* Begin XCBuildConfiguration section */
 		5C6C81192806DA2500EE2919 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E4FD5B63A6B22E8C91E933A6 /* Pods-iOSPhoneLib.debug.xcconfig */;
+			baseConfigurationReference = D93B8A3B73E688370BE5788E /* Pods-iOSPhoneLib.debug.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -954,6 +959,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -964,6 +970,8 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++17";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-framework",
@@ -980,8 +988,9 @@
 		};
 		5C6C811A2806DA2500EE2919 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A75667A8024FB2AC65D95EEA /* Pods-iOSPhoneLib.release.xcconfig */;
+			baseConfigurationReference = 122A51CD24560AF18F5DDBF3 /* Pods-iOSPhoneLib.release.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -989,6 +998,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -999,6 +1009,8 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++17";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-framework",
@@ -1015,7 +1027,7 @@
 		};
 		835D7C1227BAC7A300A7B5DD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4EA0E99A108BE147800E2BDB /* Pods-Phone Lib Example.debug.xcconfig */;
+			baseConfigurationReference = D2F87BE6F4431BF6FB323829 /* Pods-Phone Lib Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1025,6 +1037,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = E2Q9UE8HM6;
+				ENABLE_MODULE_VERIFIER = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Phone",
@@ -1043,6 +1056,8 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++17";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.voipgrid.iOSPhoneLib-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1054,7 +1069,7 @@
 		};
 		835D7C1327BAC7A300A7B5DD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B520D2655C50CFEE51B26FC8 /* Pods-Phone Lib Example.release.xcconfig */;
+			baseConfigurationReference = 886E8D3C8170DA08CD6212BB /* Pods-Phone Lib Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1064,6 +1079,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = E2Q9UE8HM6;
+				ENABLE_MODULE_VERIFIER = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Phone",
@@ -1082,6 +1098,8 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++17";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.voipgrid.iOSPhoneLib-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1128,6 +1146,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -1192,6 +1211,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
