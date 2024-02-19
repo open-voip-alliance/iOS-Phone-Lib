@@ -42,7 +42,7 @@ class Contacts {
             }
         }
         
-        if cachedContacts[call.identifier] == nil, let contact = preferences().supplementaryContacts.first(where: {$0.number.normalizePhoneNumber() == call.remoteNumber}) {
+        if cachedContacts[call.identifier] == nil, let contact = preferences().supplementaryContacts.find(forCall: call) {
             cachedContacts[call.identifier] = contact.toContact()
         }
         
@@ -75,6 +75,12 @@ class Contacts {
     
     @objc func addressBookDidChange() {
         clearCache()
+    }
+}
+
+extension Set<SupplementaryContact> {
+    func find(forCall call: VoIPLibCall) -> SupplementaryContact? {
+        return first(where: {$0.number.normalizePhoneNumber() == call.remoteNumber})
     }
 }
 
