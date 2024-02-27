@@ -30,7 +30,11 @@ class Contacts {
     
     
     func find(call: VoIPLibCall) -> Contact? {
-        if let contact = self.cachedContacts[call.identifier] {
+        find(number: call.remoteNumber, identifier: call.identifier)
+    }
+    
+    func find(number: String, identifier: String)  -> Contact? {
+        if let contact = self.cachedContacts[identifier] {
             if let contact = contact {
                 return contact.exists ? contact : nil
             }
@@ -38,30 +42,30 @@ class Contacts {
         
         store.requestAccess(for: .contacts) { (granted, error) in
             if granted {
-                self.performBackgroundLookup(call: call)
+                self.performBackgroundLookup(number: number, identifier: identifier)
             }
         }
         
-        if cachedContacts[call.identifier] == nil, let contact = preferences().supplementaryContacts.find(forCall: call) {
-            cachedContacts[call.identifier] = contact.toContact()
+        if cachedContacts[identifier] == nil, let contact = preferences().supplementaryContacts.find(forNumber: number) {
+            cachedContacts[identifier] = contact.toContact()
         }
         
-        return nil
+        return cachedContacts[identifier, default: nil]
     }
     
-    private func performBackgroundLookup(call: VoIPLibCall) {
+    private func performBackgroundLookup(number: String, identifier: String) {
         let keys = [CNContactGivenNameKey, CNContactFamilyNameKey, CNContactPhoneNumbersKey, CNContactImageDataAvailableKey, CNContactThumbnailImageDataKey]
         let request = CNContactFetchRequest(keysToFetch: keys as [CNKeyDescriptor])
         
         do {
             try store.enumerateContacts(with: request, usingBlock: { (contact, stopPointer) in
-                if !contact.phoneNumbers.filter({ $0.value.stringValue.normalizePhoneNumber() == call.remoteNumber }).isEmpty {
-                    self.cachedContacts[call.identifier] = Contact("\(contact.givenName) \(contact.familyName)")
+                if !contact.phoneNumbers.filter({ $0.value.stringValue.normalizePhoneNumber() == number }).isEmpty {
+                    self.cachedContacts[identifier] = Contact("\(contact.givenName) \(contact.familyName)")
                     return
                 }
                 
-                if cachedContacts[call.identifier] == nil {
-                    cachedContacts[call.identifier] = Contact.notFound()
+                if cachedContacts[identifier] == nil {
+                    cachedContacts[identifier] = Contact.notFound()
                 }
             })
         } catch {
@@ -113,7 +117,7 @@ extension String {
 }
 
 extension Set<SupplementaryContact> {
-    func find(forCall call: VoIPLibCall) -> SupplementaryContact? {
-        return first(where: {$0.number.normalizePhoneNumber() == call.remoteNumber})
+    func find(forNumber number: String) -> SupplementaryContact? {
+        return first(where: {$0.number.normalizePhoneNumber() == number})
     }
 }

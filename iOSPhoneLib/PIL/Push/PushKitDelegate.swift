@@ -35,9 +35,12 @@ extension PushKitDelegate: PKPushRegistryDelegate {
             return
         }
         
+        let number = payload.dictionaryPayload[pil.app.pushKitPhoneNumberKey] as? String ?? ""
+        let contact = pil.contacts.find(number: number, identifier: number)
+        
         pil.iOSCallKit.reportIncomingCall(
-            phoneNumber: payload.dictionaryPayload[pil.app.pushKitPhoneNumberKey] as? String ?? "",
-            callerName: payload.dictionaryPayload[pil.app.pushKitCallerNameKey] as? String ?? ""
+            phoneNumber: number,
+            callerName: contact?.name ?? payload.dictionaryPayload[pil.app.pushKitCallerNameKey] as? String ?? ""
         )
         
         /// We will delay briefly to let the library initialize in the AppDelegate
