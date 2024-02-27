@@ -17,7 +17,7 @@ public class PIL {
     private lazy var voipLibHelper = { di.resolve(VoIPLibHelper.self)! }()
     internal lazy var platformIntegrator = { di.resolve(PlatformIntegrator.self)! }()
     internal lazy var voipLibEventTranslator = { di.resolve(VoipLibEventTranslator.self)! }()
-    private lazy var contacts = { di.resolve(Contacts.self)! }()
+    internal lazy var contacts = { di.resolve(Contacts.self)! }()
     
     let voipLib: VoIPLib = di.resolve(VoIPLib.self)!
     lazy var iOSCallKit = { di.resolve(IOSCallKit.self)! }()
