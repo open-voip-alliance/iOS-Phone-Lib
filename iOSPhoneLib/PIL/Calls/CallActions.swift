@@ -65,11 +65,15 @@ public class CallActions {
     }
     
     func mute() {
-        voipLib.isMicrophoneMuted = true
+        performCallAction { uuid -> CXCallAction in
+            CXSetMutedCallAction(call: uuid, muted: true)
+        }
     }
     
     func unmute() {
-        voipLib.isMicrophoneMuted = false
+        performCallAction { uuid -> CXCallAction in
+            CXSetMutedCallAction(call: uuid, muted: false)
+        }
     }
     
     func toggleMute() {
