@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
     s.swift_version = "5"
     
     s.name             = 'iOSPhoneLib'
-    s.version          = '0.1.8'
+    s.version          = '0.1.9'
     s.summary          = 'Allow for easy implementation of SIP into a swift project.'
 
     s.description      = 'This library is an opinionated sip-wrapper, currently using Linphone as the base.'

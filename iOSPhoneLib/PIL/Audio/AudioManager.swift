@@ -61,6 +61,8 @@ public class AudioManager {
         linphoneAudio.routeAudio(to: route)
         
         log("Routed audio to \(route)")
+        
+        pil.events.broadcast(event: .audioStateUpdated(state: pil.sessionState))
     }
     
     /// Launch a native UI dialog box that allows the user to choose from a list of inputs.
