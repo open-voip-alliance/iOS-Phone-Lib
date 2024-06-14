@@ -1,5 +1,6 @@
 import Foundation
 import linphonesw
+import linphone
 
 internal class LinphoneAudio {
     private let manager: LinphoneManager
@@ -89,7 +90,7 @@ internal extension AudioDevice {
 
 internal extension AudioRoute {
     /// A single audio route for us will map to many different types of native routes.
-    var asLinphoneRoutes: Set<AudioDeviceType> {
+    var asLinphoneRoutes: Set<AudioDevice.Kind> {
         switch self {
             case .speaker: return [.Speaker]
             case .phone: return [.Microphone]
