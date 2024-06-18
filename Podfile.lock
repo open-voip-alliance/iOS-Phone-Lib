@@ -1,5 +1,5 @@
 PODS:
-  - Alamofire (5.6.4)
+  - Alamofire (5.9.1)
   - iOSPhoneLib (0.1.9):
     - Swinject (~> 2.8.2)
   - linphone-sdk-novideo (5.2.112)
@@ -29,7 +29,7 @@ EXTERNAL SOURCES:
     :path: iOSPhoneLib.podspec
 
 SPEC CHECKSUMS:
-  Alamofire: 4e95d97098eacb88856099c4fc79b526a299e48c
+  Alamofire: f36a35757af4587d8e4f4bfa223ad10be2422b8c
   iOSPhoneLib: fe36a48e818fd51b96cabccb9037fa9350fa8667
   linphone-sdk-novideo: 59d4d269f564909108bae583ed5dc03ae0bd14d6
   QuickTableViewController: 25e698de1546c2b829c543d91b64ebc6e884acfc
