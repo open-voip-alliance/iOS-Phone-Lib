@@ -258,7 +258,7 @@
 		0902CD539260E5BDB79DF79EECD0134E /* linphone-sdk-novideo-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "linphone-sdk-novideo-xcframeworks.sh"; sourceTree = "<group>"; };
 		0AB152BCCD513D9925DCA4E6DB8D6E8D /* CallInfoProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CallInfoProvider.swift; sourceTree = "<group>"; };
 		0AF7199075747A169FBC106A36C4A52B /* Configurable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Configurable.swift; path = Source/Protocol/Configurable.swift; sourceTree = "<group>"; };
-		0B0EC776E7FEB758A7FE436D096B6922 /* iOSPhoneLib.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = iOSPhoneLib.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		0B0EC776E7FEB758A7FE436D096B6922 /* iOSPhoneLib.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = iOSPhoneLib.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		0B2522BFC210F3A6C8E09F5CECD8C9DB /* iOSPhoneLib-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "iOSPhoneLib-prefix.pch"; sourceTree = "<group>"; };
 		0B319CCC52CE4E623D9CC7AB3D1AA7DD /* VoIPLibHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VoIPLibHelper.swift; sourceTree = "<group>"; };
 		0B653B4C19C1D8222B8EC2C53395DB6D /* AudioManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
@@ -272,9 +272,8 @@
 		138FCAFEE62DE83A04845138F1451D4F /* Swinject-Swinject */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "Swinject-Swinject"; path = Swinject.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B2543ECBEA21114FA9BE88AC9295AF /* TapActionCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TapActionCell.swift; path = Source/Views/TapActionCell.swift; sourceTree = "<group>"; };
 		14489DBF3B39048812FF72DDD257DEE9 /* Alamofire.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.release.xcconfig; sourceTree = "<group>"; };
-		18F804846A79AD5A27ABBF312FDA6EDA /* lime.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = lime.xcframework; path = "linphone-sdk-novideo/apple-darwin/XCFrameworks/lime.xcframework"; sourceTree = "<group>"; };
+		18F804846A79AD5A27ABBF312FDA6EDA /* lime.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcframework; name = lime.xcframework; path = "Pods/linphone-sdk-novideo/linphone-sdk-novideo/apple-darwin/XCFrameworks/lime.xcframework"; sourceTree = "<group>"; };
 		1943E3BD440342888D0597160DDD6514 /* Pods-iOSPhoneLib-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-iOSPhoneLib-Info.plist"; sourceTree = "<group>"; };
-		1A015AD771FEDE75E8343D690E47AC43 /* ortp.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = ortp.xcframework; path = "linphone-sdk-novideo-frameworks/ortp.xcframework"; sourceTree = "<group>"; };
 		1C3E9BDC788B72D0F1C6E7514037BB13 /* linphone-sdk-novideo-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "linphone-sdk-novideo-prefix.pch"; sourceTree = "<group>"; };
 		1E833EAEDEB61FA8F835884D31D07675 /* SAMKeychain-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SAMKeychain-prefix.pch"; sourceTree = "<group>"; };
 		1EC7B2E5C6FEF515331D625014EAF71E /* linphone-sdk-novideo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "linphone-sdk-novideo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -293,7 +292,6 @@
 		2C1BABA1DF4DE17915313D6BD6E68F35 /* iOSPhoneLib-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "iOSPhoneLib-Info.plist"; sourceTree = "<group>"; };
 		2DF58BAA9125B80CDD861D7FE4BB951C /* Quality.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Quality.swift; sourceTree = "<group>"; };
 		30327383DBC5602266F311B5D6FD85E4 /* QuickTableViewController-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "QuickTableViewController-Info.plist"; sourceTree = "<group>"; };
-		311E219D5B16FC7AC5AC7396ED3BDDFB /* msopenh264.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = msopenh264.xcframework; path = "linphone-sdk-novideo-frameworks/msopenh264.xcframework"; sourceTree = "<group>"; };
 		31907C85A461C703E88B03BC455C2CB0 /* Reusable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Reusable.swift; path = Source/Protocol/Reusable.swift; sourceTree = "<group>"; };
 		324CC5C1E62820CB4C802DD343D33FA4 /* RegistrationState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RegistrationState.swift; sourceTree = "<group>"; };
 		334AAAC6E285C611D170C3D139DA5B6D /* GraphIdentifier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GraphIdentifier.swift; path = Sources/GraphIdentifier.swift; sourceTree = "<group>"; };
@@ -302,36 +300,33 @@
 		38612EE882EB62B4E56FD0B1CAA493C5 /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Source/Core/Notifications.swift; sourceTree = "<group>"; };
 		38A331DFDBB5925AC066477A1DA98B60 /* UnavailableItems.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UnavailableItems.swift; path = Sources/UnavailableItems.swift; sourceTree = "<group>"; };
 		38EFF0096890DF4190AE19E8021905C2 /* linphone-sdk-novideo-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "linphone-sdk-novideo-umbrella.h"; sourceTree = "<group>"; };
-		3AAC93289A4B77D247E475C803178C6E /* mssilk.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = mssilk.xcframework; path = "linphone-sdk-novideo/apple-darwin/XCFrameworks/mssilk.xcframework"; sourceTree = "<group>"; };
+		3AAC93289A4B77D247E475C803178C6E /* mssilk.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcframework; name = mssilk.xcframework; path = "Pods/linphone-sdk-novideo/linphone-sdk-novideo/apple-darwin/XCFrameworks/mssilk.xcframework"; sourceTree = "<group>"; };
 		3B46CA4BC1DCC4E8D0228DD095D82E5D /* SAMKeychain.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = SAMKeychain.bundle; path = Support/SAMKeychain.bundle; sourceTree = "<group>"; };
 		3B8F9D0B93827B4E962E8C7BCDEE78FE /* Alamofire.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.debug.xcconfig; sourceTree = "<group>"; };
-		3CA17C172F339AB6627B36384B85C4C6 /* belcard.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = belcard.xcframework; path = "linphone-sdk-novideo-frameworks/belcard.xcframework"; sourceTree = "<group>"; };
-		3CA1D95BA020E3D2F5E4181EBFAE4EE3 /* belr.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = belr.xcframework; path = "linphone-sdk-novideo-frameworks/belr.xcframework"; sourceTree = "<group>"; };
 		3E031A51D9BC157FDFF4FCACD5B3E283 /* Pods-iOSPhoneLib-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-iOSPhoneLib-resources.sh"; sourceTree = "<group>"; };
 		3EF543143014BBFEA26918064804AF0C /* Pods-iOSPhoneLib */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-iOSPhoneLib"; path = Pods_iOSPhoneLib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3F04D29CA9E1F9C6E6543B99AA9919EC /* mediastreamer2.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = mediastreamer2.xcframework; path = "linphone-sdk-novideo/apple-darwin/XCFrameworks/mediastreamer2.xcframework"; sourceTree = "<group>"; };
-		3F91895E651846550598F7A4B99F1C41 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		3F04D29CA9E1F9C6E6543B99AA9919EC /* mediastreamer2.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcframework; name = mediastreamer2.xcframework; path = "Pods/linphone-sdk-novideo/linphone-sdk-novideo/apple-darwin/XCFrameworks/mediastreamer2.xcframework"; sourceTree = "<group>"; };
+		3F91895E651846550598F7A4B99F1C41 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		4027BEA6F9F15673CDEF192F9C043EEB /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/Features/ResponseSerialization.swift; sourceTree = "<group>"; };
 		40807FDA342B30653DA95468474121B8 /* Combine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Combine.swift; path = Source/Features/Combine.swift; sourceTree = "<group>"; };
 		40825D64A5405A32BD176507902F3A50 /* Concurrency.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Concurrency.swift; path = Source/Features/Concurrency.swift; sourceTree = "<group>"; };
 		41F95D0BD067E0BC38C408F9659FE048 /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/Features/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
-		4349DD5122630DF730CF759625750013 /* linphonetester.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = linphonetester.xcframework; path = "linphone-sdk-novideo/apple-darwin/XCFrameworks/linphonetester.xcframework"; sourceTree = "<group>"; };
+		4349DD5122630DF730CF759625750013 /* linphonetester.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcframework; name = linphonetester.xcframework; path = "Pods/linphone-sdk-novideo/linphone-sdk-novideo/apple-darwin/XCFrameworks/linphonetester.xcframework"; sourceTree = "<group>"; };
 		436046D770675F5F185B13A11C2593F4 /* LinphoneListener.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LinphoneListener.swift; sourceTree = "<group>"; };
 		4399F885080D5FB593B0FB1A712564C3 /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
-		44D5F6FEA2FAF80823A4BF7BF239EC0C /* linphone.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = linphone.xcframework; path = "linphone-sdk-novideo/apple-darwin/XCFrameworks/linphone.xcframework"; sourceTree = "<group>"; };
+		44D5F6FEA2FAF80823A4BF7BF239EC0C /* linphone.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcframework; name = linphone.xcframework; path = "Pods/linphone-sdk-novideo/linphone-sdk-novideo/apple-darwin/XCFrameworks/linphone.xcframework"; sourceTree = "<group>"; };
 		45009D26178CD8098612CA96384F4353 /* Direction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Direction.swift; sourceTree = "<group>"; };
 		459BED079126015C8140DD10C505AD1E /* AttendedTransferSession.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AttendedTransferSession.swift; sourceTree = "<group>"; };
-		463E0EA025493ED34A6D49C7004F629E /* ortp.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = ortp.xcframework; path = "linphone-sdk-novideo/apple-darwin/XCFrameworks/ortp.xcframework"; sourceTree = "<group>"; };
+		463E0EA025493ED34A6D49C7004F629E /* ortp.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcframework; name = ortp.xcframework; path = "Pods/linphone-sdk-novideo/linphone-sdk-novideo/apple-darwin/XCFrameworks/ortp.xcframework"; sourceTree = "<group>"; };
 		46E2FAECF88779186F21624ECB20C314 /* Pods-iOSPhoneLib-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-iOSPhoneLib-acknowledgements.markdown"; sourceTree = "<group>"; };
 		479BD7EBBA205BEC826A03D5F3EF14C6 /* iOSPhoneLib-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "iOSPhoneLib-umbrella.h"; sourceTree = "<group>"; };
 		4BADAE8108EFDAA0A44482F7E6F5FDA6 /* iOSPhoneLib-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "iOSPhoneLib-xcframeworks.sh"; sourceTree = "<group>"; };
 		4C607209FEA59E1F388613882D09CFCD /* Assembler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Assembler.swift; path = Sources/Assembler.swift; sourceTree = "<group>"; };
 		4CA48D266B6715BBB683D7F4ABD5B5D7 /* DataStreamRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DataStreamRequest.swift; path = Source/Core/DataStreamRequest.swift; sourceTree = "<group>"; };
-		4CD053FEF662A22F297A34FB0D88013A /* belle-sip.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = "belle-sip.xcframework"; path = "linphone-sdk-novideo-frameworks/belle-sip.xcframework"; sourceTree = "<group>"; };
 		4E5ACB60411527EA5B3ED1045CAF831D /* Auth.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
 		514DFC5D18D5D652E45A66F0C116FAE2 /* Swinject.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Swinject.modulemap; sourceTree = "<group>"; };
 		517DA40674FB75A7539CDFA4A8FA76CD /* ObjectScope.Standard.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ObjectScope.Standard.swift; path = Sources/ObjectScope.Standard.swift; sourceTree = "<group>"; };
-		51C20F3A817A3B096B884126A634D6C8 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; name = PrivacyInfo.xcprivacy; path = Sources/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		51C20F3A817A3B096B884126A634D6C8 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xml; name = PrivacyInfo.xcprivacy; path = Sources/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		52AA3ECCBFA029CEF537618E3DBC298B /* Pods-iOSPhoneLib-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-iOSPhoneLib-umbrella.h"; sourceTree = "<group>"; };
 		52AD79632A1DCF0D18F6AE2DD93D5D46 /* LogDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LogDelegate.swift; sourceTree = "<group>"; };
 		536904D1583A09815C74895CCC809935 /* Result+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Result+Alamofire.swift"; path = "Source/Extensions/Result+Alamofire.swift"; sourceTree = "<group>"; };
@@ -339,10 +334,9 @@
 		54B69152B924B40D00F7E9850FAD0287 /* SessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDelegate.swift; path = Source/Core/SessionDelegate.swift; sourceTree = "<group>"; };
 		55791E786560102C8BE4C90BBEDD7B0E /* QuickTableViewController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "QuickTableViewController-prefix.pch"; sourceTree = "<group>"; };
 		58F23880EF38044514EF3ED5AD0F55CB /* LinphoneRegistrationListener.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LinphoneRegistrationListener.swift; sourceTree = "<group>"; };
-		5939317C741CB75B23AA50D13EB259F8 /* mswebrtc.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = mswebrtc.xcframework; path = "linphone-sdk-novideo-frameworks/mswebrtc.xcframework"; sourceTree = "<group>"; };
 		59BA6BFF0E7201CC910CE77586EBEC1E /* Contacts.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Contacts.swift; sourceTree = "<group>"; };
 		5B4616A3AAF51EB782E928B7B3258541 /* Pods-Phone Lib Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Phone Lib Example-dummy.m"; sourceTree = "<group>"; };
-		5B988178E7C9B3574FE9C4ACBE5D8AA2 /* belcard.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = belcard.xcframework; path = "linphone-sdk-novideo/apple-darwin/XCFrameworks/belcard.xcframework"; sourceTree = "<group>"; };
+		5B988178E7C9B3574FE9C4ACBE5D8AA2 /* belcard.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcframework; name = belcard.xcframework; path = "Pods/linphone-sdk-novideo/linphone-sdk-novideo/apple-darwin/XCFrameworks/belcard.xcframework"; sourceTree = "<group>"; };
 		5C252525C9BCD29B125E53F5F44B0396 /* VoIPLibConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VoIPLibConfig.swift; sourceTree = "<group>"; };
 		5D797E9A5C5782CE845840781FA1CC81 /* Alamofire */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Alamofire; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E5C46991FBE495EDB9178C3E5D68385 /* Pods-iOSPhoneLib.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-iOSPhoneLib.debug.xcconfig"; sourceTree = "<group>"; };
@@ -351,8 +345,8 @@
 		6326E7AA488FFD7DDE98430A62331D13 /* iOSPhoneLib.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = iOSPhoneLib.debug.xcconfig; sourceTree = "<group>"; };
 		656F496159A1AE7AB1C0ECF88B4F95D2 /* EventsManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EventsManager.swift; sourceTree = "<group>"; };
 		65F132EC935B1F75A511E24E24615EE4 /* EventMonitor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EventMonitor.swift; path = Source/Features/EventMonitor.swift; sourceTree = "<group>"; };
-		67F9FD9137FCE57AF6BB4ADBE9BD2102 /* belr.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = belr.xcframework; path = "linphone-sdk-novideo/apple-darwin/XCFrameworks/belr.xcframework"; sourceTree = "<group>"; };
-		6944C2CE996F9D30F6D6910EB8B422CA /* mscodec2.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = mscodec2.xcframework; path = "linphone-sdk-novideo/apple-darwin/XCFrameworks/mscodec2.xcframework"; sourceTree = "<group>"; };
+		67F9FD9137FCE57AF6BB4ADBE9BD2102 /* belr.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcframework; name = belr.xcframework; path = "Pods/linphone-sdk-novideo/linphone-sdk-novideo/apple-darwin/XCFrameworks/belr.xcframework"; sourceTree = "<group>"; };
+		6944C2CE996F9D30F6D6910EB8B422CA /* mscodec2.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcframework; name = mscodec2.xcframework; path = "Pods/linphone-sdk-novideo/linphone-sdk-novideo/apple-darwin/XCFrameworks/mscodec2.xcframework"; sourceTree = "<group>"; };
 		6A0EAB99C4E903925991370291E418B7 /* Middleware.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Middleware.swift; sourceTree = "<group>"; };
 		6AD967A3F40A8E98018359E390CC8665 /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Source/Core/Response.swift; sourceTree = "<group>"; };
 		6BE47720BF830F723AA1C76132F715C7 /* PushKitDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PushKitDelegate.swift; sourceTree = "<group>"; };
@@ -371,7 +365,6 @@
 		7A39B04A7F28515952E95EF78D0FF817 /* QuickTableViewController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "QuickTableViewController-dummy.m"; sourceTree = "<group>"; };
 		7D5EC457C9801AC33A7030746D1C4A9B /* LinphoneWrapper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LinphoneWrapper.swift; path = "linphone-sdk-novideo/apple-darwin/share/linphonesw/LinphoneWrapper.swift"; sourceTree = "<group>"; };
 		7F7D0AA89603C364E8583FEAB10EC0C0 /* RequestCompression.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RequestCompression.swift; path = Source/Features/RequestCompression.swift; sourceTree = "<group>"; };
-		8062395B9213E96BCAE9FEB096611F87 /* lime.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = lime.xcframework; path = "linphone-sdk-novideo-frameworks/lime.xcframework"; sourceTree = "<group>"; };
 		81B94D626F515DCFF2FF6D21FC0B935B /* Pods-iOSPhoneLib-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-iOSPhoneLib-dummy.m"; sourceTree = "<group>"; };
 		8239988AA4B46C7F9F85C1B5724ABE0B /* iOSPhoneLib.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = iOSPhoneLib.release.xcconfig; sourceTree = "<group>"; };
 		8259C65C613AFD73FCB4718C2F3DA387 /* OperationQueue+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "OperationQueue+Alamofire.swift"; path = "Source/Extensions/OperationQueue+Alamofire.swift"; sourceTree = "<group>"; };
@@ -386,7 +379,6 @@
 		8745677F1A655098ED478079D84D7BE8 /* ObjectScope.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ObjectScope.swift; path = Sources/ObjectScope.swift; sourceTree = "<group>"; };
 		8801A1CEA992806BB9ADB7C782B50263 /* linphone-sdk-novideo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "linphone-sdk-novideo-dummy.m"; sourceTree = "<group>"; };
 		891F3E375BEC2463D0CBFFC5AFF5BAFA /* iOSPhoneLib.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = iOSPhoneLib.modulemap; sourceTree = "<group>"; };
-		8993536338F971992FC6CB177F6AF49A /* msamr.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = msamr.xcframework; path = "linphone-sdk-novideo-frameworks/msamr.xcframework"; sourceTree = "<group>"; };
 		89A81FD8B74252A73A1DDFCEF4F2F0CD /* LinphoneAudio.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LinphoneAudio.swift; sourceTree = "<group>"; };
 		8ACA110EF3B35B3FCC08297B3799D9AD /* Swinject */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Swinject; path = Swinject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AD14D36515E1C90B2EDE8CAA0C56F52 /* PlatformIntegrator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PlatformIntegrator.swift; sourceTree = "<group>"; };
@@ -394,7 +386,6 @@
 		8E043842C191536BF021632B288B58CC /* CallDirection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CallDirection.swift; sourceTree = "<group>"; };
 		8E2C9C7B72848061507EA5C607C7076A /* URLSessionConfiguration+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "URLSessionConfiguration+Alamofire.swift"; path = "Source/Extensions/URLSessionConfiguration+Alamofire.swift"; sourceTree = "<group>"; };
 		8EEE4C9F2AAFFFCA9F28D9095F25C294 /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Core/Request.swift; sourceTree = "<group>"; };
-		8F8D4FC581D6E7240235D752D6082C12 /* bctoolbox-ios.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = "bctoolbox-ios.xcframework"; path = "linphone-sdk-novideo-frameworks/bctoolbox-ios.xcframework"; sourceTree = "<group>"; };
 		8FE1ED772276760E04A05042CC114BB4 /* ServiceKey.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServiceKey.swift; path = Sources/ServiceKey.swift; sourceTree = "<group>"; };
 		909389D40DE2DE5A345D3FE1710DD089 /* Deprecated.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Deprecated.swift; path = Source/Model/Deprecated.swift; sourceTree = "<group>"; };
 		917D2CD47E091FB394EBE3271AF0F3E4 /* Row.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Row.swift; path = Source/Protocol/Row.swift; sourceTree = "<group>"; };
@@ -405,46 +396,42 @@
 		98E52B7317F432EB043CD41C9560DB56 /* SAMKeychain.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SAMKeychain.h; path = Sources/SAMKeychain.h; sourceTree = "<group>"; };
 		999DA689D01AC66E50A90C2AE651FAC1 /* URLEncodedFormEncoder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = URLEncodedFormEncoder.swift; path = Source/Features/URLEncodedFormEncoder.swift; sourceTree = "<group>"; };
 		99DF5C0BC14F1BD24A47438D332DC1DF /* Swinject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Swinject.release.xcconfig; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9EF4E296938748B7E6F607BF7E2C9B58 /* msopenh264.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = msopenh264.xcframework; path = "linphone-sdk-novideo/apple-darwin/XCFrameworks/msopenh264.xcframework"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9EF4E296938748B7E6F607BF7E2C9B58 /* msopenh264.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcframework; name = msopenh264.xcframework; path = "Pods/linphone-sdk-novideo/linphone-sdk-novideo/apple-darwin/XCFrameworks/msopenh264.xcframework"; sourceTree = "<group>"; };
 		9F2241B2AC0889660AAD98F1D10FA383 /* QuickTableViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QuickTableViewController.swift; path = Source/QuickTableViewController.swift; sourceTree = "<group>"; };
 		A0D017790CAE8CF916F80A45F895E430 /* FunctionType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FunctionType.swift; path = Sources/FunctionType.swift; sourceTree = "<group>"; };
 		A23719CF653AF413DF2DB77BC75D68B0 /* PIL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PIL.swift; sourceTree = "<group>"; };
 		A4AC2D40A1CDF4CC520330F50AA91AAC /* VoIPLibCallState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VoIPLibCallState.swift; sourceTree = "<group>"; };
 		A4B0607241FAA6B1E23299C0A0A51AD9 /* WebSocketRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WebSocketRequest.swift; path = Source/Core/WebSocketRequest.swift; sourceTree = "<group>"; };
 		A4DB9F7A4B078D6E3FA0C6B2A9E508A0 /* SAMKeychainQuery.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SAMKeychainQuery.h; path = Sources/SAMKeychainQuery.h; sourceTree = "<group>"; };
-		A6CE462F0233863D8BABBA22B35DB1A2 /* linphonesw.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = linphonesw.xcframework; path = "linphone-sdk-novideo-frameworks/linphonesw.xcframework"; sourceTree = "<group>"; };
-		A866E9457F2D3433B3796C1CE420AF17 /* linphonetester.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = linphonetester.xcframework; path = "linphone-sdk-novideo-frameworks/linphonetester.xcframework"; sourceTree = "<group>"; };
 		A8B70A50447881F5E1B01DB3FFF002A7 /* SAMKeychain-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SAMKeychain-Info.plist"; sourceTree = "<group>"; };
 		A9FD0E47E877B24F3D783A2239A256A5 /* SwitchCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwitchCell.swift; path = Source/Views/SwitchCell.swift; sourceTree = "<group>"; };
 		AAA2C13CB7161EE62C529F354607BBBD /* LogLevel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LogLevel.swift; sourceTree = "<group>"; };
 		AC022ECC48BA42CB601066DD0BCF628E /* MultipartUpload.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartUpload.swift; path = Source/Features/MultipartUpload.swift; sourceTree = "<group>"; };
-		AD44C979C2D92196DE0B354A4BBDF294 /* Localizable.stringsdict */ = {isa = PBXFileReference; includeInIndex = 1; path = Localizable.stringsdict; sourceTree = "<group>"; };
+		AD44C979C2D92196DE0B354A4BBDF294 /* Localizable.stringsdict */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.stringsdict; path = Localizable.stringsdict; sourceTree = "<group>"; };
 		AD504480A8C8A6D3021C4FD531F24C8B /* Assembly.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Assembly.swift; path = Sources/Assembly.swift; sourceTree = "<group>"; };
-		AD7B6683FBCF0458BE98367BDF654E47 /* msamr.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = msamr.xcframework; path = "linphone-sdk-novideo/apple-darwin/XCFrameworks/msamr.xcframework"; sourceTree = "<group>"; };
+		AD7B6683FBCF0458BE98367BDF654E47 /* msamr.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcframework; name = msamr.xcframework; path = "Pods/linphone-sdk-novideo/linphone-sdk-novideo/apple-darwin/XCFrameworks/msamr.xcframework"; sourceTree = "<group>"; };
 		ADF5799E29C454AF3D30E653FEB10C94 /* Container.TypeForwarding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Container.TypeForwarding.swift; path = Sources/Container.TypeForwarding.swift; sourceTree = "<group>"; };
-		AE8CD987776A4CDA99F286BCE0E75A07 /* belle-sip.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = "belle-sip.xcframework"; path = "linphone-sdk-novideo/apple-darwin/XCFrameworks/belle-sip.xcframework"; sourceTree = "<group>"; };
-		AF9334D37EFC9A3ECB7636A58D798821 /* ringback.wav */ = {isa = PBXFileReference; includeInIndex = 1; path = ringback.wav; sourceTree = "<group>"; };
+		AE8CD987776A4CDA99F286BCE0E75A07 /* belle-sip.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcframework; name = "belle-sip.xcframework"; path = "Pods/linphone-sdk-novideo/linphone-sdk-novideo/apple-darwin/XCFrameworks/belle-sip.xcframework"; sourceTree = "<group>"; };
+		AF9334D37EFC9A3ECB7636A58D798821 /* ringback.wav */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = audio.wav; path = ringback.wav; sourceTree = "<group>"; };
 		B180A1BE38C27D1E12292271E959523B /* PILCallFactory.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PILCallFactory.swift; sourceTree = "<group>"; };
 		B1EAE033EDC409B9E2B5CA0D6DA43D07 /* Resolver.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Resolver.swift; path = Sources/Resolver.swift; sourceTree = "<group>"; };
 		B313874BC1EBCF5E320FE3B39E479E73 /* QuickTableViewController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = QuickTableViewController.debug.xcconfig; sourceTree = "<group>"; };
 		B575A4701E77E72D0CA63972F18E969C /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/Core/ParameterEncoding.swift; sourceTree = "<group>"; };
-		B6EA24316B3E6768D449AA10A4841798 /* mscodec2.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = mscodec2.xcframework; path = "linphone-sdk-novideo-frameworks/mscodec2.xcframework"; sourceTree = "<group>"; };
 		B83C10D3B0D08C42A9EAC9A0DD73233C /* Alamofire-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Alamofire-Info.plist"; sourceTree = "<group>"; };
 		B9F0DC6733042FE3B0A948B882DF391E /* AuthenticationInterceptor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AuthenticationInterceptor.swift; path = Source/Features/AuthenticationInterceptor.swift; sourceTree = "<group>"; };
 		BABCE992677B3B5B3A3B194F7EEFE590 /* StringEncoding+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "StringEncoding+Alamofire.swift"; path = "Source/Extensions/StringEncoding+Alamofire.swift"; sourceTree = "<group>"; };
 		BB8BEBF29B94FBFE3D2467877B908913 /* Actions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Actions.swift; sourceTree = "<group>"; };
-		BD2352631B8D6749554EFF2BA58F2AF3 /* mediastreamer2.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = mediastreamer2.xcframework; path = "linphone-sdk-novideo-frameworks/mediastreamer2.xcframework"; sourceTree = "<group>"; };
 		BF08D7FA38DCE3028510CC3AB5B6F7CD /* ThreadSafeDictionary.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ThreadSafeDictionary.swift; path = Sources/ThreadSafeDictionary.swift; sourceTree = "<group>"; };
 		BFB9DB487D5B94082FA7E030F06626F5 /* AudioState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AudioState.swift; sourceTree = "<group>"; };
 		C0618280F6A865A80732B94141B38F4F /* OptionRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OptionRow.swift; path = Source/Rows/OptionRow.swift; sourceTree = "<group>"; };
-		C07500416E640D203DF93D6FEEF3688C /* bctoolbox-tester.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = "bctoolbox-tester.xcframework"; path = "linphone-sdk-novideo/apple-darwin/XCFrameworks/bctoolbox-tester.xcframework"; sourceTree = "<group>"; };
+		C07500416E640D203DF93D6FEEF3688C /* bctoolbox-tester.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcframework; name = "bctoolbox-tester.xcframework"; path = "Pods/linphone-sdk-novideo/linphone-sdk-novideo/apple-darwin/XCFrameworks/bctoolbox-tester.xcframework"; sourceTree = "<group>"; };
 		C200502FC5C412BEB3150D261BB879F3 /* Pods-iOSPhoneLib.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-iOSPhoneLib.release.xcconfig"; sourceTree = "<group>"; };
 		C2402B117E6C53C357F51EDB141A32AF /* SAMKeychain-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SAMKeychain-umbrella.h"; sourceTree = "<group>"; };
 		C3CD47ADC2CCDF772A4D52CB8546E11A /* ServiceEntry.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServiceEntry.swift; path = Sources/ServiceEntry.swift; sourceTree = "<group>"; };
-		C6822AB8F93FBE41783DB3ADD3FAB92D /* bctoolbox.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = bctoolbox.xcframework; path = "linphone-sdk-novideo/apple-darwin/XCFrameworks/bctoolbox.xcframework"; sourceTree = "<group>"; };
+		C6822AB8F93FBE41783DB3ADD3FAB92D /* bctoolbox.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcframework; name = bctoolbox.xcframework; path = "Pods/linphone-sdk-novideo/linphone-sdk-novideo/apple-darwin/XCFrameworks/bctoolbox.xcframework"; sourceTree = "<group>"; };
 		C6837C5FFF8C0840351E2C0A57C6D191 /* VoIPLib.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VoIPLib.swift; sourceTree = "<group>"; };
-		C79E4429489A11C962E0A3F086A07CB3 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; name = PrivacyInfo.xcprivacy; path = Source/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		C79E4429489A11C962E0A3F086A07CB3 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xml; name = PrivacyInfo.xcprivacy; path = Source/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		C9187C772C9BBAD80618EF969834D09F /* DataRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DataRequest.swift; path = Source/Core/DataRequest.swift; sourceTree = "<group>"; };
 		C9C20DFC92F1F5F20D29C77E88686674 /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
 		CC0AB1A75A6DB64B75C44EF49BA88CBE /* URLConvertible+URLRequestConvertible.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "URLConvertible+URLRequestConvertible.swift"; path = "Source/Core/URLConvertible+URLRequestConvertible.swift"; sourceTree = "<group>"; };
@@ -452,7 +439,6 @@
 		CE1C6E47F24EC28CA45CC20DF8ED0D57 /* Icon.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Icon.swift; path = Source/Model/Icon.swift; sourceTree = "<group>"; };
 		CEFD4604693A088A7B31D3A3F7AED3C1 /* Pods-Phone Lib Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Phone Lib Example-resources.sh"; sourceTree = "<group>"; };
 		CF63FCC489C13C0537AC615CCBE2AD94 /* RecursiveLock.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RecursiveLock.swift; path = Sources/RecursiveLock.swift; sourceTree = "<group>"; };
-		D037F96E0B9D086B881176E7E93A57DA /* bctoolbox-tester.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = "bctoolbox-tester.xcframework"; path = "linphone-sdk-novideo-frameworks/bctoolbox-tester.xcframework"; sourceTree = "<group>"; };
 		D13F4F84F77582253A12F48802D5A78A /* Section.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Section.swift; path = Source/Model/Section.swift; sourceTree = "<group>"; };
 		D1AAD80DF3E9EE2F923275465A546021 /* AudioRoute.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AudioRoute.swift; sourceTree = "<group>"; };
 		D216B8DCDE3C3DD3BEB90D5E15331E22 /* VoipLibEventTranslator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VoipLibEventTranslator.swift; sourceTree = "<group>"; };
@@ -468,10 +454,8 @@
 		DA4C767A516A24B990778D584D0BC51B /* Pods-Phone Lib Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Phone Lib Example-umbrella.h"; sourceTree = "<group>"; };
 		DAD8C8D1D49364673B4F9B14EB3CDB44 /* Protected.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Protected.swift; path = Source/Core/Protected.swift; sourceTree = "<group>"; };
 		DC338240A010F5C8121F6570D1867CE5 /* Swinject-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Swinject-dummy.m"; sourceTree = "<group>"; };
-		DC5703760807F76C845E94896B186A58 /* linphone.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = linphone.xcframework; path = "linphone-sdk-novideo-frameworks/linphone.xcframework"; sourceTree = "<group>"; };
 		DD58C94526FCE8F7D3DB5D2A1B952CD0 /* SAMKeychain.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SAMKeychain.debug.xcconfig; sourceTree = "<group>"; };
 		DE003E9FDB88775D77E9422A4D5E70D9 /* QuickTableViewController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = QuickTableViewController.release.xcconfig; sourceTree = "<group>"; };
-		DF354BA1089A5B75EBED457C44A7BD9C /* mssilk.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = mssilk.xcframework; path = "linphone-sdk-novideo-frameworks/mssilk.xcframework"; sourceTree = "<group>"; };
 		E01209CB4C029B63EDED6F7B00D2324F /* iOSPhoneLib-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "iOSPhoneLib-dummy.m"; sourceTree = "<group>"; };
 		E0142427A465FE9EEB0321A560904C14 /* CallState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CallState.swift; sourceTree = "<group>"; };
 		E27DA8F2342AB7BC16530A6EAC7F3B46 /* AFError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AFError.swift; path = Source/Core/AFError.swift; sourceTree = "<group>"; };
@@ -482,7 +466,6 @@
 		E59251BADA307DCABD76AA824D2BDEC9 /* SAMKeychainQuery.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SAMKeychainQuery.m; path = Sources/SAMKeychainQuery.m; sourceTree = "<group>"; };
 		E678660A712476FF00DE8A3093825CF5 /* URLRequest+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "URLRequest+Alamofire.swift"; path = "Source/Extensions/URLRequest+Alamofire.swift"; sourceTree = "<group>"; };
 		E85C414E75CCFB107DE4107BCCDBC046 /* DispatchQueue+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DispatchQueue+Alamofire.swift"; path = "Source/Extensions/DispatchQueue+Alamofire.swift"; sourceTree = "<group>"; };
-		E9C8EB93C233444E045D663E907FA0D2 /* bctoolbox.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = bctoolbox.xcframework; path = "linphone-sdk-novideo-frameworks/bctoolbox.xcframework"; sourceTree = "<group>"; };
 		E9E08F523DE4C95BD1B82429B9FFCD86 /* MissedCallNotification.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MissedCallNotification.swift; sourceTree = "<group>"; };
 		EA6BE18DAB6B7FE4C5030B1A7695BF41 /* InstanceStorage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InstanceStorage.swift; path = Sources/InstanceStorage.swift; sourceTree = "<group>"; };
 		EC7BBB57CA9A0BEE5E086F30F8BDC45B /* _Resolver.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = _Resolver.swift; path = Sources/_Resolver.swift; sourceTree = "<group>"; };
@@ -495,13 +478,13 @@
 		F1FAA57CCD50FE92858A76C9128F59F7 /* RedirectHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RedirectHandler.swift; path = Source/Features/RedirectHandler.swift; sourceTree = "<group>"; };
 		F22F91BC4788203AB3C3FE07524E1CB5 /* Swinject-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Swinject-umbrella.h"; sourceTree = "<group>"; };
 		F3496DC356C562481D8EB03B9AC4EEE7 /* Container.Logging.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Container.Logging.swift; path = Sources/Container.Logging.swift; sourceTree = "<group>"; };
-		F897521D0CA598887B39AAFAF0329B2C /* bctoolbox-ios.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = "bctoolbox-ios.xcframework"; path = "linphone-sdk-novideo/apple-darwin/XCFrameworks/bctoolbox-ios.xcframework"; sourceTree = "<group>"; };
+		F897521D0CA598887B39AAFAF0329B2C /* bctoolbox-ios.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcframework; name = "bctoolbox-ios.xcframework"; path = "Pods/linphone-sdk-novideo/linphone-sdk-novideo/apple-darwin/XCFrameworks/bctoolbox-ios.xcframework"; sourceTree = "<group>"; };
 		FD00F044211765E26A00A7CA7B05A952 /* Subtitle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Subtitle.swift; path = Source/Model/Subtitle.swift; sourceTree = "<group>"; };
 		FD40F3FCAD68A421DE3B80437F37CF87 /* iOSPhoneLib */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = iOSPhoneLib; path = iOSPhoneLib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD7BA0F23930A2806FFB474A54350B01 /* Pods-Phone Lib Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Phone Lib Example.debug.xcconfig"; sourceTree = "<group>"; };
 		FF381A137248D760621FB1608AAA1849 /* ParameterEncoder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoder.swift; path = Source/Core/ParameterEncoder.swift; sourceTree = "<group>"; };
 		FF82CEC13E5AA68DB9ABFBFB8C4E967D /* DownloadRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DownloadRequest.swift; path = Source/Core/DownloadRequest.swift; sourceTree = "<group>"; };
-		FFE00C529178C979F4729F9AB4F2FDBB /* mswebrtc.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = mswebrtc.xcframework; path = "linphone-sdk-novideo/apple-darwin/XCFrameworks/mswebrtc.xcframework"; sourceTree = "<group>"; };
+		FFE00C529178C979F4729F9AB4F2FDBB /* mswebrtc.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcframework; name = mswebrtc.xcframework; path = "Pods/linphone-sdk-novideo/linphone-sdk-novideo/apple-darwin/XCFrameworks/mswebrtc.xcframework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -611,7 +594,6 @@
 				90758A40AEB2EB893C9B711F4C2F0E1A /* Protocols */,
 				F90082F327BAAF5D33095BCB0A5688B7 /* Registration */,
 			);
-			name = Classes;
 			path = Classes;
 			sourceTree = "<group>";
 		};
@@ -621,7 +603,6 @@
 				6A0EAB99C4E903925991370291E418B7 /* Middleware.swift */,
 				6BE47720BF830F723AA1C76132F715C7 /* PushKitDelegate.swift */,
 			);
-			name = Push;
 			path = Push;
 			sourceTree = "<group>";
 		};
@@ -630,7 +611,6 @@
 			children = (
 				E9E08F523DE4C95BD1B82429B9FFCD86 /* MissedCallNotification.swift */,
 			);
-			name = Notifications;
 			path = Notifications;
 			sourceTree = "<group>";
 		};
@@ -639,29 +619,12 @@
 			children = (
 				86D939F6EF90FD7227460ED8FDBB0D68 /* Container.swift */,
 			);
-			name = DI;
 			path = DI;
 			sourceTree = "<group>";
 		};
 		1D7D998F23D43DECC0A86A465246B1C6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C6822AB8F93FBE41783DB3ADD3FAB92D /* bctoolbox.xcframework */,
-				F897521D0CA598887B39AAFAF0329B2C /* bctoolbox-ios.xcframework */,
-				C07500416E640D203DF93D6FEEF3688C /* bctoolbox-tester.xcframework */,
-				5B988178E7C9B3574FE9C4ACBE5D8AA2 /* belcard.xcframework */,
-				AE8CD987776A4CDA99F286BCE0E75A07 /* belle-sip.xcframework */,
-				67F9FD9137FCE57AF6BB4ADBE9BD2102 /* belr.xcframework */,
-				18F804846A79AD5A27ABBF312FDA6EDA /* lime.xcframework */,
-				44D5F6FEA2FAF80823A4BF7BF239EC0C /* linphone.xcframework */,
-				4349DD5122630DF730CF759625750013 /* linphonetester.xcframework */,
-				3F04D29CA9E1F9C6E6543B99AA9919EC /* mediastreamer2.xcframework */,
-				AD7B6683FBCF0458BE98367BDF654E47 /* msamr.xcframework */,
-				6944C2CE996F9D30F6D6910EB8B422CA /* mscodec2.xcframework */,
-				9EF4E296938748B7E6F607BF7E2C9B58 /* msopenh264.xcframework */,
-				3AAC93289A4B77D247E475C803178C6E /* mssilk.xcframework */,
-				FFE00C529178C979F4729F9AB4F2FDBB /* mswebrtc.xcframework */,
-				463E0EA025493ED34A6D49C7004F629E /* ortp.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -682,7 +645,6 @@
 				D1AAD80DF3E9EE2F923275465A546021 /* AudioRoute.swift */,
 				BFB9DB487D5B94082FA7E030F06626F5 /* AudioState.swift */,
 			);
-			name = Audio;
 			path = Audio;
 			sourceTree = "<group>";
 		};
@@ -757,7 +719,6 @@
 				82D4509F45010C5FEB7CC87F3BD69BFF /* Resources */,
 				B11E69E308B36518F801969A03CD0BF5 /* Support Files */,
 			);
-			name = Alamofire;
 			path = Alamofire;
 			sourceTree = "<group>";
 		};
@@ -766,7 +727,6 @@
 			children = (
 				5C252525C9BCD29B125E53F5F44B0396 /* VoIPLibConfig.swift */,
 			);
-			name = Config;
 			path = Config;
 			sourceTree = "<group>";
 		};
@@ -783,7 +743,6 @@
 				B180A1BE38C27D1E12292271E959523B /* PILCallFactory.swift */,
 				D216B8DCDE3C3DD3BEB90D5E15331E22 /* VoipLibEventTranslator.swift */,
 			);
-			name = Calls;
 			path = Calls;
 			sourceTree = "<group>";
 		};
@@ -793,7 +752,6 @@
 				59BA6BFF0E7201CC910CE77586EBEC1E /* Contacts.swift */,
 				8C978F54E82F7E24BB0F225E7A48995D /* SupplementaryContact.swift */,
 			);
-			name = Contacts;
 			path = Contacts;
 			sourceTree = "<group>";
 		};
@@ -830,7 +788,6 @@
 				861E7DF69FDC99247F08747C017B2829 /* TapActionRow.swift */,
 				DA10B9A3B1516EC058AFB03F3EA46120 /* Support Files */,
 			);
-			name = QuickTableViewController;
 			path = QuickTableViewController;
 			sourceTree = "<group>";
 		};
@@ -841,7 +798,6 @@
 				1D7D998F23D43DECC0A86A465246B1C6 /* Frameworks */,
 				9314743964DEB42093072222D96ADDAE /* Support Files */,
 			);
-			name = "linphone-sdk-novideo";
 			path = "linphone-sdk-novideo";
 			sourceTree = "<group>";
 		};
@@ -858,7 +814,6 @@
 			children = (
 				0B319CCC52CE4E623D9CC7AB3D1AA7DD /* VoIPLibHelper.swift */,
 			);
-			name = Helpers;
 			path = Helpers;
 			sourceTree = "<group>";
 		};
@@ -898,7 +853,6 @@
 				CD0C112AE37BCCDD524DF5EF545BC010 /* Resources */,
 				34A32D142E1E377531018E58803EC61D /* Support Files */,
 			);
-			name = SAMKeychain;
 			path = SAMKeychain;
 			sourceTree = "<group>";
 		};
@@ -909,7 +863,6 @@
 				4E5ACB60411527EA5B3ED1045CAF831D /* Auth.swift */,
 				EEAF01F734492749E3D7D0EFE81716D5 /* Preferences.swift */,
 			);
-			name = Configuration;
 			path = Configuration;
 			sourceTree = "<group>";
 		};
@@ -935,7 +888,6 @@
 			children = (
 				6E1B3762AC5FD69DE0AF37FF898AD7C7 /* InitializationError.swift */,
 			);
-			name = Error;
 			path = Error;
 			sourceTree = "<group>";
 		};
@@ -947,7 +899,6 @@
 				85438B846862D19B157B6C8997235B84 /* LinphoneManager.swift */,
 				58F23880EF38044514EF3ED5AD0F55CB /* LinphoneRegistrationListener.swift */,
 			);
-			name = Linphone;
 			path = Linphone;
 			sourceTree = "<group>";
 		};
@@ -965,7 +916,6 @@
 			children = (
 				6CE26BA6DCBC5F62C54E9CE09E974B08 /* CallDelegate.swift */,
 			);
-			name = Protocols;
 			path = Protocols;
 			sourceTree = "<group>";
 		};
@@ -988,23 +938,22 @@
 		9B0765DB78A04FCBFC9179C619B00C1E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E9C8EB93C233444E045D663E907FA0D2 /* bctoolbox.xcframework */,
-				8F8D4FC581D6E7240235D752D6082C12 /* bctoolbox-ios.xcframework */,
-				D037F96E0B9D086B881176E7E93A57DA /* bctoolbox-tester.xcframework */,
-				3CA17C172F339AB6627B36384B85C4C6 /* belcard.xcframework */,
-				4CD053FEF662A22F297A34FB0D88013A /* belle-sip.xcframework */,
-				3CA1D95BA020E3D2F5E4181EBFAE4EE3 /* belr.xcframework */,
-				8062395B9213E96BCAE9FEB096611F87 /* lime.xcframework */,
-				DC5703760807F76C845E94896B186A58 /* linphone.xcframework */,
-				A6CE462F0233863D8BABBA22B35DB1A2 /* linphonesw.xcframework */,
-				A866E9457F2D3433B3796C1CE420AF17 /* linphonetester.xcframework */,
-				BD2352631B8D6749554EFF2BA58F2AF3 /* mediastreamer2.xcframework */,
-				8993536338F971992FC6CB177F6AF49A /* msamr.xcframework */,
-				B6EA24316B3E6768D449AA10A4841798 /* mscodec2.xcframework */,
-				311E219D5B16FC7AC5AC7396ED3BDDFB /* msopenh264.xcframework */,
-				DF354BA1089A5B75EBED457C44A7BD9C /* mssilk.xcframework */,
-				5939317C741CB75B23AA50D13EB259F8 /* mswebrtc.xcframework */,
-				1A015AD771FEDE75E8343D690E47AC43 /* ortp.xcframework */,
+				C6822AB8F93FBE41783DB3ADD3FAB92D /* bctoolbox.xcframework */,
+				F897521D0CA598887B39AAFAF0329B2C /* bctoolbox-ios.xcframework */,
+				C07500416E640D203DF93D6FEEF3688C /* bctoolbox-tester.xcframework */,
+				5B988178E7C9B3574FE9C4ACBE5D8AA2 /* belcard.xcframework */,
+				AE8CD987776A4CDA99F286BCE0E75A07 /* belle-sip.xcframework */,
+				67F9FD9137FCE57AF6BB4ADBE9BD2102 /* belr.xcframework */,
+				18F804846A79AD5A27ABBF312FDA6EDA /* lime.xcframework */,
+				44D5F6FEA2FAF80823A4BF7BF239EC0C /* linphone.xcframework */,
+				4349DD5122630DF730CF759625750013 /* linphonetester.xcframework */,
+				3F04D29CA9E1F9C6E6543B99AA9919EC /* mediastreamer2.xcframework */,
+				AD7B6683FBCF0458BE98367BDF654E47 /* msamr.xcframework */,
+				6944C2CE996F9D30F6D6910EB8B422CA /* mscodec2.xcframework */,
+				9EF4E296938748B7E6F607BF7E2C9B58 /* msopenh264.xcframework */,
+				3AAC93289A4B77D247E475C803178C6E /* mssilk.xcframework */,
+				FFE00C529178C979F4729F9AB4F2FDBB /* mswebrtc.xcframework */,
+				463E0EA025493ED34A6D49C7004F629E /* ortp.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1052,7 +1001,6 @@
 				11EE4C88243A09C6FD19C48945CAC5BC /* VoIPLibCall.swift */,
 				A4AC2D40A1CDF4CC520330F50AA91AAC /* VoIPLibCallState.swift */,
 			);
-			name = Models;
 			path = Models;
 			sourceTree = "<group>";
 		};
@@ -1101,7 +1049,6 @@
 				CDDA63AEB83592AACDBD61E0861BFF60 /* Resources */,
 				A51E320D7B97BD17EA6FFAD5D9F7D7FB /* Support Files */,
 			);
-			name = Swinject;
 			path = Swinject;
 			sourceTree = "<group>";
 		};
@@ -1146,7 +1093,6 @@
 			children = (
 				0220B9A0F41ABA18408DDDA01C59EF3F /* IOS.swift */,
 			);
-			name = IOS;
 			path = IOS;
 			sourceTree = "<group>";
 		};
@@ -1222,7 +1168,6 @@
 			children = (
 				8E4A16FB120EFBFE4D94F8A5D83D88D6 /* Linphone */,
 			);
-			name = Managers;
 			path = Managers;
 			sourceTree = "<group>";
 		};
@@ -1231,7 +1176,6 @@
 			children = (
 				75B4F8C6BDE9AC18476D911549D27108 /* IOSCallKit.swift */,
 			);
-			name = CallKit;
 			path = CallKit;
 			sourceTree = "<group>";
 		};
@@ -1240,7 +1184,6 @@
 			children = (
 				AF9334D37EFC9A3ECB7636A58D798821 /* ringback.wav */,
 			);
-			name = Resources;
 			path = Resources;
 			sourceTree = "<group>";
 		};
@@ -1249,7 +1192,6 @@
 			children = (
 				324CC5C1E62820CB4C802DD343D33FA4 /* RegistrationState.swift */,
 			);
-			name = Registration;
 			path = Registration;
 			sourceTree = "<group>";
 		};
@@ -1259,7 +1201,6 @@
 				52AD79632A1DCF0D18F6AE2DD93D5D46 /* LogDelegate.swift */,
 				AAA2C13CB7161EE62C529F354607BBBD /* LogLevel.swift */,
 			);
-			name = Logging;
 			path = Logging;
 			sourceTree = "<group>";
 		};
@@ -1271,7 +1212,6 @@
 				D921799EEC04DB20B93033F179897850 /* PILEventDelegate.swift */,
 				8AD14D36515E1C90B2EDE8CAA0C56F52 /* PlatformIntegrator.swift */,
 			);
-			name = Events;
 			path = Events;
 			sourceTree = "<group>";
 		};
