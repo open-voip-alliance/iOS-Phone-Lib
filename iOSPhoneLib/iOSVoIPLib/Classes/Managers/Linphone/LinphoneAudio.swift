@@ -1,5 +1,6 @@
 import Foundation
 import linphonesw
+import linphone
 
 internal class LinphoneAudio {
     private let manager: LinphoneManager
