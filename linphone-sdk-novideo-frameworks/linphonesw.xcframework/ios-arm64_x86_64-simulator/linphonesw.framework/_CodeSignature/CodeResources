@@ -14,47 +14,47 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		XR4L9/kPJBlCKaFupz+KW7uRR54=
+		ACTQDg3t+JEXbpPh5ZPv7HOcx8M=
 		</data>
 		<key>Modules/linphonesw.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		8HRwSRQYX5BWLHkDlmMNm5pjQ34=
+		6292xjrO7Wk+TVa+N0Omv7hZbDc=
 		</data>
 		<key>Modules/linphonesw.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		Bw1gNlm0JvOjDuKbVHNukdCswiQ=
+		uGeyLlPuhAIOmTB0QeZZnc34Zoc=
 		</data>
 		<key>Modules/linphonesw.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		5NmBBpyF8cMA9Fe/psE7d6MjshQ=
+		QfzMwx7VFmOhxomV42nZfpRXHAo=
 		</data>
 		<key>Modules/linphonesw.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		Bw1gNlm0JvOjDuKbVHNukdCswiQ=
+		uGeyLlPuhAIOmTB0QeZZnc34Zoc=
 		</data>
 		<key>Modules/linphonesw.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		oHA+VIm9Z15NXzWgUoE7fH8C7rE=
+		N0bGyn84cQmHkxfGkJLZX3Z3KR0=
 		</data>
 		<key>Modules/linphonesw.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		8HRwSRQYX5BWLHkDlmMNm5pjQ34=
+		6292xjrO7Wk+TVa+N0Omv7hZbDc=
 		</data>
 		<key>Modules/linphonesw.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		XKDk+NO6H3MiBjWIt6RJrhKSqi0=
+		0nBUddqaJFIBpy3pm/KLzVYyJxw=
 		</data>
 		<key>Modules/linphonesw.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		bmYLA/mb3dLt+oAvGkwU5qsqjuo=
+		wQgv0Crzgs6n+RxJKk2WXEpQhLk=
 		</data>
 		<key>Modules/linphonesw.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		XKDk+NO6H3MiBjWIt6RJrhKSqi0=
+		0nBUddqaJFIBpy3pm/KLzVYyJxw=
 		</data>
 		<key>Modules/linphonesw.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		IcUWnnvxyWWzaeYaU003IxBMBPs=
+		jHjkUjgXk/tbvrPXmKLxkD9w3TQ=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -89,110 +89,110 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			8HRwSRQYX5BWLHkDlmMNm5pjQ34=
+			6292xjrO7Wk+TVa+N0Omv7hZbDc=
 			</data>
 			<key>hash2</key>
 			<data>
-			B59TA0TLO98P29EK7Tip2rzWizvd2Tsuuz+0sr/Y94M=
+			eeGkUM59L1M25BxFV5oQrRt7xDiyTNWZbcn+4jKv9w4=
 			</data>
 		</dict>
 		<key>Modules/linphonesw.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Bw1gNlm0JvOjDuKbVHNukdCswiQ=
+			uGeyLlPuhAIOmTB0QeZZnc34Zoc=
 			</data>
 			<key>hash2</key>
 			<data>
-			jmXR1AcLQOw8QioCyfRnsMKXnmGbTbMwh9sq03bLvWk=
+			THIai/Wr0sGQilrlctbxGlLbXWJyJLv8SnuDJqy1Ibo=
 			</data>
 		</dict>
 		<key>Modules/linphonesw.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			5NmBBpyF8cMA9Fe/psE7d6MjshQ=
+			QfzMwx7VFmOhxomV42nZfpRXHAo=
 			</data>
 			<key>hash2</key>
 			<data>
-			F7CusdPDguGis6oEaiwnpNgaAXRaUkkbYx77eBFlZ1A=
+			bRcQCyY62lMeuitxKwdC8zqhN/Eu//Iym6QsbXJVtt4=
 			</data>
 		</dict>
 		<key>Modules/linphonesw.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Bw1gNlm0JvOjDuKbVHNukdCswiQ=
+			uGeyLlPuhAIOmTB0QeZZnc34Zoc=
 			</data>
 			<key>hash2</key>
 			<data>
-			jmXR1AcLQOw8QioCyfRnsMKXnmGbTbMwh9sq03bLvWk=
+			THIai/Wr0sGQilrlctbxGlLbXWJyJLv8SnuDJqy1Ibo=
 			</data>
 		</dict>
 		<key>Modules/linphonesw.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			oHA+VIm9Z15NXzWgUoE7fH8C7rE=
+			N0bGyn84cQmHkxfGkJLZX3Z3KR0=
 			</data>
 			<key>hash2</key>
 			<data>
-			8tYw6jYS2TaQ0R/SDr5hpS3bo1+P8X8nWm74aNaDQFs=
+			HL/ASsHxQBQnAL8OMcy2suue55CobWkYKgpxK8rfJGw=
 			</data>
 		</dict>
 		<key>Modules/linphonesw.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			8HRwSRQYX5BWLHkDlmMNm5pjQ34=
+			6292xjrO7Wk+TVa+N0Omv7hZbDc=
 			</data>
 			<key>hash2</key>
 			<data>
-			B59TA0TLO98P29EK7Tip2rzWizvd2Tsuuz+0sr/Y94M=
+			eeGkUM59L1M25BxFV5oQrRt7xDiyTNWZbcn+4jKv9w4=
 			</data>
 		</dict>
 		<key>Modules/linphonesw.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			XKDk+NO6H3MiBjWIt6RJrhKSqi0=
+			0nBUddqaJFIBpy3pm/KLzVYyJxw=
 			</data>
 			<key>hash2</key>
 			<data>
-			E6H2Yi3Tzc7UJrG95/7ze+6dIgJvG+j2ghJhQWnV3rQ=
+			5+yrtesstfVAro3MWwQJMWNGhR7ebYTbFoicc3UHqCM=
 			</data>
 		</dict>
 		<key>Modules/linphonesw.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			bmYLA/mb3dLt+oAvGkwU5qsqjuo=
+			wQgv0Crzgs6n+RxJKk2WXEpQhLk=
 			</data>
 			<key>hash2</key>
 			<data>
-			PPdn3QUiDy2leI968tv4sxYCDlxPdJpJ8gj1aUONeXg=
+			5hC3lz5e71VWEnXiZrxEMdcPYMAkhWsrznBF5qnMs2c=
 			</data>
 		</dict>
 		<key>Modules/linphonesw.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			XKDk+NO6H3MiBjWIt6RJrhKSqi0=
+			0nBUddqaJFIBpy3pm/KLzVYyJxw=
 			</data>
 			<key>hash2</key>
 			<data>
-			E6H2Yi3Tzc7UJrG95/7ze+6dIgJvG+j2ghJhQWnV3rQ=
+			5+yrtesstfVAro3MWwQJMWNGhR7ebYTbFoicc3UHqCM=
 			</data>
 		</dict>
 		<key>Modules/linphonesw.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			IcUWnnvxyWWzaeYaU003IxBMBPs=
+			jHjkUjgXk/tbvrPXmKLxkD9w3TQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			8Q/Vnx8uxA0IH9KFmhrxTmkpsN0CrpXYZUgKXxcDg5M=
+			BEfoQKLEM7cR+hbeTQu/EsMxXhtMU36I3w86HPw8o1Q=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
