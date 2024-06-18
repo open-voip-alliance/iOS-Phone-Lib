@@ -38,6 +38,16 @@ public enum CodecPriorityPolicy : Swift.Int {
     get
   }
 }
+public enum ConfiguringState : Swift.Int {
+  case Successful
+  case Failed
+  case Skipped
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
 public enum ConsolidatedPresence : Swift.Int {
   case Online
   case Busy
@@ -849,7 +859,7 @@ public protocol CoreDelegate : AnyObject {
   func onSubscribeReceived(core: linphonesw.Core, linphoneEvent: linphonesw.Event, subscribeEvent: Swift.String, body: linphonesw.Content?)
   func onPublishStateChanged(core: linphonesw.Core, linphoneEvent: linphonesw.Event, state: linphonesw.PublishState)
   func onPublishReceived(core: linphonesw.Core, linphoneEvent: linphonesw.Event, publishEvent: Swift.String, body: linphonesw.Content?)
-  func onConfiguringStatus(core: linphonesw.Core, status: linphonesw.Config.ConfiguringState, message: Swift.String)
+  func onConfiguringStatus(core: linphonesw.Core, status: linphonesw.ConfiguringState, message: Swift.String)
   func onNetworkReachable(core: linphonesw.Core, reachable: Swift.Bool)
   func onLogCollectionUploadStateChanged(core: linphonesw.Core, state: linphonesw.Core.LogCollectionUploadState, info: Swift.String)
   func onLogCollectionUploadProgressIndication(core: linphonesw.Core, offset: Swift.Int, total: Swift.Int)
@@ -914,7 +924,7 @@ extension linphonesw.CoreDelegate {
   public func onSubscribeReceived(core: linphonesw.Core, linphoneEvent: linphonesw.Event, subscribeEvent: Swift.String, body: linphonesw.Content?)
   public func onPublishStateChanged(core: linphonesw.Core, linphoneEvent: linphonesw.Event, state: linphonesw.PublishState)
   public func onPublishReceived(core: linphonesw.Core, linphoneEvent: linphonesw.Event, publishEvent: Swift.String, body: linphonesw.Content?)
-  public func onConfiguringStatus(core: linphonesw.Core, status: linphonesw.Config.ConfiguringState, message: Swift.String)
+  public func onConfiguringStatus(core: linphonesw.Core, status: linphonesw.ConfiguringState, message: Swift.String)
   public func onNetworkReachable(core: linphonesw.Core, reachable: Swift.Bool)
   public func onLogCollectionUploadStateChanged(core: linphonesw.Core, state: linphonesw.Core.LogCollectionUploadState, info: Swift.String)
   public func onLogCollectionUploadProgressIndication(core: linphonesw.Core, offset: Swift.Int, total: Swift.Int)
@@ -979,7 +989,7 @@ final public class CoreDelegateStub : linphonesw.CoreDelegate {
   final public func onSubscribeReceived(core: linphonesw.Core, linphoneEvent: linphonesw.Event, subscribeEvent: Swift.String, body: linphonesw.Content?)
   final public func onPublishStateChanged(core: linphonesw.Core, linphoneEvent: linphonesw.Event, state: linphonesw.PublishState)
   final public func onPublishReceived(core: linphonesw.Core, linphoneEvent: linphonesw.Event, publishEvent: Swift.String, body: linphonesw.Content?)
-  final public func onConfiguringStatus(core: linphonesw.Core, status: linphonesw.Config.ConfiguringState, message: Swift.String)
+  final public func onConfiguringStatus(core: linphonesw.Core, status: linphonesw.ConfiguringState, message: Swift.String)
   final public func onNetworkReachable(core: linphonesw.Core, reachable: Swift.Bool)
   final public func onLogCollectionUploadStateChanged(core: linphonesw.Core, state: linphonesw.Core.LogCollectionUploadState, info: Swift.String)
   final public func onLogCollectionUploadProgressIndication(core: linphonesw.Core, offset: Swift.Int, total: Swift.Int)
@@ -1004,7 +1014,7 @@ final public class CoreDelegateStub : linphonesw.CoreDelegate {
   final public func onDefaultAccountChanged(core: linphonesw.Core, account: linphonesw.Account?)
   final public func onAccountAdded(core: linphonesw.Core, account: linphonesw.Account)
   final public func onAccountRemoved(core: linphonesw.Core, account: linphonesw.Account)
-  public init(onNewAlertTriggered: ((linphonesw.Core, linphonesw.Alert) -> Swift.Void)? = nil, onGlobalStateChanged: ((linphonesw.Core, linphonesw.GlobalState, Swift.String) -> Swift.Void)? = nil, onRegistrationStateChanged: ((linphonesw.Core, linphonesw.ProxyConfig, linphonesw.RegistrationState, Swift.String) -> Swift.Void)? = nil, onConferenceInfoReceived: ((linphonesw.Core, linphonesw.ConferenceInfo) -> Swift.Void)? = nil, onPushNotificationReceived: ((linphonesw.Core, Swift.String) -> Swift.Void)? = nil, onPreviewDisplayErrorOccurred: ((linphonesw.Core, Swift.Int) -> Swift.Void)? = nil, onCallStateChanged: ((linphonesw.Core, linphonesw.Call, linphonesw.Call.State, Swift.String) -> Swift.Void)? = nil, onNotifyPresenceReceived: ((linphonesw.Core, linphonesw.Friend) -> Swift.Void)? = nil, onNotifyPresenceReceivedForUriOrTel: ((linphonesw.Core, linphonesw.Friend, Swift.String, linphonesw.PresenceModel) -> Swift.Void)? = nil, onNewSubscriptionRequested: ((linphonesw.Core, linphonesw.Friend, Swift.String) -> Swift.Void)? = nil, onAuthenticationRequested: ((linphonesw.Core, linphonesw.AuthInfo, linphonesw.AuthMethod) -> Swift.Void)? = nil, onCallLogUpdated: ((linphonesw.Core, linphonesw.CallLog) -> Swift.Void)? = nil, onCallIdUpdated: ((linphonesw.Core, Swift.String, Swift.String) -> Swift.Void)? = nil, onMessageReceived: ((linphonesw.Core, linphonesw.ChatRoom, linphonesw.ChatMessage) -> Swift.Void)? = nil, onNewMessageReaction: ((linphonesw.Core, linphonesw.ChatRoom, linphonesw.ChatMessage, linphonesw.ChatMessageReaction) -> Swift.Void)? = nil, onReactionRemoved: ((linphonesw.Core, linphonesw.ChatRoom, linphonesw.ChatMessage, linphonesw.Address) -> Swift.Void)? = nil, onMessagesReceived: ((linphonesw.Core, linphonesw.ChatRoom, [linphonesw.ChatMessage]) -> Swift.Void)? = nil, onMessageSent: ((linphonesw.Core, linphonesw.ChatRoom, linphonesw.ChatMessage) -> Swift.Void)? = nil, onChatRoomSessionStateChanged: ((linphonesw.Core, linphonesw.ChatRoom, linphonesw.Call.State, Swift.String) -> Swift.Void)? = nil, onChatRoomRead: ((linphonesw.Core, linphonesw.ChatRoom) -> Swift.Void)? = nil, onMessageReceivedUnableDecrypt: ((linphonesw.Core, linphonesw.ChatRoom, linphonesw.ChatMessage) -> Swift.Void)? = nil, onIsComposingReceived: ((linphonesw.Core, linphonesw.ChatRoom) -> Swift.Void)? = nil, onDtmfReceived: ((linphonesw.Core, linphonesw.Call, Swift.Int) -> Swift.Void)? = nil, onReferReceived: ((linphonesw.Core, Swift.String) -> Swift.Void)? = nil, onCallGoclearAckSent: ((linphonesw.Core, linphonesw.Call) -> Swift.Void)? = nil, onCallEncryptionChanged: ((linphonesw.Core, linphonesw.Call, Swift.Bool, Swift.String) -> Swift.Void)? = nil, onCallSendMasterKeyChanged: ((linphonesw.Core, linphonesw.Call, Swift.String) -> Swift.Void)? = nil, onCallReceiveMasterKeyChanged: ((linphonesw.Core, linphonesw.Call, Swift.String) -> Swift.Void)? = nil, onTransferStateChanged: ((linphonesw.Core, linphonesw.Call, linphonesw.Call.State) -> Swift.Void)? = nil, onBuddyInfoUpdated: ((linphonesw.Core, linphonesw.Friend) -> Swift.Void)? = nil, onCallStatsUpdated: ((linphonesw.Core, linphonesw.Call, linphonesw.CallStats) -> Swift.Void)? = nil, onInfoReceived: ((linphonesw.Core, linphonesw.Call, linphonesw.InfoMessage) -> Swift.Void)? = nil, onSubscriptionStateChanged: ((linphonesw.Core, linphonesw.Event, linphonesw.SubscriptionState) -> Swift.Void)? = nil, onNotifySent: ((linphonesw.Core, linphonesw.Event, linphonesw.Content?) -> Swift.Void)? = nil, onNotifyReceived: ((linphonesw.Core, linphonesw.Event, Swift.String, linphonesw.Content?) -> Swift.Void)? = nil, onSubscribeReceived: ((linphonesw.Core, linphonesw.Event, Swift.String, linphonesw.Content?) -> Swift.Void)? = nil, onPublishStateChanged: ((linphonesw.Core, linphonesw.Event, linphonesw.PublishState) -> Swift.Void)? = nil, onPublishReceived: ((linphonesw.Core, linphonesw.Event, Swift.String, linphonesw.Content?) -> Swift.Void)? = nil, onConfiguringStatus: ((linphonesw.Core, linphonesw.Config.ConfiguringState, Swift.String) -> Swift.Void)? = nil, onNetworkReachable: ((linphonesw.Core, Swift.Bool) -> Swift.Void)? = nil, onLogCollectionUploadStateChanged: ((linphonesw.Core, linphonesw.Core.LogCollectionUploadState, Swift.String) -> Swift.Void)? = nil, onLogCollectionUploadProgressIndication: ((linphonesw.Core, Swift.Int, Swift.Int) -> Swift.Void)? = nil, onFriendListCreated: ((linphonesw.Core, linphonesw.FriendList) -> Swift.Void)? = nil, onFriendListRemoved: ((linphonesw.Core, linphonesw.FriendList) -> Swift.Void)? = nil, onCallCreated: ((linphonesw.Core, linphonesw.Call) -> Swift.Void)? = nil, onVersionUpdateCheckResultReceived: ((linphonesw.Core, linphonesw.VersionUpdateCheckResult, Swift.String, Swift.String) -> Swift.Void)? = nil, onConferenceStateChanged: ((linphonesw.Core, linphonesw.Conference, linphonesw.Conference.State) -> Swift.Void)? = nil, onChatRoomStateChanged: ((linphonesw.Core, linphonesw.ChatRoom, linphonesw.ChatRoom.State) -> Swift.Void)? = nil, onChatRoomSubjectChanged: ((linphonesw.Core, linphonesw.ChatRoom) -> Swift.Void)? = nil, onChatRoomEphemeralMessageDeleted: ((linphonesw.Core, linphonesw.ChatRoom) -> Swift.Void)? = nil, onImeeUserRegistration: ((linphonesw.Core, Swift.Bool, Swift.String, Swift.String) -> Swift.Void)? = nil, onQrcodeFound: ((linphonesw.Core, Swift.String) -> Swift.Void)? = nil, onFirstCallStarted: ((linphonesw.Core) -> Swift.Void)? = nil, onLastCallEnded: ((linphonesw.Core) -> Swift.Void)? = nil, onAudioDeviceChanged: ((linphonesw.Core, linphonesw.AudioDevice) -> Swift.Void)? = nil, onAudioDevicesListUpdated: ((linphonesw.Core) -> Swift.Void)? = nil, onEcCalibrationResult: ((linphonesw.Core, linphonesw.EcCalibratorStatus, Swift.Int) -> Swift.Void)? = nil, onEcCalibrationAudioInit: ((linphonesw.Core) -> Swift.Void)? = nil, onEcCalibrationAudioUninit: ((linphonesw.Core) -> Swift.Void)? = nil, onAccountRegistrationStateChanged: ((linphonesw.Core, linphonesw.Account, linphonesw.RegistrationState, Swift.String) -> Swift.Void)? = nil, onDefaultAccountChanged: ((linphonesw.Core, linphonesw.Account?) -> Swift.Void)? = nil, onAccountAdded: ((linphonesw.Core, linphonesw.Account) -> Swift.Void)? = nil, onAccountRemoved: ((linphonesw.Core, linphonesw.Account) -> Swift.Void)? = nil)
+  public init(onNewAlertTriggered: ((linphonesw.Core, linphonesw.Alert) -> Swift.Void)? = nil, onGlobalStateChanged: ((linphonesw.Core, linphonesw.GlobalState, Swift.String) -> Swift.Void)? = nil, onRegistrationStateChanged: ((linphonesw.Core, linphonesw.ProxyConfig, linphonesw.RegistrationState, Swift.String) -> Swift.Void)? = nil, onConferenceInfoReceived: ((linphonesw.Core, linphonesw.ConferenceInfo) -> Swift.Void)? = nil, onPushNotificationReceived: ((linphonesw.Core, Swift.String) -> Swift.Void)? = nil, onPreviewDisplayErrorOccurred: ((linphonesw.Core, Swift.Int) -> Swift.Void)? = nil, onCallStateChanged: ((linphonesw.Core, linphonesw.Call, linphonesw.Call.State, Swift.String) -> Swift.Void)? = nil, onNotifyPresenceReceived: ((linphonesw.Core, linphonesw.Friend) -> Swift.Void)? = nil, onNotifyPresenceReceivedForUriOrTel: ((linphonesw.Core, linphonesw.Friend, Swift.String, linphonesw.PresenceModel) -> Swift.Void)? = nil, onNewSubscriptionRequested: ((linphonesw.Core, linphonesw.Friend, Swift.String) -> Swift.Void)? = nil, onAuthenticationRequested: ((linphonesw.Core, linphonesw.AuthInfo, linphonesw.AuthMethod) -> Swift.Void)? = nil, onCallLogUpdated: ((linphonesw.Core, linphonesw.CallLog) -> Swift.Void)? = nil, onCallIdUpdated: ((linphonesw.Core, Swift.String, Swift.String) -> Swift.Void)? = nil, onMessageReceived: ((linphonesw.Core, linphonesw.ChatRoom, linphonesw.ChatMessage) -> Swift.Void)? = nil, onNewMessageReaction: ((linphonesw.Core, linphonesw.ChatRoom, linphonesw.ChatMessage, linphonesw.ChatMessageReaction) -> Swift.Void)? = nil, onReactionRemoved: ((linphonesw.Core, linphonesw.ChatRoom, linphonesw.ChatMessage, linphonesw.Address) -> Swift.Void)? = nil, onMessagesReceived: ((linphonesw.Core, linphonesw.ChatRoom, [linphonesw.ChatMessage]) -> Swift.Void)? = nil, onMessageSent: ((linphonesw.Core, linphonesw.ChatRoom, linphonesw.ChatMessage) -> Swift.Void)? = nil, onChatRoomSessionStateChanged: ((linphonesw.Core, linphonesw.ChatRoom, linphonesw.Call.State, Swift.String) -> Swift.Void)? = nil, onChatRoomRead: ((linphonesw.Core, linphonesw.ChatRoom) -> Swift.Void)? = nil, onMessageReceivedUnableDecrypt: ((linphonesw.Core, linphonesw.ChatRoom, linphonesw.ChatMessage) -> Swift.Void)? = nil, onIsComposingReceived: ((linphonesw.Core, linphonesw.ChatRoom) -> Swift.Void)? = nil, onDtmfReceived: ((linphonesw.Core, linphonesw.Call, Swift.Int) -> Swift.Void)? = nil, onReferReceived: ((linphonesw.Core, Swift.String) -> Swift.Void)? = nil, onCallGoclearAckSent: ((linphonesw.Core, linphonesw.Call) -> Swift.Void)? = nil, onCallEncryptionChanged: ((linphonesw.Core, linphonesw.Call, Swift.Bool, Swift.String) -> Swift.Void)? = nil, onCallSendMasterKeyChanged: ((linphonesw.Core, linphonesw.Call, Swift.String) -> Swift.Void)? = nil, onCallReceiveMasterKeyChanged: ((linphonesw.Core, linphonesw.Call, Swift.String) -> Swift.Void)? = nil, onTransferStateChanged: ((linphonesw.Core, linphonesw.Call, linphonesw.Call.State) -> Swift.Void)? = nil, onBuddyInfoUpdated: ((linphonesw.Core, linphonesw.Friend) -> Swift.Void)? = nil, onCallStatsUpdated: ((linphonesw.Core, linphonesw.Call, linphonesw.CallStats) -> Swift.Void)? = nil, onInfoReceived: ((linphonesw.Core, linphonesw.Call, linphonesw.InfoMessage) -> Swift.Void)? = nil, onSubscriptionStateChanged: ((linphonesw.Core, linphonesw.Event, linphonesw.SubscriptionState) -> Swift.Void)? = nil, onNotifySent: ((linphonesw.Core, linphonesw.Event, linphonesw.Content?) -> Swift.Void)? = nil, onNotifyReceived: ((linphonesw.Core, linphonesw.Event, Swift.String, linphonesw.Content?) -> Swift.Void)? = nil, onSubscribeReceived: ((linphonesw.Core, linphonesw.Event, Swift.String, linphonesw.Content?) -> Swift.Void)? = nil, onPublishStateChanged: ((linphonesw.Core, linphonesw.Event, linphonesw.PublishState) -> Swift.Void)? = nil, onPublishReceived: ((linphonesw.Core, linphonesw.Event, Swift.String, linphonesw.Content?) -> Swift.Void)? = nil, onConfiguringStatus: ((linphonesw.Core, linphonesw.ConfiguringState, Swift.String) -> Swift.Void)? = nil, onNetworkReachable: ((linphonesw.Core, Swift.Bool) -> Swift.Void)? = nil, onLogCollectionUploadStateChanged: ((linphonesw.Core, linphonesw.Core.LogCollectionUploadState, Swift.String) -> Swift.Void)? = nil, onLogCollectionUploadProgressIndication: ((linphonesw.Core, Swift.Int, Swift.Int) -> Swift.Void)? = nil, onFriendListCreated: ((linphonesw.Core, linphonesw.FriendList) -> Swift.Void)? = nil, onFriendListRemoved: ((linphonesw.Core, linphonesw.FriendList) -> Swift.Void)? = nil, onCallCreated: ((linphonesw.Core, linphonesw.Call) -> Swift.Void)? = nil, onVersionUpdateCheckResultReceived: ((linphonesw.Core, linphonesw.VersionUpdateCheckResult, Swift.String, Swift.String) -> Swift.Void)? = nil, onConferenceStateChanged: ((linphonesw.Core, linphonesw.Conference, linphonesw.Conference.State) -> Swift.Void)? = nil, onChatRoomStateChanged: ((linphonesw.Core, linphonesw.ChatRoom, linphonesw.ChatRoom.State) -> Swift.Void)? = nil, onChatRoomSubjectChanged: ((linphonesw.Core, linphonesw.ChatRoom) -> Swift.Void)? = nil, onChatRoomEphemeralMessageDeleted: ((linphonesw.Core, linphonesw.ChatRoom) -> Swift.Void)? = nil, onImeeUserRegistration: ((linphonesw.Core, Swift.Bool, Swift.String, Swift.String) -> Swift.Void)? = nil, onQrcodeFound: ((linphonesw.Core, Swift.String) -> Swift.Void)? = nil, onFirstCallStarted: ((linphonesw.Core) -> Swift.Void)? = nil, onLastCallEnded: ((linphonesw.Core) -> Swift.Void)? = nil, onAudioDeviceChanged: ((linphonesw.Core, linphonesw.AudioDevice) -> Swift.Void)? = nil, onAudioDevicesListUpdated: ((linphonesw.Core) -> Swift.Void)? = nil, onEcCalibrationResult: ((linphonesw.Core, linphonesw.EcCalibratorStatus, Swift.Int) -> Swift.Void)? = nil, onEcCalibrationAudioInit: ((linphonesw.Core) -> Swift.Void)? = nil, onEcCalibrationAudioUninit: ((linphonesw.Core) -> Swift.Void)? = nil, onAccountRegistrationStateChanged: ((linphonesw.Core, linphonesw.Account, linphonesw.RegistrationState, Swift.String) -> Swift.Void)? = nil, onDefaultAccountChanged: ((linphonesw.Core, linphonesw.Account?) -> Swift.Void)? = nil, onAccountAdded: ((linphonesw.Core, linphonesw.Account) -> Swift.Void)? = nil, onAccountRemoved: ((linphonesw.Core, linphonesw.Account) -> Swift.Void)? = nil)
   @objc deinit
 }
 public protocol EventDelegate : AnyObject {
@@ -1803,6 +1813,9 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
   public var driverName: Swift.String {
     get
   }
+  public var followsSystemRoutingPolicy: Swift.Bool {
+    get
+  }
   public var id: Swift.String {
     get
   }
@@ -2459,6 +2472,12 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
     get
   }
   public var senderLossRate: Swift.Float {
+    get
+  }
+  public var srtpSource: linphonesw.MediaEncryption {
+    get
+  }
+  public var srtpSuite: linphonesw.SrtpSuite {
     get
   }
   public var type: linphonesw.StreamType {
@@ -3303,19 +3322,12 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
   public var getCobject: Swift.OpaquePointer? {
     get
   }
-  public enum ConfiguringState : Swift.Int {
-    case Successful
-    case Failed
-    case Skipped
-    public init?(rawValue: Swift.Int)
-    public typealias RawValue = Swift.Int
-    public var rawValue: Swift.Int {
-      get
-    }
-  }
   public static func newForSharedCore(appGroupId: Swift.String, configFilename: Swift.String?, factoryConfigFilename: Swift.String?) -> linphonesw.Config?
   public static func newFromBuffer(buffer: Swift.String) -> linphonesw.Config?
   public static func newWithFactory(configFilename: Swift.String?, factoryConfigFilename: Swift.String?) -> linphonesw.Config?
+  public var isReadonly: Swift.Bool {
+    get
+  }
   public var sectionsNamesList: [Swift.String] {
     get
   }
@@ -6990,6 +7002,9 @@ extension linphonesw.AuthMethod : Swift.RawRepresentable {}
 extension linphonesw.CodecPriorityPolicy : Swift.Equatable {}
 extension linphonesw.CodecPriorityPolicy : Swift.Hashable {}
 extension linphonesw.CodecPriorityPolicy : Swift.RawRepresentable {}
+extension linphonesw.ConfiguringState : Swift.Equatable {}
+extension linphonesw.ConfiguringState : Swift.Hashable {}
+extension linphonesw.ConfiguringState : Swift.RawRepresentable {}
 extension linphonesw.ConsolidatedPresence : Swift.Equatable {}
 extension linphonesw.ConsolidatedPresence : Swift.Hashable {}
 extension linphonesw.ConsolidatedPresence : Swift.RawRepresentable {}
@@ -7173,9 +7188,6 @@ extension linphonesw.ConferenceInfo.State : Swift.RawRepresentable {}
 extension linphonesw.ConferenceScheduler.State : Swift.Equatable {}
 extension linphonesw.ConferenceScheduler.State : Swift.Hashable {}
 extension linphonesw.ConferenceScheduler.State : Swift.RawRepresentable {}
-extension linphonesw.Config.ConfiguringState : Swift.Equatable {}
-extension linphonesw.Config.ConfiguringState : Swift.Hashable {}
-extension linphonesw.Config.ConfiguringState : Swift.RawRepresentable {}
 extension linphonesw.Core.LogCollectionUploadState : Swift.Equatable {}
 extension linphonesw.Core.LogCollectionUploadState : Swift.Hashable {}
 extension linphonesw.Core.LogCollectionUploadState : Swift.RawRepresentable {}

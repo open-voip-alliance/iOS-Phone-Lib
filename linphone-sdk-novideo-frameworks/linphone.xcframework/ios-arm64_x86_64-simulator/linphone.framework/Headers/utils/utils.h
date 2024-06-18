@@ -24,6 +24,7 @@
 #include <ctime>
 #include <list>
 #include <map>
+#include <optional>
 #include <sstream>
 #include <string>
 #include <utility>
@@ -108,6 +109,7 @@ LINPHONE_PUBLIC double stod(const char *str, size_t *idx = 0);
 LINPHONE_PUBLIC float stof(const char *str, size_t *idx = 0);
 
 LINPHONE_PUBLIC std::string stringToLower(const std::string &str);
+LINPHONE_PUBLIC std::vector<std::string> stringToLower(const std::vector<std::string> &strs);
 
 LINPHONE_PUBLIC std::string unicodeToUtf8(uint32_t ic);
 LINPHONE_PUBLIC std::string unicodeToUtf8(const std::vector<uint32_t> &chars);
@@ -261,6 +263,7 @@ LINPHONE_PUBLIC std::map<std::string, Version> parseCapabilityDescriptor(const s
 std::string getSipFragAddress(const Content &content);
 std::string getResourceLists(const std::list<std::shared_ptr<Address>> &addresses);
 ConferenceInfo::participant_list_t parseResourceLists(const Content &content);
+ConferenceInfo::participant_list_t parseResourceLists(std::optional<std::reference_wrapper<const Content>> content);
 std::shared_ptr<ConferenceInfo> createConferenceInfoFromOp(SalCallOp *op, bool remote);
 std::string computeHa1ForAlgorithm(const std::string &userId,
                                    const std::string &password,
@@ -269,6 +272,7 @@ std::string computeHa1ForAlgorithm(const std::string &userId,
 } // namespace Utils
 
 LINPHONE_PUBLIC std::ostream &operator<<(std::ostream &ostr, const Utils::Version &version);
+LINPHONE_PUBLIC std::ostream &operator<<(std::ostream &ostr, LinphoneGlobalState state);
 
 LINPHONE_END_NAMESPACE
 
