@@ -665,6 +665,7 @@
 				5C6C810A2806DA2500EE2919 /* Sources */,
 				5C6C810B2806DA2500EE2919 /* Frameworks */,
 				5C6C810C2806DA2500EE2919 /* Resources */,
+				417DA995155F9594A7840B3D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -799,6 +800,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Phone Lib Example/Pods-Phone Lib Example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		417DA995155F9594A7840B3D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iOSPhoneLib/Pods-iOSPhoneLib-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iOSPhoneLib/Pods-iOSPhoneLib-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iOSPhoneLib/Pods-iOSPhoneLib-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		8F852B792B4E8D0900DE236B /* Export to XCFramework */ = {
