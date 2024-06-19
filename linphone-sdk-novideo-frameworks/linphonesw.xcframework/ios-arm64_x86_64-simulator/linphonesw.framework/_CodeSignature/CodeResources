@@ -34,7 +34,7 @@
 		</data>
 		<key>Modules/linphonesw.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		Ip8IkRfP8BfQ/E6GMj3kzMwcazA=
+		N0bGyn84cQmHkxfGkJLZX3Z3KR0=
 		</data>
 		<key>Modules/linphonesw.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -54,7 +54,7 @@
 		</data>
 		<key>Modules/linphonesw.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		kjzAhVKw8GynfJNMap+wgeKgKjI=
+		jHjkUjgXk/tbvrPXmKLxkD9w3TQ=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -133,11 +133,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Ip8IkRfP8BfQ/E6GMj3kzMwcazA=
+			N0bGyn84cQmHkxfGkJLZX3Z3KR0=
 			</data>
 			<key>hash2</key>
 			<data>
-			OJWXRNI2MgyYZt1Qlxn7wGc1JqCfOeknndppDZYVBGE=
+			HL/ASsHxQBQnAL8OMcy2suue55CobWkYKgpxK8rfJGw=
 			</data>
 		</dict>
 		<key>Modules/linphonesw.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
@@ -188,11 +188,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			kjzAhVKw8GynfJNMap+wgeKgKjI=
+			jHjkUjgXk/tbvrPXmKLxkD9w3TQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			X0AeY0zv3kRRch4Oiaha3CwpnOJj2L74B+A/+URspjw=
+			BEfoQKLEM7cR+hbeTQu/EsMxXhtMU36I3w86HPw8o1Q=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
