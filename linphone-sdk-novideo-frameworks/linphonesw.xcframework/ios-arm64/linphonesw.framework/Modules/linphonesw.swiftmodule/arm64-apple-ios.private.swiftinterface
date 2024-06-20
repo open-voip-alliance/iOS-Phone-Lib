@@ -1,7 +1,6 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.9.2 effective-4.1.50 (swiftlang-5.9.2.2.56 clang-1500.1.0.2.5)
-// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 4 -enforce-exclusivity=checked -O -module-name linphonesw
-// swift-module-flags-ignorable: -enable-bare-slash-regex
+// swift-compiler-version: Apple Swift version 5.10 effective-4.1.50 (swiftlang-5.10.0.13 clang-1500.3.9.4)
+// swift-module-flags: -target arm64-apple-ios12.0 -enable-objc-interop -enable-library-evolution -swift-version 4 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name linphonesw
 import Foundation
 import Swift
 import SwiftUI
@@ -20,63 +19,6 @@ public enum AVPFMode : Swift.Int {
     get
   }
 }
-public enum AccountCreatorAlgoStatus : Swift.Int {
-  case Ok
-  case NotSupported
-  public init?(rawValue: Swift.Int)
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
-    get
-  }
-}
-public enum AccountCreatorBackend : Swift.Int {
-  case XMLRPC
-  case FlexiAPI
-  public init?(rawValue: Swift.Int)
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
-    get
-  }
-}
-public enum AddressFamily : Swift.Int {
-  case Inet
-  case Inet6
-  case Unspec
-  public init?(rawValue: Swift.Int)
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
-    get
-  }
-}
-public struct AudioDeviceCapabilities : Swift.OptionSet {
-  public let rawValue: Swift.Int
-  public init(rawValue: Swift.Int)
-  public static let CapabilityRecord: linphonesw.AudioDeviceCapabilities
-  public static let CapabilityPlay: linphonesw.AudioDeviceCapabilities
-  public static let CapabilityAll: linphonesw.AudioDeviceCapabilities
-  public typealias ArrayLiteralElement = linphonesw.AudioDeviceCapabilities
-  public typealias Element = linphonesw.AudioDeviceCapabilities
-  public typealias RawValue = Swift.Int
-}
-public enum AudioDeviceType : Swift.Int {
-  case Unknown
-  case Microphone
-  case Earpiece
-  case Speaker
-  case Bluetooth
-  case BluetoothA2DP
-  case Telephony
-  case AuxLine
-  case GenericUsb
-  case Headset
-  case Headphones
-  case HearingAid
-  public init?(rawValue: Swift.Int)
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
-    get
-  }
-}
 public enum AuthMethod : Swift.Int {
   case HttpDigest
   case Tls
@@ -86,103 +28,9 @@ public enum AuthMethod : Swift.Int {
     get
   }
 }
-public struct ChatRoomBackend : Swift.OptionSet {
-  public let rawValue: Swift.Int
-  public init(rawValue: Swift.Int)
-  public static let Basic: linphonesw.ChatRoomBackend
-  public static let FlexisipChat: linphonesw.ChatRoomBackend
-  public typealias ArrayLiteralElement = linphonesw.ChatRoomBackend
-  public typealias Element = linphonesw.ChatRoomBackend
-  public typealias RawValue = Swift.Int
-}
-public struct ChatRoomCapabilities : Swift.OptionSet {
-  public let rawValue: Swift.Int
-  public init(rawValue: Swift.Int)
-  public static let None: linphonesw.ChatRoomCapabilities
-  public static let Basic: linphonesw.ChatRoomCapabilities
-  public static let RealTimeText: linphonesw.ChatRoomCapabilities
-  public static let Conference: linphonesw.ChatRoomCapabilities
-  public static let Proxy: linphonesw.ChatRoomCapabilities
-  public static let Migratable: linphonesw.ChatRoomCapabilities
-  public static let OneToOne: linphonesw.ChatRoomCapabilities
-  public static let Encrypted: linphonesw.ChatRoomCapabilities
-  public static let Ephemeral: linphonesw.ChatRoomCapabilities
-  public typealias ArrayLiteralElement = linphonesw.ChatRoomCapabilities
-  public typealias Element = linphonesw.ChatRoomCapabilities
-  public typealias RawValue = Swift.Int
-}
-public struct ChatRoomEncryptionBackend : Swift.OptionSet {
-  public let rawValue: Swift.Int
-  public init(rawValue: Swift.Int)
-  public static let None: linphonesw.ChatRoomEncryptionBackend
-  public static let Lime: linphonesw.ChatRoomEncryptionBackend
-  public typealias ArrayLiteralElement = linphonesw.ChatRoomEncryptionBackend
-  public typealias Element = linphonesw.ChatRoomEncryptionBackend
-  public typealias RawValue = Swift.Int
-}
-public enum ChatRoomEphemeralMode : Swift.Int {
-  case DeviceManaged
-  case AdminManaged
-  public init?(rawValue: Swift.Int)
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
-    get
-  }
-}
-public enum ChatRoomSecurityLevel : Swift.Int {
-  case Unsafe
-  case ClearText
-  case Encrypted
-  case Safe
-  public init?(rawValue: Swift.Int)
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
-    get
-  }
-}
-public enum ConferenceInfoState : Swift.Int {
-  case New
-  case Updated
-  case Cancelled
-  public init?(rawValue: Swift.Int)
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
-    get
-  }
-}
-public enum ConferenceJoiningMode : Swift.Int {
-  case DialIn
-  case DialOut
-  public init?(rawValue: Swift.Int)
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
-    get
-  }
-}
-public enum ConferenceLayout : Swift.Int {
-  case Grid
-  case ActiveSpeaker
-  public init?(rawValue: Swift.Int)
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
-    get
-  }
-}
-public enum ConferenceParticipantListType : Swift.Int {
-  case Closed
-  case Open
-  public init?(rawValue: Swift.Int)
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
-    get
-  }
-}
-public enum ConferenceSchedulerState : Swift.Int {
-  case Idle
-  case Error
-  case AllocationPending
-  case Ready
-  case Updating
+public enum CodecPriorityPolicy : Swift.Int {
+  case Basic
+  case Auto
   public init?(rawValue: Swift.Int)
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
@@ -221,58 +69,6 @@ public enum EcCalibratorStatus : Swift.Int {
     get
   }
 }
-public enum EventLogType : Swift.Int {
-  case None
-  case ConferenceCreated
-  case ConferenceTerminated
-  case ConferenceCallStarted
-  case ConferenceConnected
-  case ConferenceCallEnded
-  case ConferenceChatMessage
-  case ConferenceParticipantAdded
-  case ConferenceParticipantRemoved
-  case ConferenceParticipantSetAdmin
-  case ConferenceParticipantUnsetAdmin
-  case ConferenceParticipantDeviceAdded
-  case ConferenceParticipantDeviceRemoved
-  case ConferenceParticipantDeviceMediaCapabilityChanged
-  case ConferenceParticipantDeviceMediaAvailabilityChanged
-  case ConferenceParticipantDeviceStatusChanged
-  case ConferenceSubjectChanged
-  case ConferenceAvailableMediaChanged
-  case ConferenceSecurityEvent
-  case ConferenceEphemeralMessageLifetimeChanged
-  case ConferenceEphemeralMessageEnabled
-  case ConferenceEphemeralMessageDisabled
-  case ConferenceEphemeralMessageManagedByAdmin
-  case ConferenceEphemeralMessageManagedByParticipants
-  public init?(rawValue: Swift.Int)
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
-    get
-  }
-}
-public struct FriendCapability : Swift.OptionSet {
-  public let rawValue: Swift.Int
-  public init(rawValue: Swift.Int)
-  public static let None: linphonesw.FriendCapability
-  public static let GroupChat: linphonesw.FriendCapability
-  public static let LimeX3Dh: linphonesw.FriendCapability
-  public static let EphemeralMessages: linphonesw.FriendCapability
-  public typealias ArrayLiteralElement = linphonesw.FriendCapability
-  public typealias Element = linphonesw.FriendCapability
-  public typealias RawValue = Swift.Int
-}
-public enum FriendListType : Swift.Int {
-  case Default
-  case CardDAV
-  case VCard4
-  public init?(rawValue: Swift.Int)
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
-    get
-  }
-}
 public enum GlobalState : Swift.Int {
   case Off
   case Startup
@@ -293,49 +89,6 @@ public enum IceState : Swift.Int {
   case HostConnection
   case ReflexiveConnection
   case RelayConnection
-  public init?(rawValue: Swift.Int)
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
-    get
-  }
-}
-public enum LdapAuthMethod : Swift.Int {
-  case Anonymous
-  case Simple
-  public init?(rawValue: Swift.Int)
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
-    get
-  }
-}
-public enum LdapCertVerificationMode : Swift.Int {
-  case Default
-  case Disabled
-  case Enabled
-  public init?(rawValue: Swift.Int)
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
-    get
-  }
-}
-public enum LdapCheck : Swift.Int {
-  case Ok
-  case ServerEmpty
-  case ServerNotUrl
-  case ServerNoScheme
-  case ServerNotLdap
-  case ServerLdaps
-  case BaseObjectEmpty
-  case MissingFields
-  public init?(rawValue: Swift.Int)
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
-    get
-  }
-}
-public enum LdapDebugLevel : Swift.Int {
-  case Off
-  case Verbose
   public init?(rawValue: Swift.Int)
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
@@ -375,30 +128,6 @@ public struct LogLevel : Swift.OptionSet {
   public typealias Element = linphonesw.LogLevel
   public typealias RawValue = Swift.Int
 }
-public enum MagicSearchAggregation : Swift.Int {
-  case None
-  case Friend
-  public init?(rawValue: Swift.Int)
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
-    get
-  }
-}
-public struct MagicSearchSource : Swift.OptionSet {
-  public let rawValue: Swift.Int
-  public init(rawValue: Swift.Int)
-  public static let None: linphonesw.MagicSearchSource
-  public static let Friends: linphonesw.MagicSearchSource
-  public static let CallLogs: linphonesw.MagicSearchSource
-  public static let LdapServers: linphonesw.MagicSearchSource
-  public static let ChatRooms: linphonesw.MagicSearchSource
-  public static let Request: linphonesw.MagicSearchSource
-  public static let FavoriteFriends: linphonesw.MagicSearchSource
-  public static let All: linphonesw.MagicSearchSource
-  public typealias ArrayLiteralElement = linphonesw.MagicSearchSource
-  public typealias Element = linphonesw.MagicSearchSource
-  public typealias RawValue = Swift.Int
-}
 public enum MediaDirection : Swift.Int {
   case Invalid
   case Inactive
@@ -431,77 +160,6 @@ public enum MediaResourceMode : Swift.Int {
     get
   }
 }
-public enum ParticipantDeviceDisconnectionMethod : Swift.Int {
-  case Booted
-  case Departed
-  case Busy
-  case Failed
-  public init?(rawValue: Swift.Int)
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
-    get
-  }
-}
-public enum ParticipantDeviceJoiningMethod : Swift.Int {
-  case DialedIn
-  case DialedOut
-  case FocusOwner
-  public init?(rawValue: Swift.Int)
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
-    get
-  }
-}
-public enum ParticipantDeviceState : Swift.Int {
-  case Joining
-  case Present
-  case Leaving
-  case Left
-  case ScheduledForJoining
-  case ScheduledForLeaving
-  case OnHold
-  case Alerting
-  case MutedByFocus
-  public init?(rawValue: Swift.Int)
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
-    get
-  }
-}
-public enum PresenceActivityType : Swift.Int {
-  case Appointment
-  case Away
-  case Breakfast
-  case Busy
-  case Dinner
-  case Holiday
-  case InTransit
-  case LookingForWork
-  case Lunch
-  case Meal
-  case Meeting
-  case OnThePhone
-  case Other
-  case Performance
-  case PermanentAbsence
-  case Playing
-  case Presentation
-  case Shopping
-  case Sleeping
-  case Spectator
-  case Steering
-  case Travel
-  case TV
-  case Unknown
-  case Vacation
-  case Working
-  case Worship
-  public init?(rawValue: Swift.Int)
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
-    get
-  }
-}
 public enum PresenceBasicStatus : Swift.Int {
   case Open
   case Closed
@@ -527,11 +185,13 @@ public enum Privacy : Swift.Int {
 }
 public enum PublishState : Swift.Int {
   case None
-  case Progress
+  case IncomingReceived
   case Ok
   case Error
   case Expiring
   case Cleared
+  case Terminating
+  case OutgoingProgress
   public init?(rawValue: Swift.Int)
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
@@ -563,26 +223,7 @@ public enum Reason : Swift.Int {
   case ServerTimeout
   case Unknown
   case Transferred
-  public init?(rawValue: Swift.Int)
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
-    get
-  }
-}
-public enum RecorderFileFormat : Swift.Int {
-  case Unknown
-  case Wav
-  case Mkv
-  public init?(rawValue: Swift.Int)
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
-    get
-  }
-}
-public enum RecorderState : Swift.Int {
-  case Closed
-  case Paused
-  case Running
+  case ConditionalRequestFailed
   public init?(rawValue: Swift.Int)
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
@@ -602,22 +243,29 @@ public enum RegistrationState : Swift.Int {
     get
   }
 }
-public enum SecurityEventType : Swift.Int {
-  case None
-  case SecurityLevelDowngraded
-  case ParticipantMaxDeviceCountExceeded
-  case EncryptionIdentityKeyChanged
-  case ManInTheMiddleDetected
+public enum SessionExpiresRefresher : Swift.Int {
+  case Unspecified
+  case UAS
+  case UAC
   public init?(rawValue: Swift.Int)
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
   }
 }
-public enum SessionExpiresRefresher : Swift.Int {
-  case Unspecified
-  case UAS
-  case UAC
+public enum SignalStrengthUnit : Swift.Int {
+  case Rssi
+  case Dbm
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum SignalType : Swift.Int {
+  case Wifi
+  case Mobile
+  case Other
   public init?(rawValue: Swift.Int)
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
@@ -831,6 +479,17 @@ public struct LinphoneVideoViewHolder : SwiftUI.UIViewRepresentable {
   public typealias Coordinator = Swift.Void
   public typealias UIViewType = UIKit.UIView
 }
+public protocol AccountDelegate : AnyObject {
+  func onRegistrationStateChanged(account: linphonesw.Account, state: linphonesw.RegistrationState, message: Swift.String)
+}
+extension linphonesw.AccountDelegate {
+  public func onRegistrationStateChanged(account: linphonesw.Account, state: linphonesw.RegistrationState, message: Swift.String)
+}
+final public class AccountDelegateStub : linphonesw.AccountDelegate {
+  final public func onRegistrationStateChanged(account: linphonesw.Account, state: linphonesw.RegistrationState, message: Swift.String)
+  public init(onRegistrationStateChanged: ((linphonesw.Account, linphonesw.RegistrationState, Swift.String) -> Swift.Void)? = nil)
+  @objc deinit
+}
 public protocol AccountCreatorDelegate : AnyObject {
   func onCreateAccount(creator: linphonesw.AccountCreator, status: linphonesw.AccountCreator.Status, response: Swift.String)
   func onIsAccountExist(creator: linphonesw.AccountCreator, status: linphonesw.AccountCreator.Status, response: Swift.String)
@@ -881,15 +540,15 @@ final public class AccountCreatorDelegateStub : linphonesw.AccountCreatorDelegat
   public init(onCreateAccount: ((linphonesw.AccountCreator, linphonesw.AccountCreator.Status, Swift.String) -> Swift.Void)? = nil, onIsAccountExist: ((linphonesw.AccountCreator, linphonesw.AccountCreator.Status, Swift.String) -> Swift.Void)? = nil, onActivateAccount: ((linphonesw.AccountCreator, linphonesw.AccountCreator.Status, Swift.String) -> Swift.Void)? = nil, onSendToken: ((linphonesw.AccountCreator, linphonesw.AccountCreator.Status, Swift.String) -> Swift.Void)? = nil, onAccountCreationRequestToken: ((linphonesw.AccountCreator, linphonesw.AccountCreator.Status, Swift.String) -> Swift.Void)? = nil, onAccountCreationTokenUsingRequestToken: ((linphonesw.AccountCreator, linphonesw.AccountCreator.Status, Swift.String) -> Swift.Void)? = nil, onIsAccountActivated: ((linphonesw.AccountCreator, linphonesw.AccountCreator.Status, Swift.String) -> Swift.Void)? = nil, onLinkAccount: ((linphonesw.AccountCreator, linphonesw.AccountCreator.Status, Swift.String) -> Swift.Void)? = nil, onActivateAlias: ((linphonesw.AccountCreator, linphonesw.AccountCreator.Status, Swift.String) -> Swift.Void)? = nil, onIsAliasUsed: ((linphonesw.AccountCreator, linphonesw.AccountCreator.Status, Swift.String) -> Swift.Void)? = nil, onIsAccountLinked: ((linphonesw.AccountCreator, linphonesw.AccountCreator.Status, Swift.String) -> Swift.Void)? = nil, onRecoverAccount: ((linphonesw.AccountCreator, linphonesw.AccountCreator.Status, Swift.String) -> Swift.Void)? = nil, onUpdateAccount: ((linphonesw.AccountCreator, linphonesw.AccountCreator.Status, Swift.String) -> Swift.Void)? = nil, onLoginLinphoneAccount: ((linphonesw.AccountCreator, linphonesw.AccountCreator.Status, Swift.String) -> Swift.Void)? = nil)
   @objc deinit
 }
-public protocol AccountDelegate : AnyObject {
-  func onRegistrationStateChanged(account: linphonesw.Account, state: linphonesw.RegistrationState, message: Swift.String)
+public protocol AlertDelegate : AnyObject {
+  func onTerminated(alert: linphonesw.Alert)
 }
-extension linphonesw.AccountDelegate {
-  public func onRegistrationStateChanged(account: linphonesw.Account, state: linphonesw.RegistrationState, message: Swift.String)
+extension linphonesw.AlertDelegate {
+  public func onTerminated(alert: linphonesw.Alert)
 }
-final public class AccountDelegateStub : linphonesw.AccountDelegate {
-  final public func onRegistrationStateChanged(account: linphonesw.Account, state: linphonesw.RegistrationState, message: Swift.String)
-  public init(onRegistrationStateChanged: ((linphonesw.Account, linphonesw.RegistrationState, Swift.String) -> Swift.Void)? = nil)
+final public class AlertDelegateStub : linphonesw.AlertDelegate {
+  final public func onTerminated(alert: linphonesw.Alert)
+  public init(onTerminated: ((linphonesw.Alert) -> Swift.Void)? = nil)
   @objc deinit
 }
 public protocol CallDelegate : AnyObject {
@@ -953,6 +612,8 @@ final public class CallDelegateStub : linphonesw.CallDelegate {
 }
 public protocol ChatMessageDelegate : AnyObject {
   func onMsgStateChanged(message: linphonesw.ChatMessage, state: linphonesw.ChatMessage.State)
+  func onNewMessageReaction(message: linphonesw.ChatMessage, reaction: linphonesw.ChatMessageReaction)
+  func onReactionRemoved(message: linphonesw.ChatMessage, address: linphonesw.Address)
   func onFileTransferRecv(message: linphonesw.ChatMessage, content: linphonesw.Content, buffer: linphonesw.Buffer)
   func onFileTransferSend(message: linphonesw.ChatMessage, content: linphonesw.Content, offset: Swift.Int, size: Swift.Int) -> linphonesw.Buffer?
   func onFileTransferSendChunk(message: linphonesw.ChatMessage, content: linphonesw.Content, offset: Swift.Int, size: Swift.Int, buffer: linphonesw.Buffer)
@@ -963,6 +624,8 @@ public protocol ChatMessageDelegate : AnyObject {
 }
 extension linphonesw.ChatMessageDelegate {
   public func onMsgStateChanged(message: linphonesw.ChatMessage, state: linphonesw.ChatMessage.State)
+  public func onNewMessageReaction(message: linphonesw.ChatMessage, reaction: linphonesw.ChatMessageReaction)
+  public func onReactionRemoved(message: linphonesw.ChatMessage, address: linphonesw.Address)
   public func onFileTransferRecv(message: linphonesw.ChatMessage, content: linphonesw.Content, buffer: linphonesw.Buffer)
   public func onFileTransferSend(message: linphonesw.ChatMessage, content: linphonesw.Content, offset: Swift.Int, size: Swift.Int) -> linphonesw.Buffer?
   public func onFileTransferSendChunk(message: linphonesw.ChatMessage, content: linphonesw.Content, offset: Swift.Int, size: Swift.Int, buffer: linphonesw.Buffer)
@@ -973,6 +636,8 @@ extension linphonesw.ChatMessageDelegate {
 }
 final public class ChatMessageDelegateStub : linphonesw.ChatMessageDelegate {
   final public func onMsgStateChanged(message: linphonesw.ChatMessage, state: linphonesw.ChatMessage.State)
+  final public func onNewMessageReaction(message: linphonesw.ChatMessage, reaction: linphonesw.ChatMessageReaction)
+  final public func onReactionRemoved(message: linphonesw.ChatMessage, address: linphonesw.Address)
   final public func onFileTransferRecv(message: linphonesw.ChatMessage, content: linphonesw.Content, buffer: linphonesw.Buffer)
   final public func onFileTransferSend(message: linphonesw.ChatMessage, content: linphonesw.Content, offset: Swift.Int, size: Swift.Int)
   final public func onFileTransferSendChunk(message: linphonesw.ChatMessage, content: linphonesw.Content, offset: Swift.Int, size: Swift.Int, buffer: linphonesw.Buffer)
@@ -980,7 +645,7 @@ final public class ChatMessageDelegateStub : linphonesw.ChatMessageDelegate {
   final public func onParticipantImdnStateChanged(message: linphonesw.ChatMessage, state: linphonesw.ParticipantImdnState)
   final public func onEphemeralMessageTimerStarted(message: linphonesw.ChatMessage)
   final public func onEphemeralMessageDeleted(message: linphonesw.ChatMessage)
-  public init(onMsgStateChanged: ((linphonesw.ChatMessage, linphonesw.ChatMessage.State) -> Swift.Void)? = nil, onFileTransferRecv: ((linphonesw.ChatMessage, linphonesw.Content, linphonesw.Buffer) -> Swift.Void)? = nil, onFileTransferSend: ((linphonesw.ChatMessage, linphonesw.Content, Swift.Int, Swift.Int) -> Swift.Void)? = nil, onFileTransferSendChunk: ((linphonesw.ChatMessage, linphonesw.Content, Swift.Int, Swift.Int, linphonesw.Buffer) -> Swift.Void)? = nil, onFileTransferProgressIndication: ((linphonesw.ChatMessage, linphonesw.Content, Swift.Int, Swift.Int) -> Swift.Void)? = nil, onParticipantImdnStateChanged: ((linphonesw.ChatMessage, linphonesw.ParticipantImdnState) -> Swift.Void)? = nil, onEphemeralMessageTimerStarted: ((linphonesw.ChatMessage) -> Swift.Void)? = nil, onEphemeralMessageDeleted: ((linphonesw.ChatMessage) -> Swift.Void)? = nil)
+  public init(onMsgStateChanged: ((linphonesw.ChatMessage, linphonesw.ChatMessage.State) -> Swift.Void)? = nil, onNewMessageReaction: ((linphonesw.ChatMessage, linphonesw.ChatMessageReaction) -> Swift.Void)? = nil, onReactionRemoved: ((linphonesw.ChatMessage, linphonesw.Address) -> Swift.Void)? = nil, onFileTransferRecv: ((linphonesw.ChatMessage, linphonesw.Content, linphonesw.Buffer) -> Swift.Void)? = nil, onFileTransferSend: ((linphonesw.ChatMessage, linphonesw.Content, Swift.Int, Swift.Int) -> Swift.Void)? = nil, onFileTransferSendChunk: ((linphonesw.ChatMessage, linphonesw.Content, Swift.Int, Swift.Int, linphonesw.Buffer) -> Swift.Void)? = nil, onFileTransferProgressIndication: ((linphonesw.ChatMessage, linphonesw.Content, Swift.Int, Swift.Int) -> Swift.Void)? = nil, onParticipantImdnStateChanged: ((linphonesw.ChatMessage, linphonesw.ParticipantImdnState) -> Swift.Void)? = nil, onEphemeralMessageTimerStarted: ((linphonesw.ChatMessage) -> Swift.Void)? = nil, onEphemeralMessageDeleted: ((linphonesw.ChatMessage) -> Swift.Void)? = nil)
   @objc deinit
 }
 public protocol ChatRoomDelegate : AnyObject {
@@ -1002,7 +667,7 @@ public protocol ChatRoomDelegate : AnyObject {
   func onUndecryptableMessageReceived(chatRoom: linphonesw.ChatRoom, message: linphonesw.ChatMessage)
   func onParticipantDeviceAdded(chatRoom: linphonesw.ChatRoom, eventLog: linphonesw.EventLog)
   func onParticipantDeviceRemoved(chatRoom: linphonesw.ChatRoom, eventLog: linphonesw.EventLog)
-  func onParticipantDeviceStateChanged(chatRoom: linphonesw.ChatRoom, eventLog: linphonesw.EventLog, state: linphonesw.ParticipantDeviceState)
+  func onParticipantDeviceStateChanged(chatRoom: linphonesw.ChatRoom, eventLog: linphonesw.EventLog, state: linphonesw.ParticipantDevice.State)
   func onParticipantDeviceMediaAvailabilityChanged(chatRoom: linphonesw.ChatRoom, eventLog: linphonesw.EventLog)
   func onConferenceJoined(chatRoom: linphonesw.ChatRoom, eventLog: linphonesw.EventLog)
   func onConferenceLeft(chatRoom: linphonesw.ChatRoom, eventLog: linphonesw.EventLog)
@@ -1014,6 +679,7 @@ public protocol ChatRoomDelegate : AnyObject {
   func onParticipantRegistrationUnsubscriptionRequested(chatRoom: linphonesw.ChatRoom, participantAddress: linphonesw.Address)
   func onChatMessageShouldBeStored(chatRoom: linphonesw.ChatRoom, message: linphonesw.ChatMessage)
   func onChatMessageParticipantImdnStateChanged(chatRoom: linphonesw.ChatRoom, message: linphonesw.ChatMessage, state: linphonesw.ParticipantImdnState)
+  func onChatRoomRead(chatRoom: linphonesw.ChatRoom)
 }
 extension linphonesw.ChatRoomDelegate {
   public func onIsComposingReceived(chatRoom: linphonesw.ChatRoom, remoteAddress: linphonesw.Address, isComposing: Swift.Bool)
@@ -1034,7 +700,7 @@ extension linphonesw.ChatRoomDelegate {
   public func onUndecryptableMessageReceived(chatRoom: linphonesw.ChatRoom, message: linphonesw.ChatMessage)
   public func onParticipantDeviceAdded(chatRoom: linphonesw.ChatRoom, eventLog: linphonesw.EventLog)
   public func onParticipantDeviceRemoved(chatRoom: linphonesw.ChatRoom, eventLog: linphonesw.EventLog)
-  public func onParticipantDeviceStateChanged(chatRoom: linphonesw.ChatRoom, eventLog: linphonesw.EventLog, state: linphonesw.ParticipantDeviceState)
+  public func onParticipantDeviceStateChanged(chatRoom: linphonesw.ChatRoom, eventLog: linphonesw.EventLog, state: linphonesw.ParticipantDevice.State)
   public func onParticipantDeviceMediaAvailabilityChanged(chatRoom: linphonesw.ChatRoom, eventLog: linphonesw.EventLog)
   public func onConferenceJoined(chatRoom: linphonesw.ChatRoom, eventLog: linphonesw.EventLog)
   public func onConferenceLeft(chatRoom: linphonesw.ChatRoom, eventLog: linphonesw.EventLog)
@@ -1046,6 +712,7 @@ extension linphonesw.ChatRoomDelegate {
   public func onParticipantRegistrationUnsubscriptionRequested(chatRoom: linphonesw.ChatRoom, participantAddress: linphonesw.Address)
   public func onChatMessageShouldBeStored(chatRoom: linphonesw.ChatRoom, message: linphonesw.ChatMessage)
   public func onChatMessageParticipantImdnStateChanged(chatRoom: linphonesw.ChatRoom, message: linphonesw.ChatMessage, state: linphonesw.ParticipantImdnState)
+  public func onChatRoomRead(chatRoom: linphonesw.ChatRoom)
 }
 final public class ChatRoomDelegateStub : linphonesw.ChatRoomDelegate {
   final public func onIsComposingReceived(chatRoom: linphonesw.ChatRoom, remoteAddress: linphonesw.Address, isComposing: Swift.Bool)
@@ -1066,7 +733,7 @@ final public class ChatRoomDelegateStub : linphonesw.ChatRoomDelegate {
   final public func onUndecryptableMessageReceived(chatRoom: linphonesw.ChatRoom, message: linphonesw.ChatMessage)
   final public func onParticipantDeviceAdded(chatRoom: linphonesw.ChatRoom, eventLog: linphonesw.EventLog)
   final public func onParticipantDeviceRemoved(chatRoom: linphonesw.ChatRoom, eventLog: linphonesw.EventLog)
-  final public func onParticipantDeviceStateChanged(chatRoom: linphonesw.ChatRoom, eventLog: linphonesw.EventLog, state: linphonesw.ParticipantDeviceState)
+  final public func onParticipantDeviceStateChanged(chatRoom: linphonesw.ChatRoom, eventLog: linphonesw.EventLog, state: linphonesw.ParticipantDevice.State)
   final public func onParticipantDeviceMediaAvailabilityChanged(chatRoom: linphonesw.ChatRoom, eventLog: linphonesw.EventLog)
   final public func onConferenceJoined(chatRoom: linphonesw.ChatRoom, eventLog: linphonesw.EventLog)
   final public func onConferenceLeft(chatRoom: linphonesw.ChatRoom, eventLog: linphonesw.EventLog)
@@ -1078,7 +745,8 @@ final public class ChatRoomDelegateStub : linphonesw.ChatRoomDelegate {
   final public func onParticipantRegistrationUnsubscriptionRequested(chatRoom: linphonesw.ChatRoom, participantAddress: linphonesw.Address)
   final public func onChatMessageShouldBeStored(chatRoom: linphonesw.ChatRoom, message: linphonesw.ChatMessage)
   final public func onChatMessageParticipantImdnStateChanged(chatRoom: linphonesw.ChatRoom, message: linphonesw.ChatMessage, state: linphonesw.ParticipantImdnState)
-  public init(onIsComposingReceived: ((linphonesw.ChatRoom, linphonesw.Address, Swift.Bool) -> Swift.Void)? = nil, onMessageReceived: ((linphonesw.ChatRoom, linphonesw.ChatMessage) -> Swift.Void)? = nil, onMessagesReceived: ((linphonesw.ChatRoom, [linphonesw.ChatMessage]) -> Swift.Void)? = nil, onNewEvent: ((linphonesw.ChatRoom, linphonesw.EventLog) -> Swift.Void)? = nil, onNewEvents: ((linphonesw.ChatRoom, [linphonesw.EventLog]) -> Swift.Void)? = nil, onChatMessageReceived: ((linphonesw.ChatRoom, linphonesw.EventLog) -> Swift.Void)? = nil, onChatMessagesReceived: ((linphonesw.ChatRoom, [linphonesw.EventLog]) -> Swift.Void)? = nil, onChatMessageSending: ((linphonesw.ChatRoom, linphonesw.EventLog) -> Swift.Void)? = nil, onChatMessageSent: ((linphonesw.ChatRoom, linphonesw.EventLog) -> Swift.Void)? = nil, onParticipantAdded: ((linphonesw.ChatRoom, linphonesw.EventLog) -> Swift.Void)? = nil, onParticipantRemoved: ((linphonesw.ChatRoom, linphonesw.EventLog) -> Swift.Void)? = nil, onParticipantAdminStatusChanged: ((linphonesw.ChatRoom, linphonesw.EventLog) -> Swift.Void)? = nil, onStateChanged: ((linphonesw.ChatRoom, linphonesw.ChatRoom.State) -> Swift.Void)? = nil, onSecurityEvent: ((linphonesw.ChatRoom, linphonesw.EventLog) -> Swift.Void)? = nil, onSubjectChanged: ((linphonesw.ChatRoom, linphonesw.EventLog) -> Swift.Void)? = nil, onUndecryptableMessageReceived: ((linphonesw.ChatRoom, linphonesw.ChatMessage) -> Swift.Void)? = nil, onParticipantDeviceAdded: ((linphonesw.ChatRoom, linphonesw.EventLog) -> Swift.Void)? = nil, onParticipantDeviceRemoved: ((linphonesw.ChatRoom, linphonesw.EventLog) -> Swift.Void)? = nil, onParticipantDeviceStateChanged: ((linphonesw.ChatRoom, linphonesw.EventLog, linphonesw.ParticipantDeviceState) -> Swift.Void)? = nil, onParticipantDeviceMediaAvailabilityChanged: ((linphonesw.ChatRoom, linphonesw.EventLog) -> Swift.Void)? = nil, onConferenceJoined: ((linphonesw.ChatRoom, linphonesw.EventLog) -> Swift.Void)? = nil, onConferenceLeft: ((linphonesw.ChatRoom, linphonesw.EventLog) -> Swift.Void)? = nil, onEphemeralEvent: ((linphonesw.ChatRoom, linphonesw.EventLog) -> Swift.Void)? = nil, onEphemeralMessageTimerStarted: ((linphonesw.ChatRoom, linphonesw.EventLog) -> Swift.Void)? = nil, onEphemeralMessageDeleted: ((linphonesw.ChatRoom, linphonesw.EventLog) -> Swift.Void)? = nil, onConferenceAddressGeneration: ((linphonesw.ChatRoom) -> Swift.Void)? = nil, onParticipantRegistrationSubscriptionRequested: ((linphonesw.ChatRoom, linphonesw.Address) -> Swift.Void)? = nil, onParticipantRegistrationUnsubscriptionRequested: ((linphonesw.ChatRoom, linphonesw.Address) -> Swift.Void)? = nil, onChatMessageShouldBeStored: ((linphonesw.ChatRoom, linphonesw.ChatMessage) -> Swift.Void)? = nil, onChatMessageParticipantImdnStateChanged: ((linphonesw.ChatRoom, linphonesw.ChatMessage, linphonesw.ParticipantImdnState) -> Swift.Void)? = nil)
+  final public func onChatRoomRead(chatRoom: linphonesw.ChatRoom)
+  public init(onIsComposingReceived: ((linphonesw.ChatRoom, linphonesw.Address, Swift.Bool) -> Swift.Void)? = nil, onMessageReceived: ((linphonesw.ChatRoom, linphonesw.ChatMessage) -> Swift.Void)? = nil, onMessagesReceived: ((linphonesw.ChatRoom, [linphonesw.ChatMessage]) -> Swift.Void)? = nil, onNewEvent: ((linphonesw.ChatRoom, linphonesw.EventLog) -> Swift.Void)? = nil, onNewEvents: ((linphonesw.ChatRoom, [linphonesw.EventLog]) -> Swift.Void)? = nil, onChatMessageReceived: ((linphonesw.ChatRoom, linphonesw.EventLog) -> Swift.Void)? = nil, onChatMessagesReceived: ((linphonesw.ChatRoom, [linphonesw.EventLog]) -> Swift.Void)? = nil, onChatMessageSending: ((linphonesw.ChatRoom, linphonesw.EventLog) -> Swift.Void)? = nil, onChatMessageSent: ((linphonesw.ChatRoom, linphonesw.EventLog) -> Swift.Void)? = nil, onParticipantAdded: ((linphonesw.ChatRoom, linphonesw.EventLog) -> Swift.Void)? = nil, onParticipantRemoved: ((linphonesw.ChatRoom, linphonesw.EventLog) -> Swift.Void)? = nil, onParticipantAdminStatusChanged: ((linphonesw.ChatRoom, linphonesw.EventLog) -> Swift.Void)? = nil, onStateChanged: ((linphonesw.ChatRoom, linphonesw.ChatRoom.State) -> Swift.Void)? = nil, onSecurityEvent: ((linphonesw.ChatRoom, linphonesw.EventLog) -> Swift.Void)? = nil, onSubjectChanged: ((linphonesw.ChatRoom, linphonesw.EventLog) -> Swift.Void)? = nil, onUndecryptableMessageReceived: ((linphonesw.ChatRoom, linphonesw.ChatMessage) -> Swift.Void)? = nil, onParticipantDeviceAdded: ((linphonesw.ChatRoom, linphonesw.EventLog) -> Swift.Void)? = nil, onParticipantDeviceRemoved: ((linphonesw.ChatRoom, linphonesw.EventLog) -> Swift.Void)? = nil, onParticipantDeviceStateChanged: ((linphonesw.ChatRoom, linphonesw.EventLog, linphonesw.ParticipantDevice.State) -> Swift.Void)? = nil, onParticipantDeviceMediaAvailabilityChanged: ((linphonesw.ChatRoom, linphonesw.EventLog) -> Swift.Void)? = nil, onConferenceJoined: ((linphonesw.ChatRoom, linphonesw.EventLog) -> Swift.Void)? = nil, onConferenceLeft: ((linphonesw.ChatRoom, linphonesw.EventLog) -> Swift.Void)? = nil, onEphemeralEvent: ((linphonesw.ChatRoom, linphonesw.EventLog) -> Swift.Void)? = nil, onEphemeralMessageTimerStarted: ((linphonesw.ChatRoom, linphonesw.EventLog) -> Swift.Void)? = nil, onEphemeralMessageDeleted: ((linphonesw.ChatRoom, linphonesw.EventLog) -> Swift.Void)? = nil, onConferenceAddressGeneration: ((linphonesw.ChatRoom) -> Swift.Void)? = nil, onParticipantRegistrationSubscriptionRequested: ((linphonesw.ChatRoom, linphonesw.Address) -> Swift.Void)? = nil, onParticipantRegistrationUnsubscriptionRequested: ((linphonesw.ChatRoom, linphonesw.Address) -> Swift.Void)? = nil, onChatMessageShouldBeStored: ((linphonesw.ChatRoom, linphonesw.ChatMessage) -> Swift.Void)? = nil, onChatMessageParticipantImdnStateChanged: ((linphonesw.ChatRoom, linphonesw.ChatMessage, linphonesw.ParticipantImdnState) -> Swift.Void)? = nil, onChatRoomRead: ((linphonesw.ChatRoom) -> Swift.Void)? = nil)
   @objc deinit
 }
 public protocol ConferenceDelegate : AnyObject {
@@ -1086,8 +754,9 @@ public protocol ConferenceDelegate : AnyObject {
   func onParticipantRemoved(conference: linphonesw.Conference, participant: linphonesw.Participant)
   func onParticipantDeviceAdded(conference: linphonesw.Conference, participantDevice: linphonesw.ParticipantDevice)
   func onParticipantDeviceRemoved(conference: linphonesw.Conference, participantDevice: linphonesw.ParticipantDevice)
+  func onParticipantRoleChanged(conference: linphonesw.Conference, participant: linphonesw.Participant)
   func onParticipantAdminStatusChanged(conference: linphonesw.Conference, participant: linphonesw.Participant)
-  func onParticipantDeviceStateChanged(conference: linphonesw.Conference, device: linphonesw.ParticipantDevice, state: linphonesw.ParticipantDeviceState)
+  func onParticipantDeviceStateChanged(conference: linphonesw.Conference, device: linphonesw.ParticipantDevice, state: linphonesw.ParticipantDevice.State)
   func onParticipantDeviceMediaAvailabilityChanged(conference: linphonesw.Conference, device: linphonesw.ParticipantDevice)
   func onParticipantDeviceMediaCapabilityChanged(conference: linphonesw.Conference, device: linphonesw.ParticipantDevice)
   func onStateChanged(conference: linphonesw.Conference, newState: linphonesw.Conference.State)
@@ -1103,8 +772,9 @@ extension linphonesw.ConferenceDelegate {
   public func onParticipantRemoved(conference: linphonesw.Conference, participant: linphonesw.Participant)
   public func onParticipantDeviceAdded(conference: linphonesw.Conference, participantDevice: linphonesw.ParticipantDevice)
   public func onParticipantDeviceRemoved(conference: linphonesw.Conference, participantDevice: linphonesw.ParticipantDevice)
+  public func onParticipantRoleChanged(conference: linphonesw.Conference, participant: linphonesw.Participant)
   public func onParticipantAdminStatusChanged(conference: linphonesw.Conference, participant: linphonesw.Participant)
-  public func onParticipantDeviceStateChanged(conference: linphonesw.Conference, device: linphonesw.ParticipantDevice, state: linphonesw.ParticipantDeviceState)
+  public func onParticipantDeviceStateChanged(conference: linphonesw.Conference, device: linphonesw.ParticipantDevice, state: linphonesw.ParticipantDevice.State)
   public func onParticipantDeviceMediaAvailabilityChanged(conference: linphonesw.Conference, device: linphonesw.ParticipantDevice)
   public func onParticipantDeviceMediaCapabilityChanged(conference: linphonesw.Conference, device: linphonesw.ParticipantDevice)
   public func onStateChanged(conference: linphonesw.Conference, newState: linphonesw.Conference.State)
@@ -1120,8 +790,9 @@ final public class ConferenceDelegateStub : linphonesw.ConferenceDelegate {
   final public func onParticipantRemoved(conference: linphonesw.Conference, participant: linphonesw.Participant)
   final public func onParticipantDeviceAdded(conference: linphonesw.Conference, participantDevice: linphonesw.ParticipantDevice)
   final public func onParticipantDeviceRemoved(conference: linphonesw.Conference, participantDevice: linphonesw.ParticipantDevice)
+  final public func onParticipantRoleChanged(conference: linphonesw.Conference, participant: linphonesw.Participant)
   final public func onParticipantAdminStatusChanged(conference: linphonesw.Conference, participant: linphonesw.Participant)
-  final public func onParticipantDeviceStateChanged(conference: linphonesw.Conference, device: linphonesw.ParticipantDevice, state: linphonesw.ParticipantDeviceState)
+  final public func onParticipantDeviceStateChanged(conference: linphonesw.Conference, device: linphonesw.ParticipantDevice, state: linphonesw.ParticipantDevice.State)
   final public func onParticipantDeviceMediaAvailabilityChanged(conference: linphonesw.Conference, device: linphonesw.ParticipantDevice)
   final public func onParticipantDeviceMediaCapabilityChanged(conference: linphonesw.Conference, device: linphonesw.ParticipantDevice)
   final public func onStateChanged(conference: linphonesw.Conference, newState: linphonesw.Conference.State)
@@ -1131,24 +802,25 @@ final public class ConferenceDelegateStub : linphonesw.ConferenceDelegate {
   final public func onParticipantDeviceIsMuted(conference: linphonesw.Conference, participantDevice: linphonesw.ParticipantDevice, isMuted: Swift.Bool)
   final public func onAudioDeviceChanged(conference: linphonesw.Conference, audioDevice: linphonesw.AudioDevice)
   final public func onActiveSpeakerParticipantDevice(conference: linphonesw.Conference, participantDevice: linphonesw.ParticipantDevice)
-  public init(onParticipantAdded: ((linphonesw.Conference, linphonesw.Participant) -> Swift.Void)? = nil, onParticipantRemoved: ((linphonesw.Conference, linphonesw.Participant) -> Swift.Void)? = nil, onParticipantDeviceAdded: ((linphonesw.Conference, linphonesw.ParticipantDevice) -> Swift.Void)? = nil, onParticipantDeviceRemoved: ((linphonesw.Conference, linphonesw.ParticipantDevice) -> Swift.Void)? = nil, onParticipantAdminStatusChanged: ((linphonesw.Conference, linphonesw.Participant) -> Swift.Void)? = nil, onParticipantDeviceStateChanged: ((linphonesw.Conference, linphonesw.ParticipantDevice, linphonesw.ParticipantDeviceState) -> Swift.Void)? = nil, onParticipantDeviceMediaAvailabilityChanged: ((linphonesw.Conference, linphonesw.ParticipantDevice) -> Swift.Void)? = nil, onParticipantDeviceMediaCapabilityChanged: ((linphonesw.Conference, linphonesw.ParticipantDevice) -> Swift.Void)? = nil, onStateChanged: ((linphonesw.Conference, linphonesw.Conference.State) -> Swift.Void)? = nil, onAvailableMediaChanged: ((linphonesw.Conference) -> Swift.Void)? = nil, onSubjectChanged: ((linphonesw.Conference, Swift.String) -> Swift.Void)? = nil, onParticipantDeviceIsSpeakingChanged: ((linphonesw.Conference, linphonesw.ParticipantDevice, Swift.Bool) -> Swift.Void)? = nil, onParticipantDeviceIsMuted: ((linphonesw.Conference, linphonesw.ParticipantDevice, Swift.Bool) -> Swift.Void)? = nil, onAudioDeviceChanged: ((linphonesw.Conference, linphonesw.AudioDevice) -> Swift.Void)? = nil, onActiveSpeakerParticipantDevice: ((linphonesw.Conference, linphonesw.ParticipantDevice) -> Swift.Void)? = nil)
+  public init(onParticipantAdded: ((linphonesw.Conference, linphonesw.Participant) -> Swift.Void)? = nil, onParticipantRemoved: ((linphonesw.Conference, linphonesw.Participant) -> Swift.Void)? = nil, onParticipantDeviceAdded: ((linphonesw.Conference, linphonesw.ParticipantDevice) -> Swift.Void)? = nil, onParticipantDeviceRemoved: ((linphonesw.Conference, linphonesw.ParticipantDevice) -> Swift.Void)? = nil, onParticipantRoleChanged: ((linphonesw.Conference, linphonesw.Participant) -> Swift.Void)? = nil, onParticipantAdminStatusChanged: ((linphonesw.Conference, linphonesw.Participant) -> Swift.Void)? = nil, onParticipantDeviceStateChanged: ((linphonesw.Conference, linphonesw.ParticipantDevice, linphonesw.ParticipantDevice.State) -> Swift.Void)? = nil, onParticipantDeviceMediaAvailabilityChanged: ((linphonesw.Conference, linphonesw.ParticipantDevice) -> Swift.Void)? = nil, onParticipantDeviceMediaCapabilityChanged: ((linphonesw.Conference, linphonesw.ParticipantDevice) -> Swift.Void)? = nil, onStateChanged: ((linphonesw.Conference, linphonesw.Conference.State) -> Swift.Void)? = nil, onAvailableMediaChanged: ((linphonesw.Conference) -> Swift.Void)? = nil, onSubjectChanged: ((linphonesw.Conference, Swift.String) -> Swift.Void)? = nil, onParticipantDeviceIsSpeakingChanged: ((linphonesw.Conference, linphonesw.ParticipantDevice, Swift.Bool) -> Swift.Void)? = nil, onParticipantDeviceIsMuted: ((linphonesw.Conference, linphonesw.ParticipantDevice, Swift.Bool) -> Swift.Void)? = nil, onAudioDeviceChanged: ((linphonesw.Conference, linphonesw.AudioDevice) -> Swift.Void)? = nil, onActiveSpeakerParticipantDevice: ((linphonesw.Conference, linphonesw.ParticipantDevice) -> Swift.Void)? = nil)
   @objc deinit
 }
 public protocol ConferenceSchedulerDelegate : AnyObject {
-  func onStateChanged(conferenceScheduler: linphonesw.ConferenceScheduler, state: linphonesw.ConferenceSchedulerState)
+  func onStateChanged(conferenceScheduler: linphonesw.ConferenceScheduler, state: linphonesw.ConferenceScheduler.State)
   func onInvitationsSent(conferenceScheduler: linphonesw.ConferenceScheduler, failedInvitations: [linphonesw.Address])
 }
 extension linphonesw.ConferenceSchedulerDelegate {
-  public func onStateChanged(conferenceScheduler: linphonesw.ConferenceScheduler, state: linphonesw.ConferenceSchedulerState)
+  public func onStateChanged(conferenceScheduler: linphonesw.ConferenceScheduler, state: linphonesw.ConferenceScheduler.State)
   public func onInvitationsSent(conferenceScheduler: linphonesw.ConferenceScheduler, failedInvitations: [linphonesw.Address])
 }
 final public class ConferenceSchedulerDelegateStub : linphonesw.ConferenceSchedulerDelegate {
-  final public func onStateChanged(conferenceScheduler: linphonesw.ConferenceScheduler, state: linphonesw.ConferenceSchedulerState)
+  final public func onStateChanged(conferenceScheduler: linphonesw.ConferenceScheduler, state: linphonesw.ConferenceScheduler.State)
   final public func onInvitationsSent(conferenceScheduler: linphonesw.ConferenceScheduler, failedInvitations: [linphonesw.Address])
-  public init(onStateChanged: ((linphonesw.ConferenceScheduler, linphonesw.ConferenceSchedulerState) -> Swift.Void)? = nil, onInvitationsSent: ((linphonesw.ConferenceScheduler, [linphonesw.Address]) -> Swift.Void)? = nil)
+  public init(onStateChanged: ((linphonesw.ConferenceScheduler, linphonesw.ConferenceScheduler.State) -> Swift.Void)? = nil, onInvitationsSent: ((linphonesw.ConferenceScheduler, [linphonesw.Address]) -> Swift.Void)? = nil)
   @objc deinit
 }
 public protocol CoreDelegate : AnyObject {
+  func onNewAlertTriggered(core: linphonesw.Core, alert: linphonesw.Alert)
   func onGlobalStateChanged(core: linphonesw.Core, state: linphonesw.GlobalState, message: Swift.String)
   func onRegistrationStateChanged(core: linphonesw.Core, proxyConfig: linphonesw.ProxyConfig, state: linphonesw.RegistrationState, message: Swift.String)
   func onConferenceInfoReceived(core: linphonesw.Core, conferenceInfo: linphonesw.ConferenceInfo)
@@ -1162,6 +834,8 @@ public protocol CoreDelegate : AnyObject {
   func onCallLogUpdated(core: linphonesw.Core, callLog: linphonesw.CallLog)
   func onCallIdUpdated(core: linphonesw.Core, previousCallId: Swift.String, currentCallId: Swift.String)
   func onMessageReceived(core: linphonesw.Core, chatRoom: linphonesw.ChatRoom, message: linphonesw.ChatMessage)
+  func onNewMessageReaction(core: linphonesw.Core, chatRoom: linphonesw.ChatRoom, message: linphonesw.ChatMessage, reaction: linphonesw.ChatMessageReaction)
+  func onReactionRemoved(core: linphonesw.Core, chatRoom: linphonesw.ChatRoom, message: linphonesw.ChatMessage, address: linphonesw.Address)
   func onMessagesReceived(core: linphonesw.Core, chatRoom: linphonesw.ChatRoom, messages: [linphonesw.ChatMessage])
   func onMessageSent(core: linphonesw.Core, chatRoom: linphonesw.ChatRoom, message: linphonesw.ChatMessage)
   func onChatRoomSessionStateChanged(core: linphonesw.Core, chatRoom: linphonesw.ChatRoom, state: linphonesw.Call.State, message: Swift.String)
@@ -1179,10 +853,11 @@ public protocol CoreDelegate : AnyObject {
   func onCallStatsUpdated(core: linphonesw.Core, call: linphonesw.Call, callStats: linphonesw.CallStats)
   func onInfoReceived(core: linphonesw.Core, call: linphonesw.Call, message: linphonesw.InfoMessage)
   func onSubscriptionStateChanged(core: linphonesw.Core, linphoneEvent: linphonesw.Event, state: linphonesw.SubscriptionState)
-  func onNotifySent(core: linphonesw.Core, linphoneEvent: linphonesw.Event, body: linphonesw.Content)
-  func onNotifyReceived(core: linphonesw.Core, linphoneEvent: linphonesw.Event, notifiedEvent: Swift.String, body: linphonesw.Content)
+  func onNotifySent(core: linphonesw.Core, linphoneEvent: linphonesw.Event, body: linphonesw.Content?)
+  func onNotifyReceived(core: linphonesw.Core, linphoneEvent: linphonesw.Event, notifiedEvent: Swift.String, body: linphonesw.Content?)
   func onSubscribeReceived(core: linphonesw.Core, linphoneEvent: linphonesw.Event, subscribeEvent: Swift.String, body: linphonesw.Content?)
   func onPublishStateChanged(core: linphonesw.Core, linphoneEvent: linphonesw.Event, state: linphonesw.PublishState)
+  func onPublishReceived(core: linphonesw.Core, linphoneEvent: linphonesw.Event, publishEvent: Swift.String, body: linphonesw.Content?)
   func onConfiguringStatus(core: linphonesw.Core, status: linphonesw.ConfiguringState, message: Swift.String)
   func onNetworkReachable(core: linphonesw.Core, reachable: Swift.Bool)
   func onLogCollectionUploadStateChanged(core: linphonesw.Core, state: linphonesw.Core.LogCollectionUploadState, info: Swift.String)
@@ -1205,8 +880,12 @@ public protocol CoreDelegate : AnyObject {
   func onEcCalibrationAudioInit(core: linphonesw.Core)
   func onEcCalibrationAudioUninit(core: linphonesw.Core)
   func onAccountRegistrationStateChanged(core: linphonesw.Core, account: linphonesw.Account, state: linphonesw.RegistrationState, message: Swift.String)
+  func onDefaultAccountChanged(core: linphonesw.Core, account: linphonesw.Account?)
+  func onAccountAdded(core: linphonesw.Core, account: linphonesw.Account)
+  func onAccountRemoved(core: linphonesw.Core, account: linphonesw.Account)
 }
 extension linphonesw.CoreDelegate {
+  public func onNewAlertTriggered(core: linphonesw.Core, alert: linphonesw.Alert)
   public func onGlobalStateChanged(core: linphonesw.Core, state: linphonesw.GlobalState, message: Swift.String)
   public func onRegistrationStateChanged(core: linphonesw.Core, proxyConfig: linphonesw.ProxyConfig, state: linphonesw.RegistrationState, message: Swift.String)
   public func onConferenceInfoReceived(core: linphonesw.Core, conferenceInfo: linphonesw.ConferenceInfo)
@@ -1220,6 +899,8 @@ extension linphonesw.CoreDelegate {
   public func onCallLogUpdated(core: linphonesw.Core, callLog: linphonesw.CallLog)
   public func onCallIdUpdated(core: linphonesw.Core, previousCallId: Swift.String, currentCallId: Swift.String)
   public func onMessageReceived(core: linphonesw.Core, chatRoom: linphonesw.ChatRoom, message: linphonesw.ChatMessage)
+  public func onNewMessageReaction(core: linphonesw.Core, chatRoom: linphonesw.ChatRoom, message: linphonesw.ChatMessage, reaction: linphonesw.ChatMessageReaction)
+  public func onReactionRemoved(core: linphonesw.Core, chatRoom: linphonesw.ChatRoom, message: linphonesw.ChatMessage, address: linphonesw.Address)
   public func onMessagesReceived(core: linphonesw.Core, chatRoom: linphonesw.ChatRoom, messages: [linphonesw.ChatMessage])
   public func onMessageSent(core: linphonesw.Core, chatRoom: linphonesw.ChatRoom, message: linphonesw.ChatMessage)
   public func onChatRoomSessionStateChanged(core: linphonesw.Core, chatRoom: linphonesw.ChatRoom, state: linphonesw.Call.State, message: Swift.String)
@@ -1237,10 +918,11 @@ extension linphonesw.CoreDelegate {
   public func onCallStatsUpdated(core: linphonesw.Core, call: linphonesw.Call, callStats: linphonesw.CallStats)
   public func onInfoReceived(core: linphonesw.Core, call: linphonesw.Call, message: linphonesw.InfoMessage)
   public func onSubscriptionStateChanged(core: linphonesw.Core, linphoneEvent: linphonesw.Event, state: linphonesw.SubscriptionState)
-  public func onNotifySent(core: linphonesw.Core, linphoneEvent: linphonesw.Event, body: linphonesw.Content)
-  public func onNotifyReceived(core: linphonesw.Core, linphoneEvent: linphonesw.Event, notifiedEvent: Swift.String, body: linphonesw.Content)
+  public func onNotifySent(core: linphonesw.Core, linphoneEvent: linphonesw.Event, body: linphonesw.Content?)
+  public func onNotifyReceived(core: linphonesw.Core, linphoneEvent: linphonesw.Event, notifiedEvent: Swift.String, body: linphonesw.Content?)
   public func onSubscribeReceived(core: linphonesw.Core, linphoneEvent: linphonesw.Event, subscribeEvent: Swift.String, body: linphonesw.Content?)
   public func onPublishStateChanged(core: linphonesw.Core, linphoneEvent: linphonesw.Event, state: linphonesw.PublishState)
+  public func onPublishReceived(core: linphonesw.Core, linphoneEvent: linphonesw.Event, publishEvent: Swift.String, body: linphonesw.Content?)
   public func onConfiguringStatus(core: linphonesw.Core, status: linphonesw.ConfiguringState, message: Swift.String)
   public func onNetworkReachable(core: linphonesw.Core, reachable: Swift.Bool)
   public func onLogCollectionUploadStateChanged(core: linphonesw.Core, state: linphonesw.Core.LogCollectionUploadState, info: Swift.String)
@@ -1263,8 +945,12 @@ extension linphonesw.CoreDelegate {
   public func onEcCalibrationAudioInit(core: linphonesw.Core)
   public func onEcCalibrationAudioUninit(core: linphonesw.Core)
   public func onAccountRegistrationStateChanged(core: linphonesw.Core, account: linphonesw.Account, state: linphonesw.RegistrationState, message: Swift.String)
+  public func onDefaultAccountChanged(core: linphonesw.Core, account: linphonesw.Account?)
+  public func onAccountAdded(core: linphonesw.Core, account: linphonesw.Account)
+  public func onAccountRemoved(core: linphonesw.Core, account: linphonesw.Account)
 }
 final public class CoreDelegateStub : linphonesw.CoreDelegate {
+  final public func onNewAlertTriggered(core: linphonesw.Core, alert: linphonesw.Alert)
   final public func onGlobalStateChanged(core: linphonesw.Core, state: linphonesw.GlobalState, message: Swift.String)
   final public func onRegistrationStateChanged(core: linphonesw.Core, proxyConfig: linphonesw.ProxyConfig, state: linphonesw.RegistrationState, message: Swift.String)
   final public func onConferenceInfoReceived(core: linphonesw.Core, conferenceInfo: linphonesw.ConferenceInfo)
@@ -1278,6 +964,8 @@ final public class CoreDelegateStub : linphonesw.CoreDelegate {
   final public func onCallLogUpdated(core: linphonesw.Core, callLog: linphonesw.CallLog)
   final public func onCallIdUpdated(core: linphonesw.Core, previousCallId: Swift.String, currentCallId: Swift.String)
   final public func onMessageReceived(core: linphonesw.Core, chatRoom: linphonesw.ChatRoom, message: linphonesw.ChatMessage)
+  final public func onNewMessageReaction(core: linphonesw.Core, chatRoom: linphonesw.ChatRoom, message: linphonesw.ChatMessage, reaction: linphonesw.ChatMessageReaction)
+  final public func onReactionRemoved(core: linphonesw.Core, chatRoom: linphonesw.ChatRoom, message: linphonesw.ChatMessage, address: linphonesw.Address)
   final public func onMessagesReceived(core: linphonesw.Core, chatRoom: linphonesw.ChatRoom, messages: [linphonesw.ChatMessage])
   final public func onMessageSent(core: linphonesw.Core, chatRoom: linphonesw.ChatRoom, message: linphonesw.ChatMessage)
   final public func onChatRoomSessionStateChanged(core: linphonesw.Core, chatRoom: linphonesw.ChatRoom, state: linphonesw.Call.State, message: Swift.String)
@@ -1295,10 +983,11 @@ final public class CoreDelegateStub : linphonesw.CoreDelegate {
   final public func onCallStatsUpdated(core: linphonesw.Core, call: linphonesw.Call, callStats: linphonesw.CallStats)
   final public func onInfoReceived(core: linphonesw.Core, call: linphonesw.Call, message: linphonesw.InfoMessage)
   final public func onSubscriptionStateChanged(core: linphonesw.Core, linphoneEvent: linphonesw.Event, state: linphonesw.SubscriptionState)
-  final public func onNotifySent(core: linphonesw.Core, linphoneEvent: linphonesw.Event, body: linphonesw.Content)
-  final public func onNotifyReceived(core: linphonesw.Core, linphoneEvent: linphonesw.Event, notifiedEvent: Swift.String, body: linphonesw.Content)
+  final public func onNotifySent(core: linphonesw.Core, linphoneEvent: linphonesw.Event, body: linphonesw.Content?)
+  final public func onNotifyReceived(core: linphonesw.Core, linphoneEvent: linphonesw.Event, notifiedEvent: Swift.String, body: linphonesw.Content?)
   final public func onSubscribeReceived(core: linphonesw.Core, linphoneEvent: linphonesw.Event, subscribeEvent: Swift.String, body: linphonesw.Content?)
   final public func onPublishStateChanged(core: linphonesw.Core, linphoneEvent: linphonesw.Event, state: linphonesw.PublishState)
+  final public func onPublishReceived(core: linphonesw.Core, linphoneEvent: linphonesw.Event, publishEvent: Swift.String, body: linphonesw.Content?)
   final public func onConfiguringStatus(core: linphonesw.Core, status: linphonesw.ConfiguringState, message: Swift.String)
   final public func onNetworkReachable(core: linphonesw.Core, reachable: Swift.Bool)
   final public func onLogCollectionUploadStateChanged(core: linphonesw.Core, state: linphonesw.Core.LogCollectionUploadState, info: Swift.String)
@@ -1321,7 +1010,10 @@ final public class CoreDelegateStub : linphonesw.CoreDelegate {
   final public func onEcCalibrationAudioInit(core: linphonesw.Core)
   final public func onEcCalibrationAudioUninit(core: linphonesw.Core)
   final public func onAccountRegistrationStateChanged(core: linphonesw.Core, account: linphonesw.Account, state: linphonesw.RegistrationState, message: Swift.String)
-  public init(onGlobalStateChanged: ((linphonesw.Core, linphonesw.GlobalState, Swift.String) -> Swift.Void)? = nil, onRegistrationStateChanged: ((linphonesw.Core, linphonesw.ProxyConfig, linphonesw.RegistrationState, Swift.String) -> Swift.Void)? = nil, onConferenceInfoReceived: ((linphonesw.Core, linphonesw.ConferenceInfo) -> Swift.Void)? = nil, onPushNotificationReceived: ((linphonesw.Core, Swift.String) -> Swift.Void)? = nil, onPreviewDisplayErrorOccurred: ((linphonesw.Core, Swift.Int) -> Swift.Void)? = nil, onCallStateChanged: ((linphonesw.Core, linphonesw.Call, linphonesw.Call.State, Swift.String) -> Swift.Void)? = nil, onNotifyPresenceReceived: ((linphonesw.Core, linphonesw.Friend) -> Swift.Void)? = nil, onNotifyPresenceReceivedForUriOrTel: ((linphonesw.Core, linphonesw.Friend, Swift.String, linphonesw.PresenceModel) -> Swift.Void)? = nil, onNewSubscriptionRequested: ((linphonesw.Core, linphonesw.Friend, Swift.String) -> Swift.Void)? = nil, onAuthenticationRequested: ((linphonesw.Core, linphonesw.AuthInfo, linphonesw.AuthMethod) -> Swift.Void)? = nil, onCallLogUpdated: ((linphonesw.Core, linphonesw.CallLog) -> Swift.Void)? = nil, onCallIdUpdated: ((linphonesw.Core, Swift.String, Swift.String) -> Swift.Void)? = nil, onMessageReceived: ((linphonesw.Core, linphonesw.ChatRoom, linphonesw.ChatMessage) -> Swift.Void)? = nil, onMessagesReceived: ((linphonesw.Core, linphonesw.ChatRoom, [linphonesw.ChatMessage]) -> Swift.Void)? = nil, onMessageSent: ((linphonesw.Core, linphonesw.ChatRoom, linphonesw.ChatMessage) -> Swift.Void)? = nil, onChatRoomSessionStateChanged: ((linphonesw.Core, linphonesw.ChatRoom, linphonesw.Call.State, Swift.String) -> Swift.Void)? = nil, onChatRoomRead: ((linphonesw.Core, linphonesw.ChatRoom) -> Swift.Void)? = nil, onMessageReceivedUnableDecrypt: ((linphonesw.Core, linphonesw.ChatRoom, linphonesw.ChatMessage) -> Swift.Void)? = nil, onIsComposingReceived: ((linphonesw.Core, linphonesw.ChatRoom) -> Swift.Void)? = nil, onDtmfReceived: ((linphonesw.Core, linphonesw.Call, Swift.Int) -> Swift.Void)? = nil, onReferReceived: ((linphonesw.Core, Swift.String) -> Swift.Void)? = nil, onCallGoclearAckSent: ((linphonesw.Core, linphonesw.Call) -> Swift.Void)? = nil, onCallEncryptionChanged: ((linphonesw.Core, linphonesw.Call, Swift.Bool, Swift.String) -> Swift.Void)? = nil, onCallSendMasterKeyChanged: ((linphonesw.Core, linphonesw.Call, Swift.String) -> Swift.Void)? = nil, onCallReceiveMasterKeyChanged: ((linphonesw.Core, linphonesw.Call, Swift.String) -> Swift.Void)? = nil, onTransferStateChanged: ((linphonesw.Core, linphonesw.Call, linphonesw.Call.State) -> Swift.Void)? = nil, onBuddyInfoUpdated: ((linphonesw.Core, linphonesw.Friend) -> Swift.Void)? = nil, onCallStatsUpdated: ((linphonesw.Core, linphonesw.Call, linphonesw.CallStats) -> Swift.Void)? = nil, onInfoReceived: ((linphonesw.Core, linphonesw.Call, linphonesw.InfoMessage) -> Swift.Void)? = nil, onSubscriptionStateChanged: ((linphonesw.Core, linphonesw.Event, linphonesw.SubscriptionState) -> Swift.Void)? = nil, onNotifySent: ((linphonesw.Core, linphonesw.Event, linphonesw.Content) -> Swift.Void)? = nil, onNotifyReceived: ((linphonesw.Core, linphonesw.Event, Swift.String, linphonesw.Content) -> Swift.Void)? = nil, onSubscribeReceived: ((linphonesw.Core, linphonesw.Event, Swift.String, linphonesw.Content?) -> Swift.Void)? = nil, onPublishStateChanged: ((linphonesw.Core, linphonesw.Event, linphonesw.PublishState) -> Swift.Void)? = nil, onConfiguringStatus: ((linphonesw.Core, linphonesw.ConfiguringState, Swift.String) -> Swift.Void)? = nil, onNetworkReachable: ((linphonesw.Core, Swift.Bool) -> Swift.Void)? = nil, onLogCollectionUploadStateChanged: ((linphonesw.Core, linphonesw.Core.LogCollectionUploadState, Swift.String) -> Swift.Void)? = nil, onLogCollectionUploadProgressIndication: ((linphonesw.Core, Swift.Int, Swift.Int) -> Swift.Void)? = nil, onFriendListCreated: ((linphonesw.Core, linphonesw.FriendList) -> Swift.Void)? = nil, onFriendListRemoved: ((linphonesw.Core, linphonesw.FriendList) -> Swift.Void)? = nil, onCallCreated: ((linphonesw.Core, linphonesw.Call) -> Swift.Void)? = nil, onVersionUpdateCheckResultReceived: ((linphonesw.Core, linphonesw.VersionUpdateCheckResult, Swift.String, Swift.String) -> Swift.Void)? = nil, onConferenceStateChanged: ((linphonesw.Core, linphonesw.Conference, linphonesw.Conference.State) -> Swift.Void)? = nil, onChatRoomStateChanged: ((linphonesw.Core, linphonesw.ChatRoom, linphonesw.ChatRoom.State) -> Swift.Void)? = nil, onChatRoomSubjectChanged: ((linphonesw.Core, linphonesw.ChatRoom) -> Swift.Void)? = nil, onChatRoomEphemeralMessageDeleted: ((linphonesw.Core, linphonesw.ChatRoom) -> Swift.Void)? = nil, onImeeUserRegistration: ((linphonesw.Core, Swift.Bool, Swift.String, Swift.String) -> Swift.Void)? = nil, onQrcodeFound: ((linphonesw.Core, Swift.String) -> Swift.Void)? = nil, onFirstCallStarted: ((linphonesw.Core) -> Swift.Void)? = nil, onLastCallEnded: ((linphonesw.Core) -> Swift.Void)? = nil, onAudioDeviceChanged: ((linphonesw.Core, linphonesw.AudioDevice) -> Swift.Void)? = nil, onAudioDevicesListUpdated: ((linphonesw.Core) -> Swift.Void)? = nil, onEcCalibrationResult: ((linphonesw.Core, linphonesw.EcCalibratorStatus, Swift.Int) -> Swift.Void)? = nil, onEcCalibrationAudioInit: ((linphonesw.Core) -> Swift.Void)? = nil, onEcCalibrationAudioUninit: ((linphonesw.Core) -> Swift.Void)? = nil, onAccountRegistrationStateChanged: ((linphonesw.Core, linphonesw.Account, linphonesw.RegistrationState, Swift.String) -> Swift.Void)? = nil)
+  final public func onDefaultAccountChanged(core: linphonesw.Core, account: linphonesw.Account?)
+  final public func onAccountAdded(core: linphonesw.Core, account: linphonesw.Account)
+  final public func onAccountRemoved(core: linphonesw.Core, account: linphonesw.Account)
+  public init(onNewAlertTriggered: ((linphonesw.Core, linphonesw.Alert) -> Swift.Void)? = nil, onGlobalStateChanged: ((linphonesw.Core, linphonesw.GlobalState, Swift.String) -> Swift.Void)? = nil, onRegistrationStateChanged: ((linphonesw.Core, linphonesw.ProxyConfig, linphonesw.RegistrationState, Swift.String) -> Swift.Void)? = nil, onConferenceInfoReceived: ((linphonesw.Core, linphonesw.ConferenceInfo) -> Swift.Void)? = nil, onPushNotificationReceived: ((linphonesw.Core, Swift.String) -> Swift.Void)? = nil, onPreviewDisplayErrorOccurred: ((linphonesw.Core, Swift.Int) -> Swift.Void)? = nil, onCallStateChanged: ((linphonesw.Core, linphonesw.Call, linphonesw.Call.State, Swift.String) -> Swift.Void)? = nil, onNotifyPresenceReceived: ((linphonesw.Core, linphonesw.Friend) -> Swift.Void)? = nil, onNotifyPresenceReceivedForUriOrTel: ((linphonesw.Core, linphonesw.Friend, Swift.String, linphonesw.PresenceModel) -> Swift.Void)? = nil, onNewSubscriptionRequested: ((linphonesw.Core, linphonesw.Friend, Swift.String) -> Swift.Void)? = nil, onAuthenticationRequested: ((linphonesw.Core, linphonesw.AuthInfo, linphonesw.AuthMethod) -> Swift.Void)? = nil, onCallLogUpdated: ((linphonesw.Core, linphonesw.CallLog) -> Swift.Void)? = nil, onCallIdUpdated: ((linphonesw.Core, Swift.String, Swift.String) -> Swift.Void)? = nil, onMessageReceived: ((linphonesw.Core, linphonesw.ChatRoom, linphonesw.ChatMessage) -> Swift.Void)? = nil, onNewMessageReaction: ((linphonesw.Core, linphonesw.ChatRoom, linphonesw.ChatMessage, linphonesw.ChatMessageReaction) -> Swift.Void)? = nil, onReactionRemoved: ((linphonesw.Core, linphonesw.ChatRoom, linphonesw.ChatMessage, linphonesw.Address) -> Swift.Void)? = nil, onMessagesReceived: ((linphonesw.Core, linphonesw.ChatRoom, [linphonesw.ChatMessage]) -> Swift.Void)? = nil, onMessageSent: ((linphonesw.Core, linphonesw.ChatRoom, linphonesw.ChatMessage) -> Swift.Void)? = nil, onChatRoomSessionStateChanged: ((linphonesw.Core, linphonesw.ChatRoom, linphonesw.Call.State, Swift.String) -> Swift.Void)? = nil, onChatRoomRead: ((linphonesw.Core, linphonesw.ChatRoom) -> Swift.Void)? = nil, onMessageReceivedUnableDecrypt: ((linphonesw.Core, linphonesw.ChatRoom, linphonesw.ChatMessage) -> Swift.Void)? = nil, onIsComposingReceived: ((linphonesw.Core, linphonesw.ChatRoom) -> Swift.Void)? = nil, onDtmfReceived: ((linphonesw.Core, linphonesw.Call, Swift.Int) -> Swift.Void)? = nil, onReferReceived: ((linphonesw.Core, Swift.String) -> Swift.Void)? = nil, onCallGoclearAckSent: ((linphonesw.Core, linphonesw.Call) -> Swift.Void)? = nil, onCallEncryptionChanged: ((linphonesw.Core, linphonesw.Call, Swift.Bool, Swift.String) -> Swift.Void)? = nil, onCallSendMasterKeyChanged: ((linphonesw.Core, linphonesw.Call, Swift.String) -> Swift.Void)? = nil, onCallReceiveMasterKeyChanged: ((linphonesw.Core, linphonesw.Call, Swift.String) -> Swift.Void)? = nil, onTransferStateChanged: ((linphonesw.Core, linphonesw.Call, linphonesw.Call.State) -> Swift.Void)? = nil, onBuddyInfoUpdated: ((linphonesw.Core, linphonesw.Friend) -> Swift.Void)? = nil, onCallStatsUpdated: ((linphonesw.Core, linphonesw.Call, linphonesw.CallStats) -> Swift.Void)? = nil, onInfoReceived: ((linphonesw.Core, linphonesw.Call, linphonesw.InfoMessage) -> Swift.Void)? = nil, onSubscriptionStateChanged: ((linphonesw.Core, linphonesw.Event, linphonesw.SubscriptionState) -> Swift.Void)? = nil, onNotifySent: ((linphonesw.Core, linphonesw.Event, linphonesw.Content?) -> Swift.Void)? = nil, onNotifyReceived: ((linphonesw.Core, linphonesw.Event, Swift.String, linphonesw.Content?) -> Swift.Void)? = nil, onSubscribeReceived: ((linphonesw.Core, linphonesw.Event, Swift.String, linphonesw.Content?) -> Swift.Void)? = nil, onPublishStateChanged: ((linphonesw.Core, linphonesw.Event, linphonesw.PublishState) -> Swift.Void)? = nil, onPublishReceived: ((linphonesw.Core, linphonesw.Event, Swift.String, linphonesw.Content?) -> Swift.Void)? = nil, onConfiguringStatus: ((linphonesw.Core, linphonesw.ConfiguringState, Swift.String) -> Swift.Void)? = nil, onNetworkReachable: ((linphonesw.Core, Swift.Bool) -> Swift.Void)? = nil, onLogCollectionUploadStateChanged: ((linphonesw.Core, linphonesw.Core.LogCollectionUploadState, Swift.String) -> Swift.Void)? = nil, onLogCollectionUploadProgressIndication: ((linphonesw.Core, Swift.Int, Swift.Int) -> Swift.Void)? = nil, onFriendListCreated: ((linphonesw.Core, linphonesw.FriendList) -> Swift.Void)? = nil, onFriendListRemoved: ((linphonesw.Core, linphonesw.FriendList) -> Swift.Void)? = nil, onCallCreated: ((linphonesw.Core, linphonesw.Call) -> Swift.Void)? = nil, onVersionUpdateCheckResultReceived: ((linphonesw.Core, linphonesw.VersionUpdateCheckResult, Swift.String, Swift.String) -> Swift.Void)? = nil, onConferenceStateChanged: ((linphonesw.Core, linphonesw.Conference, linphonesw.Conference.State) -> Swift.Void)? = nil, onChatRoomStateChanged: ((linphonesw.Core, linphonesw.ChatRoom, linphonesw.ChatRoom.State) -> Swift.Void)? = nil, onChatRoomSubjectChanged: ((linphonesw.Core, linphonesw.ChatRoom) -> Swift.Void)? = nil, onChatRoomEphemeralMessageDeleted: ((linphonesw.Core, linphonesw.ChatRoom) -> Swift.Void)? = nil, onImeeUserRegistration: ((linphonesw.Core, Swift.Bool, Swift.String, Swift.String) -> Swift.Void)? = nil, onQrcodeFound: ((linphonesw.Core, Swift.String) -> Swift.Void)? = nil, onFirstCallStarted: ((linphonesw.Core) -> Swift.Void)? = nil, onLastCallEnded: ((linphonesw.Core) -> Swift.Void)? = nil, onAudioDeviceChanged: ((linphonesw.Core, linphonesw.AudioDevice) -> Swift.Void)? = nil, onAudioDevicesListUpdated: ((linphonesw.Core) -> Swift.Void)? = nil, onEcCalibrationResult: ((linphonesw.Core, linphonesw.EcCalibratorStatus, Swift.Int) -> Swift.Void)? = nil, onEcCalibrationAudioInit: ((linphonesw.Core) -> Swift.Void)? = nil, onEcCalibrationAudioUninit: ((linphonesw.Core) -> Swift.Void)? = nil, onAccountRegistrationStateChanged: ((linphonesw.Core, linphonesw.Account, linphonesw.RegistrationState, Swift.String) -> Swift.Void)? = nil, onDefaultAccountChanged: ((linphonesw.Core, linphonesw.Account?) -> Swift.Void)? = nil, onAccountAdded: ((linphonesw.Core, linphonesw.Account) -> Swift.Void)? = nil, onAccountRemoved: ((linphonesw.Core, linphonesw.Account) -> Swift.Void)? = nil)
   @objc deinit
 }
 public protocol EventDelegate : AnyObject {
@@ -1333,6 +1025,17 @@ extension linphonesw.EventDelegate {
 final public class EventDelegateStub : linphonesw.EventDelegate {
   final public func onNotifyResponse(linphoneEvent: linphonesw.Event)
   public init(onNotifyResponse: ((linphonesw.Event) -> Swift.Void)? = nil)
+  @objc deinit
+}
+public protocol FriendDelegate : AnyObject {
+  func onPresenceReceived(linphoneFriend: linphonesw.Friend)
+}
+extension linphonesw.FriendDelegate {
+  public func onPresenceReceived(linphoneFriend: linphonesw.Friend)
+}
+final public class FriendDelegateStub : linphonesw.FriendDelegate {
+  final public func onPresenceReceived(linphoneFriend: linphonesw.Friend)
+  public init(onPresenceReceived: ((linphonesw.Friend) -> Swift.Void)? = nil)
   @objc deinit
 }
 public protocol FriendListDelegate : AnyObject {
@@ -1356,17 +1059,6 @@ final public class FriendListDelegateStub : linphonesw.FriendListDelegate {
   final public func onSyncStatusChanged(friendList: linphonesw.FriendList, status: linphonesw.FriendList.SyncStatus, message: Swift.String)
   final public func onPresenceReceived(friendList: linphonesw.FriendList, friends: [linphonesw.Friend])
   public init(onContactCreated: ((linphonesw.FriendList, linphonesw.Friend) -> Swift.Void)? = nil, onContactDeleted: ((linphonesw.FriendList, linphonesw.Friend) -> Swift.Void)? = nil, onContactUpdated: ((linphonesw.FriendList, linphonesw.Friend, linphonesw.Friend) -> Swift.Void)? = nil, onSyncStatusChanged: ((linphonesw.FriendList, linphonesw.FriendList.SyncStatus, Swift.String) -> Swift.Void)? = nil, onPresenceReceived: ((linphonesw.FriendList, [linphonesw.Friend]) -> Swift.Void)? = nil)
-  @objc deinit
-}
-public protocol FriendDelegate : AnyObject {
-  func onPresenceReceived(linphoneFriend: linphonesw.Friend)
-}
-extension linphonesw.FriendDelegate {
-  public func onPresenceReceived(linphoneFriend: linphonesw.Friend)
-}
-final public class FriendDelegateStub : linphonesw.FriendDelegate {
-  final public func onPresenceReceived(linphoneFriend: linphonesw.Friend)
-  public init(onPresenceReceived: ((linphonesw.Friend) -> Swift.Void)? = nil)
   @objc deinit
 }
 public protocol LoggingServiceDelegate : AnyObject {
@@ -1397,7 +1089,7 @@ final public class MagicSearchDelegateStub : linphonesw.MagicSearchDelegate {
 public protocol ParticipantDeviceDelegate : AnyObject {
   func onIsSpeakingChanged(participantDevice: linphonesw.ParticipantDevice, isSpeaking: Swift.Bool)
   func onIsMuted(participantDevice: linphonesw.ParticipantDevice, isMuted: Swift.Bool)
-  func onStateChanged(participantDevice: linphonesw.ParticipantDevice, state: linphonesw.ParticipantDeviceState)
+  func onStateChanged(participantDevice: linphonesw.ParticipantDevice, state: linphonesw.ParticipantDevice.State)
   func onStreamCapabilityChanged(participantDevice: linphonesw.ParticipantDevice, direction: linphonesw.MediaDirection, streamType: linphonesw.StreamType)
   func onStreamAvailabilityChanged(participantDevice: linphonesw.ParticipantDevice, available: Swift.Bool, streamType: linphonesw.StreamType)
   func onVideoDisplayErrorOccurred(participantDevice: linphonesw.ParticipantDevice, errorCode: Swift.Int)
@@ -1405,7 +1097,7 @@ public protocol ParticipantDeviceDelegate : AnyObject {
 extension linphonesw.ParticipantDeviceDelegate {
   public func onIsSpeakingChanged(participantDevice: linphonesw.ParticipantDevice, isSpeaking: Swift.Bool)
   public func onIsMuted(participantDevice: linphonesw.ParticipantDevice, isMuted: Swift.Bool)
-  public func onStateChanged(participantDevice: linphonesw.ParticipantDevice, state: linphonesw.ParticipantDeviceState)
+  public func onStateChanged(participantDevice: linphonesw.ParticipantDevice, state: linphonesw.ParticipantDevice.State)
   public func onStreamCapabilityChanged(participantDevice: linphonesw.ParticipantDevice, direction: linphonesw.MediaDirection, streamType: linphonesw.StreamType)
   public func onStreamAvailabilityChanged(participantDevice: linphonesw.ParticipantDevice, available: Swift.Bool, streamType: linphonesw.StreamType)
   public func onVideoDisplayErrorOccurred(participantDevice: linphonesw.ParticipantDevice, errorCode: Swift.Int)
@@ -1413,11 +1105,11 @@ extension linphonesw.ParticipantDeviceDelegate {
 final public class ParticipantDeviceDelegateStub : linphonesw.ParticipantDeviceDelegate {
   final public func onIsSpeakingChanged(participantDevice: linphonesw.ParticipantDevice, isSpeaking: Swift.Bool)
   final public func onIsMuted(participantDevice: linphonesw.ParticipantDevice, isMuted: Swift.Bool)
-  final public func onStateChanged(participantDevice: linphonesw.ParticipantDevice, state: linphonesw.ParticipantDeviceState)
+  final public func onStateChanged(participantDevice: linphonesw.ParticipantDevice, state: linphonesw.ParticipantDevice.State)
   final public func onStreamCapabilityChanged(participantDevice: linphonesw.ParticipantDevice, direction: linphonesw.MediaDirection, streamType: linphonesw.StreamType)
   final public func onStreamAvailabilityChanged(participantDevice: linphonesw.ParticipantDevice, available: Swift.Bool, streamType: linphonesw.StreamType)
   final public func onVideoDisplayErrorOccurred(participantDevice: linphonesw.ParticipantDevice, errorCode: Swift.Int)
-  public init(onIsSpeakingChanged: ((linphonesw.ParticipantDevice, Swift.Bool) -> Swift.Void)? = nil, onIsMuted: ((linphonesw.ParticipantDevice, Swift.Bool) -> Swift.Void)? = nil, onStateChanged: ((linphonesw.ParticipantDevice, linphonesw.ParticipantDeviceState) -> Swift.Void)? = nil, onStreamCapabilityChanged: ((linphonesw.ParticipantDevice, linphonesw.MediaDirection, linphonesw.StreamType) -> Swift.Void)? = nil, onStreamAvailabilityChanged: ((linphonesw.ParticipantDevice, Swift.Bool, linphonesw.StreamType) -> Swift.Void)? = nil, onVideoDisplayErrorOccurred: ((linphonesw.ParticipantDevice, Swift.Int) -> Swift.Void)? = nil)
+  public init(onIsSpeakingChanged: ((linphonesw.ParticipantDevice, Swift.Bool) -> Swift.Void)? = nil, onIsMuted: ((linphonesw.ParticipantDevice, Swift.Bool) -> Swift.Void)? = nil, onStateChanged: ((linphonesw.ParticipantDevice, linphonesw.ParticipantDevice.State) -> Swift.Void)? = nil, onStreamCapabilityChanged: ((linphonesw.ParticipantDevice, linphonesw.MediaDirection, linphonesw.StreamType) -> Swift.Void)? = nil, onStreamAvailabilityChanged: ((linphonesw.ParticipantDevice, Swift.Bool, linphonesw.StreamType) -> Swift.Void)? = nil, onVideoDisplayErrorOccurred: ((linphonesw.ParticipantDevice, Swift.Int) -> Swift.Void)? = nil)
   @objc deinit
 }
 public protocol PlayerDelegate : AnyObject {
@@ -1453,6 +1145,15 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
   public var avpfEnabled: Swift.Bool {
     get
   }
+  public var callLogs: [linphonesw.CallLog] {
+    get
+  }
+  public var chatRooms: [linphonesw.ChatRoom] {
+    get
+  }
+  public var conferenceInformationList: [linphonesw.ConferenceInfo] {
+    get
+  }
   public var contactAddress: linphonesw.Address? {
     get
     set
@@ -1477,6 +1178,9 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
   public var isAvpfEnabled: Swift.Bool {
     get
   }
+  public var missedCallsCount: Swift.Int {
+    get
+  }
   public var params: linphonesw.AccountParams? {
     get
     set
@@ -1496,8 +1200,10 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
     set
   }
   public func addCustomParam(key: Swift.String, value: Swift.String)
+  public func clearCallLogs()
   public func clone() -> linphonesw.Account?
   public func findAuthInfo() -> linphonesw.AuthInfo?
+  public func getCallLogsForAddress(remoteAddress: linphonesw.Address) -> [linphonesw.CallLog]
   public func getCustomHeader(headerName: Swift.String) -> Swift.String
   public func getCustomParam(key: Swift.String) -> Swift.String
   public func isPhoneNumber(username: Swift.String) -> Swift.Bool
@@ -1505,6 +1211,7 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
   public func normalizeSipUri(username: Swift.String) -> linphonesw.Address?
   public func pauseRegister()
   public func refreshRegister()
+  public func resetMissedCallsCount()
   public func setCustomHeader(headerName: Swift.String, headerValue: Swift.String?)
   @objc deinit
 }
@@ -1539,6 +1246,7 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
     case UnexpectedError
     case NotImplementedError
     case RequestNotAuthorized
+    case RequestTooManyRequests
     public init?(rawValue: Swift.Int)
     public typealias RawValue = Swift.Int
     public var rawValue: Swift.Int {
@@ -1568,6 +1276,15 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
     case TooShort
     case TooLong
     case InvalidCharacters
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  public enum AlgoStatus : Swift.Int {
+    case Ok
+    case NotSupported
     public init?(rawValue: Swift.Int)
     public typealias RawValue = Swift.Int
     public var rawValue: Swift.Int {
@@ -1616,6 +1333,15 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
       get
     }
   }
+  public enum Backend : Swift.Int {
+    case XMLRPC
+    case FlexiAPI
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
   public enum PhoneNumberStatus : Swift.Int {
     case Ok
     case TooShort
@@ -1631,15 +1357,15 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
   public func addDelegate(delegate: any linphonesw.AccountCreatorDelegate)
   public func removeDelegate(delegate: any linphonesw.AccountCreatorDelegate)
   public static func create(core: linphonesw.Core) throws -> linphonesw.AccountCreator
-  public var accountCreationRequestToken: Swift.String {
+  public var accountCreationRequestToken: Swift.String? {
     get
     set
   }
-  public var activationCode: Swift.String {
+  public var activationCode: Swift.String? {
     get
     set
   }
-  public var algorithm: Swift.String {
+  public var algorithm: Swift.String? {
     get
     set
   }
@@ -1650,45 +1376,45 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
   public var currentDelegate: (any linphonesw.AccountCreatorDelegate)? {
     get
   }
-  public var displayName: Swift.String {
+  public var displayName: Swift.String? {
     get
     set
   }
-  public var domain: Swift.String {
+  public var domain: Swift.String? {
     get
     set
   }
-  public var email: Swift.String {
+  public var email: Swift.String? {
     get
     set
   }
-  public var ha1: Swift.String {
+  public var ha1: Swift.String? {
     get
     set
   }
-  public var language: Swift.String {
+  public var language: Swift.String? {
     get
     set
   }
-  public var password: Swift.String {
+  public var password: Swift.String? {
     get
     set
   }
-  public var phoneCountryCode: Swift.String {
+  public var phoneCountryCode: Swift.String? {
     get
   }
-  public var phoneNumber: Swift.String {
+  public var phoneNumber: Swift.String? {
     get
   }
-  public var pnParam: Swift.String {
-    get
-    set
-  }
-  public var pnPrid: Swift.String {
+  public var pnParam: Swift.String? {
     get
     set
   }
-  public var pnProvider: Swift.String {
+  public var pnPrid: Swift.String? {
+    get
+    set
+  }
+  public var pnProvider: Swift.String? {
     get
     set
   }
@@ -1699,7 +1425,7 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
   public var setAsDefault: Swift.Bool {
     get
   }
-  public var token: Swift.String {
+  public var token: Swift.String? {
     get
     set
   }
@@ -1711,7 +1437,7 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
     get
     set
   }
-  public var username: Swift.String {
+  public var username: Swift.String? {
     get
     set
   }
@@ -1721,6 +1447,7 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
   public func createAccountInCore() throws -> linphonesw.Account
   @available(*, deprecated)
   public func createProxyConfig() throws -> linphonesw.ProxyConfig
+  public func createPushAccount() throws -> linphonesw.AccountCreator.Status
   public func isAccountActivated() -> linphonesw.AccountCreator.Status
   public func isAccountExist() -> linphonesw.AccountCreator.Status
   public func isAccountLinked() -> linphonesw.AccountCreator.Status
@@ -1755,15 +1482,20 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
     get
     set
   }
-  public var conferenceFactoryUri: Swift.String {
+  public var conferenceFactoryAddress: linphonesw.Address? {
     get
     set
   }
-  public var contactParameters: Swift.String {
+  public var conferenceFactoryUri: Swift.String? {
+    get
+    @available(*, deprecated)
+    set
+  }
+  public var contactParameters: Swift.String? {
     get
     set
   }
-  public var contactUriParameters: Swift.String {
+  public var contactUriParameters: Swift.String? {
     get
     set
   }
@@ -1779,7 +1511,7 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
     get
     set
   }
-  public var domain: Swift.String {
+  public var domain: Swift.String? {
     get
   }
   public var expires: Swift.Int {
@@ -1787,25 +1519,25 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
     set
   }
   @available(*, deprecated)
-  public var identity: Swift.String {
+  public var identity: Swift.String? {
     get
   }
   public var identityAddress: linphonesw.Address? {
     get
   }
   public func setIdentityaddress(newValue: linphonesw.Address) throws
-  public var idkey: Swift.String {
+  public var idkey: Swift.String? {
     get
     set
   }
-  public var internationalPrefix: Swift.String {
+  public var internationalPrefix: Swift.String? {
     get
     set
   }
   public var isPushNotificationAvailable: Swift.Bool {
     get
   }
-  public var limeServerUrl: Swift.String {
+  public var limeServerUrl: Swift.String? {
     get
     set
   }
@@ -1814,6 +1546,10 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
     set
   }
   public var outboundProxyEnabled: Swift.Bool {
+    get
+    set
+  }
+  public var pictureUri: Swift.String? {
     get
     set
   }
@@ -1837,7 +1573,7 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
     get
     set
   }
-  public var qualityReportingCollector: Swift.String {
+  public var qualityReportingCollector: Swift.String? {
     get
     set
   }
@@ -1849,11 +1585,11 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
     get
     set
   }
-  public var realm: Swift.String {
+  public var realm: Swift.String? {
     get
     set
   }
-  public var refKey: Swift.String {
+  public var refKey: Swift.String? {
     get
     set
   }
@@ -1878,7 +1614,7 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
     set
   }
   @available(*, deprecated)
-  public var serverAddr: Swift.String {
+  public var serverAddr: Swift.String? {
     get
   }
   @available(*, deprecated)
@@ -1909,25 +1645,35 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
   public var getCobject: Swift.OpaquePointer? {
     get
   }
-  public var displayName: Swift.String {
+  public enum Family : Swift.Int {
+    case Inet
+    case Inet6
+    case Unspec
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  public var displayName: Swift.String? {
     get
   }
   public func setDisplayname(newValue: Swift.String) throws
-  public var domain: Swift.String {
+  public var domain: Swift.String? {
     get
   }
   public func setDomain(newValue: Swift.String) throws
   public var isSip: Swift.Bool {
     get
   }
-  public var isValid: Swift.Bool {
+  public var isValid: Swift.Bool? {
     get
   }
-  public var methodParam: Swift.String {
+  public var methodParam: Swift.String? {
     get
     set
   }
-  public var password: Swift.String {
+  public var password: Swift.String? {
     get
     set
   }
@@ -1935,7 +1681,7 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
     get
   }
   public func setPort(newValue: Swift.Int) throws
-  public var scheme: Swift.String {
+  public var scheme: Swift.String? {
     get
   }
   public var secure: Swift.Bool {
@@ -1950,7 +1696,7 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
     get
     set
   }
-  public var username: Swift.String {
+  public var username: Swift.String? {
     get
   }
   public func setUsername(newValue: Swift.String) throws
@@ -1971,12 +1717,93 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
   public func weakEqual(address2: linphonesw.Address) -> Swift.Bool
   @objc deinit
 }
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class Alert : linphonesw.LinphoneObject {
+  public static func getSwiftObject(cObject: Swift.OpaquePointer) -> linphonesw.Alert
+  public var getCobject: Swift.OpaquePointer? {
+    get
+  }
+  public enum Kind : Swift.Int {
+    case QoSCameraMisfunction
+    case QoSCameraLowFramerate
+    case QoSVideoStalled
+    case QoSHighLossLateRate
+    case QoSHighRemoteLossRate
+    case QoSBurstOccured
+    case QoSRetransmissionFailures
+    case QoSLowDownloadBandwidthEstimation
+    case QoSLowQualityReceivedVideo
+    case QoSLowQualitySentVideo
+    case QoSLowSignal
+    case QoSLostSignal
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  public func addDelegate(delegate: any linphonesw.AlertDelegate)
+  public func removeDelegate(delegate: any linphonesw.AlertDelegate)
+  public static func typeToString(type: linphonesw.Alert.Kind) -> Swift.String
+  public var call: linphonesw.Call? {
+    get
+  }
+  public var currentDelegate: (any linphonesw.AlertDelegate)? {
+    get
+  }
+  public var endTime: Darwin.time_t {
+    get
+  }
+  public var informations: linphonesw.Dictionary? {
+    get
+  }
+  public var startTime: Darwin.time_t {
+    get
+  }
+  public var state: Swift.Bool {
+    get
+  }
+  public var type: linphonesw.Alert.Kind {
+    get
+  }
+  public func clone() -> linphonesw.Alert?
+  public func notifyOnTerminated()
+  @objc deinit
+}
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class AudioDevice : linphonesw.LinphoneObject {
   public static func getSwiftObject(cObject: Swift.OpaquePointer) -> linphonesw.AudioDevice
   public var getCobject: Swift.OpaquePointer? {
     get
   }
-  public var capabilities: linphonesw.AudioDeviceCapabilities {
+  public struct Capabilities : Swift.OptionSet {
+    public let rawValue: Swift.Int
+    public init(rawValue: Swift.Int)
+    public static let CapabilityRecord: linphonesw.AudioDevice.Capabilities
+    public static let CapabilityPlay: linphonesw.AudioDevice.Capabilities
+    public static let CapabilityAll: linphonesw.AudioDevice.Capabilities
+    public typealias ArrayLiteralElement = linphonesw.AudioDevice.Capabilities
+    public typealias Element = linphonesw.AudioDevice.Capabilities
+    public typealias RawValue = Swift.Int
+  }
+  public enum Kind : Swift.Int {
+    case Unknown
+    case Microphone
+    case Earpiece
+    case Speaker
+    case Bluetooth
+    case BluetoothA2DP
+    case Telephony
+    case AuxLine
+    case GenericUsb
+    case Headset
+    case Headphones
+    case HearingAid
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  public var capabilities: linphonesw.AudioDevice.Capabilities {
     get
   }
   public var deviceName: Swift.String {
@@ -1985,13 +1812,16 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
   public var driverName: Swift.String {
     get
   }
+  public var followsSystemRoutingPolicy: Swift.Bool {
+    get
+  }
   public var id: Swift.String {
     get
   }
-  public var type: linphonesw.AudioDeviceType {
+  public var type: linphonesw.AudioDevice.Kind {
     get
   }
-  public func hasCapability(capability: linphonesw.AudioDeviceCapabilities) -> Swift.Bool
+  public func hasCapability(capability: linphonesw.AudioDevice.Capabilities) -> Swift.Bool
   @objc deinit
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class AuthInfo : linphonesw.LinphoneObject {
@@ -1999,7 +1829,7 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
   public var getCobject: Swift.OpaquePointer? {
     get
   }
-  public var algorithm: Swift.String {
+  public var algorithm: Swift.String? {
     get
     set
   }
@@ -2007,43 +1837,43 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
     get
     set
   }
-  public var domain: Swift.String {
+  public var domain: Swift.String? {
     get
     set
   }
-  public var ha1: Swift.String {
+  public var ha1: Swift.String? {
     get
     set
   }
-  public var password: Swift.String {
+  public var password: Swift.String? {
     get
     set
   }
-  public var realm: Swift.String {
+  public var realm: Swift.String? {
     get
     set
   }
-  public var tlsCert: Swift.String {
+  public var tlsCert: Swift.String? {
     get
     set
   }
-  public var tlsCertPath: Swift.String {
+  public var tlsCertPath: Swift.String? {
     get
     set
   }
-  public var tlsKey: Swift.String {
+  public var tlsKey: Swift.String? {
     get
     set
   }
-  public var tlsKeyPath: Swift.String {
+  public var tlsKeyPath: Swift.String? {
     get
     set
   }
-  public var userid: Swift.String {
+  public var userid: Swift.String? {
     get
     set
   }
-  public var username: Swift.String {
+  public var username: Swift.String? {
     get
     set
   }
@@ -2143,7 +1973,7 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
   public var audioStats: linphonesw.CallStats? {
     get
   }
-  public var authenticationToken: Swift.String {
+  public var authenticationToken: Swift.String? {
     get
   }
   public var authenticationTokenVerified: Swift.Bool {
@@ -2238,23 +2068,26 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
   public var recordVolume: Swift.Float {
     get
   }
-  public var referTo: Swift.String {
+  public var referTo: Swift.String? {
     get
   }
   public var remoteAddress: linphonesw.Address? {
     get
   }
   @available(*, deprecated)
-  public var remoteAddressAsString: Swift.String {
+  public var remoteAddressAsString: Swift.String? {
     get
   }
-  public var remoteContact: Swift.String {
+  public var remoteContact: Swift.String? {
+    get
+  }
+  public var remoteContactAddress: linphonesw.Address? {
     get
   }
   public var remoteParams: linphonesw.CallParams? {
     get
   }
-  public var remoteUserAgent: Swift.String {
+  public var remoteUserAgent: Swift.String? {
     get
   }
   public var replacedCall: linphonesw.Call? {
@@ -2351,7 +2184,7 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
   public var getCobject: Swift.OpaquePointer? {
     get
   }
-  public var callId: Swift.String {
+  public var callId: Swift.String? {
     get
   }
   public var conferenceInfo: linphonesw.ConferenceInfo? {
@@ -2375,7 +2208,7 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
   public var quality: Swift.Float {
     get
   }
-  public var refKey: Swift.String {
+  public var refKey: Swift.String? {
     get
     set
   }
@@ -2441,7 +2274,11 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
     get
     set
   }
-  public var conferenceVideoLayout: linphonesw.ConferenceLayout {
+  public var cfgLinesMergingEnabled: Swift.Bool? {
+    get
+    set
+  }
+  public var conferenceVideoLayout: linphonesw.Conference.Layout {
     get
     set
   }
@@ -2452,7 +2289,7 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
     get
     set
   }
-  public var fromHeader: Swift.String {
+  public var fromHeader: Swift.String? {
     get
     set
   }
@@ -2510,7 +2347,7 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
   public var receivedVideoDefinition: linphonesw.VideoDefinition? {
     get
   }
-  public var recordFile: Swift.String {
+  public var recordFile: Swift.String? {
     get
     set
   }
@@ -2528,7 +2365,7 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
   public var sentVideoDefinition: linphonesw.VideoDefinition? {
     get
   }
-  public var sessionName: Swift.String {
+  public var sessionName: Swift.String? {
     get
     set
   }
@@ -2569,8 +2406,10 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
   public func addCustomHeader(headerName: Swift.String, headerValue: Swift.String?)
   public func addCustomSdpAttribute(attributeName: Swift.String, attributeValue: Swift.String?)
   public func addCustomSdpMediaAttribute(type: linphonesw.StreamType, attributeName: Swift.String, attributeValue: Swift.String?)
+  public func cfgLinesMerged() -> Swift.Bool
   public func clearCustomSdpAttributes()
   public func clearCustomSdpMediaAttributes(type: linphonesw.StreamType)
+  @available(*, deprecated)
   public func copy() -> linphonesw.CallParams?
   public func getCustomHeader(headerName: Swift.String) -> Swift.String
   public func getCustomSdpAttribute(attributeName: Swift.String) -> Swift.String
@@ -2595,7 +2434,7 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
   public var iceState: linphonesw.IceState {
     get
   }
-  public var ipFamilyOfRemote: linphonesw.AddressFamily {
+  public var ipFamilyOfRemote: linphonesw.Address.Family {
     get
   }
   public var isZrtpKeyAgreementAlgoPostQuantum: Swift.Bool {
@@ -2632,6 +2471,12 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
     get
   }
   public var senderLossRate: Swift.Float {
+    get
+  }
+  public var srtpSource: linphonesw.MediaEncryption {
+    get
+  }
+  public var srtpSuite: linphonesw.SrtpSuite {
     get
   }
   public var type: linphonesw.StreamType {
@@ -2696,7 +2541,7 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
   }
   public func addDelegate(delegate: any linphonesw.ChatMessageDelegate)
   public func removeDelegate(delegate: any linphonesw.ChatMessageDelegate)
-  public var appdata: Swift.String {
+  public var appdata: Swift.String? {
     get
     set
   }
@@ -2728,14 +2573,14 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
   public var errorInfo: linphonesw.ErrorInfo? {
     get
   }
-  public var externalBodyUrl: Swift.String {
+  public var externalBodyUrl: Swift.String? {
     get
     set
   }
   public var fileTransferInformation: linphonesw.Content? {
     get
   }
-  public var forwardInfo: Swift.String {
+  public var forwardInfo: Swift.String? {
     get
   }
   public var fromAddress: linphonesw.Address? {
@@ -2776,10 +2621,16 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
   public var messageId: Swift.String {
     get
   }
+  public var ownReaction: linphonesw.ChatMessageReaction? {
+    get
+  }
+  public var reactions: [linphonesw.ChatMessageReaction] {
+    get
+  }
   public var replyMessage: linphonesw.ChatMessage? {
     get
   }
-  public var replyMessageId: Swift.String {
+  public var replyMessageId: Swift.String? {
     get
   }
   public var replyMessageSenderAddress: linphonesw.Address? {
@@ -2789,7 +2640,7 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
     get
   }
   @available(*, deprecated)
-  public var textContent: Swift.String {
+  public var textContent: Swift.String? {
     get
   }
   public var time: Darwin.time_t {
@@ -2806,7 +2657,7 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
     get
     set
   }
-  public var utf8Text: Swift.String {
+  public var utf8Text: Swift.String? {
     get
     set
   }
@@ -2817,6 +2668,7 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
   public func addTextContent(text: Swift.String)
   public func addUtf8TextContent(text: Swift.String)
   public func cancelFileTransfer()
+  public func createReaction(utf8Reaction: Swift.String) throws -> linphonesw.ChatMessageReaction
   public func downloadContent(content: linphonesw.Content) -> Swift.Bool
   public func getCustomHeader(headerName: Swift.String) -> Swift.String
   public func getParticipantsByImdnState(state: linphonesw.ChatMessage.State) -> [linphonesw.ParticipantImdnState]
@@ -2829,10 +2681,81 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
   public func send()
   @objc deinit
 }
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class ChatMessageReaction : linphonesw.LinphoneObject {
+  public static func getSwiftObject(cObject: Swift.OpaquePointer) -> linphonesw.ChatMessageReaction
+  public var getCobject: Swift.OpaquePointer? {
+    get
+  }
+  public var body: Swift.String {
+    get
+  }
+  public var callId: Swift.String {
+    get
+  }
+  public var fromAddress: linphonesw.Address? {
+    get
+  }
+  public func send()
+  @objc deinit
+}
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class ChatRoom : linphonesw.LinphoneObject {
   public static func getSwiftObject(cObject: Swift.OpaquePointer) -> linphonesw.ChatRoom
   public var getCobject: Swift.OpaquePointer? {
     get
+  }
+  public struct Capabilities : Swift.OptionSet {
+    public let rawValue: Swift.Int
+    public init(rawValue: Swift.Int)
+    public static let None: linphonesw.ChatRoom.Capabilities
+    public static let Basic: linphonesw.ChatRoom.Capabilities
+    public static let RealTimeText: linphonesw.ChatRoom.Capabilities
+    public static let Conference: linphonesw.ChatRoom.Capabilities
+    public static let Proxy: linphonesw.ChatRoom.Capabilities
+    public static let Migratable: linphonesw.ChatRoom.Capabilities
+    public static let OneToOne: linphonesw.ChatRoom.Capabilities
+    public static let Encrypted: linphonesw.ChatRoom.Capabilities
+    public static let Ephemeral: linphonesw.ChatRoom.Capabilities
+    public typealias ArrayLiteralElement = linphonesw.ChatRoom.Capabilities
+    public typealias Element = linphonesw.ChatRoom.Capabilities
+    public typealias RawValue = Swift.Int
+  }
+  public struct Backend : Swift.OptionSet {
+    public let rawValue: Swift.Int
+    public init(rawValue: Swift.Int)
+    public static let Basic: linphonesw.ChatRoom.Backend
+    public static let FlexisipChat: linphonesw.ChatRoom.Backend
+    public typealias ArrayLiteralElement = linphonesw.ChatRoom.Backend
+    public typealias Element = linphonesw.ChatRoom.Backend
+    public typealias RawValue = Swift.Int
+  }
+  public enum SecurityLevel : Swift.Int {
+    case Unsafe
+    case ClearText
+    case Encrypted
+    case Safe
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  public enum EphemeralMode : Swift.Int {
+    case DeviceManaged
+    case AdminManaged
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  public struct EncryptionBackend : Swift.OptionSet {
+    public let rawValue: Swift.Int
+    public init(rawValue: Swift.Int)
+    public static let None: linphonesw.ChatRoom.EncryptionBackend
+    public static let Lime: linphonesw.ChatRoom.EncryptionBackend
+    public typealias ArrayLiteralElement = linphonesw.ChatRoom.EncryptionBackend
+    public typealias Element = linphonesw.ChatRoom.EncryptionBackend
+    public typealias RawValue = Swift.Int
   }
   public enum State : Swift.Int {
     case None
@@ -2889,7 +2812,7 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
     get
     set
   }
-  public var ephemeralMode: linphonesw.ChatRoomEphemeralMode {
+  public var ephemeralMode: linphonesw.ChatRoom.EphemeralMode {
     get
     set
   }
@@ -2920,6 +2843,10 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
   public var me: linphonesw.Participant? {
     get
   }
+  public var muted: Swift.Bool {
+    get
+    set
+  }
   public var nbParticipants: Swift.Int {
     get
   }
@@ -2929,13 +2856,13 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
   public var peerAddress: linphonesw.Address? {
     get
   }
-  public var securityLevel: linphonesw.ChatRoomSecurityLevel {
+  public var securityLevel: linphonesw.ChatRoom.SecurityLevel {
     get
   }
   public var state: linphonesw.ChatRoom.State {
     get
   }
-  public var subject: Swift.String {
+  public var subject: Swift.String? {
     get
     set
   }
@@ -2978,7 +2905,6 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
   public func hasBeenLeft() -> Swift.Bool
   public func hasCapability(mask: Swift.Int) -> Swift.Bool
   public func leave()
-  public func limeAvailable() -> Swift.Bool
   public func markAsRead()
   public func notifyParticipantDeviceRegistration(participantDevice: linphonesw.Address)
   public func receiveChatMessage(message: linphonesw.ChatMessage)
@@ -2993,11 +2919,11 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
   public var getCobject: Swift.OpaquePointer? {
     get
   }
-  public var backend: linphonesw.ChatRoomBackend {
+  public var backend: linphonesw.ChatRoom.Backend {
     get
     set
   }
-  public var encryptionBackend: linphonesw.ChatRoomEncryptionBackend {
+  public var encryptionBackend: linphonesw.ChatRoom.EncryptionBackend {
     get
     set
   }
@@ -3009,7 +2935,7 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
     get
     set
   }
-  public var ephemeralMode: linphonesw.ChatRoomEphemeralMode {
+  public var ephemeralMode: linphonesw.ChatRoom.EphemeralMode {
     get
     set
   }
@@ -3024,7 +2950,7 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
     get
     set
   }
-  public var subject: Swift.String {
+  public var subject: Swift.String? {
     get
     set
   }
@@ -3034,6 +2960,43 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
   public static func getSwiftObject(cObject: Swift.OpaquePointer) -> linphonesw.Conference
   public var getCobject: Swift.OpaquePointer? {
     get
+  }
+  public enum SecurityLevel : Swift.Int {
+    case None
+    case PointToPoint
+    case EndToEnd
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  public enum ParticipantListType : Swift.Int {
+    case Closed
+    case Open
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  public enum JoiningMode : Swift.Int {
+    case DialIn
+    case DialOut
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  public enum Layout : Swift.Int {
+    case Grid
+    case ActiveSpeaker
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
   }
   public enum State : Swift.Int {
     case None
@@ -3072,7 +3035,7 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
   public var currentParams: linphonesw.ConferenceParams? {
     get
   }
-  public var duration: Swift.Int {
+  public var duration: Swift.Int? {
     get
   }
   public var ID: Swift.String {
@@ -3085,6 +3048,9 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
     get
     set
   }
+  public var inputVolume: Swift.Float {
+    get
+  }
   public var isIn: Swift.Bool {
     get
   }
@@ -3093,6 +3059,10 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
   }
   public var me: linphonesw.Participant? {
     get
+  }
+  public var microphoneMuted: Swift.Bool {
+    get
+    set
   }
   public var outputAudioDevice: linphonesw.AudioDevice? {
     get
@@ -3111,13 +3081,13 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
   public var participants: [linphonesw.Address] {
     get
   }
-  public var startTime: Darwin.time_t {
+  public var startTime: Darwin.time_t? {
     get
   }
   public var state: linphonesw.Conference.State {
     get
   }
-  public var subject: Swift.String {
+  public var subject: Swift.String? {
     get
     set
   }
@@ -3125,7 +3095,7 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
     get
     set
   }
-  public var username: Swift.String {
+  public var username: Swift.String? {
     get
     set
   }
@@ -3157,11 +3127,21 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
   public var getCobject: Swift.OpaquePointer? {
     get
   }
+  public enum State : Swift.Int {
+    case New
+    case Updated
+    case Cancelled
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
   public var dateTime: Darwin.time_t {
     get
     set
   }
-  public var description: Swift.String {
+  public var description: Swift.String? {
     get
     set
   }
@@ -3169,21 +3149,31 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
     get
     set
   }
-  public var icalendarString: Swift.String {
+  public var icalendarString: Swift.String? {
     get
   }
   public var organizer: linphonesw.Address? {
     get
     set
   }
-  public var participants: [linphonesw.Address] {
+  public var participantInfos: [linphonesw.ParticipantInfo] {
     get
     set
   }
-  public var state: linphonesw.ConferenceInfoState {
+  public var participants: [linphonesw.Address] {
+    @available(*, deprecated)
+    get
+    @available(*, deprecated)
+    set
+  }
+  public var securityLevel: linphonesw.Conference.SecurityLevel {
+    get
+    set
+  }
+  public var state: linphonesw.ConferenceInfo.State? {
     get
   }
-  public var subject: Swift.String {
+  public var subject: Swift.String? {
     get
     set
   }
@@ -3191,8 +3181,12 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
     get
   }
   public func addParticipant(participant: linphonesw.Address)
+  public func addParticipant(participantInfo: linphonesw.ParticipantInfo)
+  public func addParticipantInfos(participantInfos: [linphonesw.ParticipantInfo]?)
   public func clone() -> linphonesw.ConferenceInfo?
+  public func findParticipant(participant: linphonesw.Address) -> linphonesw.ParticipantInfo?
   public func removeParticipant(participant: linphonesw.Address)
+  public func updateParticipant(participantInfo: linphonesw.ParticipantInfo)
   @objc deinit
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class ConferenceParams : linphonesw.LinphoneObject {
@@ -3215,11 +3209,15 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
     get
     set
   }
-  public var description: Swift.String {
+  public var description: Swift.String? {
     get
     set
   }
   public var endTime: Darwin.time_t {
+    get
+    set
+  }
+  public var hidden: Swift.Bool? {
     get
     set
   }
@@ -3229,6 +3227,9 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
   }
   @available(*, deprecated)
   public var isChatEnabled: Swift.Bool {
+    get
+  }
+  public var isHidden: Swift.Bool {
     get
   }
   @available(*, deprecated)
@@ -3251,7 +3252,7 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
     get
     set
   }
-  public var participantListType: linphonesw.ConferenceParticipantListType {
+  public var participantListType: linphonesw.Conference.ParticipantListType {
     get
     set
   }
@@ -3259,11 +3260,15 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
   public var proxyCfg: linphonesw.ProxyConfig? {
     get
   }
+  public var securityLevel: linphonesw.Conference.SecurityLevel {
+    get
+    set
+  }
   public var startTime: Darwin.time_t {
     get
     set
   }
-  public var subject: Swift.String {
+  public var subject: Swift.String? {
     get
     set
   }
@@ -3278,6 +3283,18 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
   public static func getSwiftObject(cObject: Swift.OpaquePointer) -> linphonesw.ConferenceScheduler
   public var getCobject: Swift.OpaquePointer? {
     get
+  }
+  public enum State : Swift.Int {
+    case Idle
+    case Error
+    case AllocationPending
+    case Ready
+    case Updating
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
   }
   public func addDelegate(delegate: any linphonesw.ConferenceSchedulerDelegate)
   public func removeDelegate(delegate: any linphonesw.ConferenceSchedulerDelegate)
@@ -3307,6 +3324,9 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
   public static func newForSharedCore(appGroupId: Swift.String, configFilename: Swift.String?, factoryConfigFilename: Swift.String?) -> linphonesw.Config?
   public static func newFromBuffer(buffer: Swift.String) -> linphonesw.Config?
   public static func newWithFactory(configFilename: Swift.String?, factoryConfigFilename: Swift.String?) -> linphonesw.Config?
+  public var isReadonly: Swift.Bool {
+    get
+  }
   public var sectionsNamesList: [Swift.String] {
     get
   }
@@ -3362,18 +3382,18 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
   public var buffer: Swift.UnsafePointer<Swift.UInt8> {
     get
   }
-  public var disposition: Swift.String {
+  public var disposition: Swift.String? {
     get
     set
   }
-  public var encoding: Swift.String {
+  public var encoding: Swift.String? {
     get
     set
   }
   public var fileDuration: Swift.Int {
     get
   }
-  public var filePath: Swift.String {
+  public var filePath: Swift.String? {
     get
     set
   }
@@ -3401,13 +3421,13 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
   public var isVoiceRecording: Swift.Bool {
     get
   }
-  public var key: Swift.String {
+  public var key: Swift.String? {
     get
   }
   public var keySize: Swift.Int {
     get
   }
-  public var name: Swift.String {
+  public var name: Swift.String? {
     get
     set
   }
@@ -3440,7 +3460,7 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
     get
     set
   }
-  public var utf8Text: Swift.String {
+  public var utf8Text: Swift.String? {
     get
     set
   }
@@ -3505,11 +3525,11 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
   public static func tunnelAvailable() -> Swift.Bool
   public static func upnpAvailable() -> Swift.Bool
   public static func vcardSupported() -> Swift.Bool
-  public var accountCreatorBackend: linphonesw.AccountCreatorBackend {
+  public var accountCreatorBackend: linphonesw.AccountCreator.Backend {
     get
     set
   }
-  public var accountCreatorUrl: Swift.String {
+  public var accountCreatorUrl: Swift.String? {
     get
     set
   }
@@ -3521,6 +3541,14 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
     set
   }
   public var adaptiveRateControlEnabled: Swift.Bool {
+    get
+    set
+  }
+  public var agcEnabled: Swift.Bool {
+    get
+    set
+  }
+  public var alertsEnabled: Swift.Bool {
     get
     set
   }
@@ -3539,7 +3567,7 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
     get
     set
   }
-  public var audioMulticastAddr: Swift.String {
+  public var audioMulticastAddr: Swift.String? {
     get
   }
   public func setAudiomulticastaddr(newValue: Swift.String) throws
@@ -3604,7 +3632,7 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
   public var callLogs: [linphonesw.CallLog] {
     get
   }
-  public var callLogsDatabasePath: Swift.String {
+  public var callLogsDatabasePath: Swift.String? {
     @available(*, deprecated)
     get
     @available(*, deprecated)
@@ -3635,10 +3663,14 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
     get
     set
   }
-  public var captureDevice: Swift.String {
+  public var captureDevice: Swift.String? {
     get
   }
   public func setCapturedevice(newValue: Swift.String) throws
+  public var cfgLinesMergingEnabled: Swift.Bool {
+    get
+    set
+  }
   public var chatEnabled: Swift.Bool {
     get
   }
@@ -3649,6 +3681,7 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
   public var chatRooms: [linphonesw.ChatRoom] {
     get
   }
+  @available(*, deprecated)
   public var conference: linphonesw.Conference? {
     get
   }
@@ -3662,7 +3695,7 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
   public var conferenceLocalInputVolume: Swift.Float {
     get
   }
-  public var conferenceParticipantListType: linphonesw.ConferenceParticipantListType {
+  public var conferenceParticipantListType: linphonesw.Conference.ParticipantListType {
     get
     set
   }
@@ -3697,7 +3730,7 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
     get
     set
   }
-  public var defaultConferenceLayout: linphonesw.ConferenceLayout {
+  public var defaultConferenceLayout: linphonesw.Conference.Layout {
     get
     set
   }
@@ -3773,7 +3806,7 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
     get
     set
   }
-  public var echoCancellerFilterName: Swift.String {
+  public var echoCancellerFilterName: Swift.String? {
     get
     set
   }
@@ -3792,7 +3825,7 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
   public var extendedAudioDevices: [linphonesw.AudioDevice] {
     get
   }
-  public var fileTransferServer: Swift.String {
+  public var fileTransferServer: Swift.String? {
     get
     set
   }
@@ -3804,7 +3837,7 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
     get
     set
   }
-  public var friendsDatabasePath: Swift.String {
+  public var friendsDatabasePath: Swift.String? {
     get
     set
   }
@@ -3825,7 +3858,7 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
     get
     set
   }
-  public var httpProxyHost: Swift.String {
+  public var httpProxyHost: Swift.String? {
     get
     set
   }
@@ -3922,6 +3955,10 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
     get
     set
   }
+  public var label: Swift.String {
+    get
+    set
+  }
   public var lastOutgoingCallLog: linphonesw.CallLog? {
     get
   }
@@ -3932,7 +3969,7 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
     get
     set
   }
-  public var limeX3DhServerUrl: Swift.String {
+  public var limeX3DhServerUrl: Swift.String? {
     @available(*, deprecated)
     get
     @available(*, deprecated)
@@ -3942,10 +3979,13 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
     get
     set
   }
+  public var loadedPlugins: [Swift.String] {
+    get
+  }
   public var localPermissionEnabled: Swift.Bool {
     get
   }
-  public var logCollectionUploadServerUrl: Swift.String {
+  public var logCollectionUploadServerUrl: Swift.String? {
     get
     set
   }
@@ -3957,7 +3997,7 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
     get
     set
   }
-  public var mediaDevice: Swift.String {
+  public var mediaDevice: Swift.String? {
     get
   }
   public func setMediadevice(newValue: Swift.String) throws
@@ -3992,7 +4032,7 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
     get
     set
   }
-  public var natAddress: Swift.String {
+  public var natAddress: Swift.String? {
     @available(*, deprecated)
     get
     @available(*, deprecated)
@@ -4026,11 +4066,11 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
     get
     set
   }
-  public var playFile: Swift.String {
+  public var playFile: Swift.String? {
     get
     set
   }
-  public var playbackDevice: Swift.String {
+  public var playbackDevice: Swift.String? {
     get
   }
   public func setPlaybackdevice(newValue: Swift.String) throws
@@ -4070,7 +4110,7 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
   public var primaryContactParsed: linphonesw.Address? {
     get
   }
-  public var provisioningUri: Swift.String {
+  public var provisioningUri: Swift.String? {
     get
   }
   public func setProvisioninguri(newValue: Swift.String) throws
@@ -4099,11 +4139,11 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
     get
     set
   }
-  public var recordFile: Swift.String {
+  public var recordFile: Swift.String? {
     get
     set
   }
-  public var remoteRingbackTone: Swift.String {
+  public var remoteRingbackTone: Swift.String? {
     get
     set
   }
@@ -4111,7 +4151,7 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
     get
     set
   }
-  public var ring: Swift.String {
+  public var ring: Swift.String? {
     get
     set
   }
@@ -4119,15 +4159,15 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
     get
     set
   }
-  public var ringback: Swift.String {
+  public var ringback: Swift.String? {
     get
     set
   }
-  public var ringerDevice: Swift.String {
+  public var ringerDevice: Swift.String? {
     get
   }
   public func setRingerdevice(newValue: Swift.String) throws
-  public var rootCa: Swift.String {
+  public var rootCa: Swift.String? {
     get
     set
   }
@@ -4187,7 +4227,7 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
     get
     set
   }
-  public var staticPicture: Swift.String {
+  public var staticPicture: Swift.String? {
     get
   }
   public func setStaticpicture(newValue: Swift.String) throws
@@ -4195,7 +4235,7 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
     get
   }
   public func setStaticpicturefps(newValue: Swift.Float) throws
-  public var stunServer: Swift.String {
+  public var stunServer: Swift.String? {
     get
     set
   }
@@ -4228,19 +4268,19 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
   public var textPortsRange: linphonesw.Range? {
     get
   }
-  public var tlsCert: Swift.String {
+  public var tlsCert: Swift.String? {
     get
     set
   }
-  public var tlsCertPath: Swift.String {
+  public var tlsCertPath: Swift.String? {
     get
     set
   }
-  public var tlsKey: Swift.String {
+  public var tlsKey: Swift.String? {
     get
     set
   }
-  public var tlsKeyPath: Swift.String {
+  public var tlsKeyPath: Swift.String? {
     get
     set
   }
@@ -4268,7 +4308,7 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
     get
     set
   }
-  public var upnpExternalIpaddress: Swift.String {
+  public var upnpExternalIpaddress: Swift.String? {
     get
   }
   public var upnpState: linphonesw.UpnpState {
@@ -4289,7 +4329,7 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
   public var userAgent: Swift.String {
     get
   }
-  public var userCertificatesPath: Swift.String {
+  public var userCertificatesPath: Swift.String? {
     get
     set
   }
@@ -4313,7 +4353,11 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
     get
     set
   }
-  public var videoDevice: Swift.String {
+  public var videoCodecPriorityPolicy: linphonesw.CodecPriorityPolicy {
+    get
+    set
+  }
+  public var videoDevice: Swift.String? {
     get
   }
   public func setVideodevice(newValue: Swift.String) throws
@@ -4324,7 +4368,7 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
     get
     set
   }
-  public var videoDisplayFilter: Swift.String {
+  public var videoDisplayFilter: Swift.String? {
     get
     set
   }
@@ -4339,7 +4383,7 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
     get
     set
   }
-  public var videoMulticastAddr: Swift.String {
+  public var videoMulticastAddr: Swift.String? {
     get
   }
   public func setVideomulticastaddr(newValue: Swift.String) throws
@@ -4362,7 +4406,7 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
   public var videoPortsRange: linphonesw.Range? {
     get
   }
-  public var videoPreset: Swift.String {
+  public var videoPreset: Swift.String? {
     get
     set
   }
@@ -4386,7 +4430,7 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
     get
     set
   }
-  public var zrtpSecretsFile: Swift.String {
+  public var zrtpSecretsFile: Swift.String? {
     get
     set
   }
@@ -4398,18 +4442,20 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
   public func addFriendList(list: linphonesw.FriendList)
   public func addLdap(ldap: linphonesw.Ldap)
   public func addLinphoneSpec(spec: Swift.String)
+  public func addProvisioningHeader(headerName: Swift.String, value: Swift.String)
   public func addProxyConfig(config: linphonesw.ProxyConfig) throws
   public func addSupportedTag(tag: Swift.String)
   public func addToConference(call: linphonesw.Call) throws
   @available(*, deprecated)
   public func audioRouteChanged()
-  public func chatRoomGetDefaultEphemeralMode() -> linphonesw.ChatRoomEphemeralMode
-  public func chatRoomSetDefaultEphemeralMode(mode: linphonesw.ChatRoomEphemeralMode)
+  public func chatRoomGetDefaultEphemeralMode() -> linphonesw.ChatRoom.EphemeralMode
+  public func chatRoomSetDefaultEphemeralMode(mode: linphonesw.ChatRoom.EphemeralMode)
   public func checkForUpdate(currentVersion: Swift.String)
   public func clearAccounts()
   public func clearAllAuthInfo()
   public func clearCallLogs()
   public func clearLdaps()
+  public func clearProvisioningHeaders()
   public func clearProxyConfig()
   public func configSync() throws
   public func configureAudioSession()
@@ -4450,10 +4496,10 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
   public func createNativeVideoWindowId() throws -> Swift.UnsafeMutableRawPointer
   public func createNotify(resource: linphonesw.Address, event: Swift.String) throws -> linphonesw.Event
   public func createOneShotPublish(resource: linphonesw.Address, event: Swift.String) throws -> linphonesw.Event
-  public func createPresenceActivity(acttype: linphonesw.PresenceActivityType, description: Swift.String?) throws -> linphonesw.PresenceActivity
+  public func createPresenceActivity(acttype: linphonesw.PresenceActivity.Kind, description: Swift.String?) throws -> linphonesw.PresenceActivity
   public func createPresenceModel() throws -> linphonesw.PresenceModel
-  public func createPresenceModelWithActivity(acttype: linphonesw.PresenceActivityType, description: Swift.String?) throws -> linphonesw.PresenceModel
-  public func createPresenceModelWithActivityAndNote(acttype: linphonesw.PresenceActivityType, description: Swift.String?, note: Swift.String, lang: Swift.String?) throws -> linphonesw.PresenceModel
+  public func createPresenceModelWithActivity(acttype: linphonesw.PresenceActivity.Kind, description: Swift.String?) throws -> linphonesw.PresenceModel
+  public func createPresenceModelWithActivityAndNote(acttype: linphonesw.PresenceActivity.Kind, description: Swift.String?, note: Swift.String, lang: Swift.String?) throws -> linphonesw.PresenceModel
   public func createPresenceNote(content: Swift.String, lang: Swift.String?) throws -> linphonesw.PresenceNote
   public func createPresencePerson(id: Swift.String) throws -> linphonesw.PresencePerson
   public func createPresenceService(id: Swift.String, basicStatus: linphonesw.PresenceBasicStatus, contact: Swift.String) throws -> linphonesw.PresenceService
@@ -4499,8 +4545,6 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
   public func getCallByRemoteAddress2(remoteAddress: linphonesw.Address) -> linphonesw.Call?
   public func getCallHistory(peerAddress: linphonesw.Address, localAddress: linphonesw.Address) -> [linphonesw.CallLog]
   @available(*, deprecated)
-  public func getCallHistoryForAddress(address: linphonesw.Address) -> [linphonesw.CallLog]
-  @available(*, deprecated)
   public func getChatRoom(addr: linphonesw.Address) -> linphonesw.ChatRoom?
   @available(*, deprecated)
   public func getChatRoom(peerAddr: linphonesw.Address, localAddr: linphonesw.Address) -> linphonesw.ChatRoom?
@@ -4529,6 +4573,7 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
   public func isContentTypeSupported(contentType: Swift.String) -> Swift.Bool
   public func isMediaEncryptionSupported(menc: linphonesw.MediaEncryption) -> Swift.Bool
   public func isMediaFilterSupported(filtername: Swift.String) -> Swift.Bool
+  public func isPluginLoaded(name: Swift.String) -> Swift.Bool
   public func iterate()
   public func ldapAvailable() -> Swift.Bool
   @available(*, deprecated)
@@ -4622,6 +4667,9 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
   public var countryCallingCode: Swift.String {
     get
   }
+  public var flag: Swift.String {
+    get
+  }
   public var internationalCallPrefix: Swift.String {
     get
   }
@@ -4634,6 +4682,25 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
   public var nationalNumberLength: Swift.Int {
     get
   }
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class Dictionary : linphonesw.LinphoneObject {
+  public static func getSwiftObject(cObject: Swift.OpaquePointer) -> linphonesw.Dictionary
+  public var getCobject: Swift.OpaquePointer? {
+    get
+  }
+  public func clear()
+  public func clone() -> linphonesw.Dictionary?
+  public func getFloat(key: Swift.String?) -> Swift.Float
+  public func getInt(key: Swift.String?) -> Swift.Int
+  public func getInt64(key: Swift.String?) -> Swift.Int64
+  public func getString(key: Swift.String?) -> Swift.String
+  public func hasKey(key: Swift.String?) throws
+  public func remove(key: Swift.String?) throws
+  public func setFloat(key: Swift.String?, value: Swift.Float)
+  public func setInt(key: Swift.String?, value: Swift.Int)
+  public func setInt64(key: Swift.String?, value: Swift.Int64)
+  public func setString(key: Swift.String?, value: Swift.String)
   @objc deinit
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class DigestAuthenticationPolicy : linphonesw.LinphoneObject {
@@ -4660,11 +4727,11 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
   public var getCobject: Swift.OpaquePointer? {
     get
   }
-  public var phrase: Swift.String {
+  public var phrase: Swift.String? {
     get
     set
   }
-  public var proto: Swift.String {
+  public var proto: Swift.String? {
     get
     set
   }
@@ -4684,7 +4751,7 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
     get
     set
   }
-  public var warnings: Swift.String {
+  public var warnings: Swift.String? {
     get
     set
   }
@@ -4738,8 +4805,10 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
     get
     set
   }
+  public func acceptPublish() throws
   public func acceptSubscription() throws
   public func addCustomHeader(name: Swift.String, value: Swift.String?)
+  public func denyPublish(reason: linphonesw.Reason) throws
   public func denySubscription(reason: linphonesw.Reason) throws
   public func getCustomHeader(name: Swift.String) -> Swift.String
   public func notify(body: linphonesw.Content?) throws
@@ -4758,6 +4827,53 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
   public static func getSwiftObject(cObject: Swift.OpaquePointer) -> linphonesw.EventLog
   public var getCobject: Swift.OpaquePointer? {
     get
+  }
+  public enum SecurityEventType : Swift.Int {
+    case None
+    case SecurityLevelDowngraded
+    case ParticipantMaxDeviceCountExceeded
+    case EncryptionIdentityKeyChanged
+    case ManInTheMiddleDetected
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  public enum Kind : Swift.Int {
+    case None
+    case ConferenceCreated
+    case ConferenceTerminated
+    case ConferenceCallStarted
+    case ConferenceConnected
+    case ConferenceCallEnded
+    case ConferenceChatMessage
+    case ConferenceParticipantAdded
+    case ConferenceParticipantRemoved
+    case ConferenceParticipantRoleUnknown
+    case ConferenceParticipantRoleSpeaker
+    case ConferenceParticipantRoleListener
+    case ConferenceParticipantSetAdmin
+    case ConferenceParticipantUnsetAdmin
+    case ConferenceParticipantDeviceAdded
+    case ConferenceParticipantDeviceRemoved
+    case ConferenceParticipantDeviceMediaCapabilityChanged
+    case ConferenceParticipantDeviceMediaAvailabilityChanged
+    case ConferenceParticipantDeviceStatusChanged
+    case ConferenceSubjectChanged
+    case ConferenceAvailableMediaChanged
+    case ConferenceSecurityEvent
+    case ConferenceEphemeralMessageLifetimeChanged
+    case ConferenceEphemeralMessageEnabled
+    case ConferenceEphemeralMessageDisabled
+    case ConferenceEphemeralMessageManagedByAdmin
+    case ConferenceEphemeralMessageManagedByParticipants
+    case ConferenceChatMessageReaction
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
   }
   public var callLog: linphonesw.CallLog? {
     get
@@ -4792,13 +4908,13 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
   public var securityEventFaultyDeviceAddress: linphonesw.Address? {
     get
   }
-  public var securityEventType: linphonesw.SecurityEventType {
+  public var securityEventType: linphonesw.EventLog.SecurityEventType {
     get
   }
-  public var subject: Swift.String {
+  public var subject: Swift.String? {
     get
   }
-  public var type: linphonesw.EventLogType {
+  public var type: linphonesw.EventLog.Kind {
     get
   }
   public func deleteFromDatabase()
@@ -4825,7 +4941,7 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
     get
     set
   }
-  public var dataResourcesDir: Swift.String {
+  public var dataResourcesDir: Swift.String? {
     get
     set
   }
@@ -4836,7 +4952,7 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
     get
     set
   }
-  public var imageResourcesDir: Swift.String {
+  public var imageResourcesDir: Swift.String? {
     get
     set
   }
@@ -4861,29 +4977,33 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
   public var isQrcodeAvailable: Swift.Bool {
     get
   }
+  public var liblinphonePluginsDir: Swift.String? {
+    get
+    set
+  }
   public var logCollectionPath: Swift.String {
     get
     set
   }
-  public var mspluginsDir: Swift.String {
+  public var mspluginsDir: Swift.String? {
     get
     set
   }
   public var recommendedVideoDefinitions: [linphonesw.VideoDefinition] {
     get
   }
-  public var ringResourcesDir: Swift.String {
+  public var ringResourcesDir: Swift.String? {
     get
     set
   }
-  public var soundResourcesDir: Swift.String {
+  public var soundResourcesDir: Swift.String? {
     get
     set
   }
   public var supportedVideoDefinitions: [linphonesw.VideoDefinition] {
     get
   }
-  public var topResourcesDir: Swift.String {
+  public var topResourcesDir: Swift.String? {
     get
     set
   }
@@ -4911,10 +5031,12 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
   public func createErrorInfo() throws -> linphonesw.ErrorInfo
   public func createFriendPhoneNumber(phoneNumber: Swift.String, label: Swift.String?) throws -> linphonesw.FriendPhoneNumber
   public func createParticipantDeviceIdentity(address: linphonesw.Address, name: Swift.String?) throws -> linphonesw.ParticipantDeviceIdentity
+  public func createParticipantInfo(address: linphonesw.Address) throws -> linphonesw.ParticipantInfo
   public func createQrcode(code: Swift.String, width: Swift.UInt, height: Swift.UInt, margin: Swift.UInt) throws -> linphonesw.Content
   public func createRange() throws -> linphonesw.Range
   public func createSharedCore(configFilename: Swift.String?, factoryConfigPath: Swift.String?, systemContext: Swift.UnsafeMutableRawPointer?, appGroupId: Swift.String, mainCore: Swift.Bool) throws -> linphonesw.Core
   public func createSharedCoreWithConfig(config: linphonesw.Config, systemContext: Swift.UnsafeMutableRawPointer?, appGroupId: Swift.String, mainCore: Swift.Bool) throws -> linphonesw.Core
+  public func createSignalInformation() throws -> linphonesw.SignalInformation
   public func createTransports() throws -> linphonesw.Transports
   public func createTunnelConfig() throws -> linphonesw.TunnelConfig
   public func createVcard() throws -> linphonesw.Vcard
@@ -4927,8 +5049,8 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
   public func getConfigDir(context: Swift.UnsafeMutableRawPointer?) -> Swift.String
   public func getDataDir(context: Swift.UnsafeMutableRawPointer?) -> Swift.String
   public func getDownloadDir(context: Swift.UnsafeMutableRawPointer?) -> Swift.String
-  public func isChatroomBackendAvailable(chatroomBackend: linphonesw.ChatRoomBackend) -> Swift.Bool
-  public func setVfsEncryption(encryptionModule: Swift.UInt16, secret: Swift.UnsafePointer<Swift.UInt8>?, secretSize: Swift.Int)
+  public func isChatroomBackendAvailable(chatroomBackend: linphonesw.ChatRoom.Backend) -> Swift.Bool
+  public func setVfsEncryption(encryptionModule: Swift.UInt16, secret: Swift.UnsafePointer<Swift.UInt8>?, secretSize: Swift.Int) -> Swift.Bool
   public func writeQrcodeFile(filePath: Swift.String, code: Swift.String, width: Swift.UInt, height: Swift.UInt, margin: Swift.UInt) -> Swift.Int
   @objc deinit
 }
@@ -4936,6 +5058,17 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
   public static func getSwiftObject(cObject: Swift.OpaquePointer) -> linphonesw.Friend
   public var getCobject: Swift.OpaquePointer? {
     get
+  }
+  public struct Capability : Swift.OptionSet {
+    public let rawValue: Swift.Int
+    public init(rawValue: Swift.Int)
+    public static let None: linphonesw.Friend.Capability
+    public static let GroupChat: linphonesw.Friend.Capability
+    public static let LimeX3Dh: linphonesw.Friend.Capability
+    public static let EphemeralMessages: linphonesw.Friend.Capability
+    public typealias ArrayLiteralElement = linphonesw.Friend.Capability
+    public typealias Element = linphonesw.Friend.Capability
+    public typealias RawValue = Swift.Int
   }
   public func addDelegate(delegate: any linphonesw.FriendDelegate)
   public func removeDelegate(delegate: any linphonesw.FriendDelegate)
@@ -4966,15 +5099,19 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
   public var isPresenceReceived: Swift.Bool {
     get
   }
-  public var name: Swift.String {
-    get
-  }
-  public func setName(newValue: Swift.String) throws
-  public var nativeUri: Swift.String {
+  public var jobTitle: Swift.String? {
     get
     set
   }
-  public var organization: Swift.String {
+  public var name: Swift.String? {
+    get
+  }
+  public func setName(newValue: Swift.String) throws
+  public var nativeUri: Swift.String? {
+    get
+    set
+  }
+  public var organization: Swift.String? {
     get
     set
   }
@@ -4984,7 +5121,7 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
   public var phoneNumbersWithLabel: [linphonesw.FriendPhoneNumber] {
     get
   }
-  public var photo: Swift.String {
+  public var photo: Swift.String? {
     get
     set
   }
@@ -4992,7 +5129,7 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
     get
     set
   }
-  public var refKey: Swift.String {
+  public var refKey: Swift.String? {
     get
     set
   }
@@ -5021,11 +5158,11 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
   public func createVcard(name: Swift.String?) throws -> Swift.Bool
   public func done()
   public func edit()
-  public func getCapabilityVersion(capability: linphonesw.FriendCapability) -> Swift.Float
+  public func getCapabilityVersion(capability: linphonesw.Friend.Capability) -> Swift.Float
   public func getPresenceModelForUriOrTel(uriOrTel: Swift.String) -> linphonesw.PresenceModel?
-  public func hasCapability(capability: linphonesw.FriendCapability) -> Swift.Bool
-  public func hasCapabilityWithVersion(capability: linphonesw.FriendCapability, version: Swift.Float) -> Swift.Bool
-  public func hasCapabilityWithVersionOrMore(capability: linphonesw.FriendCapability, version: Swift.Float) -> Swift.Bool
+  public func hasCapability(capability: linphonesw.Friend.Capability) -> Swift.Bool
+  public func hasCapabilityWithVersion(capability: linphonesw.Friend.Capability, version: Swift.Float) -> Swift.Bool
+  public func hasCapabilityWithVersionOrMore(capability: linphonesw.Friend.Capability, version: Swift.Float) -> Swift.Bool
   public func hasPhoneNumber(phoneNumber: Swift.String) -> Swift.Bool
   public func inList() -> Swift.Bool
   public func remove()
@@ -5061,6 +5198,16 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
       get
     }
   }
+  public enum Kind : Swift.Int {
+    case Default
+    case CardDAV
+    case VCard4
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
   public func addDelegate(delegate: any linphonesw.FriendListDelegate)
   public func removeDelegate(delegate: any linphonesw.FriendListDelegate)
   public var core: linphonesw.Core? {
@@ -5069,7 +5216,11 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
   public var currentDelegate: (any linphonesw.FriendListDelegate)? {
     get
   }
-  public var displayName: Swift.String {
+  public var databaseStorageEnabled: Swift.Bool {
+    get
+    set
+  }
+  public var displayName: Swift.String? {
     get
     set
   }
@@ -5083,7 +5234,7 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
     get
     set
   }
-  public var rlsUri: Swift.String {
+  public var rlsUri: Swift.String? {
     @available(*, deprecated)
     get
     @available(*, deprecated)
@@ -5097,11 +5248,11 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
     get
     set
   }
-  public var type: linphonesw.FriendListType {
+  public var type: linphonesw.FriendList.Kind {
     get
     set
   }
-  public var uri: Swift.String {
+  public var uri: Swift.String? {
     get
     set
   }
@@ -5133,7 +5284,7 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
   public var getCobject: Swift.OpaquePointer? {
     get
   }
-  public var label: Swift.String {
+  public var label: Swift.String? {
     get
     set
   }
@@ -5217,6 +5368,49 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
   public var getCobject: Swift.OpaquePointer? {
     get
   }
+  public enum DebugLevel : Swift.Int {
+    case Off
+    case Verbose
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  public enum AuthMethod : Swift.Int {
+    case Anonymous
+    case Simple
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  public enum CertVerificationMode : Swift.Int {
+    case Default
+    case Disabled
+    case Enabled
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  public enum Check : Swift.Int {
+    case Ok
+    case ServerEmpty
+    case ServerNotUrl
+    case ServerNoScheme
+    case ServerNotLdap
+    case ServerLdaps
+    case BaseObjectEmpty
+    case MissingFields
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
   public static func newWithParams(lc: linphonesw.Core, params: linphonesw.LdapParams) -> linphonesw.Ldap?
   public var core: linphonesw.Core? {
     get
@@ -5236,7 +5430,7 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
   public var getCobject: Swift.OpaquePointer? {
     get
   }
-  public var authMethod: linphonesw.LdapAuthMethod {
+  public var authMethod: linphonesw.Ldap.AuthMethod {
     get
     set
   }
@@ -5244,11 +5438,11 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
     get
     set
   }
-  public var bindDn: Swift.String {
+  public var bindDn: Swift.String? {
     get
     set
   }
-  public var debugLevel: linphonesw.LdapDebugLevel {
+  public var debugLevel: linphonesw.Ldap.DebugLevel {
     get
     set
   }
@@ -5260,7 +5454,7 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
     get
     set
   }
-  public var filter: Swift.String {
+  public var filter: Swift.String? {
     get
     set
   }
@@ -5272,11 +5466,11 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
     get
     set
   }
-  public var nameAttribute: Swift.String {
+  public var nameAttribute: Swift.String? {
     get
     set
   }
-  public var password: Swift.String {
+  public var password: Swift.String? {
     get
     set
   }
@@ -5288,19 +5482,23 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
     get
     set
   }
-  public var serverCertificatesVerificationMode: linphonesw.LdapCertVerificationMode {
+  public var serverCertificatesVerificationMode: linphonesw.Ldap.CertVerificationMode {
     get
     set
   }
-  public var sipAttribute: Swift.String {
+  public var sipAttribute: Swift.String? {
     get
     set
   }
-  public var sipDomain: Swift.String {
+  public var sipDomain: Swift.String? {
     get
     set
   }
   public var timeout: Swift.Int {
+    get
+    set
+  }
+  public var timeoutTlsMs: Swift.Int {
     get
     set
   }
@@ -5327,7 +5525,7 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
   public var currentDelegate: (any linphonesw.LoggingServiceDelegate)? {
     get
   }
-  public var domain: Swift.String {
+  public var domain: Swift.String? {
     get
     set
   }
@@ -5357,12 +5555,37 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
   public var getCobject: Swift.OpaquePointer? {
     get
   }
+  public enum Aggregation : Swift.Int {
+    case None
+    case Friend
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  public struct Source : Swift.OptionSet {
+    public let rawValue: Swift.Int
+    public init(rawValue: Swift.Int)
+    public static let None: linphonesw.MagicSearch.Source
+    public static let Friends: linphonesw.MagicSearch.Source
+    public static let CallLogs: linphonesw.MagicSearch.Source
+    public static let LdapServers: linphonesw.MagicSearch.Source
+    public static let ChatRooms: linphonesw.MagicSearch.Source
+    public static let Request: linphonesw.MagicSearch.Source
+    public static let FavoriteFriends: linphonesw.MagicSearch.Source
+    public static let ConferencesInfo: linphonesw.MagicSearch.Source
+    public static let All: linphonesw.MagicSearch.Source
+    public typealias ArrayLiteralElement = linphonesw.MagicSearch.Source
+    public typealias Element = linphonesw.MagicSearch.Source
+    public typealias RawValue = Swift.Int
+  }
   public func addDelegate(delegate: any linphonesw.MagicSearchDelegate)
   public func removeDelegate(delegate: any linphonesw.MagicSearchDelegate)
   public var currentDelegate: (any linphonesw.MagicSearchDelegate)? {
     get
   }
-  public var delimiter: Swift.String {
+  public var delimiter: Swift.String? {
     get
     set
   }
@@ -5397,8 +5620,8 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
   public func getContacts(filter: Swift.String?, domain: Swift.String?, sourceFlags: Swift.Int) -> [linphonesw.SearchResult]
   @available(*, deprecated)
   public func getContactsAsync(filter: Swift.String?, domain: Swift.String?, sourceFlags: Swift.Int)
-  public func getContactsList(filter: Swift.String?, domain: Swift.String?, sourceFlags: Swift.Int, aggregation: linphonesw.MagicSearchAggregation) -> [linphonesw.SearchResult]
-  public func getContactsListAsync(filter: Swift.String?, domain: Swift.String?, sourceFlags: Swift.Int, aggregation: linphonesw.MagicSearchAggregation)
+  public func getContactsList(filter: Swift.String?, domain: Swift.String?, sourceFlags: Swift.Int, aggregation: linphonesw.MagicSearch.Aggregation) -> [linphonesw.SearchResult]
+  public func getContactsListAsync(filter: Swift.String?, domain: Swift.String?, sourceFlags: Swift.Int, aggregation: linphonesw.MagicSearch.Aggregation)
   public func resetSearchCache()
   @objc deinit
 }
@@ -5414,11 +5637,11 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
     get
     set
   }
-  public var natV4Address: Swift.String {
+  public var natV4Address: Swift.String? {
     get
     set
   }
-  public var natV6Address: Swift.String {
+  public var natV6Address: Swift.String? {
     get
     set
   }
@@ -5426,11 +5649,11 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
     get
     set
   }
-  public var stunServer: Swift.String {
+  public var stunServer: Swift.String? {
     get
     set
   }
-  public var stunServerUsername: Swift.String {
+  public var stunServerUsername: Swift.String? {
     get
     set
   }
@@ -5468,6 +5691,16 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
   public var getCobject: Swift.OpaquePointer? {
     get
   }
+  public enum Role : Swift.Int {
+    case Speaker
+    case Listener
+    case Unknown
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
   public var address: linphonesw.Address? {
     get
   }
@@ -5483,7 +5716,10 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
   public var isFocus: Swift.Bool {
     get
   }
-  public var securityLevel: linphonesw.ChatRoomSecurityLevel {
+  public var role: linphonesw.Participant.Role {
+    get
+  }
+  public var securityLevel: linphonesw.ChatRoom.SecurityLevel {
     get
   }
   public var userData: Swift.UnsafeMutableRawPointer? {
@@ -5499,6 +5735,43 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
   public var getCobject: Swift.OpaquePointer? {
     get
   }
+  public enum JoiningMethod : Swift.Int {
+    case DialedIn
+    case DialedOut
+    case FocusOwner
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  public enum DisconnectionMethod : Swift.Int {
+    case Booted
+    case Departed
+    case Busy
+    case Failed
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  public enum State : Swift.Int {
+    case Joining
+    case Present
+    case Leaving
+    case Left
+    case ScheduledForJoining
+    case ScheduledForLeaving
+    case OnHold
+    case Alerting
+    case MutedByFocus
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
   public func addDelegate(delegate: any linphonesw.ParticipantDeviceDelegate)
   public func removeDelegate(delegate: any linphonesw.ParticipantDeviceDelegate)
   public var address: linphonesw.Address? {
@@ -5507,10 +5780,10 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
   public var currentDelegate: (any linphonesw.ParticipantDeviceDelegate)? {
     get
   }
-  public var disconnectionMethod: linphonesw.ParticipantDeviceDisconnectionMethod {
+  public var disconnectionMethod: linphonesw.ParticipantDevice.DisconnectionMethod {
     get
   }
-  public var disconnectionReason: Swift.String {
+  public var disconnectionReason: Swift.String? {
     get
   }
   public var isInConference: Swift.Bool {
@@ -5522,20 +5795,20 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
   public var isSpeaking: Swift.Bool {
     get
   }
-  public var joiningMethod: linphonesw.ParticipantDeviceJoiningMethod {
+  public var joiningMethod: linphonesw.ParticipantDevice.JoiningMethod {
     get
   }
-  public var name: Swift.String {
+  public var name: Swift.String? {
     get
   }
   public var nativeVideoWindowId: Swift.UnsafeMutableRawPointer? {
     get
     set
   }
-  public var securityLevel: linphonesw.ChatRoomSecurityLevel {
+  public var securityLevel: linphonesw.ChatRoom.SecurityLevel {
     get
   }
-  public var state: linphonesw.ParticipantDeviceState {
+  public var state: linphonesw.ParticipantDevice.State {
     get
   }
   public var timeOfDisconnection: Darwin.time_t {
@@ -5597,6 +5870,25 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
   }
   @objc deinit
 }
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class ParticipantInfo : linphonesw.LinphoneObject {
+  public static func getSwiftObject(cObject: Swift.OpaquePointer) -> linphonesw.ParticipantInfo
+  public var getCobject: Swift.OpaquePointer? {
+    get
+  }
+  public var address: linphonesw.Address? {
+    get
+  }
+  public var role: linphonesw.Participant.Role {
+    get
+    set
+  }
+  public func addParameter(name: Swift.String, value: Swift.String)
+  public func clone() -> linphonesw.ParticipantInfo?
+  public func getParameterValue(name: Swift.String) -> Swift.String
+  public func hasParameter(name: Swift.String) -> Swift.Bool
+  public func removeParameter(name: Swift.String)
+  @objc deinit
+}
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class PayloadType : linphonesw.LinphoneObject {
   public static func getSwiftObject(cObject: Swift.OpaquePointer) -> linphonesw.PayloadType
   public var getCobject: Swift.OpaquePointer? {
@@ -5611,7 +5903,7 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
   public var description: Swift.String {
     get
   }
-  public var encoderDescription: Swift.String {
+  public var encoderDescription: Swift.String? {
     get
   }
   public var isUsable: Swift.Bool {
@@ -5631,11 +5923,11 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
     get
     set
   }
-  public var recvFmtp: Swift.String {
+  public var recvFmtp: Swift.String? {
     get
     set
   }
-  public var sendFmtp: Swift.String {
+  public var sendFmtp: Swift.String? {
     get
     set
   }
@@ -5645,6 +5937,7 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
   public func clone() -> linphonesw.PayloadType?
   public func enable(enabled: Swift.Bool) -> Swift.Int
   public func enabled() -> Swift.Bool
+  public func weakEquals(otherPayloadType: linphonesw.PayloadType) -> Swift.Bool
   @objc deinit
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class Player : linphonesw.LinphoneObject {
@@ -5707,14 +6000,48 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
   public var getCobject: Swift.OpaquePointer? {
     get
   }
-  public var description: Swift.String {
+  public enum Kind : Swift.Int {
+    case Appointment
+    case Away
+    case Breakfast
+    case Busy
+    case Dinner
+    case Holiday
+    case InTransit
+    case LookingForWork
+    case Lunch
+    case Meal
+    case Meeting
+    case OnThePhone
+    case Other
+    case Performance
+    case PermanentAbsence
+    case Playing
+    case Presentation
+    case Shopping
+    case Sleeping
+    case Spectator
+    case Steering
+    case Travel
+    case TV
+    case Unknown
+    case Vacation
+    case Working
+    case Worship
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  public var description: Swift.String? {
     get
   }
   public func setDescription(newValue: Swift.String) throws
-  public var type: linphonesw.PresenceActivityType {
+  public var type: linphonesw.PresenceActivity.Kind {
     get
   }
-  public func setType(newValue: linphonesw.PresenceActivityType) throws
+  public func setType(newValue: linphonesw.PresenceActivity.Kind) throws
   public var userData: Swift.UnsafeMutableRawPointer? {
     get
     set
@@ -5727,8 +6054,8 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
   public var getCobject: Swift.OpaquePointer? {
     get
   }
-  public static func newWithActivity(activity: linphonesw.PresenceActivityType, description: Swift.String?) -> linphonesw.PresenceModel?
-  public static func newWithActivityAndNote(activity: linphonesw.PresenceActivityType, description: Swift.String?, note: Swift.String, lang: Swift.String?) -> linphonesw.PresenceModel?
+  public static func newWithActivity(activity: linphonesw.PresenceActivity.Kind, description: Swift.String?) -> linphonesw.PresenceModel?
+  public static func newWithActivityAndNote(activity: linphonesw.PresenceActivity.Kind, description: Swift.String?, note: Swift.String, lang: Swift.String?) -> linphonesw.PresenceModel?
   public var activity: linphonesw.PresenceActivity? {
     get
   }
@@ -5742,7 +6069,7 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
   public var consolidatedPresence: linphonesw.ConsolidatedPresence {
     get
   }
-  public var contact: Swift.String {
+  public var contact: Swift.String? {
     get
   }
   public func setContact(newValue: Swift.String) throws
@@ -5780,15 +6107,15 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
   public func clearNotes() throws
   public func clearPersons() throws
   public func clearServices() throws
-  public func getCapabilityVersion(capability: linphonesw.FriendCapability) -> Swift.Float
+  public func getCapabilityVersion(capability: linphonesw.Friend.Capability) -> Swift.Float
   public func getNote(lang: Swift.String?) -> linphonesw.PresenceNote?
   public func getNthActivity(index: Swift.UInt) -> linphonesw.PresenceActivity?
   public func getNthPerson(index: Swift.UInt) -> linphonesw.PresencePerson?
   public func getNthService(index: Swift.UInt) -> linphonesw.PresenceService?
-  public func hasCapability(capability: linphonesw.FriendCapability) -> Swift.Bool
-  public func hasCapabilityWithVersion(capability: linphonesw.FriendCapability, version: Swift.Float) -> Swift.Bool
-  public func hasCapabilityWithVersionOrMore(capability: linphonesw.FriendCapability, version: Swift.Float) -> Swift.Bool
-  public func setActivity(activity: linphonesw.PresenceActivityType, description: Swift.String?) throws
+  public func hasCapability(capability: linphonesw.Friend.Capability) -> Swift.Bool
+  public func hasCapabilityWithVersion(capability: linphonesw.Friend.Capability, version: Swift.Float) -> Swift.Bool
+  public func hasCapabilityWithVersionOrMore(capability: linphonesw.Friend.Capability, version: Swift.Float) -> Swift.Bool
+  public func setActivity(activity: linphonesw.PresenceActivity.Kind, description: Swift.String?) throws
   @objc deinit
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class PresenceNote : linphonesw.LinphoneObject {
@@ -5800,7 +6127,7 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
     get
   }
   public func setContent(newValue: Swift.String) throws
-  public var lang: Swift.String {
+  public var lang: Swift.String? {
     get
   }
   public func setLang(newValue: Swift.String) throws
@@ -5815,7 +6142,7 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
   public var getCobject: Swift.OpaquePointer? {
     get
   }
-  public var id: Swift.String {
+  public var id: Swift.String? {
     get
   }
   public func setId(newValue: Swift.String) throws
@@ -5852,11 +6179,11 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
     get
   }
   public func setBasicstatus(newValue: linphonesw.PresenceBasicStatus) throws
-  public var contact: Swift.String {
+  public var contact: Swift.String? {
     get
   }
   public func setContact(newValue: Swift.String) throws
-  public var id: Swift.String {
+  public var id: Swift.String? {
     get
   }
   public func setId(newValue: Swift.String) throws
@@ -5897,7 +6224,7 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
     @available(*, deprecated)
     set
   }
-  public var conferenceFactoryUri: Swift.String {
+  public var conferenceFactoryUri: Swift.String? {
     @available(*, deprecated)
     get
     @available(*, deprecated)
@@ -5907,13 +6234,13 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
   public var contact: linphonesw.Address? {
     get
   }
-  public var contactParameters: Swift.String {
+  public var contactParameters: Swift.String? {
     @available(*, deprecated)
     get
     @available(*, deprecated)
     set
   }
-  public var contactUriParameters: Swift.String {
+  public var contactUriParameters: Swift.String? {
     @available(*, deprecated)
     get
     @available(*, deprecated)
@@ -5935,14 +6262,14 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
     @available(*, deprecated)
     set
   }
-  public var dialPrefix: Swift.String {
+  public var dialPrefix: Swift.String? {
     @available(*, deprecated)
     get
     @available(*, deprecated)
     set
   }
   @available(*, deprecated)
-  public var domain: Swift.String {
+  public var domain: Swift.String? {
     get
   }
   @available(*, deprecated)
@@ -5965,7 +6292,7 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
   }
   @available(*, deprecated)
   public func setIdentityaddress(newValue: linphonesw.Address) throws
-  public var idkey: Swift.String {
+  public var idkey: Swift.String? {
     @available(*, deprecated)
     get
     @available(*, deprecated)
@@ -6017,7 +6344,7 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
     @available(*, deprecated)
     set
   }
-  public var qualityReportingCollector: Swift.String {
+  public var qualityReportingCollector: Swift.String? {
     @available(*, deprecated)
     get
     @available(*, deprecated)
@@ -6035,13 +6362,13 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
     @available(*, deprecated)
     set
   }
-  public var realm: Swift.String {
+  public var realm: Swift.String? {
     @available(*, deprecated)
     get
     @available(*, deprecated)
     set
   }
-  public var refKey: Swift.String {
+  public var refKey: Swift.String? {
     @available(*, deprecated)
     get
     @available(*, deprecated)
@@ -6066,7 +6393,7 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
   @available(*, deprecated)
   public func setRoutes(newValue: [Swift.String]) throws
   @available(*, deprecated)
-  public var serverAddr: Swift.String {
+  public var serverAddr: Swift.String? {
     get
   }
   @available(*, deprecated)
@@ -6112,7 +6439,7 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
   public var getCobject: Swift.OpaquePointer? {
     get
   }
-  public var bundleIdentifier: Swift.String {
+  public var bundleIdentifier: Swift.String? {
     get
     set
   }
@@ -6136,27 +6463,31 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
     get
     set
   }
-  public var param: Swift.String {
+  public var param: Swift.String? {
     get
     set
   }
-  public var prid: Swift.String {
+  public var prid: Swift.String? {
     get
     set
   }
-  public var provider: Swift.String {
+  public var provider: Swift.String? {
     get
     set
   }
-  public var remoteToken: Swift.String {
+  public var remotePushInterval: Swift.String {
     get
     set
   }
-  public var teamId: Swift.String {
+  public var remoteToken: Swift.String? {
     get
     set
   }
-  public var voipToken: Swift.String {
+  public var teamId: Swift.String? {
+    get
+    set
+  }
+  public var voipToken: Swift.String? {
     get
     set
   }
@@ -6196,10 +6527,13 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
   public var peerAddr: linphonesw.Address? {
     get
   }
-  public var subject: Swift.String {
+  public var reactionContent: Swift.String? {
     get
   }
-  public var textContent: Swift.String {
+  public var subject: Swift.String? {
+    get
+  }
+  public var textContent: Swift.String? {
     get
   }
   @objc deinit
@@ -6228,20 +6562,40 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
   public var getCobject: Swift.OpaquePointer? {
     get
   }
+  public enum FileFormat : Swift.Int {
+    case Unknown
+    case Wav
+    case Mkv
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  public enum State : Swift.Int {
+    case Closed
+    case Paused
+    case Running
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
   public var captureVolume: Swift.Float {
     get
   }
   public var duration: Swift.Int {
     get
   }
-  public var file: Swift.String {
+  public var file: Swift.String? {
     get
   }
   public var params: linphonesw.RecorderParams? {
     get
     set
   }
-  public var state: linphonesw.RecorderState {
+  public var state: linphonesw.Recorder.State {
     get
   }
   public var userData: Swift.UnsafeMutableRawPointer? {
@@ -6264,15 +6618,15 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
     get
     set
   }
-  public var fileFormat: linphonesw.RecorderFileFormat {
+  public var fileFormat: linphonesw.Recorder.FileFormat {
     get
     set
   }
-  public var videoCodec: Swift.String {
+  public var videoCodec: Swift.String? {
     get
     set
   }
-  public var webcamName: Swift.String {
+  public var webcamName: Swift.String? {
     get
     set
   }
@@ -6297,7 +6651,7 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
   public var friend: linphonesw.Friend? {
     get
   }
-  public var phoneNumber: Swift.String {
+  public var phoneNumber: Swift.String? {
     get
   }
   public var sourceFlags: Swift.Int {
@@ -6306,7 +6660,30 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
   public var weight: Swift.UInt {
     get
   }
-  public func hasCapability(capability: linphonesw.FriendCapability) -> Swift.Bool
+  public func hasCapability(capability: linphonesw.Friend.Capability) -> Swift.Bool
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class SignalInformation : linphonesw.LinphoneObject {
+  public static func getSwiftObject(cObject: Swift.OpaquePointer) -> linphonesw.SignalInformation
+  public var getCobject: Swift.OpaquePointer? {
+    get
+  }
+  public var signalType: linphonesw.SignalType {
+    get
+    set
+  }
+  public var signalUnit: linphonesw.SignalStrengthUnit {
+    get
+    set
+  }
+  public var strength: Swift.Float {
+    get
+  }
+  public var value: Swift.Float {
+    get
+    set
+  }
+  public func clone() -> linphonesw.SignalInformation?
   @objc deinit
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class Transports : linphonesw.LinphoneObject {
@@ -6354,7 +6731,7 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
   public var activated: Swift.Bool {
     get
   }
-  public var domain: Swift.String {
+  public var domain: Swift.String? {
     get
     set
   }
@@ -6373,7 +6750,7 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
     get
     set
   }
-  public var username: Swift.String {
+  public var username: Swift.String? {
     get
     set
   }
@@ -6395,11 +6772,11 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
     get
     set
   }
-  public var host: Swift.String {
+  public var host: Swift.String? {
     get
     set
   }
-  public var host2: Swift.String {
+  public var host2: Swift.String? {
     get
     set
   }
@@ -6426,23 +6803,27 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
   public var getCobject: Swift.OpaquePointer? {
     get
   }
-  public var etag: Swift.String {
+  public var etag: Swift.String? {
     get
     set
   }
-  public var familyName: Swift.String {
+  public var familyName: Swift.String? {
     get
     set
   }
-  public var fullName: Swift.String {
+  public var fullName: Swift.String? {
     get
     set
   }
-  public var givenName: Swift.String {
+  public var givenName: Swift.String? {
     get
     set
   }
-  public var organization: Swift.String {
+  public var jobTitle: Swift.String? {
+    get
+    set
+  }
+  public var organization: Swift.String? {
     get
     set
   }
@@ -6452,7 +6833,7 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
   public var phoneNumbersWithLabel: [linphonesw.FriendPhoneNumber] {
     get
   }
-  public var photo: Swift.String {
+  public var photo: Swift.String? {
     get
     set
   }
@@ -6463,11 +6844,11 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
     get
     set
   }
-  public var uid: Swift.String {
+  public var uid: Swift.String? {
     get
     set
   }
-  public var url: Swift.String {
+  public var url: Swift.String? {
     get
     set
   }
@@ -6481,6 +6862,7 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
   public func generateUniqueId() -> Swift.Bool
   public func getExtendedPropertiesValuesByName(name: Swift.String) -> [Swift.String]
   public func removeExtentedPropertiesByName(name: Swift.String)
+  public func removeJobTitle()
   public func removeOrganization()
   public func removePhoneNumber(phone: Swift.String)
   public func removePhoneNumberWithLabel(phoneNumber: linphonesw.FriendPhoneNumber)
@@ -6519,7 +6901,7 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
   public var isUndefined: Swift.Bool {
     get
   }
-  public var name: Swift.String {
+  public var name: Swift.String? {
     get
     set
   }
@@ -6546,11 +6928,11 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
     get
     set
   }
-  public var cameraId: Swift.String {
+  public var cameraId: Swift.String? {
     get
     set
   }
-  public var image: Swift.String {
+  public var image: Swift.String? {
     get
     set
   }
@@ -6567,7 +6949,7 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
   }
   public func addDelegate(delegate: any linphonesw.XmlRpcRequestDelegate)
   public func removeDelegate(delegate: any linphonesw.XmlRpcRequestDelegate)
-  public var content: Swift.String {
+  public var content: Swift.String? {
     get
   }
   public var currentDelegate: (any linphonesw.XmlRpcRequestDelegate)? {
@@ -6579,13 +6961,13 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
   public var listResponse: [Swift.String] {
     get
   }
-  public var rawResponse: Swift.String {
+  public var rawResponse: Swift.String? {
     get
   }
   public var status: linphonesw.XmlRpcStatus {
     get
   }
-  public var stringResponse: Swift.String {
+  public var stringResponse: Swift.String? {
     get
   }
   public var userData: Swift.UnsafeMutableRawPointer? {
@@ -6613,42 +6995,12 @@ final public class XmlRpcRequestDelegateStub : linphonesw.XmlRpcRequestDelegate 
 extension linphonesw.AVPFMode : Swift.Equatable {}
 extension linphonesw.AVPFMode : Swift.Hashable {}
 extension linphonesw.AVPFMode : Swift.RawRepresentable {}
-extension linphonesw.AccountCreatorAlgoStatus : Swift.Equatable {}
-extension linphonesw.AccountCreatorAlgoStatus : Swift.Hashable {}
-extension linphonesw.AccountCreatorAlgoStatus : Swift.RawRepresentable {}
-extension linphonesw.AccountCreatorBackend : Swift.Equatable {}
-extension linphonesw.AccountCreatorBackend : Swift.Hashable {}
-extension linphonesw.AccountCreatorBackend : Swift.RawRepresentable {}
-extension linphonesw.AddressFamily : Swift.Equatable {}
-extension linphonesw.AddressFamily : Swift.Hashable {}
-extension linphonesw.AddressFamily : Swift.RawRepresentable {}
-extension linphonesw.AudioDeviceType : Swift.Equatable {}
-extension linphonesw.AudioDeviceType : Swift.Hashable {}
-extension linphonesw.AudioDeviceType : Swift.RawRepresentable {}
 extension linphonesw.AuthMethod : Swift.Equatable {}
 extension linphonesw.AuthMethod : Swift.Hashable {}
 extension linphonesw.AuthMethod : Swift.RawRepresentable {}
-extension linphonesw.ChatRoomEphemeralMode : Swift.Equatable {}
-extension linphonesw.ChatRoomEphemeralMode : Swift.Hashable {}
-extension linphonesw.ChatRoomEphemeralMode : Swift.RawRepresentable {}
-extension linphonesw.ChatRoomSecurityLevel : Swift.Equatable {}
-extension linphonesw.ChatRoomSecurityLevel : Swift.Hashable {}
-extension linphonesw.ChatRoomSecurityLevel : Swift.RawRepresentable {}
-extension linphonesw.ConferenceInfoState : Swift.Equatable {}
-extension linphonesw.ConferenceInfoState : Swift.Hashable {}
-extension linphonesw.ConferenceInfoState : Swift.RawRepresentable {}
-extension linphonesw.ConferenceJoiningMode : Swift.Equatable {}
-extension linphonesw.ConferenceJoiningMode : Swift.Hashable {}
-extension linphonesw.ConferenceJoiningMode : Swift.RawRepresentable {}
-extension linphonesw.ConferenceLayout : Swift.Equatable {}
-extension linphonesw.ConferenceLayout : Swift.Hashable {}
-extension linphonesw.ConferenceLayout : Swift.RawRepresentable {}
-extension linphonesw.ConferenceParticipantListType : Swift.Equatable {}
-extension linphonesw.ConferenceParticipantListType : Swift.Hashable {}
-extension linphonesw.ConferenceParticipantListType : Swift.RawRepresentable {}
-extension linphonesw.ConferenceSchedulerState : Swift.Equatable {}
-extension linphonesw.ConferenceSchedulerState : Swift.Hashable {}
-extension linphonesw.ConferenceSchedulerState : Swift.RawRepresentable {}
+extension linphonesw.CodecPriorityPolicy : Swift.Equatable {}
+extension linphonesw.CodecPriorityPolicy : Swift.Hashable {}
+extension linphonesw.CodecPriorityPolicy : Swift.RawRepresentable {}
 extension linphonesw.ConfiguringState : Swift.Equatable {}
 extension linphonesw.ConfiguringState : Swift.Hashable {}
 extension linphonesw.ConfiguringState : Swift.RawRepresentable {}
@@ -6658,39 +7010,18 @@ extension linphonesw.ConsolidatedPresence : Swift.RawRepresentable {}
 extension linphonesw.EcCalibratorStatus : Swift.Equatable {}
 extension linphonesw.EcCalibratorStatus : Swift.Hashable {}
 extension linphonesw.EcCalibratorStatus : Swift.RawRepresentable {}
-extension linphonesw.EventLogType : Swift.Equatable {}
-extension linphonesw.EventLogType : Swift.Hashable {}
-extension linphonesw.EventLogType : Swift.RawRepresentable {}
-extension linphonesw.FriendListType : Swift.Equatable {}
-extension linphonesw.FriendListType : Swift.Hashable {}
-extension linphonesw.FriendListType : Swift.RawRepresentable {}
 extension linphonesw.GlobalState : Swift.Equatable {}
 extension linphonesw.GlobalState : Swift.Hashable {}
 extension linphonesw.GlobalState : Swift.RawRepresentable {}
 extension linphonesw.IceState : Swift.Equatable {}
 extension linphonesw.IceState : Swift.Hashable {}
 extension linphonesw.IceState : Swift.RawRepresentable {}
-extension linphonesw.LdapAuthMethod : Swift.Equatable {}
-extension linphonesw.LdapAuthMethod : Swift.Hashable {}
-extension linphonesw.LdapAuthMethod : Swift.RawRepresentable {}
-extension linphonesw.LdapCertVerificationMode : Swift.Equatable {}
-extension linphonesw.LdapCertVerificationMode : Swift.Hashable {}
-extension linphonesw.LdapCertVerificationMode : Swift.RawRepresentable {}
-extension linphonesw.LdapCheck : Swift.Equatable {}
-extension linphonesw.LdapCheck : Swift.Hashable {}
-extension linphonesw.LdapCheck : Swift.RawRepresentable {}
-extension linphonesw.LdapDebugLevel : Swift.Equatable {}
-extension linphonesw.LdapDebugLevel : Swift.Hashable {}
-extension linphonesw.LdapDebugLevel : Swift.RawRepresentable {}
 extension linphonesw.LimeState : Swift.Equatable {}
 extension linphonesw.LimeState : Swift.Hashable {}
 extension linphonesw.LimeState : Swift.RawRepresentable {}
 extension linphonesw.LogCollectionState : Swift.Equatable {}
 extension linphonesw.LogCollectionState : Swift.Hashable {}
 extension linphonesw.LogCollectionState : Swift.RawRepresentable {}
-extension linphonesw.MagicSearchAggregation : Swift.Equatable {}
-extension linphonesw.MagicSearchAggregation : Swift.Hashable {}
-extension linphonesw.MagicSearchAggregation : Swift.RawRepresentable {}
 extension linphonesw.MediaDirection : Swift.Equatable {}
 extension linphonesw.MediaDirection : Swift.Hashable {}
 extension linphonesw.MediaDirection : Swift.RawRepresentable {}
@@ -6700,18 +7031,6 @@ extension linphonesw.MediaEncryption : Swift.RawRepresentable {}
 extension linphonesw.MediaResourceMode : Swift.Equatable {}
 extension linphonesw.MediaResourceMode : Swift.Hashable {}
 extension linphonesw.MediaResourceMode : Swift.RawRepresentable {}
-extension linphonesw.ParticipantDeviceDisconnectionMethod : Swift.Equatable {}
-extension linphonesw.ParticipantDeviceDisconnectionMethod : Swift.Hashable {}
-extension linphonesw.ParticipantDeviceDisconnectionMethod : Swift.RawRepresentable {}
-extension linphonesw.ParticipantDeviceJoiningMethod : Swift.Equatable {}
-extension linphonesw.ParticipantDeviceJoiningMethod : Swift.Hashable {}
-extension linphonesw.ParticipantDeviceJoiningMethod : Swift.RawRepresentable {}
-extension linphonesw.ParticipantDeviceState : Swift.Equatable {}
-extension linphonesw.ParticipantDeviceState : Swift.Hashable {}
-extension linphonesw.ParticipantDeviceState : Swift.RawRepresentable {}
-extension linphonesw.PresenceActivityType : Swift.Equatable {}
-extension linphonesw.PresenceActivityType : Swift.Hashable {}
-extension linphonesw.PresenceActivityType : Swift.RawRepresentable {}
 extension linphonesw.PresenceBasicStatus : Swift.Equatable {}
 extension linphonesw.PresenceBasicStatus : Swift.Hashable {}
 extension linphonesw.PresenceBasicStatus : Swift.RawRepresentable {}
@@ -6724,21 +7043,18 @@ extension linphonesw.PublishState : Swift.RawRepresentable {}
 extension linphonesw.Reason : Swift.Equatable {}
 extension linphonesw.Reason : Swift.Hashable {}
 extension linphonesw.Reason : Swift.RawRepresentable {}
-extension linphonesw.RecorderFileFormat : Swift.Equatable {}
-extension linphonesw.RecorderFileFormat : Swift.Hashable {}
-extension linphonesw.RecorderFileFormat : Swift.RawRepresentable {}
-extension linphonesw.RecorderState : Swift.Equatable {}
-extension linphonesw.RecorderState : Swift.Hashable {}
-extension linphonesw.RecorderState : Swift.RawRepresentable {}
 extension linphonesw.RegistrationState : Swift.Equatable {}
 extension linphonesw.RegistrationState : Swift.Hashable {}
 extension linphonesw.RegistrationState : Swift.RawRepresentable {}
-extension linphonesw.SecurityEventType : Swift.Equatable {}
-extension linphonesw.SecurityEventType : Swift.Hashable {}
-extension linphonesw.SecurityEventType : Swift.RawRepresentable {}
 extension linphonesw.SessionExpiresRefresher : Swift.Equatable {}
 extension linphonesw.SessionExpiresRefresher : Swift.Hashable {}
 extension linphonesw.SessionExpiresRefresher : Swift.RawRepresentable {}
+extension linphonesw.SignalStrengthUnit : Swift.Equatable {}
+extension linphonesw.SignalStrengthUnit : Swift.Hashable {}
+extension linphonesw.SignalStrengthUnit : Swift.RawRepresentable {}
+extension linphonesw.SignalType : Swift.Equatable {}
+extension linphonesw.SignalType : Swift.Hashable {}
+extension linphonesw.SignalType : Swift.RawRepresentable {}
 extension linphonesw.SrtpSuite : Swift.Equatable {}
 extension linphonesw.SrtpSuite : Swift.Hashable {}
 extension linphonesw.SrtpSuite : Swift.RawRepresentable {}
@@ -6796,6 +7112,9 @@ extension linphonesw.AccountCreator.DomainStatus : Swift.RawRepresentable {}
 extension linphonesw.AccountCreator.ActivationCodeStatus : Swift.Equatable {}
 extension linphonesw.AccountCreator.ActivationCodeStatus : Swift.Hashable {}
 extension linphonesw.AccountCreator.ActivationCodeStatus : Swift.RawRepresentable {}
+extension linphonesw.AccountCreator.AlgoStatus : Swift.Equatable {}
+extension linphonesw.AccountCreator.AlgoStatus : Swift.Hashable {}
+extension linphonesw.AccountCreator.AlgoStatus : Swift.RawRepresentable {}
 extension linphonesw.AccountCreator.LanguageStatus : Swift.Equatable {}
 extension linphonesw.AccountCreator.LanguageStatus : Swift.Hashable {}
 extension linphonesw.AccountCreator.LanguageStatus : Swift.RawRepresentable {}
@@ -6808,9 +7127,21 @@ extension linphonesw.AccountCreator.EmailStatus : Swift.RawRepresentable {}
 extension linphonesw.AccountCreator.UsernameStatus : Swift.Equatable {}
 extension linphonesw.AccountCreator.UsernameStatus : Swift.Hashable {}
 extension linphonesw.AccountCreator.UsernameStatus : Swift.RawRepresentable {}
+extension linphonesw.AccountCreator.Backend : Swift.Equatable {}
+extension linphonesw.AccountCreator.Backend : Swift.Hashable {}
+extension linphonesw.AccountCreator.Backend : Swift.RawRepresentable {}
 extension linphonesw.AccountCreator.PhoneNumberStatus : Swift.Equatable {}
 extension linphonesw.AccountCreator.PhoneNumberStatus : Swift.Hashable {}
 extension linphonesw.AccountCreator.PhoneNumberStatus : Swift.RawRepresentable {}
+extension linphonesw.Address.Family : Swift.Equatable {}
+extension linphonesw.Address.Family : Swift.Hashable {}
+extension linphonesw.Address.Family : Swift.RawRepresentable {}
+extension linphonesw.Alert.Kind : Swift.Equatable {}
+extension linphonesw.Alert.Kind : Swift.Hashable {}
+extension linphonesw.Alert.Kind : Swift.RawRepresentable {}
+extension linphonesw.AudioDevice.Kind : Swift.Equatable {}
+extension linphonesw.AudioDevice.Kind : Swift.Hashable {}
+extension linphonesw.AudioDevice.Kind : Swift.RawRepresentable {}
 extension linphonesw.Call.Status : Swift.Equatable {}
 extension linphonesw.Call.Status : Swift.Hashable {}
 extension linphonesw.Call.Status : Swift.RawRepresentable {}
@@ -6826,24 +7157,93 @@ extension linphonesw.ChatMessage.Direction : Swift.RawRepresentable {}
 extension linphonesw.ChatMessage.State : Swift.Equatable {}
 extension linphonesw.ChatMessage.State : Swift.Hashable {}
 extension linphonesw.ChatMessage.State : Swift.RawRepresentable {}
+extension linphonesw.ChatRoom.SecurityLevel : Swift.Equatable {}
+extension linphonesw.ChatRoom.SecurityLevel : Swift.Hashable {}
+extension linphonesw.ChatRoom.SecurityLevel : Swift.RawRepresentable {}
+extension linphonesw.ChatRoom.EphemeralMode : Swift.Equatable {}
+extension linphonesw.ChatRoom.EphemeralMode : Swift.Hashable {}
+extension linphonesw.ChatRoom.EphemeralMode : Swift.RawRepresentable {}
 extension linphonesw.ChatRoom.State : Swift.Equatable {}
 extension linphonesw.ChatRoom.State : Swift.Hashable {}
 extension linphonesw.ChatRoom.State : Swift.RawRepresentable {}
+extension linphonesw.Conference.SecurityLevel : Swift.Equatable {}
+extension linphonesw.Conference.SecurityLevel : Swift.Hashable {}
+extension linphonesw.Conference.SecurityLevel : Swift.RawRepresentable {}
+extension linphonesw.Conference.ParticipantListType : Swift.Equatable {}
+extension linphonesw.Conference.ParticipantListType : Swift.Hashable {}
+extension linphonesw.Conference.ParticipantListType : Swift.RawRepresentable {}
+extension linphonesw.Conference.JoiningMode : Swift.Equatable {}
+extension linphonesw.Conference.JoiningMode : Swift.Hashable {}
+extension linphonesw.Conference.JoiningMode : Swift.RawRepresentable {}
+extension linphonesw.Conference.Layout : Swift.Equatable {}
+extension linphonesw.Conference.Layout : Swift.Hashable {}
+extension linphonesw.Conference.Layout : Swift.RawRepresentable {}
 extension linphonesw.Conference.State : Swift.Equatable {}
 extension linphonesw.Conference.State : Swift.Hashable {}
 extension linphonesw.Conference.State : Swift.RawRepresentable {}
+extension linphonesw.ConferenceInfo.State : Swift.Equatable {}
+extension linphonesw.ConferenceInfo.State : Swift.Hashable {}
+extension linphonesw.ConferenceInfo.State : Swift.RawRepresentable {}
+extension linphonesw.ConferenceScheduler.State : Swift.Equatable {}
+extension linphonesw.ConferenceScheduler.State : Swift.Hashable {}
+extension linphonesw.ConferenceScheduler.State : Swift.RawRepresentable {}
 extension linphonesw.Core.LogCollectionUploadState : Swift.Equatable {}
 extension linphonesw.Core.LogCollectionUploadState : Swift.Hashable {}
 extension linphonesw.Core.LogCollectionUploadState : Swift.RawRepresentable {}
+extension linphonesw.EventLog.SecurityEventType : Swift.Equatable {}
+extension linphonesw.EventLog.SecurityEventType : Swift.Hashable {}
+extension linphonesw.EventLog.SecurityEventType : Swift.RawRepresentable {}
+extension linphonesw.EventLog.Kind : Swift.Equatable {}
+extension linphonesw.EventLog.Kind : Swift.Hashable {}
+extension linphonesw.EventLog.Kind : Swift.RawRepresentable {}
 extension linphonesw.FriendList.SyncStatus : Swift.Equatable {}
 extension linphonesw.FriendList.SyncStatus : Swift.Hashable {}
 extension linphonesw.FriendList.SyncStatus : Swift.RawRepresentable {}
 extension linphonesw.FriendList.Status : Swift.Equatable {}
 extension linphonesw.FriendList.Status : Swift.Hashable {}
 extension linphonesw.FriendList.Status : Swift.RawRepresentable {}
+extension linphonesw.FriendList.Kind : Swift.Equatable {}
+extension linphonesw.FriendList.Kind : Swift.Hashable {}
+extension linphonesw.FriendList.Kind : Swift.RawRepresentable {}
+extension linphonesw.Ldap.DebugLevel : Swift.Equatable {}
+extension linphonesw.Ldap.DebugLevel : Swift.Hashable {}
+extension linphonesw.Ldap.DebugLevel : Swift.RawRepresentable {}
+extension linphonesw.Ldap.AuthMethod : Swift.Equatable {}
+extension linphonesw.Ldap.AuthMethod : Swift.Hashable {}
+extension linphonesw.Ldap.AuthMethod : Swift.RawRepresentable {}
+extension linphonesw.Ldap.CertVerificationMode : Swift.Equatable {}
+extension linphonesw.Ldap.CertVerificationMode : Swift.Hashable {}
+extension linphonesw.Ldap.CertVerificationMode : Swift.RawRepresentable {}
+extension linphonesw.Ldap.Check : Swift.Equatable {}
+extension linphonesw.Ldap.Check : Swift.Hashable {}
+extension linphonesw.Ldap.Check : Swift.RawRepresentable {}
+extension linphonesw.MagicSearch.Aggregation : Swift.Equatable {}
+extension linphonesw.MagicSearch.Aggregation : Swift.Hashable {}
+extension linphonesw.MagicSearch.Aggregation : Swift.RawRepresentable {}
+extension linphonesw.Participant.Role : Swift.Equatable {}
+extension linphonesw.Participant.Role : Swift.Hashable {}
+extension linphonesw.Participant.Role : Swift.RawRepresentable {}
+extension linphonesw.ParticipantDevice.JoiningMethod : Swift.Equatable {}
+extension linphonesw.ParticipantDevice.JoiningMethod : Swift.Hashable {}
+extension linphonesw.ParticipantDevice.JoiningMethod : Swift.RawRepresentable {}
+extension linphonesw.ParticipantDevice.DisconnectionMethod : Swift.Equatable {}
+extension linphonesw.ParticipantDevice.DisconnectionMethod : Swift.Hashable {}
+extension linphonesw.ParticipantDevice.DisconnectionMethod : Swift.RawRepresentable {}
+extension linphonesw.ParticipantDevice.State : Swift.Equatable {}
+extension linphonesw.ParticipantDevice.State : Swift.Hashable {}
+extension linphonesw.ParticipantDevice.State : Swift.RawRepresentable {}
 extension linphonesw.Player.State : Swift.Equatable {}
 extension linphonesw.Player.State : Swift.Hashable {}
 extension linphonesw.Player.State : Swift.RawRepresentable {}
+extension linphonesw.PresenceActivity.Kind : Swift.Equatable {}
+extension linphonesw.PresenceActivity.Kind : Swift.Hashable {}
+extension linphonesw.PresenceActivity.Kind : Swift.RawRepresentable {}
+extension linphonesw.Recorder.FileFormat : Swift.Equatable {}
+extension linphonesw.Recorder.FileFormat : Swift.Hashable {}
+extension linphonesw.Recorder.FileFormat : Swift.RawRepresentable {}
+extension linphonesw.Recorder.State : Swift.Equatable {}
+extension linphonesw.Recorder.State : Swift.Hashable {}
+extension linphonesw.Recorder.State : Swift.RawRepresentable {}
 extension linphonesw.Tunnel.Mode : Swift.Equatable {}
 extension linphonesw.Tunnel.Mode : Swift.Hashable {}
 extension linphonesw.Tunnel.Mode : Swift.RawRepresentable {}
