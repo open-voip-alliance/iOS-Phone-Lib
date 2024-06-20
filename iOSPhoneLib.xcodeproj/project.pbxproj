@@ -201,23 +201,23 @@
 		8F23DC602B4D8E4800E71B87 /* mswebrtc.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = mswebrtc.xcframework; path = "linphone-sdk-novideo/apple-darwin/XCFrameworks/mswebrtc.xcframework"; sourceTree = "<group>"; };
 		8F23DC612B4D8E4800E71B87 /* ortp.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ortp.xcframework; path = "linphone-sdk-novideo/apple-darwin/XCFrameworks/ortp.xcframework"; sourceTree = "<group>"; };
 		8F23DC622B4D8E4800E71B87 /* ZXing.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ZXing.xcframework; path = "linphone-sdk-novideo/apple-darwin/XCFrameworks/ZXing.xcframework"; sourceTree = "<group>"; };
-		8F852B7C2B4E943F00DE236B /* mswebrtc.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = mswebrtc.xcframework; sourceTree = "<group>"; };
-		8F852B7D2B4E943F00DE236B /* mssilk.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = mssilk.xcframework; sourceTree = "<group>"; };
-		8F852B7E2B4E943F00DE236B /* msamr.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = msamr.xcframework; sourceTree = "<group>"; };
-		8F852B7F2B4E943F00DE236B /* belr.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = belr.xcframework; sourceTree = "<group>"; };
-		8F852B802B4E943F00DE236B /* lime.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = lime.xcframework; sourceTree = "<group>"; };
-		8F852B812B4E943F00DE236B /* linphone.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = linphone.xcframework; sourceTree = "<group>"; };
-		8F852B822B4E943F00DE236B /* bctoolbox.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = bctoolbox.xcframework; sourceTree = "<group>"; };
-		8F852B832B4E943F00DE236B /* ortp.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = ortp.xcframework; sourceTree = "<group>"; };
-		8F852B842B4E943F00DE236B /* mediastreamer2.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = mediastreamer2.xcframework; sourceTree = "<group>"; };
-		8F852B852B4E943F00DE236B /* belle-sip.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = "belle-sip.xcframework"; sourceTree = "<group>"; };
-		8F852B862B4E943F00DE236B /* bctoolbox-ios.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = "bctoolbox-ios.xcframework"; sourceTree = "<group>"; };
-		8F852B872B4E943F00DE236B /* mscodec2.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = mscodec2.xcframework; sourceTree = "<group>"; };
-		8F852B882B4E943F00DE236B /* ZXing.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = ZXing.xcframework; sourceTree = "<group>"; };
-		8F852B892B4E943F00DE236B /* belcard.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = belcard.xcframework; sourceTree = "<group>"; };
-		8F852B8A2B4E943F00DE236B /* linphonesw.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = linphonesw.xcframework; sourceTree = "<group>"; };
-		8F852B8B2B4E943F00DE236B /* msopenh264.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = msopenh264.xcframework; sourceTree = "<group>"; };
-		8F852B8C2B4E943F00DE236B /* linphonetester.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = linphonetester.xcframework; sourceTree = "<group>"; };
+		8F323C712C24593500A6CECE /* belle-sip.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = "belle-sip.xcframework"; sourceTree = "<group>"; };
+		8F323C722C24593500A6CECE /* linphone.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = linphone.xcframework; sourceTree = "<group>"; };
+		8F323C732C24593500A6CECE /* mediastreamer2.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = mediastreamer2.xcframework; sourceTree = "<group>"; };
+		8F323C742C24593500A6CECE /* bctoolbox.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = bctoolbox.xcframework; sourceTree = "<group>"; };
+		8F323C752C24593500A6CECE /* lime.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = lime.xcframework; sourceTree = "<group>"; };
+		8F323C762C24593500A6CECE /* mssilk.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = mssilk.xcframework; sourceTree = "<group>"; };
+		8F323C772C24593500A6CECE /* linphonetester.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = linphonetester.xcframework; sourceTree = "<group>"; };
+		8F323C782C24593500A6CECE /* bctoolbox-tester.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = "bctoolbox-tester.xcframework"; sourceTree = "<group>"; };
+		8F323C792C24593500A6CECE /* belcard.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = belcard.xcframework; sourceTree = "<group>"; };
+		8F323C7A2C24593500A6CECE /* mscodec2.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = mscodec2.xcframework; sourceTree = "<group>"; };
+		8F323C7B2C24593500A6CECE /* msopenh264.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = msopenh264.xcframework; sourceTree = "<group>"; };
+		8F323C7C2C24593500A6CECE /* linphonesw.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = linphonesw.xcframework; sourceTree = "<group>"; };
+		8F323C7D2C24593500A6CECE /* bctoolbox-ios.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = "bctoolbox-ios.xcframework"; sourceTree = "<group>"; };
+		8F323C7E2C24593600A6CECE /* ortp.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = ortp.xcframework; sourceTree = "<group>"; };
+		8F323C7F2C24593600A6CECE /* mswebrtc.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = mswebrtc.xcframework; sourceTree = "<group>"; };
+		8F323C802C24593600A6CECE /* msamr.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = msamr.xcframework; sourceTree = "<group>"; };
+		8F323C812C24593600A6CECE /* belr.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = belr.xcframework; sourceTree = "<group>"; };
 		D2F87BE6F4431BF6FB323829 /* Pods-Phone Lib Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Phone Lib Example.debug.xcconfig"; path = "Target Support Files/Pods-Phone Lib Example/Pods-Phone Lib Example.debug.xcconfig"; sourceTree = "<group>"; };
 		D93B8A3B73E688370BE5788E /* Pods-iOSPhoneLib.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSPhoneLib.debug.xcconfig"; path = "Target Support Files/Pods-iOSPhoneLib/Pods-iOSPhoneLib.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -595,23 +595,23 @@
 		8F852B7B2B4E943F00DE236B /* linphone-sdk-novideo-frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8F852B7C2B4E943F00DE236B /* mswebrtc.xcframework */,
-				8F852B7D2B4E943F00DE236B /* mssilk.xcframework */,
-				8F852B7E2B4E943F00DE236B /* msamr.xcframework */,
-				8F852B7F2B4E943F00DE236B /* belr.xcframework */,
-				8F852B802B4E943F00DE236B /* lime.xcframework */,
-				8F852B812B4E943F00DE236B /* linphone.xcframework */,
-				8F852B822B4E943F00DE236B /* bctoolbox.xcframework */,
-				8F852B832B4E943F00DE236B /* ortp.xcframework */,
-				8F852B842B4E943F00DE236B /* mediastreamer2.xcframework */,
-				8F852B852B4E943F00DE236B /* belle-sip.xcframework */,
-				8F852B862B4E943F00DE236B /* bctoolbox-ios.xcframework */,
-				8F852B872B4E943F00DE236B /* mscodec2.xcframework */,
-				8F852B882B4E943F00DE236B /* ZXing.xcframework */,
-				8F852B892B4E943F00DE236B /* belcard.xcframework */,
-				8F852B8A2B4E943F00DE236B /* linphonesw.xcframework */,
-				8F852B8B2B4E943F00DE236B /* msopenh264.xcframework */,
-				8F852B8C2B4E943F00DE236B /* linphonetester.xcframework */,
+				8F323C7D2C24593500A6CECE /* bctoolbox-ios.xcframework */,
+				8F323C782C24593500A6CECE /* bctoolbox-tester.xcframework */,
+				8F323C742C24593500A6CECE /* bctoolbox.xcframework */,
+				8F323C792C24593500A6CECE /* belcard.xcframework */,
+				8F323C712C24593500A6CECE /* belle-sip.xcframework */,
+				8F323C812C24593600A6CECE /* belr.xcframework */,
+				8F323C752C24593500A6CECE /* lime.xcframework */,
+				8F323C722C24593500A6CECE /* linphone.xcframework */,
+				8F323C7C2C24593500A6CECE /* linphonesw.xcframework */,
+				8F323C772C24593500A6CECE /* linphonetester.xcframework */,
+				8F323C732C24593500A6CECE /* mediastreamer2.xcframework */,
+				8F323C802C24593600A6CECE /* msamr.xcframework */,
+				8F323C7A2C24593500A6CECE /* mscodec2.xcframework */,
+				8F323C7B2C24593500A6CECE /* msopenh264.xcframework */,
+				8F323C762C24593500A6CECE /* mssilk.xcframework */,
+				8F323C7F2C24593600A6CECE /* mswebrtc.xcframework */,
+				8F323C7E2C24593600A6CECE /* ortp.xcframework */,
 			);
 			path = "linphone-sdk-novideo-frameworks";
 			sourceTree = "<group>";
@@ -817,7 +817,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Remove current frameworks\nrm -r linphone-sdk-novideo-frameworks/\n# Copy existing depedencies of linphone to frameworks to be included in pod\ncp -r Pods/linphone-sdk-novideo/linphone-sdk-novideo/apple-darwin/XCFrameworks/ linphone-sdk-novideo-frameworks/\n\n# Export linphonesw for device\nxcodebuild archive \\\n-workspace iOSPhoneLib.xcworkspace \\\n-scheme linphone-sdk-novideo \\\n-configuration Release \\\n-sdk iphoneos \\\n-archivePath archives/ios_devices.xcarchive \\\nBUILD_LIBRARY_FOR_DISTRIBUTION=YES \\\nSKIP_INSTALL=NO \\\n\n# Export linphonesw for simulator\nxcodebuild archive \\\n-workspace iOSPhoneLib.xcworkspace \\\n-scheme linphone-sdk-novideo \\\n-configuration Debug \\\n-sdk iphonesimulator \\\n-archivePath archives/ios_simulators.xcarchive \\\nBUILD_LIBRARY_FOR_DISTRIBUTION=YES \\\nSKIP_INSTALL=NO \\\n\n# Combine both linphonesw frameworks to XCFramework\nxcodebuild \\\n-create-xcframework \\\n-framework archives/ios_devices.xcarchive/Products/Library/Frameworks/linphonesw.framework \\\n-framework archives/ios_simulators.xcarchive/Products/Library/Frameworks/linphonesw.framework \\\n-output linphone-sdk-novideo-frameworks/linphonesw.xcframework\n\n# Remove archives\nrm -rf archives\n";
+			shellScript = "# Remove current frameworks\nrm -r linphone-sdk-novideo-frameworks/\n# Copy existing depedencies of linphone to frameworks to be included in pod\ncp -r Pods/linphone-sdk-novideo/linphone-sdk-novideo/apple-darwin/XCFrameworks/ linphone-sdk-novideo-frameworks/\n\n# Export linphonesw for device\nxcodebuild archive \\\n-workspace iOSPhoneLib.xcworkspace \\\n-scheme linphone-sdk-novideo \\\n-configuration Release \\\n-sdk iphoneos \\\n-destination \"generic/platform=iOS\" \\\n-archivePath archives/ios_devices.xcarchive \\\nBUILD_LIBRARY_FOR_DISTRIBUTION=YES \\\nSKIP_INSTALL=NO \\\n\n# Export linphonesw for simulator\nxcodebuild archive \\\n-workspace iOSPhoneLib.xcworkspace \\\n-scheme linphone-sdk-novideo \\\n-configuration Debug \\\n-sdk iphonesimulator \\\n-destination \"generic/platform=iOS Simulator\" \\\n-archivePath archives/ios_simulators.xcarchive \\\nBUILD_LIBRARY_FOR_DISTRIBUTION=YES \\\nSKIP_INSTALL=NO \\\n\n# Combine both linphonesw frameworks to XCFramework\nxcodebuild \\\n-create-xcframework \\\n-framework archives/ios_devices.xcarchive/Products/Library/Frameworks/linphonesw.framework \\\n-framework archives/ios_simulators.xcarchive/Products/Library/Frameworks/linphonesw.framework \\\n-output archives/linphonesw.xcframework\n\n# Remove archives\n#rm -rf archives\n";
 		};
 		B6DA5CABC8F0867A8DACCE84 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
