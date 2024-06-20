@@ -7,6 +7,7 @@ cp -r Pods/linphone-sdk-novideo/linphone-sdk-novideo/apple-darwin/XCFrameworks/ 
 xcodebuild archive \
 -workspace iOSPhoneLib.xcworkspace \
 -scheme linphone-sdk-novideo \
+-arch arm64 \
 -configuration Release \
 -sdk iphoneos \
 -archivePath archives/ios_devices.xcarchive \
@@ -17,6 +18,7 @@ SKIP_INSTALL=NO \
 xcodebuild archive \
 -workspace iOSPhoneLib.xcworkspace \
 -scheme linphone-sdk-novideo \
+-arch x86_64 \
 -configuration Debug \
 -sdk iphonesimulator \
 -archivePath archives/ios_simulators.xcarchive \
