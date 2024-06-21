@@ -53,6 +53,7 @@ class MissedCallNotification {
     private func buildBaseNotificationContent(callsAmount: Int = 1)  -> UNMutableNotificationContent {
         let content = UNMutableNotificationContent()
         content.sound = UNNotificationSound.default
+        content.badge = callsAmount as NSNumber
         content.userInfo[NotificationDataKeys.missedCallsCount.rawValue] = callsAmount
         return content
     }

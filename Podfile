@@ -14,7 +14,7 @@ target 'Phone Lib Example' do
   pod 'iOSPhoneLib' , :path => 'iOSPhoneLib.podspec'
   pod 'SAMKeychain'
   pod 'QuickTableViewController'
-  pod 'Alamofire', '~> 5.2'
+  pod 'Alamofire', '~> 5.9.1'
 end
 
 post_install do |installer|

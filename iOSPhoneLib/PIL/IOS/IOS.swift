@@ -29,6 +29,12 @@ public class IOS {
             selector: #selector(didEnterBackground),
             name: UIApplication.didEnterBackgroundNotification,
             object: nil)
+        
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(didBecomeActive),
+            name: UIApplication.didBecomeActiveNotification,
+            object: nil)
     }
     
     @objc func willEnterForeground() {
@@ -39,6 +45,11 @@ public class IOS {
         }
         
         pil.start()
+    }
+    
+    @objc func didBecomeActive() {
+        UIApplication.shared.applicationIconBadgeNumber = 0
+        UNUserNotificationCenter.current().removeAllDeliveredNotifications()
     }
     
     @objc func didEnterBackground() {

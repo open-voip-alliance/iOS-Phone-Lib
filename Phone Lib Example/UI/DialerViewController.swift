@@ -21,6 +21,7 @@ class DialerViewController: UIViewController {
         
         numberPreview.text = ""
         
+        
         CNContactStore().requestAccess(for: .contacts) { (granted, error) in
             
         }
@@ -30,9 +31,35 @@ class DialerViewController: UIViewController {
         }
     }
 
+    func requestNotificationPermission()  {
+        let center = UNUserNotificationCenter.current()
+
+        do {
+          try center.requestAuthorization(options: [.alert, .sound, .badge]) { (granted, error) in
+            if granted {
+              // Notification permission granted
+              print("Notifications permission granted")
+            } else {
+              // Permission denied
+              print("Notifications permission denied")
+            }
+            if let error = error {
+              print("Error requesting notification permission: \(error.localizedDescription)")
+            }
+          }
+        } catch {
+          // Handle error
+          print("Error requesting notification permission: \(error.localizedDescription)")
+        }
+    }
+    
     @IBAction func callButtonWasPressed(_ sender: UIButton) {
+        requestNotificationPermission()
+        
         guard let number = numberPreview.text,
               let pil = PIL.shared else { return }
+        
+    
         
         pil.preferences = Preferences(
             useApplicationRingtone: pil.preferences.useApplicationRingtone,
