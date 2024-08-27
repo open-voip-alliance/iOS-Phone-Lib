@@ -28,10 +28,9 @@ class PushKitDelegate: NSObject {
 
 extension PushKitDelegate: PKPushRegistryDelegate {
 
-    public func pushRegistry(_ registry: PKPushRegistry, didReceiveIncomingPushWith payload: PKPushPayload, for type: PKPushType, completion: @escaping () -> ()) {
+    func pushRegistry(_ registry: PKPushRegistry, didReceiveIncomingPushWith payload: PKPushPayload, for type: PKPushType) async {
         if type != .voIP {
             pil.writeLog("Received a non-VoIP push message. Halting processing.")
-            completion()
             return
         }
         
@@ -43,13 +42,19 @@ extension PushKitDelegate: PKPushRegistryDelegate {
             callerName: contact?.name ?? payload.dictionaryPayload[pil.app.pushKitCallerNameKey] as? String ?? ""
         )
         
-        /// We will delay briefly to let the library initialize in the AppDelegate
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-            self.handle(payload: payload, for: type, completion: completion)
-        }
+        await self.handle(payload: payload, for: type)
     }
+   
     
-    private func handle(payload: PKPushPayload, for type: PKPushType, completion: @escaping () -> ()) {
+    private func handle(payload: PKPushPayload, for type: PKPushType) async {
+        await waitForAuthToBeConfigured()
+        
+        if !authIsConfigured {
+            pil.writeLog("We have no authentication configured and so cannot accept this call")
+            self.middleware.respond(payload: payload, available: false, reason: UnavailableReason.unableToRegister)
+            return
+        }
+        
         self.middleware.inspect(payload: payload, type: type)
             
         pil.writeLog("Received a VoIP push message, starting incoming ringing.")
@@ -57,7 +62,6 @@ extension PushKitDelegate: PKPushRegistryDelegate {
         if pil.calls.isInCall {
             pil.writeLog("Not taking call as we already have an active one!")
             self.middleware.respond(payload: payload, available: false, reason: UnavailableReason.inCall)
-            completion()
             return
         }
                         
@@ -69,8 +73,20 @@ extension PushKitDelegate: PKPushRegistryDelegate {
             } else {
                 self.middleware.respond(payload: payload, available: false, reason: UnavailableReason.unableToRegister)
             }
-            
-            completion()
+        }
+    }
+    
+    var authIsConfigured: Bool { pil.auth != nil }
+    
+    /// Auth is configured in the AppDelegate, it is possible for a push notification to be received before this has properly
+    /// been completed. In this case we will wait for up to 150 seconds for auth to become available before assuming it has failed.
+    private func waitForAuthToBeConfigured() async {
+        var attempts = 0
+        
+        // Awaiting for 150 attempts of 0.01 seconds = 1.5 seconds
+        while !authIsConfigured && attempts <= 150 {
+            try? await Task.sleep(nanoseconds: 10_000_000)
+            attempts += 1
         }
     }
 

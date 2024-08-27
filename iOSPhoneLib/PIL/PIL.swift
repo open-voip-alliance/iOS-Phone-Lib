@@ -42,6 +42,8 @@ public class PIL {
     
     static public var shared: PIL?
     
+    static public private(set) var isInitializationComplete = false
+    
     /// The user preferences for the PIL, when this value is updated it will trigger
     /// a full PIL restart and re-register.
     public var preferences = Preferences() {
