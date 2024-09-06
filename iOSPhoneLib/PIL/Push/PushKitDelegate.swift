@@ -27,8 +27,8 @@ class PushKitDelegate: NSObject {
 }
 
 extension PushKitDelegate: PKPushRegistryDelegate {
-
-    func pushRegistry(_ registry: PKPushRegistry, didReceiveIncomingPushWith payload: PKPushPayload, for type: PKPushType) async {
+    
+    func pushRegistry(_ registry: PKPushRegistry, didReceiveIncomingPushWith payload: PKPushPayload, for type: PKPushType, completion: @escaping () -> Void) {
         if type != .voIP {
             pil.writeLog("Received a non-VoIP push message. Halting processing.")
             return
@@ -42,9 +42,10 @@ extension PushKitDelegate: PKPushRegistryDelegate {
             callerName: contact?.name ?? payload.dictionaryPayload[pil.app.pushKitCallerNameKey] as? String ?? ""
         )
         
-        await self.handle(payload: payload, for: type)
+        Task {
+            await self.handle(payload: payload, for: type)
+        }
     }
-   
     
     private func handle(payload: PKPushPayload, for type: PKPushType) async {
         await waitForAuthToBeConfigured()
