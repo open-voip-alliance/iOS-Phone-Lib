@@ -48,8 +48,10 @@ public class PIL {
     /// a full PIL restart and re-register.
     public var preferences = Preferences() {
         didSet {
-            iOSCallKit.refresh()
-            contacts.clearCache()
+            if oldValue != preferences {
+                iOSCallKit.refresh()
+                contacts.clearCache()
+            }
         }
     }
     

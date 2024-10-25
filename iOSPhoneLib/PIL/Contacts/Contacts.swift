@@ -40,36 +40,38 @@ class Contacts {
             }
         }
         
-        store.requestAccess(for: .contacts) { (granted, error) in
-            if granted {
-                self.performBackgroundLookup(number: number, identifier: identifier)
-            }
+        if CNContactStore.authorizationStatus(for: .contacts) != .authorized {
+            return nil
         }
         
-        if cachedContacts[identifier] == nil, let contact = preferences().supplementaryContacts.find(forNumber: number) {
-            cachedContacts[identifier] = contact.toContact()
+        if let cachedContact = cachedContacts[identifier] {
+            return cachedContact
+        }
+        
+        let contact = searchForNumberInUnifiedContacts(number: number)
+        
+        if contact != nil {
+            cachedContacts[identifier] = contact?.toContact() ?? Contact.notFound()
+        } else {
+            if let supplementaryContact = preferences().supplementaryContacts.find(forNumber: number) {
+                cachedContacts[identifier] = supplementaryContact.toContact()
+            }
         }
         
         return cachedContacts[identifier, default: nil]
     }
     
-    private func performBackgroundLookup(number: String, identifier: String) {
+    private func searchForNumberInUnifiedContacts(number: String) -> CNContact? {
         let keys = [CNContactGivenNameKey, CNContactFamilyNameKey, CNContactPhoneNumbersKey, CNContactImageDataAvailableKey, CNContactThumbnailImageDataKey]
         let request = CNContactFetchRequest(keysToFetch: keys as [CNKeyDescriptor])
         
+        let predicate = CNContact.predicateForContacts(matching: CNPhoneNumber(stringValue: number))
+        
         do {
-            try store.enumerateContacts(with: request, usingBlock: { (contact, stopPointer) in
-                if !contact.phoneNumbers.filter({ $0.value.stringValue.normalizePhoneNumber() == number }).isEmpty {
-                    self.cachedContacts[identifier] = Contact("\(contact.givenName) \(contact.familyName)")
-                    return
-                }
-                
-                if cachedContacts[identifier] == nil {
-                    cachedContacts[identifier] = Contact.notFound()
-                }
-            })
+            return try store.unifiedContacts(matching: predicate, keysToFetch: keys as [CNKeyDescriptor]).first
         } catch {
             log("Unable to access contacts")
+            return nil
         }
     }
     
@@ -119,5 +121,11 @@ extension String {
 extension Set<SupplementaryContact> {
     func find(forNumber number: String) -> SupplementaryContact? {
         return first(where: {$0.number.normalizePhoneNumber() == number})
+    }
+}
+
+extension CNContact {
+    func toContact() -> Contact {
+        return Contact("\(givenName) \(familyName)")
     }
 }
