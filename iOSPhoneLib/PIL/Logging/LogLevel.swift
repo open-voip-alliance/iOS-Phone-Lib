@@ -7,7 +7,7 @@
 
 import Foundation
 
-public enum LogLevel {
+public enum AppLogLevel {
     case debug
     case info
     case warning

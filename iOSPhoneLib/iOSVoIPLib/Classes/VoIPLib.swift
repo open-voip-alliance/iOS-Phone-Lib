@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Swinject
 
 class VoIPLib {
     

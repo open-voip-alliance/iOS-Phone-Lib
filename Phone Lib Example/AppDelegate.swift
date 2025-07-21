@@ -82,7 +82,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, LogDelegate {
         defaults.object(forKey: key) as? String ?? ""
     } //TODO: move this outside ViewControllers
     
-    func onLogReceived(message: String, level: LogLevel) {
+    func onLogReceived(message: String, level: AppLogLevel) {
         print("\(String(describing: level)) \(message)")
     }
 }

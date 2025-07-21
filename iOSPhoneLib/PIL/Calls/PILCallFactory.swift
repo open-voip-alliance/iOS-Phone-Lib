@@ -12,14 +12,14 @@ public class PILCallFactory {
         self.contacts = contacts
     }
     
-    public func make(voipLibCall: VoIPLibCall?) -> Call? {
+    public func make(voipLibCall: VoIPLibCall?) -> AppCall? {
         guard let libraryCall = voipLibCall else {
             return nil
         }
         
         let remotePartyDetails = findRemotePartyDetails(call: libraryCall)
         
-        return Call(
+        return AppCall(
             remoteNumber: remotePartyDetails.0,
             displayName: remotePartyDetails.1,
             state: convertCallState(state: libraryCall.state),

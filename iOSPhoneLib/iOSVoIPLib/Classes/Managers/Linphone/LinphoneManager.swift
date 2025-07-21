@@ -2,12 +2,12 @@ import Foundation
 import linphonesw
 import AVFoundation
 
-typealias LinphoneCall = linphonesw.Call
-public typealias RegistrationCallback = (RegistrationState) -> Void
-typealias LinphoneLogLevel = linphonesw.LogLevel
+typealias LinphoneCall = Call
+public typealias RegistrationCallback = (AppRegistrationState) -> Void
+typealias LinphoneLogLevel = AppLogLevel
 
-class LinphoneManager: linphonesw.LoggingServiceDelegate {
-   
+class LinphoneManager: LoggingServiceDelegate {
+
     private(set) var config: VoIPLibConfig?
     var isInitialized: Bool {
         linphoneCore != nil
@@ -261,7 +261,7 @@ class LinphoneManager: linphonesw.LoggingServiceDelegate {
     
     func setAudio(enabled:Bool) {
         log("Linphone set audio: \(enabled)")
-        linphoneCore.activateAudioSession(actived: enabled)
+        linphoneCore.activateAudioSession(activated: enabled)
     }
     
     func setHold(call: VoIPLibCall, onHold hold:Bool) -> Bool {
@@ -323,7 +323,7 @@ class LinphoneManager: linphonesw.LoggingServiceDelegate {
         return CallInfoProvider(VoIPLibCall: call).provide()
     }
     
-    func onLogMessageWritten(logService: LoggingService, domain: String, level: LogLevel, message: String) {
+    func onLogMessageWritten(logService: LoggingService, domain: String, level: AppLogLevel, message: String) {
         config?.logListener(message)
     }
     
