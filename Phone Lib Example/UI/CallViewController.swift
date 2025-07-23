@@ -76,14 +76,14 @@ class CallViewController: UIViewController, PILEventDelegate {
         renderForEventStatus(call: call)
     }
     
-    private func renderCallInfo(call: AppCall) {
+    private func renderCallInfo(call: Call) {
         self.callTitle.text = "\(call.remotePartyHeading) - \(call.remotePartySubheading)"
         self.callSubtitle.text = String(describing: call.direction)
         self.callDuration.text = call.prettyDuration
         self.callStatus.text = String(describing: call.state)
     }
     
-    private func renderCallButtons(call: AppCall) {
+    private func renderCallButtons(call: Call) {
         let audioState: AudioState
         let isMicrophoneMuted: Bool
         if let callSessionState = self.callSessionState {
@@ -130,7 +130,7 @@ class CallViewController: UIViewController, PILEventDelegate {
         }
     }
     
-    private func renderForEventStatus(call: AppCall) {
+    private func renderForEventStatus(call: Call) {
         switch event {
         case .incomingCallReceived:
             showEventStatus(message: "Incoming Call Received: In call with \(call.displayName)")

@@ -1,4 +1,4 @@
-// swift-tools-version:5.7
+// swift-tools-version:5.9
 
 import PackageDescription
 
@@ -15,14 +15,14 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/JohannesNevels/Swinject.git", branch: "master"),
-        .package(url: "https://gitlab.linphone.org/BC/public/linphone-sdk-swift-ios.git", exact: "5.4.24")
+        .package(path: "../LinphoneWrapper")
     ],
     targets: [
         .target(
             name: "iOSPhoneLib",
             dependencies: [
                 .product(name: "Swinject", package: "Swinject"),
-                .product(name: "linphonesw", package: "linphone-sdk-swift-ios"),
+                .product(name: "LinphoneWrapper", package: "LinphoneWrapper")
             ],
             path: "iOSPhoneLib",
             resources: [

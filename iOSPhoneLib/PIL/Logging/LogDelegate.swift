@@ -1,5 +1,5 @@
 import Foundation
 
 public protocol LogDelegate {
-    func onLogReceived(message: String, level: AppLogLevel)
+    func onLogReceived(message: String, level: LogLevel)
 }

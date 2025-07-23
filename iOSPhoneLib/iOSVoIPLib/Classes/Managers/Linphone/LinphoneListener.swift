@@ -1,5 +1,6 @@
 import Foundation
 import linphonesw
+import LinphoneWrapper
 
 internal class LinphoneListener: CoreDelegate {
     

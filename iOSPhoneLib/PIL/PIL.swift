@@ -68,7 +68,7 @@ public class PIL {
             config: VoIPLibConfig(
                 callDelegate: voipLibEventTranslator,
                 logListener: { message in
-                    self.app.logDelegate?.onLogReceived(message: message, level: AppLogLevel.info)
+                    self.app.logDelegate?.onLogReceived(message: message, level: LogLevel.info)
                 }
             )
         )
@@ -130,7 +130,7 @@ public class PIL {
         self.iOSCallKit.startCall(number: number.normalizedForCalling)
     }
     
-    internal func writeLog(_ message: String, level: AppLogLevel = .info) {
+    internal func writeLog(_ message: String, level: LogLevel = .info) {
         app.logDelegate?.onLogReceived(message: "PhoneIntegrationLib: \(message)", level: level)
     }
     
@@ -150,7 +150,7 @@ public class PIL {
     }
 }
 
-internal func log(_ message: String, level: AppLogLevel = .info) {
+internal func log(_ message: String, level: LogLevel = .info) {
     if let pil = PIL.shared {
         pil.writeLog(message, level: level)
     }

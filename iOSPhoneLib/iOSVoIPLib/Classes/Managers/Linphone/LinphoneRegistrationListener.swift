@@ -1,5 +1,6 @@
 import Foundation
 import linphonesw
+import LinphoneWrapper
 
 internal class LinphoneRegistrationListener : CoreDelegate {
     
@@ -34,7 +35,7 @@ internal class LinphoneRegistrationListener : CoreDelegate {
         self.manager = manager
     }
 
-    func onAccountRegistrationStateChanged(core: Core, account: Account, state: RegistrationState, message: String) {
+    func onAccountRegistrationStateChanged(core: Core, account: Account, state: LinphoneRegistrationState, message: String) {
         log("Received registration state change: \(state.rawValue), message: \(message)")
         
         let callbacks = manager.registrationCallbacks
@@ -46,10 +47,10 @@ internal class LinphoneRegistrationListener : CoreDelegate {
         
         // If the registration was successful, just immediately invoke the callback and reset
         // all timers.
-        if state == RegistrationState.Ok {
+        if state == LinphoneRegistrationState.Ok {
             log("Successful, resetting timers.")
             manager.registrationCallbacks = []
-            callbacks.invoke(state: AppRegistrationState.registered)
+            callbacks.invoke(state: RegistrationState.registered)
             reset()
             return
         }
@@ -66,7 +67,7 @@ internal class LinphoneRegistrationListener : CoreDelegate {
             manager.registrationCallbacks = []
             manager.unregister()
             log("Registration timeout has been exceeded, registration failed.")
-            callbacks.invoke(state: AppRegistrationState.failed)
+            callbacks.invoke(state: RegistrationState.failed)
             reset()
             return
         }
@@ -94,7 +95,7 @@ internal class LinphoneRegistrationListener : CoreDelegate {
 }
 
 extension Array {
-    func invoke(state: AppRegistrationState) {
+    func invoke(state: RegistrationState) {
         filter { element in
             element is RegistrationCallback
         }.forEach { element in

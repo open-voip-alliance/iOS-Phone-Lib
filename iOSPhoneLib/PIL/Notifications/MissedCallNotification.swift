@@ -17,7 +17,7 @@ class MissedCallNotification {
     }
         
     @available(iOS 12.0, *)
-    func notify(call: AppCall) {
+    func notify(call: Call) {
         log("Requesting notification authorization")
         
         center.getNotificationSettings { (settings) in
@@ -35,14 +35,14 @@ class MissedCallNotification {
         }
     }
     
-    private func createNewNotification(call: AppCall) -> UNMutableNotificationContent {
+    private func createNewNotification(call: Call) -> UNMutableNotificationContent {
         let content = buildBaseNotificationContent()
         content.title = String(format: NSLocalizedString("notification_missed_call_title", comment: ""), 1)
         content.body = String(format: NSLocalizedString("notification_missed_call_subtitle", comment: ""), call.remotePartyHeading, 1)
         return content
     }
     
-    private func updateExistingNotification(call: AppCall, notification: UNNotification) -> UNMutableNotificationContent {
+    private func updateExistingNotification(call: Call, notification: UNNotification) -> UNMutableNotificationContent {
         let callsAmount = notification.missedCallsCount + 1
         let content = buildBaseNotificationContent(callsAmount: callsAmount)
         content.title = String(format: NSLocalizedString("notification_missed_call_title", comment: ""), callsAmount)

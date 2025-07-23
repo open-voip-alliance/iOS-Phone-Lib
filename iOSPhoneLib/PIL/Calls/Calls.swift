@@ -33,7 +33,7 @@ public class Calls {
     }
     
     /// The currently active call that is setup to send/receive audio.
-    public var activeCall: AppCall? {
+    public var activeCall: Call? {
         get {
             factory.make(voipLibCall: activeVoipLibCall)
         }
@@ -41,7 +41,7 @@ public class Calls {
     
     /// The background call. This will only exist when a transfer is happening.
     /// This will be the initial call while connecting to the new call.
-    public var inactiveCall: AppCall? {
+    public var inactiveCall: Call? {
         get {
             factory.make(voipLibCall: inactiveVoipLibCall)
         }

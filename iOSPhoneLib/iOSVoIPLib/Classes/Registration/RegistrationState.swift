@@ -7,7 +7,7 @@
 
 import Foundation
 
-public enum AppRegistrationState {
+public enum RegistrationState {
     case none
     case progress
     case registered

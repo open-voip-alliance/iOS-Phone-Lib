@@ -1,12 +1,11 @@
 import Foundation
 import linphonesw
+import LinphoneWrapper
 import AVFoundation
 
-typealias LinphoneCall = Call
-public typealias RegistrationCallback = (AppRegistrationState) -> Void
-typealias LinphoneLogLevel = AppLogLevel
+public typealias RegistrationCallback = (RegistrationState) -> Void
 
-class LinphoneManager: LoggingServiceDelegate {
+class LinphoneManager: LinphoneLoggingServiceDelegate {
 
     private(set) var config: VoIPLibConfig?
     var isInitialized: Bool {
@@ -323,7 +322,7 @@ class LinphoneManager: LoggingServiceDelegate {
         return CallInfoProvider(VoIPLibCall: call).provide()
     }
     
-    func onLogMessageWritten(logService: LoggingService, domain: String, level: AppLogLevel, message: String) {
+    func onLogMessageWritten(logService: LoggingService, domain: String, level: LogLevel, message: String) {
         config?.logListener(message)
     }
     

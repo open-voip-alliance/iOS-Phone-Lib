@@ -148,7 +148,7 @@ class IOSCallKit: NSObject {
         }
     }
     
-    func updateCall(call: AppCall) {
+    func updateCall(call: Call) {
         let update = CXCallUpdate()
         update.hasVideo = false
         update.localizedCallerName = call.prettyRemotePartyHeading

@@ -4,7 +4,7 @@
 
 import Foundation
 
-public struct AppCall {
+public struct Call {
     public let remoteNumber: String
     public let displayName: String
     public let state: CallState
