@@ -6,7 +6,12 @@
 
 import Foundation
 import linphonesw
+
+#if IOSPHONELIB_PRIVATE
+import LinphoneWrapper_Private
+#else
 import LinphoneWrapper
+#endif
 
 public class VoIPLibCall:NSObject {
     public let callId = UUID()

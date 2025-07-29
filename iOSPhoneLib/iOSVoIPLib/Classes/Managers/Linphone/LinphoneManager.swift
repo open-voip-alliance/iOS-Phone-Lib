@@ -1,7 +1,12 @@
 import Foundation
 import linphonesw
-import LinphoneWrapper
 import AVFoundation
+
+#if IOSPHONELIB_PRIVATE
+import LinphoneWrapper_Private
+#else
+import LinphoneWrapper
+#endif
 
 public typealias RegistrationCallback = (RegistrationState) -> Void
 
