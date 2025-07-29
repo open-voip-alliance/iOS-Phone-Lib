@@ -13,7 +13,7 @@ let package = Package(
         ),
     ],
     dependencies: [
-        .package(url: "https://github.com/JohannesNevels/Swinject.git", branch: "master"),
+        .package(url: "https://github.com/JohannesNevels/Swinject.git", .exact("2.9.2")),
         .package(url: "https://gitlab.linphone.org/BC/public/linphone-sdk-swift-ios.git", .exact("5.4.24"))
     ],
     targets: [
