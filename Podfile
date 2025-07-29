@@ -5,13 +5,7 @@ use_frameworks! :linkage => :static
 source 'https://gitlab.linphone.org/BC/public/podspec.git'
 source 'https://github.com/CocoaPods/Specs.git'
 
-target 'iOSPhoneLib' do
-  pod 'Swinject'
-  pod 'linphone-sdk-novideo', '5.3.58'
-end
-
 target 'Phone Lib Example' do
-  pod 'iOSPhoneLib' , :path => 'iOSPhoneLib.podspec'
   pod 'SAMKeychain'
   pod 'QuickTableViewController'
   pod 'Alamofire', '~> 5.9.1'

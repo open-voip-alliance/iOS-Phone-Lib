@@ -2,12 +2,16 @@ import Foundation
 import linphonesw
 import AVFoundation
 
-typealias LinphoneCall = linphonesw.Call
-public typealias RegistrationCallback = (RegistrationState) -> Void
-typealias LinphoneLogLevel = linphonesw.LogLevel
+#if IOSPHONELIB_PRIVATE
+import LinphoneWrapper_Private
+#else
+import LinphoneWrapper
+#endif
 
-class LinphoneManager: linphonesw.LoggingServiceDelegate {
-   
+public typealias RegistrationCallback = (RegistrationState) -> Void
+
+class LinphoneManager: LinphoneLoggingServiceDelegate {
+
     private(set) var config: VoIPLibConfig?
     var isInitialized: Bool {
         linphoneCore != nil
@@ -261,7 +265,7 @@ class LinphoneManager: linphonesw.LoggingServiceDelegate {
     
     func setAudio(enabled:Bool) {
         log("Linphone set audio: \(enabled)")
-        linphoneCore.activateAudioSession(actived: enabled)
+        linphoneCore.activateAudioSession(activated: enabled)
     }
     
     func setHold(call: VoIPLibCall, onHold hold:Bool) -> Bool {

@@ -1,6 +1,12 @@
 import Foundation
 import linphonesw
 
+#if IOSPHONELIB_PRIVATE
+import LinphoneWrapper_Private
+#else
+import LinphoneWrapper
+#endif
+
 internal class LinphoneListener: CoreDelegate {
     
     private let headersToPreserve = ["Remote-Party-ID", "P-Asserted-Identity"]

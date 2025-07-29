@@ -1,7 +1,6 @@
 import Foundation
 import AVFoundation
 import AVKit
-import linphonesw
 
 public class AudioManager {
     

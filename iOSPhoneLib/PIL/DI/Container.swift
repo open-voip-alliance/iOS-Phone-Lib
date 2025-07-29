@@ -6,9 +6,10 @@
 //
 
 import Foundation
-import Swinject
 import CallKit
 import AVFoundation
+import Swinject
+import UserNotifications
 
 // Resolves the current preferences from the [PIL] that doesn't require depending on the whole
 // [PIL] object.

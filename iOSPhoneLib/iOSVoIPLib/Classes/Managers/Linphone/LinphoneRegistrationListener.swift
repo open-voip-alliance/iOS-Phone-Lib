@@ -1,6 +1,12 @@
 import Foundation
 import linphonesw
 
+#if IOSPHONELIB_PRIVATE
+import LinphoneWrapper_Private
+#else
+import LinphoneWrapper
+#endif
+
 internal class LinphoneRegistrationListener : CoreDelegate {
     
     /**
@@ -34,7 +40,7 @@ internal class LinphoneRegistrationListener : CoreDelegate {
         self.manager = manager
     }
 
-    func onAccountRegistrationStateChanged(core: Core, account: Account, state: linphonesw.RegistrationState, message: String) {
+    func onAccountRegistrationStateChanged(core: Core, account: Account, state: LinphoneRegistrationState, message: String) {
         log("Received registration state change: \(state.rawValue), message: \(message)")
         
         let callbacks = manager.registrationCallbacks
@@ -46,7 +52,7 @@ internal class LinphoneRegistrationListener : CoreDelegate {
         
         // If the registration was successful, just immediately invoke the callback and reset
         // all timers.
-        if state == linphonesw.RegistrationState.Ok {
+        if state == LinphoneRegistrationState.Ok {
             log("Successful, resetting timers.")
             manager.registrationCallbacks = []
             callbacks.invoke(state: RegistrationState.registered)
