@@ -3,7 +3,7 @@ import linphonesw
 import AVFoundation
 
 #if IOSPHONELIB_PRIVATE
-import LinphoneWrapper_Private
+import iOSPhoneLib_Private
 #else
 import LinphoneWrapper
 #endif
