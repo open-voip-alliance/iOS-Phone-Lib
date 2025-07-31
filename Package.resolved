@@ -14,8 +14,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/JohannesNevels/Swinject.git",
       "state" : {
-        "branch" : "master",
-        "revision" : "a6fc20519781c1c4f64a00b76200c51116a8e8b8"
+        "revision" : "a6fc20519781c1c4f64a00b76200c51116a8e8b8",
+        "version" : "2.9.2"
       }
     }
   ],
