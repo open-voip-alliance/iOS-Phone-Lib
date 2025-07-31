@@ -8,7 +8,7 @@ import Foundation
 import linphonesw
 
 #if IOSPHONELIB_PRIVATE
-import LinphoneWrapper_Private
+import iOSPhoneLib_Private
 #else
 import LinphoneWrapper
 #endif

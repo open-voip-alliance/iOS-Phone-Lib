@@ -2,10 +2,6 @@
 
 This library is an opinionated VoIP wrapper for iOS applications. It currently uses Linphone as the underlying SIP library.
 
-## Installation
-
-Install using [Cocoa Pods](https://cocoapods.org).
-
 ## Registration
 
 Step 1: Create a Config object . This object contains all the possible configuration options, however the auth parameter is the only one that is required, the rest will use sensible defaults.
