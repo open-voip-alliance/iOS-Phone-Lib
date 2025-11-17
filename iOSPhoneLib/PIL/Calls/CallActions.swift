@@ -6,15 +6,17 @@ import Foundation
 import CallKit
 
 public class CallActions {
-    
+
     private let controller: CXCallController
     private let pil: PIL
     private let voipLib: VoIPLib
-    
-    init(controller: CXCallController, pil: PIL, voipLib: VoIPLib) {
+    private let systemTones: SystemTones
+
+    init(controller: CXCallController, pil: PIL, voipLib: VoIPLib, systemTones: SystemTones) {
         self.controller = controller
         self.pil = pil
         self.voipLib = voipLib
+        self.systemTones = systemTones
     }
 
     public func hold() {
@@ -86,7 +88,11 @@ public class CallActions {
         }
     }
     
-    public func sendDtmf(_ dtmf: String) {
+    public func sendDtmf(_ dtmf: String, playToneLocally: Bool = false) {
+        if playToneLocally {
+            dtmf.forEach { systemTones.playForDigit(digit: $0) }
+        }
+
         performCallAction { uuid -> CXCallAction in
             CXPlayDTMFCallAction(call: uuid, digits: dtmf, type: .singleTone)
         }
