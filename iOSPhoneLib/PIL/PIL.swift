@@ -11,13 +11,14 @@ import CallKit
 public class PIL {
 
     let app: ApplicationSetup
-    
+
     private let callFactory = di.resolve(PILCallFactory.self)!
     private lazy var pushKit: PushKitDelegate = { PushKitDelegate(middleware: app.middleware!) }()
     private lazy var voipLibHelper = { di.resolve(VoIPLibHelper.self)! }()
     internal lazy var platformIntegrator = { di.resolve(PlatformIntegrator.self)! }()
     internal lazy var voipLibEventTranslator = { di.resolve(VoipLibEventTranslator.self)! }()
     internal lazy var contacts = { di.resolve(Contacts.self)! }()
+    private lazy var systemTones = { di.resolve(SystemTones.self)! }()
     
     let voipLib: VoIPLib = di.resolve(VoIPLib.self)!
     lazy var iOSCallKit = { di.resolve(IOSCallKit.self)! }()
@@ -147,6 +148,12 @@ public class PIL {
     public func performEchoCancellationCalibration() {
         log("Beginning echo cancellation calibration")
         voipLib.startEchoCancellerCalibration()
+    }
+
+    /// Play a DTMF tone locally without sending it over the network.
+    /// - Parameter digit: The DTMF digit to play ('0'-'9', '#', '*')
+    public func playToneLocally(digit: Character) {
+        systemTones.playForDigit(digit: digit)
     }
 }
 

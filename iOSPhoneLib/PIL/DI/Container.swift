@@ -25,7 +25,8 @@ var register: (Container) -> Container = {
         CallActions(
             controller: CXCallController(),
             pil: c.resolve(PIL.self)!,
-            voipLib: c.resolve(VoIPLib.self)!
+            voipLib: c.resolve(VoIPLib.self)!,
+            systemTones: c.resolve(SystemTones.self)!
         )
     }.inObjectScope(.container)
     
@@ -96,7 +97,11 @@ var register: (Container) -> Container = {
             center: UNUserNotificationCenter.current()
         )
     }.inObjectScope(.container)
-    
+
+    $0.register(SystemTones.self) { _ in
+        SystemTones()
+    }.inObjectScope(.container)
+
     return $0
 }
 
