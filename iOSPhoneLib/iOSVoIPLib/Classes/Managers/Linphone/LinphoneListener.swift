@@ -49,13 +49,13 @@ internal class LinphoneListener: CoreDelegate {
         }
     }
     
-    func onTransferStateChanged(core: Core, transfered: LinphoneCall, VoIPLibCallState: LinphoneCall.State) {
+    func onTransferStateChanged(core: Core, transferred: LinphoneCall, callState: LinphoneCall.State) {
         guard let delegate = self.linphoneManager.config?.callDelegate else {
             log("Unable to send VoIPLibCall transfer event as no VoIPLibCall delegate")
             return
         }
         
-        guard let voipLibVoIPLibCall = VoIPLibCall(linphoneCall: transfered) else {
+        guard let voipLibVoIPLibCall = VoIPLibCall(linphoneCall: transferred) else {
             log("Unable to create VoIPLibCall, no remote address")
             return
         }
