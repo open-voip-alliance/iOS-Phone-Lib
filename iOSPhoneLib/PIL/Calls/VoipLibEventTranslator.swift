@@ -39,10 +39,12 @@ class VoipLibEventTranslator: VoIPLibCallDelegate {
         
         if (pil.calls.isInTransfer) {
             pil.events.broadcast(event: .attendedTransferStarted(state: pil.sessionState))
-        } else {
-            pil.writeLog("Setting up the outgoing call")
-            pil.events.broadcast(event: .outgoingCallStarted(state: pil.sessionState))
+            return
         }
+        
+        pil.writeLog("Setting up the outgoing call")
+        pil.voipLib.actions(call: call).setAudio(enabled: true)
+        pil.events.broadcast(event: .outgoingCallStarted(state: pil.sessionState))
     }
 
     public func callUpdated(_ call: VoIPLibCall, message: String) {
@@ -52,14 +54,20 @@ class VoipLibEventTranslator: VoIPLibCallDelegate {
 
     public func callConnected(_ call: VoIPLibCall) {
         pil.writeLog("VoipLib event callConnected")
-              
-        pil.voipLib.actions(call: call).setAudio(enabled: true)
         
         if pil.calls.isInTransfer {
             pil.events.broadcast(event: .attendedTransferConnected(state: pil.sessionState))
-        } else {
-            pil.events.broadcast(event: .callConnected(state: pil.sessionState))
+            return
         }
+        
+        // Audio is enabled in outgoingCallCreated for outgoing calls because we want
+        // to start the audio session earlier than incoming calls that are still
+        // ringing.
+        if call.isIncoming {
+            pil.voipLib.actions(call: call).setAudio(enabled: true)
+        }
+        
+        pil.events.broadcast(event: .callConnected(state: pil.sessionState))
     }
 
     public func callEnded(_ call: VoIPLibCall) {

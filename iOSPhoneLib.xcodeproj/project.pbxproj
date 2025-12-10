@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A3B45902EE95E5D006CB363 /* SystemTones.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3B458F2EE95E5D006CB363 /* SystemTones.swift */; };
+		1A3B45942EE95F32006CB363 /* iOSPhoneLib in Frameworks */ = {isa = PBXBuildFile; productRef = 1A3B45932EE95F32006CB363 /* iOSPhoneLib */; };
 		1A55D2242B7E869F006BBEFB /* SupplementaryContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A55D2232B7E869F006BBEFB /* SupplementaryContact.swift */; };
 		2C70EAB9036A1EDA60801929 /* Pods_Phone_Lib_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53057F9D284C0D60E8D22EB9 /* Pods_Phone_Lib_Example.framework */; };
 		5C00279A2839151800FC1368 /* LinphoneAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0027992839151800FC1368 /* LinphoneAudio.swift */; };
@@ -79,6 +81,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A3B458F2EE95E5D006CB363 /* SystemTones.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemTones.swift; sourceTree = "<group>"; };
 		1A55D2232B7E869F006BBEFB /* SupplementaryContact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupplementaryContact.swift; sourceTree = "<group>"; };
 		53057F9D284C0D60E8D22EB9 /* Pods_Phone_Lib_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Phone_Lib_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C0027992839151800FC1368 /* LinphoneAudio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinphoneAudio.swift; sourceTree = "<group>"; };
@@ -196,6 +199,7 @@
 				2C70EAB9036A1EDA60801929 /* Pods_Phone_Lib_Example.framework in Frameworks */,
 				8FDDCDA02E38DDF400B2365B /* iOSPhoneLib in Frameworks */,
 				8F8A19FE2E3B624C00A37772 /* iOSPhoneLib in Frameworks */,
+				1A3B45942EE95F32006CB363 /* iOSPhoneLib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,6 +436,7 @@
 		835D82F727BD61E000A7B5DD /* Audio */ = {
 			isa = PBXGroup;
 			children = (
+				1A3B458F2EE95E5D006CB363 /* SystemTones.swift */,
 				835D82F827BD61E000A7B5DD /* AudioManager.swift */,
 				835D82F927BD61E000A7B5DD /* AudioRoute.swift */,
 				835D830827BD61E000A7B5DD /* AudioState.swift */,
@@ -673,8 +678,7 @@
 			);
 			mainGroup = 8378858B27AC3FB7001A24A8;
 			packageReferences = (
-				8F8A19FC2E3B624C00A37772 /* XCLocalSwiftPackageReference "../ios-phone-lib-test" */,
-				8F8A1A022E3B648300A37772 /* XCLocalSwiftPackageReference "LinphoneWrapper" */,
+				1A3B45922EE95F32006CB363 /* XCLocalSwiftPackageReference "../ios-phone-lib" */,
 			);
 			productRefGroup = 8378859627AC3FB7001A24A8 /* Products */;
 			projectDirPath = "";
@@ -809,6 +813,7 @@
 				5C6C81592806DE9E00EE2919 /* Direction.swift in Sources */,
 				5C6C815A2806DE9E00EE2919 /* CallDelegate.swift in Sources */,
 				5C6C815C2806DE9E00EE2919 /* RegistrationState.swift in Sources */,
+				1A3B45902EE95E5D006CB363 /* SystemTones.swift in Sources */,
 				5C00279A2839151800FC1368 /* LinphoneAudio.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1153,17 +1158,17 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
-		8F8A19FC2E3B624C00A37772 /* XCLocalSwiftPackageReference "../ios-phone-lib-test" */ = {
+		1A3B45922EE95F32006CB363 /* XCLocalSwiftPackageReference "../ios-phone-lib" */ = {
 			isa = XCLocalSwiftPackageReference;
-			relativePath = "../ios-phone-lib-test";
-		};
-		8F8A1A022E3B648300A37772 /* XCLocalSwiftPackageReference "LinphoneWrapper" */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = LinphoneWrapper;
+			relativePath = "../ios-phone-lib";
 		};
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		1A3B45932EE95F32006CB363 /* iOSPhoneLib */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = iOSPhoneLib;
+		};
 		8F8A19FD2E3B624C00A37772 /* iOSPhoneLib */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = iOSPhoneLib;
